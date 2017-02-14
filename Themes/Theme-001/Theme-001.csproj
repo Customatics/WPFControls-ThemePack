@@ -69,9 +69,11 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Page Include="Themes\Elements\Buttons.xaml">
+    <Folder Include="Controls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Themes\Styles\Buttons.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Themes\Values\Numerics.xaml">
@@ -80,32 +82,32 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Themes\Elements\Form.xaml">
+    <Page Include="Themes\Styles\Form.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Themes\Elements\Options.xaml">
+    <Page Include="Themes\Styles\Options.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Themes\Elements\ProgressBar.xaml">
+    <Page Include="Themes\Styles\ProgressBar.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Themes\Elements\Scroll.xaml">
+    <Page Include="Themes\Styles\Scroll.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Themes\Elements\Slider.xaml">
+    <Page Include="Themes\Styles\Slider.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Themes\Elements\Texts.xaml">
+    <Page Include="Themes\Styles\Texts.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -2,8 +2,11 @@
 			 xmlns:sys="clr-namespace:System;assembly=mscorlib"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     >
-    <Thickness x:Key="SpaceInner" Left="8" Top="4" Right="8" Bottom="4" />
-    <sys:Double x:Key="SpaceOuter">4</sys:Double>
+    <Thickness x:Key="SpaceInner" Left="9" Top="4" Right="9" Bottom="5" />
+    <Thickness x:Key="SpaceOuter" Left="5" Top="4" Right="5" Bottom="4" />
+
+    <sys:Double x:Key="ButtonMinWidth">60</sys:Double>
+    
     <sys:Double x:Key="DisabledOpacity">0.25</sys:Double>
     
 </ResourceDictionary>
