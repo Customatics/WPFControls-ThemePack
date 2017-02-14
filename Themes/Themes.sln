@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26014.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreThemeWindow", "ThemeWindow\CoreThemeWindow.csproj", "{B9911D48-7A60-4D44-B71F-2BA8C9521AE9}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Theme-001", "Theme-001\Theme-001.shproj", "{FBBAFCA7-3AA0-4D18-A45A-ADFB641F5AD6}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Theme-001\Theme-001.projitems*{fbbafca7-3aa0-4d18-a45a-adfb641f5ad6}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9911D48-7A60-4D44-B71F-2BA8C9521AE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9911D48-7A60-4D44-B71F-2BA8C9521AE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9911D48-7A60-4D44-B71F-2BA8C9521AE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9911D48-7A60-4D44-B71F-2BA8C9521AE9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
