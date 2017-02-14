@@ -4,6 +4,13 @@
              xmlns:local="clr-namespace:ThemeWindow"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Theme-001;component/Themes/Values/Numerics.xaml"/>
+                <ResourceDictionary Source="/Theme-001;component/Themes/ColorSchemes/Light.xaml"/>
+                
+                <ResourceDictionary Source="/Theme-001;component/Themes/Elements/Buttons.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

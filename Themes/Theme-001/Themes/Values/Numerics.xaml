@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    >
+    <Thickness x:Key="SpaceInner" Left="8" Top="4" Right="8" Bottom="4" />
+    <sys:Double x:Key="SpaceOuter">4</sys:Double>
+    <sys:Double x:Key="DisabledOpacity">0.25</sys:Double>
+    
+</ResourceDictionary>

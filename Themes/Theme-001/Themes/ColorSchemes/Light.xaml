@@ -1,0 +1,13 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    >
+
+    <SolidColorBrush x:Key="PrimaryColor" Color="#FFFFFFFF"/>
+    <SolidColorBrush x:Key="SecondaryColor" Color="#FF50514F"/>
+
+    <SolidColorBrush x:Key="ActiveColor" Color="#FF49C6E5"/>
+    <SolidColorBrush x:Key="HoverColor" Color="#FF54DEFD"/>
+    <SolidColorBrush x:Key="PressColor" Color="#FF568EA3"/>
+
+</ResourceDictionary>
