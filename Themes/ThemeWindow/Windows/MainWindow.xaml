@@ -4,7 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ThemeWindow"
-        mc:Ignorable="d" d:DataContext="{d:DesignInstance viewModel:MainWindowVM}"
+        xmlns:viewModel="clr-namespace:ThemeWindow.ViewModel"
+        mc:Ignorable="d" d:DataContext="{d:DesignInstance viewModel:MainWindowViewModel}"
         Title="Theme preview" d:DesignWidth="1400" d:DesignHeight="600" SizeToContent="WidthAndHeight">
     <Grid Margin="10" SnapsToDevicePixels="True" UseLayoutRounding="True">
         <Grid.RowDefinitions>
@@ -19,12 +20,14 @@
         </Grid.ColumnDefinitions>
 
 
-        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" >
-            <ComboBoxItem Content="Theme - 001" HorizontalAlignment="Left" Width="118"/>
-        </ComboBox>
-        <ComboBox Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120">
-            <ComboBoxItem Content="Default color" HorizontalAlignment="Left" Width="118"/>
-        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" 
+                  ItemsSource="{Binding Themes}"
+                  DisplayMemberPath="Name"
+                  SelectedItem="{Binding SelectedTheme}"/>
+        <ComboBox Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120"
+                  ItemsSource="{Binding ColorSchemes}"
+                  DisplayMemberPath="Name"
+                  SelectedItem="{Binding SelecteColorScheme}"/>
 
         <TabControl Grid.Row="2" Grid.ColumnSpan="3" Width="Auto" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
             <TabItem Header="Labels and texts">
@@ -68,11 +71,11 @@
                             <TextBlock Grid.Column="10">Disabled</TextBlock>
 
                             <!-- solid button-->
-                            <Button Style="{StaticResource Button.Solid}" Grid.Column="2" Grid.Row="2" Content="Button" IsDefault="True" />
-                            <Button Style="{StaticResource Button.Solid}" Grid.Column="4" Grid.Row="2" Content="Button" />
-                            <Button Style="{StaticResource Button.Solid}" Grid.Column="6" Grid.Row="2" Content="Button" />
-                            <Button Style="{StaticResource Button.Solid}" Grid.Column="8" Grid.Row="2" Content="Button" />
-                            <Button Style="{StaticResource Button.Solid}" Grid.Column="10" Grid.Row="2" Content="Button" IsEnabled="False" />
+                            <Button Grid.Column="2" Grid.Row="2" Content="Button" IsDefault="True" />
+                            <Button Grid.Column="4" Grid.Row="2" Content="Button" />
+                            <Button Grid.Column="6" Grid.Row="2" Content="Button" />
+                            <Button Grid.Column="8" Grid.Row="2" Content="Button" />
+                            <Button Grid.Column="10" Grid.Row="2" Content="Button" IsEnabled="False" />
 
                             <!-- ghost button-->
                             <Button Style="{StaticResource Button.Ghost}" Grid.Column="2" Grid.Row="4" Content="Button" IsDefault="True" />

@@ -46,8 +46,11 @@
     <Compile Include="Abstractions\IThemesSeeker.cs" />
     <Compile Include="Base\BaseViewModel.cs" />
     <Compile Include="BusinessModels\DataEventsArgs.cs" />
+    <Compile Include="BusinessModels\DllResourceInfo.cs" />
     <Compile Include="Constants\ThemeNameConstants.cs" />
+    <Compile Include="Extentions\ResourceTypeExtenstions.cs" />
     <Compile Include="Factories\ThemeSeekerFactory.cs" />
+    <Compile Include="Helpers\AssemblyResourceHelper.cs" />
     <Compile Include="Helpers\GenericPluginLoader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThemeManagement\DllThemeSeeker.cs" />

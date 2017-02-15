@@ -11,11 +11,17 @@ namespace ThemePack.Models.Models
     /// </summary>
     public class ThemeM
     {
-        public ThemeM(IList<ColorSchemeM> schemes, IList<ControlStyleM> styles)
+        public ThemeM(string name, IList<ColorSchemeM> schemes, IList<ControlStyleM> styles)
         {
+            Name = name;
             ColorSchemeModels = schemes;
             ControlStyleModels = styles;
         }
+
+        /// <summary>
+        /// Theme name
+        /// </summary>
+        public string Name { get; set; }
 
         /// <summary>
         /// List of <see cref="ColorSchemeM"/>

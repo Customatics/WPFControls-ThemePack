@@ -8,10 +8,12 @@ namespace ThemePack.Models.Models
     /// </summary>
     public class ControlStyleM
     {
-        public ControlStyleM(string name, Uri uri)
+        public ControlStyleM(string name, ResourceDictionary resource, Uri uri)
         {
             this.Name = name;
-            this.Resources = new ResourceDictionary { Source = uri };
+            this.Uri = uri;
+            resource.Source = uri;
+            this.Resources = resource;
         }
         /// <summary>
         /// The ResourceDictionary that represents this application theme.
@@ -22,5 +24,10 @@ namespace ThemePack.Models.Models
         /// The name of the application theme.
         /// </summary>
         public string Name { get; private set; }
+
+        /// <summary>
+        /// Resource <see cref="Uri"/>
+        /// </summary>
+        public Uri Uri { get; private set; }
     }
 }

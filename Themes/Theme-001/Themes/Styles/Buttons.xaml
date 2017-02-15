@@ -2,6 +2,19 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
+    <Style TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="{DynamicResource ActiveColor}"/>
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryColor}"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="MinWidth" Value="{DynamicResource ButtonMinWidth}"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource ActiveColor}"/>
+        <Setter Property="Margin" Value="{DynamicResource SpaceOuter}"/>
+        <Setter Property="Padding" Value="{DynamicResource SpaceInner}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+    </Style>
+    
     <Style x:Key="Button.Solid" TargetType="{x:Type Button}" >
         <Setter Property="Background" Value="{StaticResource ActiveColor}"/>
         <Setter Property="Foreground" Value="{StaticResource PrimaryColor}"/>

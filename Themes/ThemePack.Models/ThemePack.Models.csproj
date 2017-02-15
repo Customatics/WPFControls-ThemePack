@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Models\ColorSchemeM.cs" />
     <Compile Include="Models\ControlStyleM.cs" />
+    <Compile Include="Models\Enums\XamlResourceType.cs" />
     <Compile Include="Models\ThemeM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

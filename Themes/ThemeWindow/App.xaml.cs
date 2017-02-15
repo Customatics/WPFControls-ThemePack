@@ -41,7 +41,7 @@ namespace ThemeWindow
 
         private void RunApplication()
         {
-            var mainWindowVm = new MainWindowVM();
+            var mainWindowVm = new MainWindowViewModel();
             var mainWindow = new MainWindow { DataContext = mainWindowVm };
 
             Current.MainWindow = mainWindow;

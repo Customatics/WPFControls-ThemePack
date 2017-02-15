@@ -75,6 +75,52 @@ namespace ThemePack.Common.Base
 
         #endregion
 
+        #region Setting Value
+
+        /// <summary>
+        /// Sets <paramref name="newValue"/> to property with specified <paramref name="propertyName"/>.
+        /// </summary>
+        /// <typeparam name="T">value type.</typeparam>
+        /// <param name="local">ref value to set <paramref name="newValue"/> to.</param>
+        /// <param name="newValue">new value to set.</param>
+        /// <param name="propertyName">property name.</param>
+        /// <returns>is setting successful.</returns>
+        /// <exception cref="Exception"><see cref="PropertyChanged"/>'s callback throws an exception.</exception>
+        protected bool SetValue<T>(ref T local, T newValue, [CallerMemberName] string propertyName = null)
+        {
+            if (Equals(local, newValue))
+            {
+                return false;
+            }
+
+            local = newValue;
+            OnPropertyChanged(propertyName);
+            return true;
+        }
+
+        /// <summary>
+        /// Sets <paramref name="newValue"/> to <paramref name="properties"/>.
+        /// </summary>
+        /// <typeparam name="T">value type.</typeparam>
+        /// <param name="local">ref value to set <paramref name="newValue"/> to.</param>
+        /// <param name="newValue">new value to set.</param>
+        /// <param name="properties">property expressions.</param>
+        /// <returns>is setting successful.</returns>
+        /// <exception cref="Exception"><see cref="PropertyChanged"/>'s callback throws an exception.</exception>
+        protected bool SetValue<T>(ref T local, T newValue, params Expression<Func<object>>[] properties)
+        {
+            if (Equals(newValue, local))
+            {
+                return false;
+            }
+
+            local = newValue;
+            OnPropertiesChanged(properties);
+            return true;
+        }
+
+        #endregion
+
         #region UI Update
 
         /// <summary>

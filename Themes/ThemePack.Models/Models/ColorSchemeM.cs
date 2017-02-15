@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace ThemePack.Models.Models
 {
@@ -11,7 +12,7 @@ namespace ThemePack.Models.Models
     /// </summary>
     public class ColorSchemeM : ControlStyleM
     {
-        public ColorSchemeM(string name, Uri uri) : base(name, uri)
+        public ColorSchemeM(string name, ResourceDictionary resource, Uri uri) : base(name, resource, uri)
         {
         }
     }
