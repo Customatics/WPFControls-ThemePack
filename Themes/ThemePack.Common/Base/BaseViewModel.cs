@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Threading;
+using ThemePack.Common.Base.Abstractions;
 using ThemePack.Common.BusinessModels;
 
 namespace ThemePack.Common.Base
@@ -17,7 +18,7 @@ namespace ThemePack.Common.Base
     /// </summary>
     /// <date>17:05 05/14/2015</date>
     /// <author>Anton Liakhovich</author>
-    public abstract class BaseViewModel : INotifyPropertyChanged, IDisposable
+    public abstract class BaseViewModel : INotifyPropertyChanged, IRequestCloseViewModel, IRequestWaitViewModel, IDisposable
     {
         #region INotifyPropertyChanged implementation
 

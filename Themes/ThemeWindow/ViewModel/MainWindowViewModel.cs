@@ -13,7 +13,7 @@ using ThemePack.Models.Models;
 
 namespace ThemeWindow.ViewModel
 {
-    class MainWindowViewModel : BaseViewModel
+    class MainWindowViewModel : BaseWindowViewModel
     {
         #region private fields and constants
 
