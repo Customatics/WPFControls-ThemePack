@@ -23,7 +23,7 @@
 
     <Style x:Key="LabelText" TargetType="TextBlock" BasedOn="{StaticResource MainText}"/>
 
-    <Style x:Key="LabelDescriptionText" TargetType="TextBlock" BasedOn="{StaticResource MainLabel}"/>
+    <Style x:Key="LabelDescriptionText" TargetType="TextBlock" BasedOn="{StaticResource LabelText}"/>
 
     <Style x:Key="NoteText" TargetType="TextBlock" BasedOn="{StaticResource MainText}"/>
 
