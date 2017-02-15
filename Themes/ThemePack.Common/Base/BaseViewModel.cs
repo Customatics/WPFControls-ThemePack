@@ -121,6 +121,28 @@ namespace ThemePack.Common.Base
 
         #endregion
 
+        #region Getting Property Name
+
+        /// <summary>
+        /// Get <paramref name="property"/> name. 
+        /// </summary>
+        /// <typeparam name="T"><paramref name="property"/> type.</typeparam>
+        /// <param name="property">property to get name from.</param>
+        /// <returns><paramref name="property"/> name.</returns>
+        private static string GetPropertyName<T>(Expression<Func<T>> property)
+        {
+            var lambda = (LambdaExpression)property;
+            var lambdaBody = lambda.Body as UnaryExpression;
+
+            var memberExpression = (lambdaBody != null)
+                ? (MemberExpression)lambdaBody.Operand
+                : (MemberExpression)lambda.Body;
+
+            return memberExpression.Member.Name;
+        }
+
+        #endregion
+
         #region UI Update
 
         /// <summary>
@@ -257,28 +279,6 @@ namespace ThemePack.Common.Base
 
             IsDisposing = true;
             return true;
-        }
-
-        #endregion
-
-        #region Getting Property Name
-
-        /// <summary>
-        /// Get <paramref name="property"/> name. 
-        /// </summary>
-        /// <typeparam name="T"><paramref name="property"/> type.</typeparam>
-        /// <param name="property">property to get name from.</param>
-        /// <returns><paramref name="property"/> name.</returns>
-        private static string GetPropertyName<T>(Expression<Func<T>> property)
-        {
-            var lambda = (LambdaExpression)property;
-            var lambdaBody = lambda.Body as UnaryExpression;
-
-            var memberExpression = (lambdaBody != null)
-                ? (MemberExpression)lambdaBody.Operand
-                : (MemberExpression)lambda.Body;
-
-            return memberExpression.Member.Name;
         }
 
         #endregion
