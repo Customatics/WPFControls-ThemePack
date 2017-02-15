@@ -6,7 +6,7 @@
         xmlns:vm="clr-namespace:ThemeWindow.ViewModel"
         xmlns:base="clr-namespace:ThemePack.Common.Base;assembly=ThemePack.Common"
         mc:Ignorable="d" d:DataContext="{d:DesignInstance vm:MainWindowViewModel}"
-        Title="Theme preview" Width="900" Height="600"  SizeToContent="Manual">
+        Title="Theme preview" Width="900" Height="600" Style="{StaticResource Window.ModalStyle.NormalStyle}" SizeToContent="Manual">
     <Grid Margin="10" SnapsToDevicePixels="True" UseLayoutRounding="True">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>

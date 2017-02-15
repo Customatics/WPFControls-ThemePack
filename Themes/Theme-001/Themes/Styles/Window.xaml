@@ -16,7 +16,13 @@
         <!--<Setter Property="MinHeight" Value="500" />-->
         <Setter Property="ShowInTaskbar" Value="False" />
         <Setter Property="BorderThickness" Value="1"/>
-        <Setter Property="BorderBrush" Value="{StaticResource StatusBar.Bg.Fill}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource SecondaryColor}"/>
+    </Style>
+
+    <Style TargetType="{x:Type Grid}" x:Key="Form.Title">
+        <Setter Property="Background" Value="{StaticResource StatusBar.Bg.Fill}" />
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Disabled"/>
+        <Setter Property="Height" Value="106"/>
     </Style>
 
     <Style x:Key="Window.Form.Scalable" TargetType="Window">
@@ -41,12 +47,12 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Window}">
                     <Grid Margin="7">
-                        <Border   Background="{StaticResource White.Fill}"   BorderBrush="{StaticResource StatusBar.Bg.Fill}" BorderThickness="0" CornerRadius="0" ClipToBounds="True">
-                            <Border.Effect>
+                        <Border Background="{DynamicResource PrimaryColor}"   BorderBrush="{DynamicResource SecondaryColor}" BorderThickness="0" CornerRadius="0" ClipToBounds="True">
+                            <!--<Border.Effect>
                                 <DropShadowEffect BlurRadius="0" Color="Red" ShadowDepth="0" Direction="180" Opacity="0"/>
-                            </Border.Effect>
+                            </Border.Effect>-->
                         </Border>
-                        <Border BorderBrush="{StaticResource StatusBar.Bg.Fill}" BorderThickness="1" CornerRadius="0" ClipToBounds="True"/>
+                        <Border BorderBrush="{DynamicResource SecondaryColor}" BorderThickness="1" CornerRadius="0" ClipToBounds="True"/>
 
                         <Grid Margin="0">
                             <!--<Grid.RowDefinitions>
@@ -79,18 +85,21 @@
     </Style>
 
     <Style x:Key="Window.Shade" TargetType="Rectangle">
-        <Setter Property="Fill" Value="{StaticResource Gray.Alpha40.Fill}" />
+        <Setter Property="Fill" Value="{StaticResource TintColor}" />
     </Style>
 
+    <Style x:Key="Window.Icon" TargetType="Path">
+        <Setter Property="Height" Value="44"/>
+        <Setter Property="MaxWidth" Value="44"/>
+        <Setter Property="Fill" Value="{StaticResource White.Fill}"/>
+        <Setter Property="Stretch" Value="Uniform"/>
+        <Setter Property="Data" Value="M34,6.5L34,0.5 6,0.5 6,39.5 10,39.5 10,44.5 39,44.5 39,6.5 34,6.5z M7,38.5L7,1.5 33,1.5 33,6.5 10,6.5 10,38.5 7,38.5z M38,43.5L11,43.5 11,39.5 11,38.5 11,7.5 33,7.5 34,7.5 38,7.5 38,43.5z"/>
+    </Style>
+    
     <Style x:Key="Window.Title" TargetType="Label">
         <Setter Property="VerticalAlignment" Value="Center"/>
-        <Setter Property="Foreground" Value="{StaticResource White.Fill}"/>
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryColor}"/>
         <Setter Property="FontSize" Value="24"/>
-        <Setter Property="FontFamily" Value="Segoe UI Semilight"/>
-    </Style>
-
-    <Style x:Key="Window.Bottom" TargetType="Grid">
-        <Setter Property="Height" Value="107"/>
     </Style>
 
     <Style x:Key="Window.ButtonsHolder" TargetType="Grid">
@@ -129,10 +138,10 @@
                 <Setter Property="Background" Value="Transparent"/>
             </Trigger>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="#FF096CBD"/>
+                <Setter Property="Background" Value="{StaticResource HoverColor}"/>
             </Trigger>
             <Trigger Property="IsPressed" Value="True">
-                <Setter Property="Background" Value="#FF0765B2"/>
+                <Setter Property="Background" Value="{StaticResource PressColor}"/>
             </Trigger>
             <Trigger Property="IsEnabled" Value="False">
                 <Setter Property="Opacity" Value="0.25"/>
@@ -140,36 +149,12 @@
         </Style.Triggers>
     </Style>
 
-    <Style x:Key="Window.ActionsHolder" TargetType="Grid">
-        <Setter Property="HorizontalAlignment" Value="Right"/>
-        <Setter Property="VerticalAlignment" Value="Top"/>
-        <Setter Property="Margin" Value="2,0"/>
-    </Style>
-
-    <Style x:Key="Window.LeftPanel" TargetType="Grid">
-        <Setter Property="Width" Value="409"/>
-    </Style>
-
-    <Style x:Key="Window.RightPanel" TargetType="Grid">
-        <Setter Property="Width" Value="409"/>
-        <Setter Property="Background" Value="{StaticResource Gray9.Fill}"/>
-    </Style>
-
-    <Style x:Key="Window.ContentHolder" TargetType="Grid">
-        <Setter Property="MinWidth" Value="409"/>
-        <Setter Property="MaxWidth" Value="817"/>
-    </Style>
-
-    <Style x:Key="Window.Panel" TargetType="StackPanel">
-        <Setter Property="Margin" Value="38,49,38,0"/>
-    </Style>
-
     <Style x:Key="Window.Button.Minimize" TargetType="Button" BasedOn="{StaticResource Window.Button}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
                     <Grid Background="{TemplateBinding Background}">
-                        <Path Data="M15,12L30,12 30,27 15,27z" Width="11" Height="1" Fill="{StaticResource White.Fill}" Stretch="Fill" />
+                        <Path Data="M15,12L30,12 30,27 15,27z" Width="11" Height="1" Fill="{DynamicResource PrimaryColor}" Stretch="Fill" />
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
@@ -181,7 +166,7 @@
             <Setter.Value>
                 <ControlTemplate>
                     <Grid Background="{TemplateBinding Background}">
-                        <Path Data="M0,0L0,11 12,11 12,0 0,0z M11,10L1,10 1,1 11,1 11,10z" Width="12" Height="11" Fill="{StaticResource White.Fill}" Stretch="Fill"/>
+                        <Path Data="M0,0L0,11 12,11 12,0 0,0z M11,10L1,10 1,1 11,1 11,10z" Width="12" Height="11" Fill="{DynamicResource PrimaryColor}" Stretch="Fill"/>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
@@ -193,7 +178,7 @@
             <Setter.Value>
                 <ControlTemplate>
                     <Grid Background="{TemplateBinding Background}">
-                        <Path Data="M11,0.7L10.3,0 5.5,4.8 0.7,0 0,0.7 4.8,5.5 0,10.3 0.7,11 5.5,6.2 10.3,11 11,10.3 6.2,5.5z" Width="11" Height="11" Fill="{StaticResource White.Fill}" Stretch="Fill"/>
+                        <Path Data="M11,0.7L10.3,0 5.5,4.8 0.7,0 0,0.7 4.8,5.5 0,10.3 0.7,11 5.5,6.2 10.3,11 11,10.3 6.2,5.5z" Width="11" Height="11" Fill="{DynamicResource PrimaryColor}" Stretch="Fill"/>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
@@ -308,7 +293,7 @@
                 </BeginStoryboard>
             </EventTrigger>
             <!--<Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="BorderBrush" Value="{StaticResource StatusBar.Bg.Fill}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource SecondaryColor}"/>
             </Trigger>-->
         </Style.Triggers>
     </Style>
@@ -323,7 +308,7 @@
     </Style>
 
     <Style x:Key="WindowBack" TargetType="{x:Type Grid}">
-        <Setter Property="Background" Value="{StaticResource StatusBar.Bg.Fill}"/>
+        <Setter Property="Background" Value="{DynamicResource SecondaryColor}"/>
         <Setter Property="UseLayoutRounding" Value="True"/>
         <!--<Setter Property="BitmapEffect">
             <Setter.Value>
@@ -332,7 +317,7 @@
         </Setter>-->
         <Style.Triggers>
             <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=base:BaseWindow}, Path=IsActive}" Value="False">
-                <Setter Property="Background" Value="{StaticResource Tab.Blue.Bg3.Fill}"/>
+                <Setter Property="Background" Value="{DynamicResource SecondaryColor}"/>
             </DataTrigger>
         </Style.Triggers>
     </Style>
@@ -376,7 +361,7 @@
                         </Border>
                         <!-- MouseLeftButtonDown="MoveWindow" MouseMove="OnBorderMouseMove"  -->
                         <Image x:Name="IconApp" Margin="10, 0, 0, 0" HorizontalAlignment="Left" Source="{TemplateBinding Icon}" IsHitTestVisible="False"/>
-                        <TextBlock Foreground="White" Text="{TemplateBinding Title}" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Normal" Margin="10,0,0,0" IsHitTestVisible="False">
+                        <TextBlock Foreground="{DynamicResource PrimaryColor}" Text="{TemplateBinding Title}" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Normal" Margin="10,0,0,0" IsHitTestVisible="False">
 
                         </TextBlock>
                         <!--  MouseLeftButtonDown="MoveWindow" -->
@@ -455,7 +440,7 @@
                         </Border>
                         <!-- MouseLeftButtonDown="MoveWindow" MouseMove="OnBorderMouseMove"  -->
                         <Image x:Name="IconApp" Margin="10, 0, 0, 0" HorizontalAlignment="Left" Source="{TemplateBinding Icon}" IsHitTestVisible="False"/>
-                        <TextBlock Foreground="White" Text="{TemplateBinding Title}" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Normal" Margin="10,0,0,0" IsHitTestVisible="False">
+                        <TextBlock Foreground="{DynamicResource PrimaryColor}" Text="{TemplateBinding Title}" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Normal" Margin="10,0,0,0" IsHitTestVisible="False">
 
                         </TextBlock>
                         <!--  MouseLeftButtonDown="MoveWindow" -->

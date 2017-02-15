@@ -21,9 +21,9 @@
 
     <Style x:Key="MainText" TargetType="TextBlock"/>
 
-    <Style x:Key="MainLabel" TargetType="TextBlock" BasedOn="{StaticResource MainText}"/>
+    <Style x:Key="LabelText" TargetType="TextBlock" BasedOn="{StaticResource MainText}"/>
 
-    <Style x:Key="MainDescription" TargetType="TextBlock" BasedOn="{StaticResource MainLabel}"/>
+    <Style x:Key="LabelDescriptionText" TargetType="TextBlock" BasedOn="{StaticResource MainLabel}"/>
 
     <Style x:Key="NoteText" TargetType="TextBlock" BasedOn="{StaticResource MainText}"/>
 
