@@ -26,12 +26,13 @@
         <Setter Property="Padding" Value="{DynamicResource SpaceInner}"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="TextBlock.TextDecorations" Value="{x:Null}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" 
                             Margin="{TemplateBinding Margin}" MinWidth="{TemplateBinding MinWidth}">
-                        <TextBlock Foreground="{TemplateBinding Foreground}" FontSize="{TemplateBinding FontSize}" Padding="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}">
+                        <TextBlock Foreground="{TemplateBinding Foreground}" FontSize="{TemplateBinding FontSize}" Padding="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" TextDecorations="{TemplateBinding TextBlock.TextDecorations}">
                             <ContentPresenter ContentSource="Content"/>
                         </TextBlock>
                     </Border>
@@ -75,7 +76,11 @@
             <Trigger Property="IsMouseOver" Value="true">
                 <Setter Property="BorderBrush" Value="{DynamicResource HoverColor}"/>
                 <Setter Property="Foreground" Value="{DynamicResource HoverColor}"/>
-                <Setter Property="Background" Value="{x:Null}"/>
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <SolidColorBrush Color="{DynamicResource Active}" Opacity="0.10"/>
+                    </Setter.Value>
+                </Setter>
             </Trigger>
             <Trigger Property="IsPressed" Value="true">
                 <Setter Property="BorderBrush" Value="{DynamicResource PressColor}"/>
@@ -87,15 +92,10 @@
 
     <Style x:Key="Button.Borderless" TargetType="{x:Type Button}" BasedOn="{StaticResource Button.Ghost}">
         <Setter Property="BorderThickness" Value="0"/>
-        <Setter Property="TextBlock.TextDecorations" Value="Underline"/>
         <Setter Property="FontWeight" Value="DemiBold"/>
+        <Setter Property="TextBlock.TextDecorations" Value="Underline"/>
         <Style.Triggers>
             <Trigger Property="IsDefault" Value="true">
-                <Setter Property="Background">
-                    <Setter.Value>
-                        <SolidColorBrush Color="{DynamicResource Active}" Opacity="0.05"/>
-                    </Setter.Value>
-                </Setter>
                 <Setter Property="Foreground" Value="{DynamicResource ActiveColor}"/>
             </Trigger>
             <Trigger Property="IsEnabled" Value="False">
@@ -105,6 +105,7 @@
             </Trigger>
             <Trigger Property="IsMouseOver" Value="true">
                 <Setter Property="Foreground" Value="{DynamicResource HoverColor}"/>
+                <Setter Property="Background" Value="{x:Null}"/>
             </Trigger>
             <Trigger Property="IsPressed" Value="true">
                 <Setter Property="Foreground" Value="{DynamicResource PressColor}"/>
