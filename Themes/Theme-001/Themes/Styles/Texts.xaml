@@ -1,6 +1,31 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Theme_001.Elements">
-    
+    >
+
+    <FontFamily x:Key="MainFont">Segoe UI</FontFamily>
+    <FontFamily x:Key="SecondaryFont">OpenSans</FontFamily>
+
+    <Style x:Key="Title" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{StaticResource SecondaryColor}"/>
+        <Setter Property="FontSize" Value="24"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+    </Style>
+
+    <Style x:Key="SubTitle" TargetType="TextBlock" BasedOn="{StaticResource Title}">
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+    </Style>
+
+    <Style x:Key="MainText" TargetType="TextBlock"/>
+
+    <Style x:Key="MainLabel" TargetType="TextBlock" BasedOn="{StaticResource MainText}"/>
+
+    <Style x:Key="MainDescription" TargetType="TextBlock" BasedOn="{StaticResource MainLabel}"/>
+
+    <Style x:Key="NoteText" TargetType="TextBlock" BasedOn="{StaticResource MainText}"/>
+
+
 </ResourceDictionary>

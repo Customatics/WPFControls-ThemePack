@@ -78,13 +78,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controls\" />
+    <Folder Include="Fonts\" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Themes\Styles\Buttons.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Styles\Resource.Themes.Common.xaml">
-      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Themes\Styles\Window.xaml">
