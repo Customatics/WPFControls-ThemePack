@@ -1,9 +1,10 @@
-﻿<Window x:Class="ThemeWindow.Windows.MainWindow"
+﻿<base:BaseWindow x:Class="ThemeWindow.Windows.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="clr-namespace:ThemeWindow.ViewModel"
+        xmlns:base="clr-namespace:ThemePack.Common.Base;assembly=ThemePack.Common"
         mc:Ignorable="d" d:DataContext="{d:DesignInstance vm:MainWindowViewModel}"
         Title="Theme preview" d:DesignWidth="800" d:DesignHeight="600" SizeToContent="WidthAndHeight">
     <Grid Margin="10" SnapsToDevicePixels="True" UseLayoutRounding="True">
@@ -34,11 +35,11 @@
                     <Style TargetType="{x:Type Ellipse}">
                         <Setter Property="Width" Value="45"/>
                         <Setter Property="Height" Value="45"/>
-                        <!--<Setter Property="Stroke" Value="#eeeeee"/>-->
+                        <Setter Property="Stroke" Value="#ffffff"/>
                         <Setter Property="Fill" Value="#ffffff"/>
                         <Setter Property="Effect">
                             <Setter.Value>
-                                <DropShadowEffect BlurRadius="6" Color="{Binding RelativeSource={RelativeSource Self}, Path=Fill, Mode=OneWay}" Opacity="0.25" Direction="-90" />
+                                <DropShadowEffect BlurRadius="6" Color="{Binding RelativeSource={RelativeSource Self}, Path=Fill, Mode=OneWay}" Opacity="0.1" Direction="-90" />
                             </Setter.Value>
                         </Setter>
                     </Style>
@@ -59,28 +60,75 @@
                                 <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition Width="10"/>
                                 <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Ellipse Grid.Column="0" Fill="{DynamicResource PrimaryColor}"/>
+                            <Ellipse Grid.Column="2" Fill="{DynamicResource SecondaryColor}"/>
+                            <Ellipse Grid.Column="4" Fill="{DynamicResource TintColor}"/>
+                            <Ellipse Grid.Column="6" Fill="{DynamicResource AccentedColor}"/>
+
+                            <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center">Primary</TextBlock>
+                            <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center">Secondary</TextBlock>
+                            <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center">Tint</TextBlock>
+                            <TextBlock Grid.Row="2" Grid.Column="6" HorizontalAlignment="Center">Accented</TextBlock>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Interaction colors" Margin="10">
+                        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition Width="10"/>
                                 <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition Width="10"/>
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
-                            <Ellipse Grid.Column="0" Fill="{DynamicResource PrimaryColor}"/>
-                            <Ellipse Grid.Column="2" Fill="{DynamicResource SecondaryColor}"/>
-                            <Ellipse Grid.Column="4" Fill="{DynamicResource AccentedColor}"/>
 
-                            <Ellipse Grid.Column="6" Fill="{DynamicResource ActiveColor}" />
-                            <Ellipse Grid.Column="8" Fill="{DynamicResource HoverColor}" />
-                            <Ellipse Grid.Column="10" Fill="{DynamicResource PressColor}" />
+                            <Ellipse Grid.Column="0" Fill="{DynamicResource ActiveColor}" />
+                            <Ellipse Grid.Column="2" Fill="{DynamicResource HoverColor}" />
+                            <Ellipse Grid.Column="4" Fill="{DynamicResource PressColor}" />
 
-                            <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center">Primary</TextBlock>
-                            <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center">Secondary</TextBlock>
-                            <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center">Accented</TextBlock>
-
-                            <TextBlock Grid.Row="2" Grid.Column="6" HorizontalAlignment="Center">Active</TextBlock>
-                            <TextBlock Grid.Row="2" Grid.Column="8" HorizontalAlignment="Center">Hover</TextBlock>
-                            <TextBlock Grid.Row="2" Grid.Column="10" HorizontalAlignment="Center">Pressed</TextBlock>
+                            <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center">Active</TextBlock>
+                            <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center">Hover</TextBlock>
+                            <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center">Pressed</TextBlock>
                         </Grid>
                     </GroupBox>
+                    <GroupBox Header="Marker colors" Margin="10">
+                        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Ellipse Grid.Column="0" Fill="{DynamicResource NoteColor}"/>
+                            <Ellipse Grid.Column="2" Fill="{DynamicResource SuccessColor}"/>
+                            <Ellipse Grid.Column="4" Fill="{DynamicResource WarningColor}"/>
+                            <Ellipse Grid.Column="6" Fill="{DynamicResource ErrorColor}" />
+
+
+                            <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center">Note</TextBlock>
+                            <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center">Success</TextBlock>
+                            <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center">Warning</TextBlock>
+                            <TextBlock Grid.Row="2" Grid.Column="6" HorizontalAlignment="Center">Error</TextBlock>
+                        </Grid>
+                    </GroupBox>
+
                 </WrapPanel>
             </TabItem>
             <TabItem Header="Labels and texts">
@@ -160,4 +208,5 @@
         </TabControl>
 
     </Grid>
-</Window>
+</base:BaseWindow>
+

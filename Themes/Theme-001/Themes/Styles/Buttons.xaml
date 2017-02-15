@@ -93,10 +93,10 @@
     <Style x:Key="Button.Borderless" TargetType="{x:Type Button}" BasedOn="{StaticResource Button.Ghost}">
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="FontWeight" Value="DemiBold"/>
-        <Setter Property="TextBlock.TextDecorations" Value="Underline"/>
         <Style.Triggers>
             <Trigger Property="IsDefault" Value="true">
-                <Setter Property="Foreground" Value="{DynamicResource ActiveColor}"/>
+                <Setter Property="Foreground" Value="{DynamicResource AccentedColor}"/>
+                <Setter Property="TextBlock.TextDecorations" Value="Underline"/>
             </Trigger>
             <Trigger Property="IsEnabled" Value="False">
                 <Setter Property="Opacity" Value="{DynamicResource DisabledOpacity}"/>

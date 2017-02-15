@@ -6,7 +6,8 @@
     <Thickness x:Key="SpaceOuter" Left="5" Top="4" Right="5" Bottom="4" />
 
     <sys:Double x:Key="ButtonMinWidth">60</sys:Double>
-    
+
     <sys:Double x:Key="DisabledOpacity">0.25</sys:Double>
-    
+    <sys:Double x:Key="TintOpacity">0.65</sys:Double>
+
 </ResourceDictionary>

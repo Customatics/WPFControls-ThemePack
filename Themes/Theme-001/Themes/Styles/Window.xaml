@@ -360,7 +360,7 @@
 
     <!-- ISSUE WITH XP : http://connect.microsoft.com/VisualStudio/feedback/details/369500/problem-with-the-allowtransparency-and-popup-controls-in-wpf -->
     <!-- Hotfix : http://support.microsoft.com/kb/943326 -->
-    <Style x:Key="Window.NormalStyle" TargetType="{x:Type base:BaseWindow}">
+    <Style TargetType="{x:Type base:BaseWindow}">
         <Setter Property="WindowStyle" Value="None" />
         <Setter Property="AllowsTransparency" Value="True" />
         <Setter Property="ResizeMode" Value="CanResize" />

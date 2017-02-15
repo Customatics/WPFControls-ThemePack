@@ -3,21 +3,36 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     >
 
+    <!-- color definitions -->
     <Color x:Key="Primary">#FFFFFF</Color>
     <Color x:Key="Secondary">#50514F</Color>
-    <Color x:Key="Accented">#0984a3</Color>
+    <Color x:Key="Tint">#50514F</Color>
+
+    <Color x:Key="Accented">#ffc44f</Color>
     
     <Color x:Key="Active">#49C6E5</Color>
     <Color x:Key="Hover">#07b9e5</Color>
     <Color x:Key="Press">#1398c4</Color>
+
+    <Color x:Key="Note">#c2def2</Color>
+    <Color x:Key="Success">#aced95</Color>
+    <Color x:Key="Warning">#eae96c</Color>
+    <Color x:Key="Error">#ea6c6c</Color>
+    <!-- end: color definitions-->
+
     
-
-
     <SolidColorBrush x:Key="PrimaryColor" Color="{StaticResource Primary}"/>
     <SolidColorBrush x:Key="SecondaryColor" Color="{StaticResource Secondary}"/>
+    <SolidColorBrush x:Key="TintColor" Color="{StaticResource Tint}" Opacity="{StaticResource TintOpacity}"/>
     <SolidColorBrush x:Key="AccentedColor" Color="{StaticResource Accented}"/>
+    
     <SolidColorBrush x:Key="ActiveColor" Color="{StaticResource Active}"/>
     <SolidColorBrush x:Key="HoverColor" Color="{StaticResource Hover}"/>
     <SolidColorBrush x:Key="PressColor" Color="{StaticResource Press}"/>
+
+    <SolidColorBrush x:Key="NoteColor" Color="{StaticResource Note}"/>
+    <SolidColorBrush x:Key="SuccessColor" Color="{StaticResource Success}"/>
+    <SolidColorBrush x:Key="WarningColor" Color="{StaticResource Warning}"/>
+    <SolidColorBrush x:Key="ErrorColor" Color="{StaticResource Error}"/>
 
 </ResourceDictionary>
