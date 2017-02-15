@@ -3,11 +3,20 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     >
 
-    <SolidColorBrush x:Key="PrimaryColor" Color="#FFFFFFFF"/>
-    <SolidColorBrush x:Key="SecondaryColor" Color="#FF50514F"/>
+    <Color x:Key="Primary">#FFFFFF</Color>
+    <Color x:Key="Secondary">#50514F</Color>
+    <Color x:Key="Accented">#50514F</Color>
+    <Color x:Key="Active">#49C6E5</Color>
+    <Color x:Key="Hover">#54DEFD</Color>
+    <Color x:Key="Press">#568EA3</Color>
+    
 
-    <SolidColorBrush x:Key="ActiveColor" Color="#FF49C6E5"/>
-    <SolidColorBrush x:Key="HoverColor" Color="#FF54DEFD"/>
-    <SolidColorBrush x:Key="PressColor" Color="#FF568EA3"/>
+
+    <SolidColorBrush x:Key="PrimaryColor" Color="{StaticResource Primary}"/>
+    <SolidColorBrush x:Key="SecondaryColor" Color="{StaticResource Secondary}"/>
+    <SolidColorBrush x:Key="AccentedColor" Color="{StaticResource Accented}"/>
+    <SolidColorBrush x:Key="ActiveColor" Color="{StaticResource Active}"/>
+    <SolidColorBrush x:Key="HoverColor" Color="{StaticResource Hover}"/>
+    <SolidColorBrush x:Key="PressColor" Color="{StaticResource Press}"/>
 
 </ResourceDictionary>

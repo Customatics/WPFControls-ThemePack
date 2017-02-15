@@ -4,10 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ThemeWindow"
-        xmlns:viewModel="clr-namespace:ThemeWindow.ViewModel"
         mc:Ignorable="d" d:DataContext="{d:DesignInstance viewModel:MainWindowVM}"
-        Title="Theme preview" Height="550" Width="600">
-    <Grid Margin="10">
+        Title="Theme preview" d:DesignWidth="1400" d:DesignHeight="600" SizeToContent="WidthAndHeight">
+    <Grid Margin="10" SnapsToDevicePixels="True" UseLayoutRounding="True">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="10"/>
@@ -33,59 +32,7 @@
             </TabItem>
             <TabItem Header="Buttons">
                 <WrapPanel>
-                <GroupBox Header="Large size" Margin="10">
-                    <Grid HorizontalAlignment="Left" VerticalAlignment="Top">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="10"/>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="10"/>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="10"/>
-                            <RowDefinition Height="auto"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="10"/>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="10"/>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="10"/>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="10"/>
-                            <ColumnDefinition Width="Auto"/>
-                        </Grid.ColumnDefinitions>
-
-                        <TextBlock Grid.Row="2">Solid</TextBlock>
-                        <TextBlock Grid.Row="4">Ghost</TextBlock>
-                        <TextBlock Grid.Row="6">Borderless</TextBlock>
-
-                        <TextBlock Grid.Column="2">Enabled</TextBlock>
-                        <TextBlock Grid.Column="4">Hover/Selected</TextBlock>
-                        <TextBlock Grid.Column="6">Pressed</TextBlock>
-                        <TextBlock Grid.Column="8">Disabled</TextBlock>
-
-                        <!-- solid button-->
-                        <Button Grid.Column="2" Grid.Row="2" Content="Button" />
-                        <Button Grid.Column="4" Grid.Row="2" Content="Button"/>
-                        <Button Grid.Column="6" Grid.Row="2" Content="Button"/>
-                        <Button Grid.Column="8" Grid.Row="2" Content="Button"/>
-
-                        <!-- ghost button-->
-                        <Button Grid.Column="2" Grid.Row="4" Content="Button" />
-                        <Button Grid.Column="4" Grid.Row="4" Content="Button"/>
-                        <Button Grid.Column="6" Grid.Row="4" Content="Button"/>
-                        <Button Grid.Column="8" Grid.Row="4" Content="Button"/>
-
-                        <!-- borderless button-->
-                        <Button Grid.Column="2" Grid.Row="6" Content="Button" />
-                        <Button Grid.Column="4" Grid.Row="6" Content="Button"/>
-                        <Button Grid.Column="6" Grid.Row="6" Content="Button"/>
-                        <Button Grid.Column="8" Grid.Row="6" Content="Button"/>
-
-                    </Grid>
-                </GroupBox>
-                    <GroupBox Header="Medium size" Margin="10">
+                    <GroupBox Header="Large size" Margin="10">
                         <Grid HorizontalAlignment="Left" VerticalAlignment="Top">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="auto"/>
@@ -106,56 +53,6 @@
                                 <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition Width="10"/>
                                 <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
-
-                            <TextBlock Grid.Row="2">Solid</TextBlock>
-                            <TextBlock Grid.Row="4">Ghost</TextBlock>
-                            <TextBlock Grid.Row="6">Borderless</TextBlock>
-
-                            <TextBlock Grid.Column="2">Enabled</TextBlock>
-                            <TextBlock Grid.Column="4">Hover/Selected</TextBlock>
-                            <TextBlock Grid.Column="6">Pressed</TextBlock>
-                            <TextBlock Grid.Column="8">Disabled</TextBlock>
-
-                            <!-- solid button-->
-                            <Button Grid.Column="2" Grid.Row="2" Content="Button" />
-                            <Button Grid.Column="4" Grid.Row="2" Content="Button"/>
-                            <Button Grid.Column="6" Grid.Row="2" Content="Button"/>
-                            <Button Grid.Column="8" Grid.Row="2" Content="Button"/>
-
-                            <!-- ghost button-->
-                            <Button Grid.Column="2" Grid.Row="4" Content="Button" />
-                            <Button Grid.Column="4" Grid.Row="4" Content="Button"/>
-                            <Button Grid.Column="6" Grid.Row="4" Content="Button"/>
-                            <Button Grid.Column="8" Grid.Row="4" Content="Button"/>
-
-                            <!-- borderless button-->
-                            <Button Grid.Column="2" Grid.Row="6" Content="Button" />
-                            <Button Grid.Column="4" Grid.Row="6" Content="Button"/>
-                            <Button Grid.Column="6" Grid.Row="6" Content="Button"/>
-                            <Button Grid.Column="8" Grid.Row="6" Content="Button"/>
-
-                        </Grid>
-                    </GroupBox>
-                    <GroupBox Header="Normal size" Margin="10">
-                        <Grid HorizontalAlignment="Left" VerticalAlignment="Top">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="auto"/>
-                                <RowDefinition Height="10"/>
-                                <RowDefinition Height="auto"/>
-                                <RowDefinition Height="10"/>
-                                <RowDefinition Height="auto"/>
-                                <RowDefinition Height="10"/>
-                                <RowDefinition Height="auto"/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition Width="10"/>
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
@@ -164,80 +61,32 @@
                             <TextBlock Grid.Row="4">Ghost</TextBlock>
                             <TextBlock Grid.Row="6">Borderless</TextBlock>
 
-                            <TextBlock Grid.Column="2">Enabled</TextBlock>
-                            <TextBlock Grid.Column="4">Hover/Selected</TextBlock>
-                            <TextBlock Grid.Column="6">Pressed</TextBlock>
-                            <TextBlock Grid.Column="8">Disabled</TextBlock>
+                            <TextBlock Grid.Column="2">IsDefault</TextBlock>
+                            <TextBlock Grid.Column="4">Common</TextBlock>
+                            <TextBlock Grid.Column="6">Hover/Selected</TextBlock>
+                            <TextBlock Grid.Column="8">Pressed</TextBlock>
+                            <TextBlock Grid.Column="10">Disabled</TextBlock>
 
                             <!-- solid button-->
-                            <Button Grid.Column="2" Grid.Row="2" Content="Button" />
-                            <Button Grid.Column="4" Grid.Row="2" Content="Button"/>
-                            <Button Grid.Column="6" Grid.Row="2" Content="Button"/>
-                            <Button Grid.Column="8" Grid.Row="2" Content="Button"/>
+                            <Button Style="{StaticResource Button.Solid}" Grid.Column="2" Grid.Row="2" Content="Button" IsDefault="True" />
+                            <Button Style="{StaticResource Button.Solid}" Grid.Column="4" Grid.Row="2" Content="Button" />
+                            <Button Style="{StaticResource Button.Solid}" Grid.Column="6" Grid.Row="2" Content="Button" />
+                            <Button Style="{StaticResource Button.Solid}" Grid.Column="8" Grid.Row="2" Content="Button" />
+                            <Button Style="{StaticResource Button.Solid}" Grid.Column="10" Grid.Row="2" Content="Button" IsEnabled="False" />
 
                             <!-- ghost button-->
-                            <Button Grid.Column="2" Grid.Row="4" Content="Button" />
-                            <Button Grid.Column="4" Grid.Row="4" Content="Button"/>
-                            <Button Grid.Column="6" Grid.Row="4" Content="Button"/>
-                            <Button Grid.Column="8" Grid.Row="4" Content="Button"/>
+                            <Button Style="{StaticResource Button.Ghost}" Grid.Column="2" Grid.Row="4" Content="Button" IsDefault="True" />
+                            <Button Style="{StaticResource Button.Ghost}" Grid.Column="4" Grid.Row="4" Content="Button" />
+                            <Button Style="{StaticResource Button.Ghost}" Grid.Column="6" Grid.Row="4" Content="Button" />
+                            <Button Style="{StaticResource Button.Ghost}" Grid.Column="8" Grid.Row="4" Content="Button" />
+                            <Button Style="{StaticResource Button.Ghost}" Grid.Column="10" Grid.Row="4" Content="Button" IsEnabled="False" />
 
                             <!-- borderless button-->
-                            <Button Grid.Column="2" Grid.Row="6" Content="Button" />
-                            <Button Grid.Column="4" Grid.Row="6" Content="Button"/>
-                            <Button Grid.Column="6" Grid.Row="6" Content="Button"/>
-                            <Button Grid.Column="8" Grid.Row="6" Content="Button"/>
-
-                        </Grid>
-                    </GroupBox>
-                    <GroupBox Header="Small size" Margin="10">
-                        <Grid HorizontalAlignment="Left" VerticalAlignment="Top">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="auto"/>
-                                <RowDefinition Height="10"/>
-                                <RowDefinition Height="auto"/>
-                                <RowDefinition Height="10"/>
-                                <RowDefinition Height="auto"/>
-                                <RowDefinition Height="10"/>
-                                <RowDefinition Height="auto"/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
-
-                            <TextBlock Grid.Row="2">Solid</TextBlock>
-                            <TextBlock Grid.Row="4">Ghost</TextBlock>
-                            <TextBlock Grid.Row="6">Borderless</TextBlock>
-
-                            <TextBlock Grid.Column="2">Enabled</TextBlock>
-                            <TextBlock Grid.Column="4">Hover/Selected</TextBlock>
-                            <TextBlock Grid.Column="6">Pressed</TextBlock>
-                            <TextBlock Grid.Column="8">Disabled</TextBlock>
-
-                            <!-- solid button-->
-                            <Button Grid.Column="2" Grid.Row="2" Content="Button" />
-                            <Button Grid.Column="4" Grid.Row="2" Content="Button"/>
-                            <Button Grid.Column="6" Grid.Row="2" Content="Button"/>
-                            <Button Grid.Column="8" Grid.Row="2" Content="Button"/>
-
-                            <!-- ghost button-->
-                            <Button Grid.Column="2" Grid.Row="4" Content="Button" />
-                            <Button Grid.Column="4" Grid.Row="4" Content="Button"/>
-                            <Button Grid.Column="6" Grid.Row="4" Content="Button"/>
-                            <Button Grid.Column="8" Grid.Row="4" Content="Button"/>
-
-                            <!-- borderless button-->
-                            <Button Grid.Column="2" Grid.Row="6" Content="Button" />
-                            <Button Grid.Column="4" Grid.Row="6" Content="Button"/>
-                            <Button Grid.Column="6" Grid.Row="6" Content="Button"/>
-                            <Button Grid.Column="8" Grid.Row="6" Content="Button"/>
+                            <Button Style="{StaticResource Button.Borderless}" Grid.Column="2" Grid.Row="6" Content="Button" IsDefault="True" />
+                            <Button Style="{StaticResource Button.Borderless}" Grid.Column="4" Grid.Row="6" Content="Button" />
+                            <Button Style="{StaticResource Button.Borderless}" Grid.Column="6" Grid.Row="6" Content="Button" />
+                            <Button Style="{StaticResource Button.Borderless}" Grid.Column="8" Grid.Row="6" Content="Button" />
+                            <Button Style="{StaticResource Button.Borderless}" Grid.Column="10" Grid.Row="6" Content="Button" IsEnabled="False" />
 
                         </Grid>
                     </GroupBox>
