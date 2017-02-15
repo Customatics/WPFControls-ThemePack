@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="clr-namespace:ThemeWindow.ViewModel"
-        mc:Ignorable="d" d:DataContext="{d:DesignInstance vm:MainWindowVM}"
+        mc:Ignorable="d" d:DataContext="{d:DesignInstance vm:MainWindowViewModel}"
         Title="Theme preview" d:DesignWidth="800" d:DesignHeight="600" SizeToContent="WidthAndHeight">
     <Grid Margin="10" SnapsToDevicePixels="True" UseLayoutRounding="True">
         <Grid.RowDefinitions>

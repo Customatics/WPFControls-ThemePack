@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreThemeWindow", "ThemeWindow\CoreThemeWindow.csproj", "{B9911D48-7A60-4D44-B71F-2BA8C9521AE9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3E563956-7FD7-4320-B358-737FBEEFB03C} = {3E563956-7FD7-4320-B358-737FBEEFB03C}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Theme-001", "Theme-001\Theme-001.csproj", "{3E563956-7FD7-4320-B358-737FBEEFB03C}"
 EndProject
