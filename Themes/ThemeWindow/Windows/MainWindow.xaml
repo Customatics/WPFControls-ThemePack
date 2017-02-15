@@ -29,6 +29,60 @@
                   SelectedItem="{Binding SelecteColorScheme}"/>
 
         <TabControl Grid.Row="2" Grid.ColumnSpan="3" Width="Auto" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <TabItem Header="Colors">
+                <TabItem.Resources>
+                    <Style TargetType="{x:Type Ellipse}">
+                        <Setter Property="Width" Value="45"/>
+                        <Setter Property="Height" Value="45"/>
+                        <!--<Setter Property="Stroke" Value="#eeeeee"/>-->
+                        <Setter Property="Fill" Value="#ffffff"/>
+                        <Setter Property="Effect">
+                            <Setter.Value>
+                                <DropShadowEffect BlurRadius="6" Color="{Binding RelativeSource={RelativeSource Self}, Path=Fill, Mode=OneWay}" Opacity="0.25" Direction="-90" />
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </TabItem.Resources>
+                <WrapPanel>
+                    <GroupBox Header="Main colors" Margin="10">
+                        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Ellipse Grid.Column="0" Fill="{DynamicResource PrimaryColor}"/>
+                            <Ellipse Grid.Column="2" Fill="{DynamicResource SecondaryColor}"/>
+                            <Ellipse Grid.Column="4" Fill="{DynamicResource AccentedColor}"/>
+
+                            <Ellipse Grid.Column="6" Fill="{DynamicResource ActiveColor}" />
+                            <Ellipse Grid.Column="8" Fill="{DynamicResource HoverColor}" />
+                            <Ellipse Grid.Column="10" Fill="{DynamicResource PressColor}" />
+
+                            <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center">Primary</TextBlock>
+                            <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center">Secondary</TextBlock>
+                            <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center">Accented</TextBlock>
+
+                            <TextBlock Grid.Row="2" Grid.Column="6" HorizontalAlignment="Center">Active</TextBlock>
+                            <TextBlock Grid.Row="2" Grid.Column="8" HorizontalAlignment="Center">Hover</TextBlock>
+                            <TextBlock Grid.Row="2" Grid.Column="10" HorizontalAlignment="Center">Pressed</TextBlock>
+                        </Grid>
+                    </GroupBox>
+                </WrapPanel>
+            </TabItem>
             <TabItem Header="Labels and texts">
                 <Grid />
             </TabItem>
@@ -70,25 +124,25 @@
                             <TextBlock Grid.Column="10">Disabled</TextBlock>
 
                             <!-- solid button-->
-                            <Button Grid.Column="2" Grid.Row="2" Content="Button" IsDefault="True" />
-                            <Button Grid.Column="4" Grid.Row="2" Content="Button" />
-                            <Button Grid.Column="6" Grid.Row="2" Content="Button" />
-                            <Button Grid.Column="8" Grid.Row="2" Content="Button" />
-                            <Button Grid.Column="10" Grid.Row="2" Content="Button" IsEnabled="False" />
+                            <Button Style="{DynamicResource Button.Solid}" Grid.Column="2" Grid.Row="2" Content="Button" IsDefault="True" />
+                            <Button Style="{DynamicResource Button.Solid}" Grid.Column="4" Grid.Row="2" Content="Button" />
+                            <Button Style="{DynamicResource Button.Solid}" Grid.Column="6" Grid.Row="2" Content="Button" />
+                            <Button Style="{DynamicResource Button.Solid}" Grid.Column="8" Grid.Row="2" Content="Button" />
+                            <Button Style="{DynamicResource Button.Solid}" Grid.Column="10" Grid.Row="2" Content="Button" IsEnabled="False" />
 
                             <!-- ghost button-->
-                            <Button Style="{StaticResource Button.Ghost}" Grid.Column="2" Grid.Row="4" Content="Button" IsDefault="True" />
-                            <Button Style="{StaticResource Button.Ghost}" Grid.Column="4" Grid.Row="4" Content="Button" />
-                            <Button Style="{StaticResource Button.Ghost}" Grid.Column="6" Grid.Row="4" Content="Button" />
-                            <Button Style="{StaticResource Button.Ghost}" Grid.Column="8" Grid.Row="4" Content="Button" />
-                            <Button Style="{StaticResource Button.Ghost}" Grid.Column="10" Grid.Row="4" Content="Button" IsEnabled="False" />
+                            <Button Style="{DynamicResource Button.Ghost}" Grid.Column="2" Grid.Row="4" Content="Button" IsDefault="True" />
+                            <Button Style="{DynamicResource Button.Ghost}" Grid.Column="4" Grid.Row="4" Content="Button" />
+                            <Button Style="{DynamicResource Button.Ghost}" Grid.Column="6" Grid.Row="4" Content="Button" />
+                            <Button Style="{DynamicResource Button.Ghost}" Grid.Column="8" Grid.Row="4" Content="Button" />
+                            <Button Style="{DynamicResource Button.Ghost}" Grid.Column="10" Grid.Row="4" Content="Button" IsEnabled="False" />
 
                             <!-- borderless button-->
-                            <Button Style="{StaticResource Button.Borderless}" Grid.Column="2" Grid.Row="6" Content="Button" IsDefault="True" />
-                            <Button Style="{StaticResource Button.Borderless}" Grid.Column="4" Grid.Row="6" Content="Button" />
-                            <Button Style="{StaticResource Button.Borderless}" Grid.Column="6" Grid.Row="6" Content="Button" />
-                            <Button Style="{StaticResource Button.Borderless}" Grid.Column="8" Grid.Row="6" Content="Button" />
-                            <Button Style="{StaticResource Button.Borderless}" Grid.Column="10" Grid.Row="6" Content="Button" IsEnabled="False" />
+                            <Button Style="{DynamicResource Button.Borderless}" Grid.Column="2" Grid.Row="6" Content="Button" IsDefault="True" />
+                            <Button Style="{DynamicResource Button.Borderless}" Grid.Column="4" Grid.Row="6" Content="Button" />
+                            <Button Style="{DynamicResource Button.Borderless}" Grid.Column="6" Grid.Row="6" Content="Button" />
+                            <Button Style="{DynamicResource Button.Borderless}" Grid.Column="8" Grid.Row="6" Content="Button" />
+                            <Button Style="{DynamicResource Button.Borderless}" Grid.Column="10" Grid.Row="6" Content="Button" IsEnabled="False" />
 
                         </Grid>
                     </GroupBox>
