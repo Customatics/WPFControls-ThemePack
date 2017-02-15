@@ -2,5 +2,21 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Theme_001">
+
+    <Color x:Key="Primary">#bbbbbb</Color>
+    <Color x:Key="Secondary">#ffddff</Color>
+    <Color x:Key="Accented">#50514F</Color>
+    <Color x:Key="Active">#1E2122</Color>
+    <Color x:Key="Hover">#04272F</Color>
+    <Color x:Key="Press">#023C52</Color>
+
+
+
+    <SolidColorBrush x:Key="PrimaryColor" Color="{StaticResource Primary}"/>
+    <SolidColorBrush x:Key="SecondaryColor" Color="{StaticResource Secondary}"/>
+    <SolidColorBrush x:Key="AccentedColor" Color="{StaticResource Accented}"/>
+    <SolidColorBrush x:Key="ActiveColor" Color="{StaticResource Active}"/>
+    <SolidColorBrush x:Key="HoverColor" Color="{StaticResource Hover}"/>
+    <SolidColorBrush x:Key="PressColor" Color="{StaticResource Press}"/>
     
 </ResourceDictionary>

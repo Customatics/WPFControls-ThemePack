@@ -11,6 +11,13 @@ namespace ThemePack.Common.Constants
     /// </summary>
     public static class ThemeNameConstants
     {
+        public const string ThemeStyle = "themes\\styles";
 
+        public const string ColorScheme = "themes\\colorschemes";
+
+        /// <summary>
+        /// Numerics values
+        /// </summary>
+        public const string Values = "themes\\values";
     }
 }

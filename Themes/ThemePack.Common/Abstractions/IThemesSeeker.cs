@@ -5,6 +5,6 @@ namespace ThemePack.Common.Abstractions
 {
     public interface IThemesSeeker
     {
-        IList<ThemeM> GetThemes();
+        IList<ThemeM> GetThemes(string folder);
     }
 }

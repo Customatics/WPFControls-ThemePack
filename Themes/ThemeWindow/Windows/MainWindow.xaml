@@ -19,12 +19,14 @@
         </Grid.ColumnDefinitions>
 
 
-        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" >
-            <ComboBoxItem Content="Theme - 001" HorizontalAlignment="Left" Width="118"/>
-        </ComboBox>
-        <ComboBox Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120">
-            <ComboBoxItem Content="Default color" HorizontalAlignment="Left" Width="118"/>
-        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" 
+                  ItemsSource="{Binding Themes}"
+                  DisplayMemberPath="Name"
+                  SelectedItem="{Binding SelectedTheme}"/>
+        <ComboBox Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120"
+                  ItemsSource="{Binding ColorSchemes}"
+                  DisplayMemberPath="Name"
+                  SelectedItem="{Binding SelecteColorScheme}"/>
 
         <TabControl Grid.Row="2" Grid.ColumnSpan="3" Width="Auto" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
             <TabItem Header="Colors">

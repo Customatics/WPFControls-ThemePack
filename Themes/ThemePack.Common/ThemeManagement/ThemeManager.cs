@@ -25,27 +25,52 @@ namespace ThemePack.Common.ThemeManagement
         /// <param name="app"><see cref="Application"/></param>
         /// <param name="themes">new <see cref="ColorScheme"/></param>
         /// <param name="colorSchemes">new <see cref="ControlStyleM"/></param>
-        public static  void ChangeApplicationTheme(Application app, IList<ControlStyleM> themes, IList<ColorSchemeM> colorSchemes)
+        public static void ChangeApplicationTheme(Application app, IList<ControlStyleM> styles, IList<ColorSchemeM> colorSchemes)
         {
-            app.Resources.Clear();
-            app.Resources.BeginInit();
+            if (app == null) { return; }
+            if (styles == null) { return; }
+            if (colorSchemes == null) { return; }
 
-            foreach (var theme in themes)
+            app.Resources.MergedDictionaries.Clear();
+            //app.Resources.BeginInit();
+
+            foreach (var style in styles)
             {
-                foreach (DictionaryEntry themeResource in theme.Resources)
-                {
-                    app.Resources.Add(themeResource.Key, themeResource.Value);
-                }
+                app.Resources.MergedDictionaries.Add(style.Resources);
             }
-            foreach (var theme in colorSchemes)
+            foreach (var scheme in colorSchemes)
             {
-                foreach (DictionaryEntry themeResource in theme.Resources)
-                {
-                    app.Resources.Add(themeResource.Key, themeResource.Value);
-                }
+                app.Resources.MergedDictionaries.Add(scheme.Resources);
             }
 
-            app.Resources.EndInit();
+            //app.Resources.BeginInit();
+
+            //foreach (var controlStyleM in styles)
+            //{
+            //    foreach (DictionaryEntry resource in controlStyleM.Resources)
+            //    {
+            //        if (app.Resources.Contains(resource.Key))
+            //        {
+            //            app.Resources.Remove(resource.Key);
+            //        }
+            //        app.Resources.Add(resource.Key, resource.Value);
+            //    }
+            //}
+            //foreach (var controlStyleM in colorSchemes)
+            //{
+            //    foreach (DictionaryEntry resource in controlStyleM.Resources)
+            //    {
+            //        if (app.Resources.Contains(resource.Key))
+            //        {
+            //            app.Resources.Remove(resource.Key);
+            //        }
+            //        app.Resources.Add(resource.Key, resource.Value);
+            //    }
+            //}
+            
+            //app.Resources.EndInit();
+
+            //app.Resources.EndInit();
         }
     }
 }
