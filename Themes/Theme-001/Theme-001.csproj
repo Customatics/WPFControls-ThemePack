@@ -71,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controls\" />
+    <Folder Include="Fonts\" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Themes\Styles\Buttons.xaml">

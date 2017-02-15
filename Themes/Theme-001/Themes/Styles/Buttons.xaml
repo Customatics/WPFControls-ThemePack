@@ -38,7 +38,7 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsDefault" Value="true">
-                            <Setter Property="BorderBrush" Value="{DynamicResource AccentedColor}"/>
+                            <Setter Property="BorderBrush" Value="{DynamicResource DefaultedColor}"/>
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="true">
                             <Setter Property="Background" Value="{DynamicResource HoverColor}"/>
@@ -64,8 +64,8 @@
         <Setter Property="BorderBrush" Value="{DynamicResource ActiveColor}"/>
         <Style.Triggers>
             <Trigger Property="IsDefault" Value="true">
-                <Setter Property="BorderBrush" Value="{DynamicResource AccentedColor}"/>
-                <Setter Property="Foreground" Value="{DynamicResource AccentedColor}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource DefaultedColor}"/>
+                <Setter Property="Foreground" Value="{DynamicResource DefaultedColor}"/>
                 <Setter Property="Background" Value="{x:Null}"/>
             </Trigger>
             <Trigger Property="IsEnabled" Value="False">
@@ -95,7 +95,7 @@
         <Setter Property="FontWeight" Value="DemiBold"/>
         <Style.Triggers>
             <Trigger Property="IsDefault" Value="true">
-                <Setter Property="Foreground" Value="{DynamicResource AccentedColor}"/>
+                <Setter Property="Foreground" Value="{DynamicResource DefaultedColor}"/>
                 <Setter Property="TextBlock.TextDecorations" Value="Underline"/>
             </Trigger>
             <Trigger Property="IsEnabled" Value="False">

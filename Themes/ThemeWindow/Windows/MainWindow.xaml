@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="clr-namespace:ThemeWindow.ViewModel"
         mc:Ignorable="d" d:DataContext="{d:DesignInstance vm:MainWindowViewModel}"
-        Title="Theme preview" d:DesignWidth="800" d:DesignHeight="600" SizeToContent="WidthAndHeight">
+        Title="Theme preview" Width="900" Height="600"  SizeToContent="Manual">
     <Grid Margin="10" SnapsToDevicePixels="True" UseLayoutRounding="True">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
@@ -45,7 +45,7 @@
                 </TabItem.Resources>
                 <WrapPanel>
                     <GroupBox Header="Main colors" Margin="10">
-                        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
+                        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="auto"/>
                                 <RowDefinition Height="10"/>
@@ -68,17 +68,19 @@
                             <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center">Primary</TextBlock>
                             <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center">Secondary</TextBlock>
                             <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center">Tint</TextBlock>
-                            <TextBlock Grid.Row="2" Grid.Column="6" HorizontalAlignment="Center">Accented</TextBlock>
+                            <TextBlock Grid.Row="2" Grid.Column="6" HorizontalAlignment="Center">Accent</TextBlock>
                         </Grid>
                     </GroupBox>
                     <GroupBox Header="Interaction colors" Margin="10">
-                        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
+                        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="auto"/>
                                 <RowDefinition Height="10"/>
                                 <RowDefinition Height="auto"/>
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="10"/>
                                 <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition Width="10"/>
                                 <ColumnDefinition Width="Auto"/>
@@ -89,24 +91,22 @@
                             <Ellipse Grid.Column="0" Fill="{DynamicResource ActiveColor}" />
                             <Ellipse Grid.Column="2" Fill="{DynamicResource HoverColor}" />
                             <Ellipse Grid.Column="4" Fill="{DynamicResource PressColor}" />
+                            <Ellipse Grid.Column="6" Fill="{DynamicResource DefaultedColor}" />
 
                             <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center">Active</TextBlock>
                             <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center">Hover</TextBlock>
                             <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center">Pressed</TextBlock>
+                            <TextBlock Grid.Row="2" Grid.Column="6" HorizontalAlignment="Center">Defaulted</TextBlock>
                         </Grid>
                     </GroupBox>
                     <GroupBox Header="Marker colors" Margin="10">
-                        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
+                        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="auto"/>
                                 <RowDefinition Height="10"/>
                                 <RowDefinition Height="auto"/>
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="10"/>
                                 <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition Width="10"/>
                                 <ColumnDefinition Width="Auto"/>
@@ -131,7 +131,31 @@
                 </WrapPanel>
             </TabItem>
             <TabItem Header="Labels and texts">
-                <Grid />
+                <Grid >
+                    <GroupBox Header="Headers" Margin="10">
+                        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" Style="{DynamicResource Title}" Text="Title message"/>
+                            <TextBlock Grid.Row="2" Style="{DynamicResource SubTitle}" Text="Subtitle information"/>
+                            <TextBlock Grid.Row="4" Style="{DynamicResource MainText}" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."/>
+                            <TextBlock Grid.Row="6" Style="{DynamicResource LabelText}" Text="Label:"/>
+                            <TextBlock Grid.Row="8" Style="{DynamicResource LabelDescriptionText}" Text="label description"/>
+                            <TextBlock Grid.Row="10" Style="{DynamicResource NoteText}" Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."/>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
             </TabItem>
             <TabItem Header="Buttons">
                 <WrapPanel>
@@ -202,6 +226,9 @@
                 <Grid />
             </TabItem>
             <TabItem Header="Scroll, Progress &amp; Sliders">
+                <Grid />
+            </TabItem>
+            <TabItem Header="Notifications">
                 <Grid />
             </TabItem>
         </TabControl>
