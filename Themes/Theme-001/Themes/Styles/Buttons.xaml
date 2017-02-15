@@ -3,14 +3,14 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <Style x:Key="Button.Solid" TargetType="{x:Type Button}" >
-        <Setter Property="Background" Value="{StaticResource ActiveColor}"/>
-        <Setter Property="Foreground" Value="{StaticResource PrimaryColor}"/>
+        <Setter Property="Background" Value="{DynamicResource ActiveColor}"/>
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryColor}"/>
         <Setter Property="FontSize" Value="14"/>
-        <Setter Property="MinWidth" Value="{StaticResource ButtonMinWidth}"/>
+        <Setter Property="MinWidth" Value="{DynamicResource ButtonMinWidth}"/>
         <Setter Property="BorderThickness" Value="2"/>
-        <Setter Property="BorderBrush" Value="{StaticResource ActiveColor}"/>
-        <Setter Property="Margin" Value="{StaticResource SpaceOuter}"/>
-        <Setter Property="Padding" Value="{StaticResource SpaceInner}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource ActiveColor}"/>
+        <Setter Property="Margin" Value="{DynamicResource SpaceOuter}"/>
+        <Setter Property="Padding" Value="{DynamicResource SpaceInner}"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="Template">
@@ -24,16 +24,17 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsDefault" Value="true">
-                            <Setter Property="BorderBrush" Value="{StaticResource AccentedColor}"/>
+                            <Setter Property="BorderBrush" Value="{DynamicResource AccentedColor}"/>
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="true">
-                            <Setter Property="Background" Value="{StaticResource HoverColor}"/>
+                            <Setter Property="Background" Value="{DynamicResource HoverColor}"/>
                         </Trigger>
                         <Trigger Property="IsPressed" Value="true">
-                            <Setter Property="Background" Value="{StaticResource PressColor}"/>
+                            <Setter Property="Background" Value="{DynamicResource PressColor}"/>
+                            <Setter Property="BorderBrush" Value="{DynamicResource PressColor}"/>
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="False">
-                            <Setter Property="Opacity" Value="{StaticResource DisabledOpacity}"/>
+                            <Setter Property="Opacity" Value="{DynamicResource DisabledOpacity}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -43,29 +44,29 @@
 
     <Style x:Key="Button.Ghost" TargetType="{x:Type Button}" BasedOn="{StaticResource Button.Solid}">
         <Setter Property="Background" Value="{x:Null}"/>
-        <Setter Property="Foreground" Value="{StaticResource ActiveColor}"/>
+        <Setter Property="Foreground" Value="{DynamicResource ActiveColor}"/>
         <Setter Property="FontSize" Value="14"/>
-        <Setter Property="MinWidth" Value="{StaticResource ButtonMinWidth}"/>
-        <Setter Property="BorderBrush" Value="{StaticResource ActiveColor}"/>
+        <Setter Property="MinWidth" Value="{DynamicResource ButtonMinWidth}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource ActiveColor}"/>
         <Style.Triggers>
             <Trigger Property="IsDefault" Value="true">
-                <Setter Property="BorderBrush" Value="{StaticResource AccentedColor}"/>
-                <Setter Property="Foreground" Value="{StaticResource AccentedColor}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource AccentedColor}"/>
+                <Setter Property="Foreground" Value="{DynamicResource AccentedColor}"/>
                 <Setter Property="Background" Value="{x:Null}"/>
             </Trigger>
             <Trigger Property="IsEnabled" Value="False">
-                <Setter Property="Opacity" Value="{StaticResource DisabledOpacity}"/>
+                <Setter Property="Opacity" Value="{DynamicResource DisabledOpacity}"/>
                 <Setter Property="Background" Value="{x:Null}"/>
                 <Setter Property="BorderThickness" Value="2"/>
             </Trigger>
             <Trigger Property="IsMouseOver" Value="true">
-                <Setter Property="BorderBrush" Value="{StaticResource HoverColor}"/>
-                <Setter Property="Foreground" Value="{StaticResource HoverColor}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource HoverColor}"/>
+                <Setter Property="Foreground" Value="{DynamicResource HoverColor}"/>
                 <Setter Property="Background" Value="{x:Null}"/>
             </Trigger>
             <Trigger Property="IsPressed" Value="true">
-                <Setter Property="BorderBrush" Value="{StaticResource PressColor}"/>
-                <Setter Property="Foreground" Value="{StaticResource PressColor}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource PressColor}"/>
+                <Setter Property="Foreground" Value="{DynamicResource PressColor}"/>
                 <Setter Property="Background" Value="{x:Null}"/>
             </Trigger>
         </Style.Triggers>
@@ -79,21 +80,21 @@
             <Trigger Property="IsDefault" Value="true">
                 <Setter Property="Background">
                     <Setter.Value>
-                        <SolidColorBrush Color="{StaticResource Active}" Opacity="0.05"/>
+                        <SolidColorBrush Color="{DynamicResource Active}" Opacity="0.05"/>
                     </Setter.Value>
                 </Setter>
-                <Setter Property="Foreground" Value="{StaticResource ActiveColor}"/>
+                <Setter Property="Foreground" Value="{DynamicResource ActiveColor}"/>
             </Trigger>
             <Trigger Property="IsEnabled" Value="False">
-                <Setter Property="Opacity" Value="{StaticResource DisabledOpacity}"/>
+                <Setter Property="Opacity" Value="{DynamicResource DisabledOpacity}"/>
                 <Setter Property="Background" Value="{x:Null}"/>
                 <Setter Property="BorderThickness" Value="0"/>
             </Trigger>
             <Trigger Property="IsMouseOver" Value="true">
-                <Setter Property="Foreground" Value="{StaticResource HoverColor}"/>
+                <Setter Property="Foreground" Value="{DynamicResource HoverColor}"/>
             </Trigger>
             <Trigger Property="IsPressed" Value="true">
-                <Setter Property="Foreground" Value="{StaticResource PressColor}"/>
+                <Setter Property="Foreground" Value="{DynamicResource PressColor}"/>
                 <Setter Property="Background" Value="{x:Null}"/>
             </Trigger>
             

@@ -5,10 +5,11 @@
 
     <Color x:Key="Primary">#FFFFFF</Color>
     <Color x:Key="Secondary">#50514F</Color>
-    <Color x:Key="Accented">#50514F</Color>
+    <Color x:Key="Accented">#0984a3</Color>
+    
     <Color x:Key="Active">#49C6E5</Color>
-    <Color x:Key="Hover">#54DEFD</Color>
-    <Color x:Key="Press">#568EA3</Color>
+    <Color x:Key="Hover">#07b9e5</Color>
+    <Color x:Key="Press">#1398c4</Color>
     
 
 
