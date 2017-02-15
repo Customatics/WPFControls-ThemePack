@@ -9,6 +9,7 @@
                 <ResourceDictionary Source="/Theme-001;component/Themes/ColorSchemes/Light.xaml"/>
 
                 <ResourceDictionary Source="/Theme-001;component/Themes/Styles/Buttons.xaml"/>
+                <ResourceDictionary Source="/Theme-001;component/Themes/Styles/Window.xaml"/>
                 <ResourceDictionary Source="/Theme-001;component/Themes/Styles/Texts.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
