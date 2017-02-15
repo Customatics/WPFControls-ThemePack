@@ -74,6 +74,7 @@
     <Style x:Key="Button.Borderless" TargetType="{x:Type Button}" BasedOn="{StaticResource Button.Ghost}">
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="TextBlock.TextDecorations" Value="Underline"/>
+        <Setter Property="FontWeight" Value="DemiBold"/>
         <Style.Triggers>
             <Trigger Property="IsDefault" Value="true">
                 <Setter Property="Background">
@@ -82,6 +83,11 @@
                     </Setter.Value>
                 </Setter>
                 <Setter Property="Foreground" Value="{StaticResource ActiveColor}"/>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Opacity" Value="{StaticResource DisabledOpacity}"/>
+                <Setter Property="Background" Value="{x:Null}"/>
+                <Setter Property="BorderThickness" Value="0"/>
             </Trigger>
             <Trigger Property="IsMouseOver" Value="true">
                 <Setter Property="Foreground" Value="{StaticResource HoverColor}"/>
