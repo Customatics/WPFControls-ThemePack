@@ -9,6 +9,7 @@
         <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
         <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled"/>
         <Setter Property="Padding" Value="10"/>
+        <Setter Property="Margin" Value="4"/>
         <Setter Property="Effect">
             <Setter.Value>
                 <DropShadowEffect BlurRadius="6" Color="{DynamicResource Tint}" Opacity="0.1" Direction="-90" ShadowDepth="2" />
@@ -20,19 +21,21 @@
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
                             <RowDefinition Height="*" />
                         </Grid.RowDefinitions>
-                        <Border BorderThickness="1" CornerRadius="0" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" Margin="0 0 0 -1" Padding="{TemplateBinding Padding}">
-                            <TextBlock Foreground="{TemplateBinding Foreground}" FontSize="{TemplateBinding FontSize}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Style="{StaticResource CaptionTextBlockStyle}">
-                                <ContentPresenter ContentSource="Header" RecognizesAccessKey="True" />
-                            </TextBlock>
-                        </Border>
+                        <Border BorderThickness="{TemplateBinding BorderThickness}" Grid.RowSpan="3" CornerRadius="0" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" Margin="0 0 0 -1"/>
 
-                        <Border Grid.Row="1" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="0" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}">
-                            <ScrollViewer HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}" VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}">
-                                <ContentPresenter Margin="{TemplateBinding Padding}" />
-                            </ScrollViewer>
-                        </Border>
+                        <TextBlock Padding="{TemplateBinding Padding}" Foreground="{TemplateBinding Foreground}" FontSize="{TemplateBinding FontSize}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Style="{StaticResource CaptionTextBlockStyle}">
+                            <ContentPresenter ContentSource="Header" RecognizesAccessKey="True" />
+                        </TextBlock>
+
+                        <Rectangle Fill="{TemplateBinding BorderBrush}" />
+
+                        <ScrollViewer Grid.Row="2" HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}" VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}" Padding="{TemplateBinding Padding}">
+                            <ContentPresenter />
+                        </ScrollViewer>
+                        
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
