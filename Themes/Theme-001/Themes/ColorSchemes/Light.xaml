@@ -9,7 +9,7 @@
     <!-- color definitions -->
     <Color x:Key="Primary">#FFFFFF</Color>
     <Color x:Key="Secondary">#50514F</Color>
-    <Color x:Key="Tint">#50514F</Color>
+    <Color x:Key="Tint">#808080</Color>
 
     <Color x:Key="Accent">#ffc44f</Color>
     

@@ -6,26 +6,61 @@
     <FontFamily x:Key="MainFont">Segoe UI</FontFamily>
     <FontFamily x:Key="SecondaryFont">OpenSans</FontFamily>
 
-    <Style x:Key="Title" TargetType="TextBlock">
-        <Setter Property="Foreground" Value="{StaticResource SecondaryColor}"/>
-        <Setter Property="FontSize" Value="24"/>
+    <!--<Style TargetType="TextBlock">
+        <Setter Property="FontSize" Value="{StaticResource BaseTextSize}"/>
+        <Setter Property="Padding" Value="{StaticResource SpaceOuter}"/>
+    </Style>-->
+
+    <!--<Style TargetType="Label">
+        <Setter Property="FontSize" Value="{StaticResource CaptionTextSize}"/>
+        <Setter Property="Padding" Value="{StaticResource SpaceOuter}"/>
+    </Style>-->
+
+    <Style x:Key="HeaderTextBlockStyle" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{DynamicResource SecondaryColor}"/>
+        <Setter Property="FontSize" Value="{StaticResource HeaderTextSize}"/>
         <Setter Property="FontWeight" Value="SemiBold"/>
         <Setter Property="TextWrapping" Value="Wrap"/>
-        <Setter Property="HorizontalAlignment" Value="Stretch"/>
     </Style>
 
-    <Style x:Key="SubTitle" TargetType="TextBlock" BasedOn="{StaticResource Title}">
-        <Setter Property="FontSize" Value="18"/>
-        <Setter Property="FontWeight" Value="Bold"/>
+    <Style x:Key="SubHeaderTextBlockStyle" TargetType="TextBlock" BasedOn="{StaticResource HeaderTextBlockStyle}">
+        <Setter Property="FontSize" Value="{StaticResource SubHeaderTextSize}"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
     </Style>
 
-    <Style x:Key="MainText" TargetType="TextBlock"/>
+    <Style x:Key="TitleTextBlockStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="{StaticResource TitleTextSize}"/>
+        <Setter Property="Foreground" Value="{DynamicResource SecondaryColor}"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+    </Style>
 
-    <Style x:Key="LabelText" TargetType="TextBlock" BasedOn="{StaticResource MainText}"/>
+    <Style x:Key="SubTitleTextBlockStyle" TargetType="TextBlock" BasedOn="{StaticResource TitleTextBlockStyle}">
+        <Setter Property="FontSize" Value="{StaticResource SubTitleTextSize}"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+    </Style>
 
-    <Style x:Key="LabelDescriptionText" TargetType="TextBlock" BasedOn="{StaticResource LabelText}"/>
+    <Style x:Key="BaseTextBlockStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="{StaticResource BaseTextSize}"/>
+        <Setter Property="Foreground" Value="{DynamicResource SecondaryColor}"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+    </Style>
 
-    <Style x:Key="NoteText" TargetType="TextBlock" BasedOn="{StaticResource MainText}"/>
+    <Style x:Key="BodyTextBlockStyle" TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}">
+        <Setter Property="FontSize" Value="{StaticResource BodyTextSize}"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+    </Style>
+
+    <Style x:Key="CaptionTextBlockStyle" TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}">
+        <Setter Property="FontSize" Value="{StaticResource CaptionTextSize}"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+    </Style>
+
+    <Style x:Key="NoteTextBlockStyle" TargetType="TextBlock" BasedOn="{StaticResource BodyTextBlockStyle}">
+        <Setter Property="FontSize" Value="{StaticResource NoteTextSize}"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="Padding" Value="{StaticResource SpaceOuter}"/>
+    </Style>
 
 
 </ResourceDictionary>

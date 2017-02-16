@@ -7,7 +7,7 @@
         xmlns:base="clr-namespace:ThemePack.Common.Base;assembly=ThemePack.Common"
         mc:Ignorable="d" d:DataContext="{d:DesignInstance vm:MainWindowViewModel}"
         Title="Theme preview" Width="900" Height="600" Style="{StaticResource Window.ModalStyle.NormalStyle}" SizeToContent="Manual">
-    <Grid Margin="10" SnapsToDevicePixels="True" UseLayoutRounding="True">
+    <Grid Margin="10" SnapsToDevicePixels="True" UseLayoutRounding="True" Grid.IsSharedSizeScope="True">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="10"/>
@@ -29,23 +29,23 @@
                   DisplayMemberPath="Name"
                   SelectedItem="{Binding SelecteColorScheme}"/>
 
-        <TabControl Grid.Row="2" Grid.ColumnSpan="3" Width="Auto" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <TabControl Background="Transparent" Grid.Row="2" Grid.ColumnSpan="3" Width="Auto" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
             <TabItem Header="Colors">
                 <TabItem.Resources>
                     <Style TargetType="{x:Type Ellipse}">
                         <Setter Property="Width" Value="45"/>
                         <Setter Property="Height" Value="45"/>
-                        <Setter Property="Stroke" Value="#ffffff"/>
-                        <Setter Property="Fill" Value="#ffffff"/>
+                        <Setter Property="Stroke" Value="{DynamicResource TintColor}"/>
+                        <Setter Property="Fill" Value="{DynamicResource TintColor}"/>
                         <Setter Property="Effect">
                             <Setter.Value>
-                                <DropShadowEffect BlurRadius="6" Color="{Binding RelativeSource={RelativeSource Self}, Path=Fill, Mode=OneWay}" Opacity="0.1" Direction="-90" />
+                                <DropShadowEffect BlurRadius="6" Color="{Binding RelativeSource={RelativeSource Self}, Path=Fill, Mode=OneWay}" Opacity="0.01" Direction="-90" ShadowDepth="4"  />
                             </Setter.Value>
                         </Setter>
                     </Style>
                 </TabItem.Resources>
                 <WrapPanel>
-                    <GroupBox Header="Main colors" Margin="10">
+                    <GroupBox Header="Main colors" Margin="10" BorderBrush="{x:Null}">
                         <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="auto"/>
@@ -53,26 +53,26 @@
                                 <RowDefinition Height="auto"/>
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto" SharedSizeGroup="col"/>
                                 <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto" SharedSizeGroup="col"/>
                                 <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto" SharedSizeGroup="col"/>
                                 <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto" SharedSizeGroup="col"/>
                             </Grid.ColumnDefinitions>
                             <Ellipse Grid.Column="0" Fill="{DynamicResource PrimaryColor}"/>
                             <Ellipse Grid.Column="2" Fill="{DynamicResource SecondaryColor}"/>
                             <Ellipse Grid.Column="4" Fill="{DynamicResource TintColor}"/>
                             <Ellipse Grid.Column="6" Fill="{DynamicResource AccentedColor}"/>
 
-                            <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center">Primary</TextBlock>
-                            <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center">Secondary</TextBlock>
-                            <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center">Tint</TextBlock>
-                            <TextBlock Grid.Row="2" Grid.Column="6" HorizontalAlignment="Center">Accent</TextBlock>
+                            <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Primary</TextBlock>
+                            <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Secondary</TextBlock>
+                            <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Tint</TextBlock>
+                            <TextBlock Grid.Row="2" Grid.Column="6" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Accent</TextBlock>
                         </Grid>
                     </GroupBox>
-                    <GroupBox Header="Interaction colors" Margin="10">
+                    <GroupBox Header="Interaction colors" Margin="10" BorderBrush="{x:Null}">
                         <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="auto"/>
@@ -80,13 +80,13 @@
                                 <RowDefinition Height="auto"/>
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto" SharedSizeGroup="col"/>
                                 <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto" SharedSizeGroup="col"/>
                                 <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto" SharedSizeGroup="col"/>
                                 <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto" SharedSizeGroup="col"/>
                             </Grid.ColumnDefinitions>
 
                             <Ellipse Grid.Column="0" Fill="{DynamicResource ActiveColor}" />
@@ -94,13 +94,13 @@
                             <Ellipse Grid.Column="4" Fill="{DynamicResource PressColor}" />
                             <Ellipse Grid.Column="6" Fill="{DynamicResource DefaultedColor}" />
 
-                            <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center">Active</TextBlock>
-                            <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center">Hover</TextBlock>
-                            <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center">Pressed</TextBlock>
-                            <TextBlock Grid.Row="2" Grid.Column="6" HorizontalAlignment="Center">Defaulted</TextBlock>
+                            <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Active</TextBlock>
+                            <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Hover</TextBlock>
+                            <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Pressed</TextBlock>
+                            <TextBlock Grid.Row="2" Grid.Column="6" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Defaulted</TextBlock>
                         </Grid>
                     </GroupBox>
-                    <GroupBox Header="Marker colors" Margin="10">
+                    <GroupBox Header="Marker colors" Margin="10" BorderBrush="{x:Null}">
                         <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="auto"/>
@@ -108,13 +108,13 @@
                                 <RowDefinition Height="auto"/>
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto" SharedSizeGroup="col"/>
                                 <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto" SharedSizeGroup="col"/>
                                 <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto" SharedSizeGroup="col"/>
                                 <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto" SharedSizeGroup="col"/>
                             </Grid.ColumnDefinitions>
                             <Ellipse Grid.Column="0" Fill="{DynamicResource NoteColor}"/>
                             <Ellipse Grid.Column="2" Fill="{DynamicResource SuccessColor}"/>
@@ -122,19 +122,18 @@
                             <Ellipse Grid.Column="6" Fill="{DynamicResource ErrorColor}" />
 
 
-                            <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center">Note</TextBlock>
-                            <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center">Success</TextBlock>
-                            <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center">Warning</TextBlock>
-                            <TextBlock Grid.Row="2" Grid.Column="6" HorizontalAlignment="Center">Error</TextBlock>
+                            <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Note</TextBlock>
+                            <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Success</TextBlock>
+                            <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Warning</TextBlock>
+                            <TextBlock Grid.Row="2" Grid.Column="6" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Error</TextBlock>
                         </Grid>
                     </GroupBox>
-
                 </WrapPanel>
             </TabItem>
             <TabItem Header="Labels and texts">
-                <Grid >
-                    <GroupBox Header="Headers" Margin="10">
-                        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10">
+                <Grid x:Name="Content">
+                    <GroupBox Header="Headers" Margin="10" BorderBrush="{x:Null}" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Auto" >
+                        <Grid Margin="10">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="auto"/>
                                 <RowDefinition Height="10"/>
@@ -147,21 +146,41 @@
                                 <RowDefinition Height="auto"/>
                                 <RowDefinition Height="10"/>
                                 <RowDefinition Height="auto"/>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="auto"/>
                             </Grid.RowDefinitions>
-                            <TextBlock Grid.Row="0" Style="{DynamicResource Title}" Text="Title message"/>
-                            <TextBlock Grid.Row="2" Style="{DynamicResource SubTitle}" Text="Subtitle information"/>
-                            <TextBlock Grid.Row="4" Style="{DynamicResource MainText}" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."/>
-                            <TextBlock Grid.Row="6" Style="{DynamicResource LabelText}" Text="Label:"/>
-                            <TextBlock Grid.Row="8" Style="{DynamicResource LabelDescriptionText}" Text="label description"/>
-                            <TextBlock Grid.Row="10" Style="{DynamicResource NoteText}" Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."/>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Row="0" Style="{DynamicResource HeaderTextBlockStyle}" HorizontalAlignment="Right" Text="Header"/>
+                            <TextBlock Grid.Row="2" Style="{DynamicResource SubHeaderTextBlockStyle}" HorizontalAlignment="Right" Text="SubHeader"/>
+                            <TextBlock Grid.Row="4" Style="{DynamicResource TitleTextBlockStyle}" HorizontalAlignment="Right" Text="Title"/>
+                            <TextBlock Grid.Row="6" Style="{DynamicResource SubTitleTextBlockStyle}" HorizontalAlignment="Right" Text="SubTitle"/>
+                            <TextBlock Grid.Row="8" Style="{DynamicResource BaseTextBlockStyle}" HorizontalAlignment="Right" Text="Base text"/>
+                            <TextBlock Grid.Row="10" Style="{DynamicResource BodyTextBlockStyle}" HorizontalAlignment="Right" Text="Body text"/>
+                            <TextBlock Grid.Row="12" Style="{DynamicResource CaptionTextBlockStyle}" HorizontalAlignment="Right" Text="Caption"/>
+                            <TextBlock Grid.Row="14" Style="{DynamicResource NoteTextBlockStyle}" HorizontalAlignment="Right" Text="Note"/>
+                            
+                            <TextBlock Grid.Row="0" Grid.Column="2" Style="{DynamicResource HeaderTextBlockStyle}" Text="WOAH!"/>
+                            <TextBlock Grid.Row="2" Grid.Column="2" Style="{DynamicResource SubHeaderTextBlockStyle}" Text="We are glad to see you are checking out our Themes!"/>
+                            <TextBlock Grid.Row="4" Grid.Column="2" Style="{DynamicResource TitleTextBlockStyle}" Text="Subtitle information"/>
+                            <TextBlock Grid.Row="6" Grid.Column="2" Style="{DynamicResource SubTitleTextBlockStyle}" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."/>
+                            <TextBlock Grid.Row="8" Grid.Column="2" Style="{DynamicResource BaseTextBlockStyle}" Text="Base text"/>
+                            <TextBlock Grid.Row="10" Grid.Column="2" Style="{DynamicResource BodyTextBlockStyle}" Text="Body text"/>
+                            <TextBlock Grid.Row="12" Grid.Column="2" Style="{DynamicResource CaptionTextBlockStyle}" Text="Caption"/>
+                            <TextBlock Grid.Row="14" Grid.Column="2" Style="{DynamicResource NoteTextBlockStyle}" Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."/>
                         </Grid>
                     </GroupBox>
                 </Grid>
             </TabItem>
-            <TabItem Header="Buttons">
+            <TabItem Header="Buttons" ScrollViewer.VerticalScrollBarVisibility="Auto">
                 <WrapPanel>
-                    <GroupBox Header="Large size" Margin="10">
-                        <Grid HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <GroupBox Header="Default size" Margin="10" BorderBrush="{x:Null}">
+                        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="auto"/>
                                 <RowDefinition Height="10"/>
@@ -179,42 +198,76 @@
                                 <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition Width="10"/>
                                 <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center">Solid</TextBlock>
+                            <TextBlock Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Center">Ghost</TextBlock>
+                            <TextBlock Grid.Row="6" HorizontalAlignment="Right" VerticalAlignment="Center">Borderless</TextBlock>
+
+                            <TextBlock Grid.Column="2" HorizontalAlignment="Center">IsDefault</TextBlock>
+                            <TextBlock Grid.Column="4" HorizontalAlignment="Center">Common</TextBlock>
+                            <TextBlock Grid.Column="6" HorizontalAlignment="Center">Disabled</TextBlock>
+
+                            <!-- solid button-->
+                            <Button Style="{DynamicResource Button.Solid}" Grid.Column="2" Grid.Row="2" Content="Button" IsDefault="True" />
+                            <Button Style="{DynamicResource Button.Solid}" Grid.Column="4" Grid.Row="2" Content="Button" />
+                            <Button Style="{DynamicResource Button.Solid}" Grid.Column="6" Grid.Row="2" Content="Button" IsEnabled="False" />
+
+                            <!-- ghost button-->
+                            <Button Style="{DynamicResource Button.Ghost}" Grid.Column="2" Grid.Row="4" Content="Button" IsDefault="True" />
+                            <Button Style="{DynamicResource Button.Ghost}" Grid.Column="4" Grid.Row="4" Content="Button" />
+                            <Button Style="{DynamicResource Button.Ghost}" Grid.Column="6" Grid.Row="4" Content="Button" IsEnabled="False" />
+
+                            <!-- borderless button-->
+                            <Button Style="{DynamicResource Button.Borderless}" Grid.Column="2" Grid.Row="6" Content="Button" IsDefault="True" />
+                            <Button Style="{DynamicResource Button.Borderless}" Grid.Column="4" Grid.Row="6" Content="Button" />
+                            <Button Style="{DynamicResource Button.Borderless}" Grid.Column="6" Grid.Row="6" Content="Button" IsEnabled="False" />
+
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Large size" Margin="10" BorderBrush="{x:Null}">
+                        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition Width="10"/>
                                 <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition Width="10"/>
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
 
-                            <TextBlock Grid.Row="2">Solid</TextBlock>
-                            <TextBlock Grid.Row="4">Ghost</TextBlock>
-                            <TextBlock Grid.Row="6">Borderless</TextBlock>
+                            <TextBlock Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center">Solid</TextBlock>
+                            <TextBlock Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Center">Ghost</TextBlock>
+                            <TextBlock Grid.Row="6" HorizontalAlignment="Right" VerticalAlignment="Center">Borderless</TextBlock>
 
-                            <TextBlock Grid.Column="2">IsDefault</TextBlock>
-                            <TextBlock Grid.Column="4">Common</TextBlock>
-                            <TextBlock Grid.Column="6">Hover/Selected</TextBlock>
-                            <TextBlock Grid.Column="8">Pressed</TextBlock>
-                            <TextBlock Grid.Column="10">Disabled</TextBlock>
+                            <TextBlock Grid.Column="2" HorizontalAlignment="Center">IsDefault</TextBlock>
+                            <TextBlock Grid.Column="4" HorizontalAlignment="Center">Common</TextBlock>
+                            <TextBlock Grid.Column="6" HorizontalAlignment="Center">Disabled</TextBlock>
 
                             <!-- solid button-->
-                            <Button Style="{DynamicResource Button.Solid}" Grid.Column="2" Grid.Row="2" Content="Button" IsDefault="True" />
-                            <Button Style="{DynamicResource Button.Solid}" Grid.Column="4" Grid.Row="2" Content="Button" />
-                            <Button Style="{DynamicResource Button.Solid}" Grid.Column="6" Grid.Row="2" Content="Button" />
-                            <Button Style="{DynamicResource Button.Solid}" Grid.Column="8" Grid.Row="2" Content="Button" />
-                            <Button Style="{DynamicResource Button.Solid}" Grid.Column="10" Grid.Row="2" Content="Button" IsEnabled="False" />
+                            <Button Style="{DynamicResource Button.Solid.Large}" Grid.Column="2" Grid.Row="2" Content="Button" IsDefault="True" />
+                            <Button Style="{DynamicResource Button.Solid.Large}" Grid.Column="4" Grid.Row="2" Content="Button" />
+                            <Button Style="{DynamicResource Button.Solid.Large}" Grid.Column="6" Grid.Row="2" Content="Button" IsEnabled="False" />
 
                             <!-- ghost button-->
-                            <Button Style="{DynamicResource Button.Ghost}" Grid.Column="2" Grid.Row="4" Content="Button" IsDefault="True" />
-                            <Button Style="{DynamicResource Button.Ghost}" Grid.Column="4" Grid.Row="4" Content="Button" />
-                            <Button Style="{DynamicResource Button.Ghost}" Grid.Column="6" Grid.Row="4" Content="Button" />
-                            <Button Style="{DynamicResource Button.Ghost}" Grid.Column="8" Grid.Row="4" Content="Button" />
-                            <Button Style="{DynamicResource Button.Ghost}" Grid.Column="10" Grid.Row="4" Content="Button" IsEnabled="False" />
+                            <Button Style="{DynamicResource Button.Ghost.Large}" Grid.Column="2" Grid.Row="4" Content="Button" IsDefault="True" />
+                            <Button Style="{DynamicResource Button.Ghost.Large}" Grid.Column="4" Grid.Row="4" Content="Button" />
+                            <Button Style="{DynamicResource Button.Ghost.Large}" Grid.Column="6" Grid.Row="4" Content="Button" IsEnabled="False" />
 
                             <!-- borderless button-->
-                            <Button Style="{DynamicResource Button.Borderless}" Grid.Column="2" Grid.Row="6" Content="Button" IsDefault="True" />
-                            <Button Style="{DynamicResource Button.Borderless}" Grid.Column="4" Grid.Row="6" Content="Button" />
-                            <Button Style="{DynamicResource Button.Borderless}" Grid.Column="6" Grid.Row="6" Content="Button" />
-                            <Button Style="{DynamicResource Button.Borderless}" Grid.Column="8" Grid.Row="6" Content="Button" />
-                            <Button Style="{DynamicResource Button.Borderless}" Grid.Column="10" Grid.Row="6" Content="Button" IsEnabled="False" />
+                            <Button Style="{DynamicResource Button.Borderless.Large}" Grid.Column="2" Grid.Row="6" Content="Button" IsDefault="True" />
+                            <Button Style="{DynamicResource Button.Borderless.Large}" Grid.Column="4" Grid.Row="6" Content="Button" />
+                            <Button Style="{DynamicResource Button.Borderless.Large}" Grid.Column="6" Grid.Row="6" Content="Button" IsEnabled="False" />
 
                         </Grid>
                     </GroupBox>
