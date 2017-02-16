@@ -18,25 +18,25 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="GroupBox">
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="*" />
-                        </Grid.RowDefinitions>
-                        <Border BorderThickness="{TemplateBinding BorderThickness}" Grid.RowSpan="3" CornerRadius="0" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" Margin="0 0 0 -1"/>
+                    <Border BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="0" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" Margin="0 0 0 -1">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
 
-                        <TextBlock Padding="{TemplateBinding Padding}" Foreground="{TemplateBinding Foreground}" FontSize="{TemplateBinding FontSize}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Style="{StaticResource CaptionTextBlockStyle}">
+                            <TextBlock Padding="{TemplateBinding Padding}" Foreground="{TemplateBinding Foreground}" FontSize="{TemplateBinding FontSize}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Style="{StaticResource CaptionTextBlockStyle}">
                             <ContentPresenter ContentSource="Header" RecognizesAccessKey="True" />
-                        </TextBlock>
+                            </TextBlock>
 
-                        <Rectangle Fill="{TemplateBinding BorderBrush}" />
+                            <Rectangle Fill="{TemplateBinding BorderBrush}" />
 
-                        <ScrollViewer Grid.Row="2" HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}" VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}" Padding="{TemplateBinding Padding}">
-                            <ContentPresenter />
-                        </ScrollViewer>
-                        
-                    </Grid>
+                            <ScrollViewer Grid.Row="2" HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}" VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}" Padding="{TemplateBinding Padding}">
+                                <ContentPresenter />
+                            </ScrollViewer>
+                        </Grid>
+                    </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
