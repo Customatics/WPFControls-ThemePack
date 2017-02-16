@@ -284,40 +284,25 @@ namespace ThemePack.Common.Base
             public static readonly int NOMOVE = 0x0002;
         }
 
-        private static void WmGetMinMaxInfo(System.IntPtr hwnd, System.IntPtr lParam)
+        private static void WmGetMinMaxInfo(IntPtr window, IntPtr lParam)
         {
-            POINT lMousePosition;
-            GetCursorPos(out lMousePosition);
-
-            IntPtr lPrimaryScreen = MonitorFromPoint(new POINT(0, 0), MonitorOptions.MONITOR_DEFAULTTOPRIMARY);
-            var lPrimaryScreenInfo = new user32.MONITORINFOEX();
-            if (user32.GetMonitorInfo(lPrimaryScreen, ref lPrimaryScreenInfo) == false)
+            var screen = user32.MonitorFromWindow(window, user32.MONITOR_DEFAULTTONEAREST);
+            var screenInfo = user32.MONITORINFOEX.New();
+            if (user32.GetMonitorInfo(screen, ref screenInfo) == false)
             {
                 return;
             }
 
-            IntPtr lCurrentScreen = MonitorFromPoint(lMousePosition, MonitorOptions.MONITOR_DEFAULTTONEAREST);
+            var work = screenInfo.WorkArea.ToRectangle();
+            var monitor = screenInfo.Monitor.ToRectangle();
 
-            MINMAXINFO lMmi = (MINMAXINFO)Marshal.PtrToStructure(lParam, typeof(MINMAXINFO));
+            var info = (MINMAXINFO)Marshal.PtrToStructure(lParam, typeof(MINMAXINFO));
+            info.ptMaxPosition.X = work.Left - monitor.Left;
+            info.ptMaxPosition.Y = work.Top - monitor.Top;
+            info.ptMaxSize.X = work.Width;
+            info.ptMaxSize.Y = work.Height;
 
-            if (lPrimaryScreen.Equals(lCurrentScreen) == true)
-            {
-                var work = lPrimaryScreenInfo.WorkArea;
-                lMmi.ptMaxPosition.X = work.Left;
-                lMmi.ptMaxPosition.Y = work.Top;
-                lMmi.ptMaxSize.X = work.Right - work.Left;
-                lMmi.ptMaxSize.Y = work.Bottom - work.Top;
-            }
-            else
-            {
-                var monitor = lPrimaryScreenInfo.Monitor;
-                lMmi.ptMaxPosition.X = monitor.Left;
-                lMmi.ptMaxPosition.Y = monitor.Top;
-                lMmi.ptMaxSize.X = monitor.Right - monitor.Left;
-                lMmi.ptMaxSize.Y = monitor.Bottom - monitor.Top;
-            }
-
-            Marshal.StructureToPtr(lMmi, lParam, true);
+            Marshal.StructureToPtr(info, lParam, true);
         }
 
         [DllImport("user32.dll")]

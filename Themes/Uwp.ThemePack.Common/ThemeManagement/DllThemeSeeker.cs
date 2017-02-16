@@ -1,22 +1,13 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Globalization;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Resources;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using ThemePack.Common.Abstractions;
-using ThemePack.Common.BusinessModels;
-using ThemePack.Common.Extentions;
-using ThemePack.Common.Helpers;
-using ThemePack.Models.Models;
-using ThemePack.Models.Models.Enums;
+using Uwp.ThemePack.Common.Abstractions;
+using Uwp.ThemePack.Common.Helpers;
+using Uwp.ThemePack.Models.Models;
+using Uwp.ThemePack.Models.Models.Enums;
 
-namespace ThemePack.Common.ThemeManagement
+namespace Uwp.ThemePack.Common.ThemeManagement
 {
     public class DllThemeSeeker : IThemesSeeker
     {
@@ -30,7 +21,7 @@ namespace ThemePack.Common.ThemeManagement
                 //ICollection<Assembly> assemblies = new List<Assembly>(dllFileNames.Length);
                 foreach (string dllFile in dllFileNames)
                 {
-                    var assemblyName = AssemblyName.GetAssemblyName(dllFile).Name;
+                    var assemblyName = "thisidf";//AssemblyName.GetAssemblyName(dllFile).Name;
                     var currentDllResources = AssemblyResourceHelper.LoadXaml(dllFile);
                     themes.Add(new ThemeM(assemblyName, currentDllResources.Where(_ => _.ResourceType == XamlResourceType.ColorScheme).Select(it => new ColorSchemeM(it.Name,it.Resource, it.Uri)).ToList(),
                                           currentDllResources.Where(_ => _.ResourceType == XamlResourceType.ControlStyle).Select(it => new ControlStyleM(it.Name, it.Resource, it.Uri)).ToList()));

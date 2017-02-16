@@ -1,9 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Windows;
-using ThemePack.Models.Models;
+﻿using System.Collections.Generic;
+using Windows.UI.Xaml;
+using Uwp.ThemePack.Models.Models;
 
-namespace ThemePack.Common.ThemeManagement
+namespace Uwp.ThemePack.Common.ThemeManagement
 {
     /// <summary>
     /// A class that allows to change theme and color scheme of current application

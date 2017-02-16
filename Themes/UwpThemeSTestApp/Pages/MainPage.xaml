@@ -1,0 +1,38 @@
+﻿<Page
+    x:Class="UwpThemeSTestApp.Pages.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UwpThemeSTestApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="using:UwpThemeSTestApp.ViewModels"
+    mc:Ignorable="d"
+    Width="900" Height="600"
+    DataContext="{StaticResource mainPageViewModel}">
+
+    <Grid  Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid Margin="10" UseLayoutRounding="True">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+
+            <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" 
+                  ItemsSource="{Binding Themes}"
+                  DisplayMemberPath="Name"
+                  SelectedItem="{Binding SelectedTheme}"/>
+            <ComboBox Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120"
+                  ItemsSource="{Binding ColorSchemes}"
+                  DisplayMemberPath="Name"
+                  SelectedItem="{Binding SelecteColorScheme}"/>
+
+        </Grid>
+    </Grid>
+</Page>

@@ -8,7 +8,7 @@ using ThemePack.Common.ThemeManagement;
 
 namespace ThemePack.Common.Factories
 {
-    public class ThemeSeekerFactory//todo factory
+    public class ThemeSeekerFactory
     {
         public IThemesSeeker GetThemeSeeker()
         {
