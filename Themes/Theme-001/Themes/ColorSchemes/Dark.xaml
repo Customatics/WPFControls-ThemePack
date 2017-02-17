@@ -5,39 +5,15 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="po"
     >
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Light.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
 
     <!-- color definitions -->
     <Color x:Key="Primary">#01161E</Color>
     <Color x:Key="Secondary">#EFF6E0</Color>
-    <Color x:Key="Tint">#808080</Color>
-
-    <Color x:Key="Accent">#ffc44f</Color>
-
-    <Color x:Key="Active">#1aa3b6</Color>
-    <Color x:Key="Hover">#1addf8</Color>
-    <Color x:Key="Press">#3bceec</Color>
-    <Color x:Key="Default">#009ae6</Color>
-
-    <Color x:Key="Note">#c2def2</Color>
-    <Color x:Key="Success">#aced95</Color>
-    <Color x:Key="Warning">#eae96c</Color>
-    <Color x:Key="Error">#ea6c6c</Color>
-    <!-- end: color definitions-->
-
-
+    
     <SolidColorBrush x:Key="PrimaryColor" Color="{StaticResource Primary}" po:Freeze="True" />
     <SolidColorBrush x:Key="SecondaryColor" Color="{StaticResource Secondary}" po:Freeze="True" />
-    <SolidColorBrush x:Key="TintColor" Color="{StaticResource Tint}" Opacity="{StaticResource TintOpacity}" po:Freeze="True" />
-    <SolidColorBrush x:Key="AccentedColor" Color="{StaticResource Accent}" po:Freeze="True" />
-
-    <SolidColorBrush x:Key="ActiveColor" Color="{StaticResource Active}" po:Freeze="True" />
-    <SolidColorBrush x:Key="HoverColor" Color="{StaticResource Hover}" po:Freeze="True" />
-    <SolidColorBrush x:Key="PressColor" Color="{StaticResource Press}" po:Freeze="True" />
-    <SolidColorBrush x:Key="DefaultedColor" Color="{StaticResource Default}" po:Freeze="True" />
-
-    <SolidColorBrush x:Key="NoteColor" Color="{StaticResource Note}" po:Freeze="True" />
-    <SolidColorBrush x:Key="SuccessColor" Color="{StaticResource Success}" po:Freeze="True" />
-    <SolidColorBrush x:Key="WarningColor" Color="{StaticResource Warning}" po:Freeze="True" />
-    <SolidColorBrush x:Key="ErrorColor" Color="{StaticResource Error}" po:Freeze="True" />
 
 </ResourceDictionary>

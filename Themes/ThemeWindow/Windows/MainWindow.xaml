@@ -29,7 +29,7 @@
                   DisplayMemberPath="Name"
                   SelectedItem="{Binding SelecteColorScheme}"/>
 
-        <TabControl Background="Transparent" Grid.Row="2" Grid.ColumnSpan="3" Width="Auto" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <TabControl Background="{DynamicResource TintColor}" Grid.Row="2" Grid.ColumnSpan="3" Width="Auto" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
             <TabItem Header="Colors">
                 <TabItem.Resources>
                     <Style TargetType="{x:Type Ellipse}">
@@ -45,7 +45,7 @@
                     </Style>
                 </TabItem.Resources>
                 <WrapPanel>
-                    <GroupBox Header="Main colors" Margin="10" BorderBrush="{x:Null}">
+                    <GroupBox Header="Main colors" BorderBrush="{x:Null}">
                         <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="auto"/>
@@ -72,7 +72,7 @@
                             <TextBlock Grid.Row="2" Grid.Column="6" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Accent</TextBlock>
                         </Grid>
                     </GroupBox>
-                    <GroupBox Header="Interaction colors" Margin="10" BorderBrush="{x:Null}">
+                    <GroupBox Header="Interaction colors" BorderBrush="{x:Null}">
                         <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="auto"/>
@@ -100,7 +100,7 @@
                             <TextBlock Grid.Row="2" Grid.Column="6" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Defaulted</TextBlock>
                         </Grid>
                     </GroupBox>
-                    <GroupBox Header="Marker colors" Margin="10" BorderBrush="{x:Null}">
+                    <GroupBox Header="Marker colors" BorderBrush="{x:Null}">
                         <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="auto"/>
@@ -132,7 +132,7 @@
             </TabItem>
             <TabItem Header="Labels and texts">
                 <Grid x:Name="Content">
-                    <GroupBox Header="Headers" Margin="10" BorderBrush="{x:Null}" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Auto" >
+                    <GroupBox Header="Headers" BorderBrush="{x:Null}" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Auto" >
                         <Grid Margin="10">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="auto"/>
@@ -179,7 +179,7 @@
             </TabItem>
             <TabItem Header="Buttons" ScrollViewer.VerticalScrollBarVisibility="Auto">
                 <WrapPanel>
-                    <GroupBox Header="Default size" Margin="10" BorderBrush="{x:Null}">
+                    <GroupBox Header="Default size" BorderBrush="{x:Null}">
                         <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="auto"/>
@@ -225,7 +225,7 @@
 
                         </Grid>
                     </GroupBox>
-                    <GroupBox Header="Large size" Margin="10" BorderBrush="{x:Null}">
+                    <GroupBox Header="Large size" BorderBrush="{x:Null}">
                         <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="auto"/>
