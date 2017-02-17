@@ -44,91 +44,93 @@
                         </Setter>
                     </Style>
                 </TabItem.Resources>
-                <WrapPanel>
-                    <GroupBox Header="Main colors" BorderBrush="{x:Null}">
-                        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="auto"/>
-                                <RowDefinition Height="10"/>
-                                <RowDefinition Height="auto"/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto" SharedSizeGroup="col"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto" SharedSizeGroup="col"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto" SharedSizeGroup="col"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto" SharedSizeGroup="col"/>
-                            </Grid.ColumnDefinitions>
-                            <Ellipse Grid.Column="0" Fill="{DynamicResource PrimaryColor}"/>
-                            <Ellipse Grid.Column="2" Fill="{DynamicResource SecondaryColor}"/>
-                            <Ellipse Grid.Column="4" Fill="{DynamicResource TintColor}"/>
-                            <Ellipse Grid.Column="6" Fill="{DynamicResource AccentedColor}"/>
+                <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                    <WrapPanel>
+                        <GroupBox Header="Main colors" BorderBrush="{x:Null}">
+                            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" SharedSizeGroup="col"/>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition Width="Auto" SharedSizeGroup="col"/>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition Width="Auto" SharedSizeGroup="col"/>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition Width="Auto" SharedSizeGroup="col"/>
+                                </Grid.ColumnDefinitions>
+                                <Ellipse Grid.Column="0" Fill="{DynamicResource PrimaryColor}"/>
+                                <Ellipse Grid.Column="2" Fill="{DynamicResource SecondaryColor}"/>
+                                <Ellipse Grid.Column="4" Fill="{DynamicResource TintColor}"/>
+                                <Ellipse Grid.Column="6" Fill="{DynamicResource AccentedColor}"/>
 
-                            <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Primary</TextBlock>
-                            <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Secondary</TextBlock>
-                            <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Tint</TextBlock>
-                            <TextBlock Grid.Row="2" Grid.Column="6" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Accent</TextBlock>
-                        </Grid>
-                    </GroupBox>
-                    <GroupBox Header="Interaction colors" BorderBrush="{x:Null}">
-                        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="auto"/>
-                                <RowDefinition Height="10"/>
-                                <RowDefinition Height="auto"/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto" SharedSizeGroup="col"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto" SharedSizeGroup="col"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto" SharedSizeGroup="col"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto" SharedSizeGroup="col"/>
-                            </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Primary</TextBlock>
+                                <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Secondary</TextBlock>
+                                <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Tint</TextBlock>
+                                <TextBlock Grid.Row="2" Grid.Column="6" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Accent</TextBlock>
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox Header="Interaction colors" BorderBrush="{x:Null}">
+                            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" SharedSizeGroup="col"/>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition Width="Auto" SharedSizeGroup="col"/>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition Width="Auto" SharedSizeGroup="col"/>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition Width="Auto" SharedSizeGroup="col"/>
+                                </Grid.ColumnDefinitions>
 
-                            <Ellipse Grid.Column="0" Fill="{DynamicResource ActiveColor}" />
-                            <Ellipse Grid.Column="2" Fill="{DynamicResource HoverColor}" />
-                            <Ellipse Grid.Column="4" Fill="{DynamicResource PressColor}" />
-                            <Ellipse Grid.Column="6" Fill="{DynamicResource DefaultedColor}" />
+                                <Ellipse Grid.Column="0" Fill="{DynamicResource ActiveColor}" />
+                                <Ellipse Grid.Column="2" Fill="{DynamicResource HoverColor}" />
+                                <Ellipse Grid.Column="4" Fill="{DynamicResource PressColor}" />
+                                <Ellipse Grid.Column="6" Fill="{DynamicResource DefaultedColor}" />
 
-                            <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Active</TextBlock>
-                            <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Hover</TextBlock>
-                            <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Pressed</TextBlock>
-                            <TextBlock Grid.Row="2" Grid.Column="6" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Defaulted</TextBlock>
-                        </Grid>
-                    </GroupBox>
-                    <GroupBox Header="Marker colors" BorderBrush="{x:Null}">
-                        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="auto"/>
-                                <RowDefinition Height="10"/>
-                                <RowDefinition Height="auto"/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto" SharedSizeGroup="col"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto" SharedSizeGroup="col"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto" SharedSizeGroup="col"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto" SharedSizeGroup="col"/>
-                            </Grid.ColumnDefinitions>
-                            <Ellipse Grid.Column="0" Fill="{DynamicResource NoteColor}"/>
-                            <Ellipse Grid.Column="2" Fill="{DynamicResource SuccessColor}"/>
-                            <Ellipse Grid.Column="4" Fill="{DynamicResource WarningColor}"/>
-                            <Ellipse Grid.Column="6" Fill="{DynamicResource ErrorColor}" />
+                                <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Active</TextBlock>
+                                <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Hover</TextBlock>
+                                <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Pressed</TextBlock>
+                                <TextBlock Grid.Row="2" Grid.Column="6" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Defaulted</TextBlock>
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox Header="Marker colors" BorderBrush="{x:Null}">
+                            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" SharedSizeGroup="col"/>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition Width="Auto" SharedSizeGroup="col"/>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition Width="Auto" SharedSizeGroup="col"/>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition Width="Auto" SharedSizeGroup="col"/>
+                                </Grid.ColumnDefinitions>
+                                <Ellipse Grid.Column="0" Fill="{DynamicResource NoteColor}"/>
+                                <Ellipse Grid.Column="2" Fill="{DynamicResource SuccessColor}"/>
+                                <Ellipse Grid.Column="4" Fill="{DynamicResource WarningColor}"/>
+                                <Ellipse Grid.Column="6" Fill="{DynamicResource ErrorColor}" />
 
 
-                            <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Note</TextBlock>
-                            <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Success</TextBlock>
-                            <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Warning</TextBlock>
-                            <TextBlock Grid.Row="2" Grid.Column="6" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Error</TextBlock>
-                        </Grid>
-                    </GroupBox>
-                </WrapPanel>
+                                <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Note</TextBlock>
+                                <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Success</TextBlock>
+                                <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Warning</TextBlock>
+                                <TextBlock Grid.Row="2" Grid.Column="6" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Error</TextBlock>
+                            </Grid>
+                        </GroupBox>
+                    </WrapPanel>
+                </ScrollViewer>
             </TabItem>
             <TabItem Header="Labels and texts">
                 <Grid x:Name="Content">
@@ -178,6 +180,7 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Buttons">
+                <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
                 <WrapPanel>
                     <GroupBox Header="Button: default size" BorderBrush="{x:Null}">
                         <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
@@ -363,8 +366,6 @@
 
                         </Grid>
                     </GroupBox>
-                    
-                    
                     <GroupBox Header="Toggle: default size" BorderBrush="{x:Null}">
                         <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
                             <Grid.RowDefinitions>
@@ -406,6 +407,7 @@
                         </Grid>
                     </GroupBox>
                 </WrapPanel>
+                </ScrollViewer>
             </TabItem>
             <TabItem Header="Forms">
                 <Grid />
