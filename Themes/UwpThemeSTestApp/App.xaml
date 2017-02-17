@@ -7,7 +7,7 @@
     RequestedTheme="Light">
     <Application.Resources>
         <ResourceDictionary>
-            <viewModels:MainPageViewModel x:Key="mainPageViewModel"/>
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>

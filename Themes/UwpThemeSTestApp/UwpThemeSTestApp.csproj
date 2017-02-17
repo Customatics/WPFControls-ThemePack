@@ -7,12 +7,12 @@
     <ProjectGuid>{B7FCA47F-DAA6-4DED-AD8B-5F98749E9E0C}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UwpThemeSTestApp</RootNamespace>
-    <AssemblyName>UwpThemeSTestApp</AssemblyName>
+    <RootNamespace>UwpThemesTestApp</RootNamespace>
+    <AssemblyName>UwpThemesTestApp</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.14393.0</TargetPlatformVersion>
-    <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
+    <TargetPlatformMinVersion>10.0.10586.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -138,6 +138,10 @@
     <ProjectReference Include="..\Uwp.ThemePack.Models\Uwp.ThemePack.Models.csproj">
       <Project>{d37d9b0f-d775-44b8-babc-8f0b5a50833f}</Project>
       <Name>Uwp.ThemePack.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UwpTheme-001\UwpTheme_001.csproj">
+      <Project>{970343d1-868c-46f6-9331-5c0243557a8b}</Project>
+      <Name>UwpTheme_001</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

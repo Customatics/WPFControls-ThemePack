@@ -81,8 +81,7 @@
     <Compile Include="Base\DPI.cs" />
     <Compile Include="Base\DpiAwareWindow.cs" />
     <Compile Include="Base\WindowSizePositionManager.cs" />
-    <Compile Include="BusinessModels\DataEventsArgs.cs" />
-    <Compile Include="BusinessModels\DllResourceInfo.cs" />
+    <Compile Include="Models\DataEventsArgs.cs" />
     <Compile Include="Constants\ThemeNameConstants.cs" />
     <Compile Include="Extentions\ResourceTypeExtenstions.cs" />
     <Compile Include="Factories\ThemeSeekerFactory.cs" />
@@ -130,6 +129,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AttachedProperties\" />
+    <Folder Include="BusinessModels\" />
     <Folder Include="Components\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

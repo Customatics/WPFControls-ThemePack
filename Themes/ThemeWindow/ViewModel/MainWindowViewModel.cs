@@ -68,7 +68,14 @@ namespace ThemeWindow.ViewModel
         public ThemeM SelectedTheme
         {
             get { return selectedTheme; }
-            set { SetValue(ref selectedTheme, value); }
+            set
+            {
+                if (value != selectedTheme)
+                {
+                    SetValue(ref selectedTheme, value);
+                    ChangeSelectedTheme();
+                }
+            }
         }
 
         /// <summary>
@@ -90,9 +97,9 @@ namespace ThemeWindow.ViewModel
             {
                 if (value != selecteColorScheme)
                 {
-                    ThemeManager.ChangeApplicationTheme(Application.Current, SelectedTheme.ControlStyleModels, new List<ColorSchemeM>() { value });
+                    SetValue(ref selecteColorScheme, value);
+                    ChangeSelectedTheme();
                 }
-                SetValue(ref selecteColorScheme, value);
             }
         }
 
@@ -121,8 +128,13 @@ namespace ThemeWindow.ViewModel
                 SelectedTheme = Themes.First();
                 ColorSchemes = new ObservableCollection<ColorSchemeM>(Themes.First().ColorSchemeModels);
                 SelecteColorScheme = ColorSchemes.FirstOrDefault();
-                ThemeManager.ChangeApplicationTheme(Application.Current, SelectedTheme.ControlStyleModels, new List<ColorSchemeM>() { SelecteColorScheme });
+                ThemeManager.ChangeApplicationTheme(Application.Current, SelectedTheme.ControlStyleModels, SelecteColorScheme);
             }
+        }
+
+        private void ChangeSelectedTheme()
+        {
+            ThemeManager.ChangeApplicationTheme(Application.Current, selectedTheme.ControlStyleModels, selecteColorScheme);
         }
 
         #endregion

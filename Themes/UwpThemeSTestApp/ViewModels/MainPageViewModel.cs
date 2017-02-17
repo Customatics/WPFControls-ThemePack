@@ -3,14 +3,18 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.Storage;
+using Windows.Storage.Streams;
 using Windows.UI.Xaml;
+using Windows.UI.Xaml.Media.Imaging;
 using Uwp.ThemePack.Common.Base;
 using Uwp.ThemePack.Common.Factories;
 using Uwp.ThemePack.Common.ThemeManagement;
 using Uwp.ThemePack.Models.Models;
+using Uwp.ThemePack.Models.Models.Enums;
 
 namespace UwpThemeSTestApp.ViewModels
 {
@@ -50,7 +54,7 @@ namespace UwpThemeSTestApp.ViewModels
         #region C'tors
 
         /// <summary>
-        /// Create instance of <see cref="MainWindowViewModel"/>
+        /// Create instance of <see cref="BaseViewModel"/>
         /// </summary>
         public MainPageViewModel()
         {
@@ -69,7 +73,14 @@ namespace UwpThemeSTestApp.ViewModels
         public ThemeM SelectedTheme
         {
             get { return selectedTheme; }
-            set { SetValue(ref selectedTheme, value); }
+            set
+            {
+                if (value != selectedTheme)
+                {
+                    SetValue(ref selectedTheme, value);
+                    ChangeSelectedTheme();
+                }
+            }
         }
 
         /// <summary>
@@ -91,9 +102,9 @@ namespace UwpThemeSTestApp.ViewModels
             {
                 if (value != selecteColorScheme)
                 {
-                    ThemeManager.ChangeApplicationTheme(Application.Current, SelectedTheme.ControlStyleModels, new List<ColorSchemeM>() { value });
+                    SetValue(ref selecteColorScheme, value);
+                    ChangeSelectedTheme();
                 }
-                SetValue(ref selecteColorScheme, value);
             }
         }
 
@@ -115,15 +126,21 @@ namespace UwpThemeSTestApp.ViewModels
 
         private void Initialize()
         {
+
             var themeSeeker = themeSeekerFactory.GetThemeSeeker();
-            Themes = new ObservableCollection<ThemeM>(themeSeeker.GetThemes(Path.Combine(ApplicationData.Current.LocalFolder.Path, ThemeFolder)));
+            Themes = new ObservableCollection<ThemeM>(themeSeeker.GetThemes(Path.Combine(AppContext.BaseDirectory, ThemeFolder)));
             if (Themes.Any())
             {
-                SelectedTheme = Themes.First();
-                ColorSchemes = new ObservableCollection<ColorSchemeM>(Themes.First().ColorSchemeModels);
-                SelecteColorScheme = ColorSchemes.FirstOrDefault();
-                ThemeManager.ChangeApplicationTheme(Application.Current, SelectedTheme.ControlStyleModels, new List<ColorSchemeM>() { SelecteColorScheme });
+                selectedTheme = Themes.First();
+                colorSchemes = new ObservableCollection<ColorSchemeM>(Themes.First().ColorSchemeModels);
+                selecteColorScheme = ColorSchemes.FirstOrDefault();
+                ChangeSelectedTheme();
             }
+        }
+
+        private void ChangeSelectedTheme()
+        {
+            ThemeManager.ChangeApplicationTheme(Application.Current, selectedTheme.ControlStyleModels, selecteColorScheme);
         }
 
         #endregion

@@ -1,9 +1,9 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-
-    <!-- Button -->
-
+<ResourceDictionary.MergedDictionaries>
+    <ResourceDictionary Source="Form.xaml"></ResourceDictionary>
+</ResourceDictionary.MergedDictionaries>
     <Style x:Key="Button.Solid" TargetType="{x:Type Button}" >
         <Setter Property="Background" Value="{DynamicResource ActiveColor}"/>
         <Setter Property="Foreground" Value="{DynamicResource PrimaryColor}"/>

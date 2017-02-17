@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Windows.UI.Xaml;
 using Uwp.ThemePack.Models.Models;
 
@@ -19,57 +21,34 @@ namespace Uwp.ThemePack.Common.ThemeManagement
         //}
 
         /// <summary>
-        /// Change theme and color scheme and theme for the application
+        /// Change theme and color scheme and theme for the application. Every resource should contain color scheme inside it merged dictionary (because of StaticResource)
+        /// There is no DynamicResource in UWP
         /// </summary>
         /// <param name="app"><see cref="Application"/></param>
-        /// <param name="styles">new <see cref="ControlStyleM"/></param>
-        /// <param name="colorSchemes">new <see cref="ColorSchemeM"/></param>
-        public static void ChangeApplicationTheme(Application app, IList<ControlStyleM> styles, IList<ColorSchemeM> colorSchemes)
+        ///// <param name="styles">new <see cref="ControlStyleM"/></param>
+        /// <param name="colorScheme">new <see cref="ColorSchemeM"/></param>
+        public static void ChangeApplicationTheme(Application app, IList<ControlStyleM> styles, ColorSchemeM colorScheme)
         {
             if (app == null) { return; }
             if (styles == null) { return; }
-            if (colorSchemes == null) { return; }
+            if (colorScheme == null) { return; }
+
+            var colorSchemeResource = new ResourceDictionary() { Source = colorScheme.Uri };
+
+            var colorSchemeResourceThemes = colorSchemeResource.ThemeDictionaries.ToList();
+            colorSchemeResource.ThemeDictionaries.Clear();
+            app.Resources.ThemeDictionaries.Clear();
+            foreach (var theme in colorSchemeResourceThemes)
+            {
+                app.Resources.ThemeDictionaries.Add(theme.Key, theme.Value);
+            }
 
             app.Resources.MergedDictionaries.Clear();
-            //app.Resources.BeginInit();
-
-            foreach (var style in styles)
+            foreach (var controlStyleM in styles)
             {
-                app.Resources.MergedDictionaries.Add(style.Resources);
+                var styleResource = new ResourceDictionary() { Source = controlStyleM.Uri };
+                app.Resources.MergedDictionaries.Add(styleResource);
             }
-            foreach (var scheme in colorSchemes)
-            {
-                app.Resources.MergedDictionaries.Add(scheme.Resources);
-            }
-
-            //app.Resources.BeginInit();
-
-            //foreach (var controlStyleM in styles)
-            //{
-            //    foreach (DictionaryEntry resource in controlStyleM.Resources)
-            //    {
-            //        if (app.Resources.Contains(resource.Key))
-            //        {
-            //            app.Resources.Remove(resource.Key);
-            //        }
-            //        app.Resources.Add(resource.Key, resource.Value);
-            //    }
-            //}
-            //foreach (var controlStyleM in colorSchemes)
-            //{
-            //    foreach (DictionaryEntry resource in controlStyleM.Resources)
-            //    {
-            //        if (app.Resources.Contains(resource.Key))
-            //        {
-            //            app.Resources.Remove(resource.Key);
-            //        }
-            //        app.Resources.Add(resource.Key, resource.Value);
-            //    }
-            //}
-            
-            //app.Resources.EndInit();
-
-            //app.Resources.EndInit();
         }
     }
 }

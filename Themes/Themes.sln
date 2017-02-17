@@ -14,13 +14,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThemePack.Models", "ThemePa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThemePack.Common", "ThemePack.Common\ThemePack.Common.csproj", "{FF521270-BC6C-4AA6-87C2-FA49FFB93DBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UwpTheme-001", "UwpTheme-001\UwpTheme-001.csproj", "{970343D1-868C-46F6-9331-5C0243557A8B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UwpTheme_001", "UwpTheme-001\UwpTheme_001.csproj", "{970343D1-868C-46F6-9331-5C0243557A8B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uwp.ThemePack.Models", "Uwp.ThemePack.Models\Uwp.ThemePack.Models.csproj", "{D37D9B0F-D775-44B8-BABC-8F0B5A50833F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uwp.ThemePack.Common", "Uwp.ThemePack.Common\Uwp.ThemePack.Common.csproj", "{4431102C-375F-4616-BF58-0379F886C83F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UwpThemeSTestApp", "UwpThemeSTestApp\UwpThemeSTestApp.csproj", "{B7FCA47F-DAA6-4DED-AD8B-5F98749E9E0C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UwpThemesTestApp", "UwpThemeSTestApp\UwpThemesTestApp.csproj", "{B7FCA47F-DAA6-4DED-AD8B-5F98749E9E0C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

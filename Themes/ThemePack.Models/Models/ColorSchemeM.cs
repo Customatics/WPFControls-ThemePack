@@ -12,7 +12,7 @@ namespace ThemePack.Models.Models
     /// </summary>
     public class ColorSchemeM : ControlStyleM
     {
-        public ColorSchemeM(string name, ResourceDictionary resource, Uri uri) : base(name, resource, uri)
+        public ColorSchemeM(string name, ResourceDictionary resource) : base(name, resource)
         {
         }
     }

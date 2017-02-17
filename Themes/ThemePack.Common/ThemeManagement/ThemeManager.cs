@@ -24,12 +24,12 @@ namespace ThemePack.Common.ThemeManagement
         /// </summary>
         /// <param name="app"><see cref="Application"/></param>
         /// <param name="styles">new <see cref="ControlStyleM"/></param>
-        /// <param name="colorSchemes">new <see cref="ColorSchemeM"/></param>
-        public static void ChangeApplicationTheme(Application app, IList<ControlStyleM> styles, IList<ColorSchemeM> colorSchemes)
+        /// <param name="colorScheme">new <see cref="ColorSchemeM"/></param>
+        public static void ChangeApplicationTheme(Application app, IList<ControlStyleM> styles, ColorSchemeM colorScheme)
         {
             if (app == null) { return; }
             if (styles == null) { return; }
-            if (colorSchemes == null) { return; }
+            if (colorScheme == null) { return; }
 
             app.Resources.MergedDictionaries.Clear();
             //app.Resources.BeginInit();
@@ -38,10 +38,7 @@ namespace ThemePack.Common.ThemeManagement
             {
                 app.Resources.MergedDictionaries.Add(style.Resources);
             }
-            foreach (var scheme in colorSchemes)
-            {
-                app.Resources.MergedDictionaries.Add(scheme.Resources);
-            }
+            app.Resources.MergedDictionaries.Add(colorScheme.Resources);
 
             //app.Resources.BeginInit();
 
@@ -67,7 +64,7 @@ namespace ThemePack.Common.ThemeManagement
             //        app.Resources.Add(resource.Key, resource.Value);
             //    }
             //}
-            
+
             //app.Resources.EndInit();
 
             //app.Resources.EndInit();

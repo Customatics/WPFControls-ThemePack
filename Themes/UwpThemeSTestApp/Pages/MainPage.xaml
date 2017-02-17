@@ -8,7 +8,7 @@
     xmlns:viewModels="using:UwpThemeSTestApp.ViewModels"
     mc:Ignorable="d"
     Width="900" Height="600"
-    DataContext="{StaticResource mainPageViewModel}">
+    d:DataContext="{d:DesignData MainPageViewModel}">
 
     <Grid  Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid Margin="10" UseLayoutRounding="True">
@@ -27,11 +27,12 @@
             <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" 
                   ItemsSource="{Binding Themes}"
                   DisplayMemberPath="Name"
-                  SelectedItem="{Binding SelectedTheme}"/>
+                  SelectedItem="{Binding SelectedTheme, Mode=TwoWay}"/>
             <ComboBox Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120"
                   ItemsSource="{Binding ColorSchemes}"
                   DisplayMemberPath="Name"
-                  SelectedItem="{Binding SelecteColorScheme}"/>
+                  SelectedItem="{Binding SelecteColorScheme, Mode=TwoWay}"/>
+            <Button Grid.Row="2" Grid.ColumnSpan="3" Grid.Column="0" Width="300" Content="Button" Height="90"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
         </Grid>
     </Grid>
