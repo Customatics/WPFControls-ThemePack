@@ -8,6 +8,12 @@
     <Thickness x:Key="SpaceInner.Large" Left="18" Top="6" Right="18" Bottom="7" />
     <Thickness x:Key="SpaceOuter.Large" Left="5" Top="4" Right="5" Bottom="4" />
 
+    <Thickness x:Key="SpaceInner.Medium" Left="12" Top="5" Right="12" Bottom="6" />
+    <Thickness x:Key="SpaceOuter.Medium" Left="5" Top="4" Right="5" Bottom="4" />
+
+    <Thickness x:Key="SpaceInner.Small" Left="9" Top="4" Right="9" Bottom="5" />
+    <Thickness x:Key="SpaceOuter.Small" Left="5" Top="4" Right="5" Bottom="4" />
+
     <sys:Double x:Key="ButtonMinWidth">60</sys:Double>
 
     <sys:Double x:Key="DisabledOpacity">0.25</sys:Double>

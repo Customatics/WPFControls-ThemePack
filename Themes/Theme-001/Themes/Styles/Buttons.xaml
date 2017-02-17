@@ -2,24 +2,12 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <!--<Style TargetType="{x:Type Button}">
-        <Setter Property="Background" Value="{DynamicResource ActiveColor}"/>
-        <Setter Property="Foreground" Value="{DynamicResource PrimaryColor}"/>
-        <Setter Property="FontSize" Value="{StaticResource BaseTextSize}"/>
-        <Setter Property="FontWeight" Value="Regular"/>
-        <Setter Property="MinWidth" Value="{DynamicResource ButtonMinWidth}"/>
-        <Setter Property="BorderThickness" Value="2"/>
-        <Setter Property="BorderBrush" Value="{DynamicResource ActiveColor}"/>
-        <Setter Property="Margin" Value="{DynamicResource SpaceOuter}"/>
-        <Setter Property="Padding" Value="{DynamicResource SpaceInner}"/>
-        <Setter Property="HorizontalContentAlignment" Value="Center"/>
-        <Setter Property="VerticalContentAlignment" Value="Center"/>
-    </Style>-->
-    
+    <!-- Button -->
+
     <Style x:Key="Button.Solid" TargetType="{x:Type Button}" >
         <Setter Property="Background" Value="{DynamicResource ActiveColor}"/>
         <Setter Property="Foreground" Value="{DynamicResource PrimaryColor}"/>
-        <Setter Property="FontSize" Value="{StaticResource BaseTextSize}"/>
+        <Setter Property="FontSize" Value="{StaticResource BodyTextSize}"/>
         <Setter Property="FontWeight" Value="Regular"/>
         <Setter Property="MinWidth" Value="{DynamicResource ButtonMinWidth}"/>
         <Setter Property="BorderThickness" Value="2"/>
@@ -34,7 +22,15 @@
                 <ControlTemplate TargetType="Button">
                     <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" 
                             Margin="{TemplateBinding Margin}" MinWidth="{TemplateBinding MinWidth}">
-                        <TextBlock Foreground="{TemplateBinding Foreground}" FontSize="{TemplateBinding FontSize}" Padding="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" TextDecorations="{TemplateBinding TextBlock.TextDecorations}" Style="{StaticResource BaseTextBlockStyle}">
+                        <TextBlock Foreground="{TemplateBinding Foreground}"
+                                   FontSize="{TemplateBinding FontSize}"
+                                   Padding="{TemplateBinding Padding}"
+                                   VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                   HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                   TextDecorations="{TemplateBinding TextBlock.TextDecorations}">
+                            <TextBlock.Style>
+                                <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseTextBlockStyle}"/>
+                            </TextBlock.Style>
                             <ContentPresenter ContentSource="Content"/>
                         </TextBlock>
                     </Border>
@@ -112,26 +108,184 @@
                 <Setter Property="Foreground" Value="{DynamicResource PressColor}"/>
                 <Setter Property="Background" Value="{x:Null}"/>
             </Trigger>
-            
+
         </Style.Triggers>
     </Style>
 
     <Style x:Key="Button.Solid.Large" TargetType="{x:Type Button}" BasedOn="{StaticResource Button.Solid}">
-        <Setter Property="FontSize" Value="19"/>
+        <Setter Property="FontSize" Value="{StaticResource TitleTextSize}"/>
         <Setter Property="Margin" Value="{DynamicResource SpaceOuter.Large}"/>
         <Setter Property="Padding" Value="{DynamicResource SpaceInner.Large}"/>
     </Style>
 
     <Style x:Key="Button.Ghost.Large" TargetType="{x:Type Button}" BasedOn="{StaticResource Button.Ghost}">
-        <Setter Property="FontSize" Value="19"/>
+        <Setter Property="FontSize" Value="{StaticResource TitleTextSize}"/>
         <Setter Property="Margin" Value="{DynamicResource SpaceOuter.Large}"/>
         <Setter Property="Padding" Value="{DynamicResource SpaceInner.Large}"/>
     </Style>
 
     <Style x:Key="Button.Borderless.Large" TargetType="{x:Type Button}" BasedOn="{StaticResource Button.Borderless}">
-        <Setter Property="FontSize" Value="19"/>
+        <Setter Property="FontSize" Value="{StaticResource TitleTextSize}"/>
         <Setter Property="Margin" Value="{DynamicResource SpaceOuter.Large}"/>
         <Setter Property="Padding" Value="{DynamicResource SpaceInner.Large}"/>
+    </Style>
+
+
+    <Style x:Key="Button.Solid.Medium" TargetType="{x:Type Button}" BasedOn="{StaticResource Button.Solid}">
+        <Setter Property="FontSize" Value="{StaticResource SubTitleTextSize}"/>
+        <Setter Property="Margin" Value="{DynamicResource SpaceOuter.Medium}"/>
+        <Setter Property="Padding" Value="{DynamicResource SpaceInner.Medium}"/>
+    </Style>
+
+    <Style x:Key="Button.Ghost.Medium" TargetType="{x:Type Button}" BasedOn="{StaticResource Button.Ghost}">
+        <Setter Property="FontSize" Value="{StaticResource SubTitleTextSize}"/>
+        <Setter Property="Margin" Value="{DynamicResource SpaceOuter.Medium}"/>
+        <Setter Property="Padding" Value="{DynamicResource SpaceInner.Medium}"/>
+    </Style>
+
+    <Style x:Key="Button.Borderless.Medium" TargetType="{x:Type Button}" BasedOn="{StaticResource Button.Borderless}">
+        <Setter Property="FontSize" Value="{StaticResource SubTitleTextSize}"/>
+        <Setter Property="Margin" Value="{DynamicResource SpaceOuter.Medium}"/>
+        <Setter Property="Padding" Value="{DynamicResource SpaceInner.Medium}"/>
+    </Style>
+
+
+    <Style x:Key="Button.Solid.Small" TargetType="{x:Type Button}" BasedOn="{StaticResource Button.Solid}">
+        <Setter Property="FontSize"  Value="{StaticResource NoteTextSize}"/>
+        <Setter Property="Margin" Value="{DynamicResource SpaceOuter.Small}"/>
+        <Setter Property="Padding" Value="{DynamicResource SpaceInner.Small}"/>
+    </Style>
+
+    <Style x:Key="Button.Ghost.Small" TargetType="{x:Type Button}" BasedOn="{StaticResource Button.Ghost}">
+        <Setter Property="FontSize"  Value="{StaticResource NoteTextSize}"/>
+        <Setter Property="Margin" Value="{DynamicResource SpaceOuter.Small}"/>
+        <Setter Property="Padding" Value="{DynamicResource SpaceInner.Small}"/>
+    </Style>
+
+    <Style x:Key="Button.Borderless.Small" TargetType="{x:Type Button}" BasedOn="{StaticResource Button.Borderless}">
+        <Setter Property="FontSize"  Value="{StaticResource NoteTextSize}"/>
+        <Setter Property="Margin" Value="{DynamicResource SpaceOuter.Small}"/>
+        <Setter Property="Padding" Value="{DynamicResource SpaceInner.Small}"/>
+    </Style>
+
+
+    <!-- ToggleButton -->
+    <Style x:Key="ToggleButton.Solid" TargetType="{x:Type ToggleButton}" >
+        <Setter Property="Background" Value="{DynamicResource ActiveColor}"/>
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryColor}"/>
+        <Setter Property="FontSize" Value="{StaticResource BodyTextSize}"/>
+        <Setter Property="FontWeight" Value="Regular"/>
+        <Setter Property="MinWidth" Value="{DynamicResource ButtonMinWidth}"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource ActiveColor}"/>
+        <Setter Property="Margin" Value="{DynamicResource SpaceOuter}"/>
+        <Setter Property="Padding" Value="{DynamicResource SpaceInner}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="TextBlock.TextDecorations" Value="{x:Null}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ToggleButton">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" 
+                            Margin="{TemplateBinding Margin}" MinWidth="{TemplateBinding MinWidth}">
+                        <TextBlock
+                                    Foreground="{TemplateBinding Foreground}"
+                                    FontSize="{TemplateBinding FontSize}"
+                                    Padding="{TemplateBinding Padding}"
+                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                    TextDecorations="{TemplateBinding TextBlock.TextDecorations}"
+                                    >
+                            <TextBlock.Style>
+                                <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseTextBlockStyle}"/>
+                            </TextBlock.Style>
+                            <ContentPresenter ContentSource="Content"/>
+                        </TextBlock>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="true">
+                            <Setter Property="Background" Value="{DynamicResource DefaultedColor}"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Background" Value="{DynamicResource HoverColor}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Background" Value="{DynamicResource PressColor}"/>
+                            <Setter Property="BorderBrush" Value="{DynamicResource PressColor}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value="{DynamicResource DisabledOpacity}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="ToggleButton.Ghost" TargetType="{x:Type ToggleButton}" BasedOn="{StaticResource ToggleButton.Solid}">
+        <Setter Property="Background" Value="{x:Null}"/>
+        <Setter Property="Foreground" Value="{DynamicResource ActiveColor}"/>
+        <Setter Property="MinWidth" Value="{DynamicResource ButtonMinWidth}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource ActiveColor}"/>
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="true">
+                <Setter Property="BorderBrush" Value="{DynamicResource DefaultedColor}"/>
+                <Setter Property="Foreground" Value="{DynamicResource DefaultedColor}"/>
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <SolidColorBrush Color="{DynamicResource Default}" Opacity="0.10"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="BorderBrush" Value="{DynamicResource HoverColor}"/>
+                <Setter Property="Foreground" Value="{DynamicResource HoverColor}"/>
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <SolidColorBrush Color="{DynamicResource Active}" Opacity="0.10"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="true">
+                <Setter Property="BorderBrush" Value="{DynamicResource PressColor}"/>
+                <Setter Property="Foreground" Value="{DynamicResource PressColor}"/>
+                <Setter Property="Background" Value="{x:Null}"/>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Opacity" Value="{DynamicResource DisabledOpacity}"/>
+                <Setter Property="Background" Value="{x:Null}"/>
+                <Setter Property="BorderThickness" Value="1"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="ToggleButton.Borderless" TargetType="{x:Type ToggleButton}" BasedOn="{StaticResource ToggleButton.Ghost}">
+        <Setter Property="Foreground" Value="{DynamicResource ActiveColor}"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="true">
+                <Setter Property="Foreground" Value="{DynamicResource DefaultedColor}"/>
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <SolidColorBrush Color="{DynamicResource Default}" Opacity="0.10"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Opacity" Value="{DynamicResource DisabledOpacity}"/>
+                <Setter Property="Background" Value="{x:Null}"/>
+                <Setter Property="BorderThickness" Value="0"/>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="Foreground" Value="{DynamicResource HoverColor}"/>
+                <Setter Property="Background" Value="{x:Null}"/>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="true">
+                <Setter Property="Foreground" Value="{DynamicResource PressColor}"/>
+                <Setter Property="Background" Value="{x:Null}"/>
+            </Trigger>
+
+        </Style.Triggers>
     </Style>
 
 </ResourceDictionary>

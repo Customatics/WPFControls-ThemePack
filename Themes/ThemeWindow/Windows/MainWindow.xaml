@@ -177,9 +177,9 @@
                     </GroupBox>
                 </Grid>
             </TabItem>
-            <TabItem Header="Buttons" ScrollViewer.VerticalScrollBarVisibility="Auto">
+            <TabItem Header="Buttons">
                 <WrapPanel>
-                    <GroupBox Header="Default size" BorderBrush="{x:Null}">
+                    <GroupBox Header="Button: default size" BorderBrush="{x:Null}">
                         <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="auto"/>
@@ -225,7 +225,7 @@
 
                         </Grid>
                     </GroupBox>
-                    <GroupBox Header="Large size" BorderBrush="{x:Null}">
+                    <GroupBox Header="Button: large size" BorderBrush="{x:Null}">
                         <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="auto"/>
@@ -268,6 +268,140 @@
                             <Button Style="{DynamicResource Button.Borderless.Large}" Grid.Column="2" Grid.Row="6" Content="Button" IsDefault="True" />
                             <Button Style="{DynamicResource Button.Borderless.Large}" Grid.Column="4" Grid.Row="6" Content="Button" />
                             <Button Style="{DynamicResource Button.Borderless.Large}" Grid.Column="6" Grid.Row="6" Content="Button" IsEnabled="False" />
+
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Button: medium size" BorderBrush="{x:Null}">
+                        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center">Solid</TextBlock>
+                            <TextBlock Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Center">Ghost</TextBlock>
+                            <TextBlock Grid.Row="6" HorizontalAlignment="Right" VerticalAlignment="Center">Borderless</TextBlock>
+
+                            <TextBlock Grid.Column="2" HorizontalAlignment="Center">IsDefault</TextBlock>
+                            <TextBlock Grid.Column="4" HorizontalAlignment="Center">Common</TextBlock>
+                            <TextBlock Grid.Column="6" HorizontalAlignment="Center">Disabled</TextBlock>
+
+                            <!-- solid button-->
+                            <Button Style="{DynamicResource Button.Solid.Medium}" Grid.Column="2" Grid.Row="2" Content="Button" IsDefault="True" />
+                            <Button Style="{DynamicResource Button.Solid.Medium}" Grid.Column="4" Grid.Row="2" Content="Button" />
+                            <Button Style="{DynamicResource Button.Solid.Medium}" Grid.Column="6" Grid.Row="2" Content="Button" IsEnabled="False" />
+
+                            <!-- ghost button-->
+                            <Button Style="{DynamicResource Button.Ghost.Medium}" Grid.Column="2" Grid.Row="4" Content="Button" IsDefault="True" />
+                            <Button Style="{DynamicResource Button.Ghost.Medium}" Grid.Column="4" Grid.Row="4" Content="Button" />
+                            <Button Style="{DynamicResource Button.Ghost.Medium}" Grid.Column="6" Grid.Row="4" Content="Button" IsEnabled="False" />
+
+                            <!-- borderless button-->
+                            <Button Style="{DynamicResource Button.Borderless.Medium}" Grid.Column="2" Grid.Row="6" Content="Button" IsDefault="True" />
+                            <Button Style="{DynamicResource Button.Borderless.Medium}" Grid.Column="4" Grid.Row="6" Content="Button" />
+                            <Button Style="{DynamicResource Button.Borderless.Medium}" Grid.Column="6" Grid.Row="6" Content="Button" IsEnabled="False" />
+
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Button: small size" BorderBrush="{x:Null}">
+                        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center">Solid</TextBlock>
+                            <TextBlock Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Center">Ghost</TextBlock>
+                            <TextBlock Grid.Row="6" HorizontalAlignment="Right" VerticalAlignment="Center">Borderless</TextBlock>
+
+                            <TextBlock Grid.Column="2" HorizontalAlignment="Center">IsDefault</TextBlock>
+                            <TextBlock Grid.Column="4" HorizontalAlignment="Center">Common</TextBlock>
+                            <TextBlock Grid.Column="6" HorizontalAlignment="Center">Disabled</TextBlock>
+
+                            <!-- solid button-->
+                            <Button Style="{DynamicResource Button.Solid.Small}" Grid.Column="2" Grid.Row="2" Content="Button" IsDefault="True" />
+                            <Button Style="{DynamicResource Button.Solid.Small}" Grid.Column="4" Grid.Row="2" Content="Button" />
+                            <Button Style="{DynamicResource Button.Solid.Small}" Grid.Column="6" Grid.Row="2" Content="Button" IsEnabled="False" />
+
+                            <!-- ghost button-->
+                            <Button Style="{DynamicResource Button.Ghost.Small}" Grid.Column="2" Grid.Row="4" Content="Button" IsDefault="True" />
+                            <Button Style="{DynamicResource Button.Ghost.Small}" Grid.Column="4" Grid.Row="4" Content="Button" />
+                            <Button Style="{DynamicResource Button.Ghost.Small}" Grid.Column="6" Grid.Row="4" Content="Button" IsEnabled="False" />
+
+                            <!-- borderless button-->
+                            <Button Style="{DynamicResource Button.Borderless.Small}" Grid.Column="2" Grid.Row="6" Content="Button" IsDefault="True" />
+                            <Button Style="{DynamicResource Button.Borderless.Small}" Grid.Column="4" Grid.Row="6" Content="Button" />
+                            <Button Style="{DynamicResource Button.Borderless.Small}" Grid.Column="6" Grid.Row="6" Content="Button" IsEnabled="False" />
+
+                        </Grid>
+                    </GroupBox>
+                    
+                    
+                    <GroupBox Header="Toggle: default size" BorderBrush="{x:Null}">
+                        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center">Solid</TextBlock>
+                            <TextBlock Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Center">Ghost</TextBlock>
+                            <TextBlock Grid.Row="6" HorizontalAlignment="Right" VerticalAlignment="Center">Borderless</TextBlock>
+
+                            <TextBlock Grid.Column="2" HorizontalAlignment="Center">Common</TextBlock>
+                            <TextBlock Grid.Column="8" HorizontalAlignment="Center">Disabled</TextBlock>
+
+                            <!-- solid button-->
+                            <ToggleButton Style="{DynamicResource ToggleButton.Solid}" Grid.Column="2" Grid.Row="2" Content="ToggleButton" />
+                            <ToggleButton Style="{DynamicResource ToggleButton.Solid}" Grid.Column="4" Grid.Row="2" Content="ToggleButton" IsEnabled="False" />
+
+                            <!-- ghost ToggleButton-->
+                            <ToggleButton Style="{DynamicResource ToggleButton.Ghost}" Grid.Column="2" Grid.Row="4" Content="ToggleButton" />
+                            <ToggleButton Style="{DynamicResource ToggleButton.Ghost}" Grid.Column="4" Grid.Row="2" Content="ToggleButton" IsEnabled="False" />
+
+                            <!-- borderless ToggleButton-->
+                            <ToggleButton Style="{DynamicResource ToggleButton.Borderless}" Grid.Column="2" Grid.Row="6" Content="ToggleButton"  />
+                            <ToggleButton Style="{DynamicResource ToggleButton.Borderless}" Grid.Column="4" Grid.Row="2" Content="ToggleButton" IsEnabled="False" />
 
                         </Grid>
                     </GroupBox>
