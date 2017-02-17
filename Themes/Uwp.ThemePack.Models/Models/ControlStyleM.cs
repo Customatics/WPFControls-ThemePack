@@ -8,17 +8,11 @@ namespace Uwp.ThemePack.Models.Models
     /// </summary>
     public class ControlStyleM
     {
-        public ControlStyleM(string name, ResourceDictionary resource, Uri uri)
+        public ControlStyleM(string name, Uri uri)
         {
             this.Name = name;
             this.Uri = uri;
-            resource.Source = uri;
-            this.Resources = resource;
         }
-        /// <summary>
-        /// The ResourceDictionary that represents this application theme.
-        /// </summary>
-        public ResourceDictionary Resources { get; private set; }
 
         /// <summary>
         /// The name of the application theme.

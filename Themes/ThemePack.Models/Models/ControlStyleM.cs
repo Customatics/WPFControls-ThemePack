@@ -8,11 +8,9 @@ namespace ThemePack.Models.Models
     /// </summary>
     public class ControlStyleM
     {
-        public ControlStyleM(string name, ResourceDictionary resource, Uri uri)
+        public ControlStyleM(string name, ResourceDictionary resource)
         {
             this.Name = name;
-            this.Uri = uri;
-            resource.Source = uri;
             this.Resources = resource;
         }
         /// <summary>
@@ -25,9 +23,5 @@ namespace ThemePack.Models.Models
         /// </summary>
         public string Name { get; private set; }
 
-        /// <summary>
-        /// Resource <see cref="Uri"/>
-        /// </summary>
-        public Uri Uri { get; private set; }
     }
 }

@@ -7,6 +7,7 @@ using System.Resources;
 using System.Windows;
 using ThemePack.Common.BusinessModels;
 using ThemePack.Common.Extentions;
+using ThemePack.Models.Models;
 
 namespace ThemePack.Common.Helpers
 {
@@ -37,8 +38,8 @@ namespace ThemePack.Common.Helpers
                         var parentDir = Path.GetDirectoryName(resource.Key.ToString());
                         //var name = resource.Key.ToString().Replace(".baml", "");
                         Uri uri = new Uri("/" + assembly.GetName().Name + ";component/" + resource.Key.ToString().Replace(".baml", ".xaml"), UriKind.Relative);
-                        ResourceDictionary skin = Application.LoadComponent(uri) as ResourceDictionary;
-                        resources.Add(new DllResourceInfo(name, uri, skin, parentDir.FolderNameToResourceType()));
+                        //ResourceDictionary skin = Application.LoadComponent(uri) as ResourceDictionary;
+                        resources.Add(new DllResourceInfo(name, uri, parentDir.FolderNameToResourceType()));
                     }
                 }
             }

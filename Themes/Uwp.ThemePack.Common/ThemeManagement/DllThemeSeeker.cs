@@ -3,9 +3,9 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using Uwp.ThemePack.Common.Abstractions;
-using Uwp.ThemePack.Common.Helpers;
 using Uwp.ThemePack.Models.Models;
 using Uwp.ThemePack.Models.Models.Enums;
+using UwpTheme_001;
 
 namespace Uwp.ThemePack.Common.ThemeManagement
 {
@@ -15,18 +15,12 @@ namespace Uwp.ThemePack.Common.ThemeManagement
         {
             var themes = new List<ThemeM>();
 
-            if (Directory.Exists(folder))
-            {
-                var  dllFileNames = Directory.GetFiles(folder, "*.dll");
-                //ICollection<Assembly> assemblies = new List<Assembly>(dllFileNames.Length);
-                foreach (string dllFile in dllFileNames)
-                {
-                    var assemblyName = "thisidf";//AssemblyName.GetAssemblyName(dllFile).Name;
-                    var currentDllResources = AssemblyResourceHelper.LoadXaml(dllFile);
-                    themes.Add(new ThemeM(assemblyName, currentDllResources.Where(_ => _.ResourceType == XamlResourceType.ColorScheme).Select(it => new ColorSchemeM(it.Name,it.Resource, it.Uri)).ToList(),
-                                          currentDllResources.Where(_ => _.ResourceType == XamlResourceType.ControlStyle).Select(it => new ControlStyleM(it.Name, it.Resource, it.Uri)).ToList()));
-                }
-            }
+            //**add here others themes
+            var currentDllResources = new Theme001AssemblyContainer().GetAssemblyResources();
+            var assemblyName = "Theme_001";
+            themes.Add(new ThemeM(assemblyName, currentDllResources.Where(_ => _.ResourceType == XamlResourceType.ColorScheme).Select(it => new ColorSchemeM(it.Name, it.Uri)).ToList(),
+                                  currentDllResources.Where(_ => _.ResourceType == XamlResourceType.ControlStyle).Select(it => new ControlStyleM(it.Name, it.Uri)).ToList()));
+            //**
 
             return themes;
         }

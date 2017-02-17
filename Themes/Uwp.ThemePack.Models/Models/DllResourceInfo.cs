@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using ThemePack.Models.Models.Enums;
+using Windows.UI.Xaml;
+using Uwp.ThemePack.Models.Models.Enums;
 
-namespace ThemePack.Common.BusinessModels
+namespace Uwp.ThemePack.Models.Models
 {
     /// <summary>
     /// Assembly <see cref="ResourceDictionary"/> info
@@ -20,11 +16,10 @@ namespace ThemePack.Common.BusinessModels
         /// <param name="uri">Resource uri</param>
         /// <param name="resource">.xaml resource <see cref="ResourceDictionary"/></param>
         /// <param name="resourceType"><see cref="ResourceType"/></param>
-        public DllResourceInfo(string name, Uri uri, ResourceDictionary resource, XamlResourceType resourceType)
+        public DllResourceInfo(string name, Uri uri, XamlResourceType resourceType)
         {
             Name = name;
             Uri = uri;
-            Resource = resource;
             ResourceType = resourceType;
         }
 
@@ -37,11 +32,6 @@ namespace ThemePack.Common.BusinessModels
         /// Resource <see cref="Uri"/>
         /// </summary>
         public Uri Uri { get; set; }
-
-        /// <summary>
-        /// Resource <see cref="ResourceDictionary"/>
-        /// </summary>
-        public ResourceDictionary Resource { get; set; }
 
         /// <summary>
         /// <see cref="ResourceType"/>

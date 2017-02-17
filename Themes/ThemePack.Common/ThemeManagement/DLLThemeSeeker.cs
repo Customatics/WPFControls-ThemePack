@@ -32,8 +32,8 @@ namespace ThemePack.Common.ThemeManagement
                 {
                     var assemblyName = AssemblyName.GetAssemblyName(dllFile).Name;
                     var currentDllResources = AssemblyResourceHelper.LoadXaml(dllFile);
-                    themes.Add(new ThemeM(assemblyName, currentDllResources.Where(_ => _.ResourceType == XamlResourceType.ColorScheme).Select(it => new ColorSchemeM(it.Name,it.Resource, it.Uri)).ToList(),
-                                          currentDllResources.Where(_ => _.ResourceType == XamlResourceType.ControlStyle).Select(it => new ControlStyleM(it.Name, it.Resource, it.Uri)).ToList()));
+                    themes.Add(new ThemeM(assemblyName, currentDllResources.Where(_ => _.ResourceType == XamlResourceType.ColorScheme).Select(it => new ColorSchemeM(it.Name,it.Resource)).ToList(),
+                                          currentDllResources.Where(_ => _.ResourceType == XamlResourceType.ControlStyle).Select(it => new ControlStyleM(it.Name, it.Resource)).ToList()));
                 }
             }
 
