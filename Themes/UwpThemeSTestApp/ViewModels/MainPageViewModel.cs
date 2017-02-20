@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.Storage;
 using Windows.Storage.Streams;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Media.Imaging;
 using Uwp.ThemePack.Common.Base;
@@ -21,9 +22,6 @@ namespace UwpThemeSTestApp.ViewModels
     class MainPageViewModel : BaseViewModel
     {
         #region private fields and constants
-
-        private const string ThemeFolder = "Themes";
-
 
         private ThemeSeekerFactory themeSeekerFactory;
 
@@ -124,17 +122,24 @@ namespace UwpThemeSTestApp.ViewModels
 
         #region private methods
 
-        private void Initialize()
+        private async void Initialize()
         {
-
             var themeSeeker = themeSeekerFactory.GetThemeSeeker();
-            Themes = new ObservableCollection<ThemeM>(themeSeeker.GetThemes(Path.Combine(AppContext.BaseDirectory, ThemeFolder)));
-            if (Themes.Any())
+            try
             {
-                selectedTheme = Themes.First();
-                colorSchemes = new ObservableCollection<ColorSchemeM>(Themes.First().ColorSchemeModels);
-                selecteColorScheme = ColorSchemes.FirstOrDefault();
-                ChangeSelectedTheme();
+                Themes = new ObservableCollection<ThemeM>(themeSeeker.GetThemes());
+                if (Themes.Any())
+                {
+                    selectedTheme = Themes.First();
+                    colorSchemes = new ObservableCollection<ColorSchemeM>(Themes.First().ColorSchemeModels);
+                    selecteColorScheme = ColorSchemes.FirstOrDefault();
+                    ChangeSelectedTheme();
+                }
+            }
+            catch (Exception e)
+            {
+                var dialog = new MessageDialog(e.Message);
+                await dialog.ShowAsync();
             }
         }
 

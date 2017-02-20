@@ -81,39 +81,28 @@
     <Compile Include="Base\DPI.cs" />
     <Compile Include="Base\DpiAwareWindow.cs" />
     <Compile Include="Base\WindowSizePositionManager.cs" />
+    <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Converters\ConverterMarkupExtension.cs" />
+    <Compile Include="Converters\EmptyStringToZeroConverter.cs" />
+    <Compile Include="Converters\NullToVisibilityConverter.cs" />
+    <Compile Include="Converters\TreeLevelConverter.cs" />
     <Compile Include="Models\DataEventsArgs.cs" />
     <Compile Include="Constants\ThemeNameConstants.cs" />
     <Compile Include="Extentions\ResourceTypeExtenstions.cs" />
     <Compile Include="Factories\ThemeSeekerFactory.cs" />
-    <Compile Include="Helpers\advapi32.cs" />
     <Compile Include="Helpers\AssemblyResourceHelper.cs" />
     <Compile Include="Helpers\ConversionHelper.cs" />
     <Compile Include="Helpers\DelayHelper.cs" />
-    <Compile Include="Helpers\DesktopHelper.cs" />
     <Compile Include="Helpers\DpiHelper.cs" />
     <Compile Include="Helpers\EnumerationHelper.cs" />
-    <Compile Include="Helpers\GenericPluginLoader.cs" />
-    <Compile Include="Helpers\StringHelper.cs" />
-    <Compile Include="Interop\kernel32.cs" />
-    <Compile Include="Helpers\Utils.cs" />
-    <Compile Include="Helpers\wtsapi32.cs" />
     <Compile Include="Interop\gdi32.cs" />
     <Compile Include="Interop\shcore.cs" />
-    <Compile Include="Interop\shlwapi.cs" />
     <Compile Include="Interop\user32.cs" />
     <Compile Include="Messages\CloseModalWindowsMessage.cs" />
-    <Compile Include="Models\Constants\ProcessesAction.cs" />
-    <Compile Include="Models\PackedRegion.cs" />
-    <Compile Include="Models\PixelRegion.cs" />
-    <Compile Include="Models\ProtocolSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CursorService.cs" />
     <Compile Include="ThemeManagement\DllThemeSeeker.cs" />
     <Compile Include="ThemeManagement\ThemeManager.cs" />
-    <Compile Include="Win\GraphicsDeviceIsBusyException.cs" />
-    <Compile Include="Win\GraphicsDeviceNotFoundException.cs" />
-    <Compile Include="Win\NativeException.cs" />
-    <Compile Include="Win\SystemType.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ThemePack.Models\ThemePack.Models.csproj">
@@ -127,11 +116,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="AttachedProperties\" />
-    <Folder Include="BusinessModels\" />
-    <Folder Include="Components\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

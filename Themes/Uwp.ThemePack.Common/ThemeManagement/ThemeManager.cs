@@ -11,17 +11,8 @@ namespace Uwp.ThemePack.Common.ThemeManagement
     /// </summary>
     public static class ThemeManager
     {
-        //private IList<Theme> themes;
-        //private IList<ColorScheme> colorSchemes;
-
-        //public ThemeManager(IList<Theme> themes, IList<ColorScheme> colorSchemes)
-        //{
-        //    this.themes = themes;
-        //    this.colorSchemes = colorSchemes;
-        //}
-
         /// <summary>
-        /// Change theme and color scheme and theme for the application. Every resource should contain color scheme inside it merged dictionary (because of StaticResource)
+        /// Change theme, color scheme and theme for the application. Every resource should contain color scheme inside it merged dictionary (because of StaticResource)
         /// There is no DynamicResource in UWP
         /// </summary>
         /// <param name="app"><see cref="Application"/></param>
@@ -35,7 +26,7 @@ namespace Uwp.ThemePack.Common.ThemeManagement
 
             var colorSchemeResource = new ResourceDictionary() { Source = colorScheme.Uri };
 
-            var colorSchemeResourceThemes = colorSchemeResource.ThemeDictionaries.ToList();
+            var colorSchemeResourceThemes = colorSchemeResource.ThemeDictionaries.ToList();//we should copy and clear. Just because we can't add element to new resource while he is a child
             colorSchemeResource.ThemeDictionaries.Clear();
             app.Resources.ThemeDictionaries.Clear();
             foreach (var theme in colorSchemeResourceThemes)

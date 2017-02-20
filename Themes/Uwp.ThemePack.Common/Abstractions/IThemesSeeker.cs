@@ -8,6 +8,6 @@ namespace Uwp.ThemePack.Common.Abstractions
     /// </summary>
     public interface IThemesSeeker
     {
-        IList<ThemeM> GetThemes(string folder);
+        IList<ThemeM> GetThemes();
     }
 }

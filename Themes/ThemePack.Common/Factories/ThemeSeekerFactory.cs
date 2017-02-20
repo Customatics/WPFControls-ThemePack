@@ -8,9 +8,12 @@ using ThemePack.Common.ThemeManagement;
 
 namespace ThemePack.Common.Factories
 {
+    /// <summary>
+    /// Factory for theme seeker <see cref="IThemesSeeker"/>
+    /// </summary>
     public class ThemeSeekerFactory
     {
-        public IThemesSeeker GetThemeSeeker()
+        public IThemesSeeker GetThemeSeeker()// possible others realizations
         {
             return new DllThemeSeeker();
         }

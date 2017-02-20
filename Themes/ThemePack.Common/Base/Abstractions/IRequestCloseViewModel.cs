@@ -1,5 +1,5 @@
 ﻿using System;
-using ThemePack.Common.BusinessModels;
+using ThemePack.Common.Models;
 
 namespace ThemePack.Common.Base.Abstractions
 {
