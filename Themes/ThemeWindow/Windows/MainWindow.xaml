@@ -764,12 +764,26 @@
                                     <MenuItem Header="Enabled" >
                                         <MenuItem Header="Enabled subitem"/>
                                         <MenuItem Header="Checkable subitem" IsCheckable="True"/>
+                                        <Separator/>
                                         <MenuItem Header="Disabled subitem" IsEnabled="False"/>
                                     </MenuItem>
                                     <MenuItem Header="Checkable" IsCheckable="True"/>
+                                    <Separator/>
                                     <MenuItem Header="Disabled" IsEnabled="False"/>
                                 </ContextMenu>
                             </GroupBox.ContextMenu>
+                        </GroupBox>
+                    </WrapPanel>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="Icons">
+                <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                    <WrapPanel>
+                        <GroupBox Header="Outline" BorderBrush="{x:Null}">
+                           
+                        </GroupBox>
+                        <GroupBox Header="Solid" BorderBrush="{x:Null}">
+
                         </GroupBox>
                     </WrapPanel>
                 </ScrollViewer>
