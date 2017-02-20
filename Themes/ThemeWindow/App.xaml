@@ -9,8 +9,14 @@
                 <ResourceDictionary Source="/Theme-001;component/Themes/ColorSchemes/Light.xaml"/>
 
                 <ResourceDictionary Source="/Theme-001;component/Themes/Styles/Buttons.xaml"/>
-                <ResourceDictionary Source="/Theme-001;component/Themes/Styles/Window.xaml"/>
+                <ResourceDictionary Source="/Theme-001;component/Themes/Styles/Form.xaml"/>
+                <ResourceDictionary Source="/Theme-001;component/Themes/Styles/Notifications.xaml"/>
+                <ResourceDictionary Source="/Theme-001;component/Themes/Styles/Options.xaml"/>
+                <ResourceDictionary Source="/Theme-001;component/Themes/Styles/ProgressBar.xaml"/>
+                <ResourceDictionary Source="/Theme-001;component/Themes/Styles/Scroll.xaml"/>
+                <ResourceDictionary Source="/Theme-001;component/Themes/Styles/Slider.xaml"/>
                 <ResourceDictionary Source="/Theme-001;component/Themes/Styles/Texts.xaml"/>
+                <ResourceDictionary Source="/Theme-001;component/Themes/Styles/Window.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

@@ -32,9 +32,11 @@
 
                             <Rectangle Fill="{TemplateBinding BorderBrush}" />
 
-                            <ScrollViewer Grid.Row="2" HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}" VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}" Padding="{TemplateBinding Padding}">
-                                <ContentPresenter />
-                            </ScrollViewer>
+                            <!--<ScrollViewer Grid.Row="2" HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}" VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}" Padding="{TemplateBinding Padding}">-->
+                            <Grid Grid.Row="2">
+                            <ContentPresenter Margin="{TemplateBinding Padding}" />
+                            </Grid>
+                            <!--</ScrollViewer>-->
                         </Grid>
                     </Border>
                 </ControlTemplate>

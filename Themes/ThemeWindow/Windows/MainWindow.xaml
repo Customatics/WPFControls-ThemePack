@@ -20,7 +20,6 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-
         <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" 
                   ItemsSource="{Binding Themes}"
                   DisplayMemberPath="Name"
@@ -134,7 +133,7 @@
                 </ScrollViewer>
             </TabItem>
             <TabItem Header="Labels and texts">
-                <Grid x:Name="Content">
+                <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
                     <GroupBox Header="Headers" BorderBrush="{x:Null}" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Auto" >
                         <Grid Margin="10">
                             <Grid.RowDefinitions>
@@ -167,7 +166,7 @@
                             <TextBlock Grid.Row="10" Style="{DynamicResource BodyTextBlockStyle}" HorizontalAlignment="Right" Text="Body text"/>
                             <TextBlock Grid.Row="12" Style="{DynamicResource CaptionTextBlockStyle}" HorizontalAlignment="Right" Text="Caption"/>
                             <TextBlock Grid.Row="14" Style="{DynamicResource NoteTextBlockStyle}" HorizontalAlignment="Right" Text="Note"/>
-                            
+
                             <TextBlock Grid.Row="0" Grid.Column="2" Style="{DynamicResource HeaderTextBlockStyle}" Text="WOAH!"/>
                             <TextBlock Grid.Row="2" Grid.Column="2" Style="{DynamicResource SubHeaderTextBlockStyle}" Text="We are glad to see you are checking out our Themes!"/>
                             <TextBlock Grid.Row="4" Grid.Column="2" Style="{DynamicResource TitleTextBlockStyle}" Text="Subtitle information"/>
@@ -178,249 +177,465 @@
                             <TextBlock Grid.Row="14" Grid.Column="2" Style="{DynamicResource NoteTextBlockStyle}" Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."/>
                         </Grid>
                     </GroupBox>
-                </Grid>
+                </ScrollViewer>
             </TabItem>
             <TabItem Header="Buttons">
                 <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
-                <WrapPanel>
-                    <GroupBox Header="Button: default size" BorderBrush="{x:Null}">
-                        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="auto"/>
-                                <RowDefinition Height="10"/>
-                                <RowDefinition Height="auto"/>
-                                <RowDefinition Height="10"/>
-                                <RowDefinition Height="auto"/>
-                                <RowDefinition Height="10"/>
-                                <RowDefinition Height="auto"/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
+                    <WrapPanel>
+                        <GroupBox Header="Button: normal size" BorderBrush="{x:Null}" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                            <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
 
-                            <TextBlock Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center">Solid</TextBlock>
-                            <TextBlock Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Center">Ghost</TextBlock>
-                            <TextBlock Grid.Row="6" HorizontalAlignment="Right" VerticalAlignment="Center">Borderless</TextBlock>
+                                <TextBlock Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center">Solid</TextBlock>
+                                <TextBlock Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Center">Ghost</TextBlock>
+                                <TextBlock Grid.Row="6" HorizontalAlignment="Right" VerticalAlignment="Center">Borderless</TextBlock>
 
-                            <TextBlock Grid.Column="2" HorizontalAlignment="Center">IsDefault</TextBlock>
-                            <TextBlock Grid.Column="4" HorizontalAlignment="Center">Common</TextBlock>
-                            <TextBlock Grid.Column="6" HorizontalAlignment="Center">Disabled</TextBlock>
+                                <TextBlock Grid.Column="2" HorizontalAlignment="Center">IsDefault</TextBlock>
+                                <TextBlock Grid.Column="4" HorizontalAlignment="Center">Common</TextBlock>
+                                <TextBlock Grid.Column="6" HorizontalAlignment="Center">Disabled</TextBlock>
 
-                            <!-- solid button-->
-                            <Button Style="{DynamicResource Button.Solid}" Grid.Column="2" Grid.Row="2" Content="Button" IsDefault="True" />
-                            <Button Style="{DynamicResource Button.Solid}" Grid.Column="4" Grid.Row="2" Content="Button" />
-                            <Button Style="{DynamicResource Button.Solid}" Grid.Column="6" Grid.Row="2" Content="Button" IsEnabled="False" />
+                                <!-- solid button-->
+                                <Button Style="{DynamicResource Button.Solid}" Grid.Column="2" Grid.Row="2" Content="Button" IsDefault="True" />
+                                <Button Style="{DynamicResource Button.Solid}" Grid.Column="4" Grid.Row="2" Content="Button" />
+                                <Button Style="{DynamicResource Button.Solid}" Grid.Column="6" Grid.Row="2" Content="Button" IsEnabled="False" />
 
-                            <!-- ghost button-->
-                            <Button Style="{DynamicResource Button.Ghost}" Grid.Column="2" Grid.Row="4" Content="Button" IsDefault="True" />
-                            <Button Style="{DynamicResource Button.Ghost}" Grid.Column="4" Grid.Row="4" Content="Button" />
-                            <Button Style="{DynamicResource Button.Ghost}" Grid.Column="6" Grid.Row="4" Content="Button" IsEnabled="False" />
+                                <!-- ghost button-->
+                                <Button Style="{DynamicResource Button.Ghost}" Grid.Column="2" Grid.Row="4" Content="Button" IsDefault="True" />
+                                <Button Style="{DynamicResource Button.Ghost}" Grid.Column="4" Grid.Row="4" Content="Button" />
+                                <Button Style="{DynamicResource Button.Ghost}" Grid.Column="6" Grid.Row="4" Content="Button" IsEnabled="False" />
 
-                            <!-- borderless button-->
-                            <Button Style="{DynamicResource Button.Borderless}" Grid.Column="2" Grid.Row="6" Content="Button" IsDefault="True" />
-                            <Button Style="{DynamicResource Button.Borderless}" Grid.Column="4" Grid.Row="6" Content="Button" />
-                            <Button Style="{DynamicResource Button.Borderless}" Grid.Column="6" Grid.Row="6" Content="Button" IsEnabled="False" />
+                                <!-- borderless button-->
+                                <Button Style="{DynamicResource Button.Borderless}" Grid.Column="2" Grid.Row="6" Content="Button" IsDefault="True" />
+                                <Button Style="{DynamicResource Button.Borderless}" Grid.Column="4" Grid.Row="6" Content="Button" />
+                                <Button Style="{DynamicResource Button.Borderless}" Grid.Column="6" Grid.Row="6" Content="Button" IsEnabled="False" />
 
-                        </Grid>
-                    </GroupBox>
-                    <GroupBox Header="Button: large size" BorderBrush="{x:Null}">
-                        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="auto"/>
-                                <RowDefinition Height="10"/>
-                                <RowDefinition Height="auto"/>
-                                <RowDefinition Height="10"/>
-                                <RowDefinition Height="auto"/>
-                                <RowDefinition Height="10"/>
-                                <RowDefinition Height="auto"/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox Header="Button: large size" BorderBrush="{x:Null}">
+                            <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
 
-                            <TextBlock Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center">Solid</TextBlock>
-                            <TextBlock Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Center">Ghost</TextBlock>
-                            <TextBlock Grid.Row="6" HorizontalAlignment="Right" VerticalAlignment="Center">Borderless</TextBlock>
+                                <TextBlock Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center">Solid</TextBlock>
+                                <TextBlock Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Center">Ghost</TextBlock>
+                                <TextBlock Grid.Row="6" HorizontalAlignment="Right" VerticalAlignment="Center">Borderless</TextBlock>
 
-                            <TextBlock Grid.Column="2" HorizontalAlignment="Center">IsDefault</TextBlock>
-                            <TextBlock Grid.Column="4" HorizontalAlignment="Center">Common</TextBlock>
-                            <TextBlock Grid.Column="6" HorizontalAlignment="Center">Disabled</TextBlock>
+                                <TextBlock Grid.Column="2" HorizontalAlignment="Center">IsDefault</TextBlock>
+                                <TextBlock Grid.Column="4" HorizontalAlignment="Center">Common</TextBlock>
+                                <TextBlock Grid.Column="6" HorizontalAlignment="Center">Disabled</TextBlock>
 
-                            <!-- solid button-->
-                            <Button Style="{DynamicResource Button.Solid.Large}" Grid.Column="2" Grid.Row="2" Content="Button" IsDefault="True" />
-                            <Button Style="{DynamicResource Button.Solid.Large}" Grid.Column="4" Grid.Row="2" Content="Button" />
-                            <Button Style="{DynamicResource Button.Solid.Large}" Grid.Column="6" Grid.Row="2" Content="Button" IsEnabled="False" />
+                                <!-- solid button-->
+                                <Button Style="{DynamicResource Button.Solid.Large}" Grid.Column="2" Grid.Row="2" Content="Button" IsDefault="True" />
+                                <Button Style="{DynamicResource Button.Solid.Large}" Grid.Column="4" Grid.Row="2" Content="Button" />
+                                <Button Style="{DynamicResource Button.Solid.Large}" Grid.Column="6" Grid.Row="2" Content="Button" IsEnabled="False" />
 
-                            <!-- ghost button-->
-                            <Button Style="{DynamicResource Button.Ghost.Large}" Grid.Column="2" Grid.Row="4" Content="Button" IsDefault="True" />
-                            <Button Style="{DynamicResource Button.Ghost.Large}" Grid.Column="4" Grid.Row="4" Content="Button" />
-                            <Button Style="{DynamicResource Button.Ghost.Large}" Grid.Column="6" Grid.Row="4" Content="Button" IsEnabled="False" />
+                                <!-- ghost button-->
+                                <Button Style="{DynamicResource Button.Ghost.Large}" Grid.Column="2" Grid.Row="4" Content="Button" IsDefault="True" />
+                                <Button Style="{DynamicResource Button.Ghost.Large}" Grid.Column="4" Grid.Row="4" Content="Button" />
+                                <Button Style="{DynamicResource Button.Ghost.Large}" Grid.Column="6" Grid.Row="4" Content="Button" IsEnabled="False" />
 
-                            <!-- borderless button-->
-                            <Button Style="{DynamicResource Button.Borderless.Large}" Grid.Column="2" Grid.Row="6" Content="Button" IsDefault="True" />
-                            <Button Style="{DynamicResource Button.Borderless.Large}" Grid.Column="4" Grid.Row="6" Content="Button" />
-                            <Button Style="{DynamicResource Button.Borderless.Large}" Grid.Column="6" Grid.Row="6" Content="Button" IsEnabled="False" />
+                                <!-- borderless button-->
+                                <Button Style="{DynamicResource Button.Borderless.Large}" Grid.Column="2" Grid.Row="6" Content="Button" IsDefault="True" />
+                                <Button Style="{DynamicResource Button.Borderless.Large}" Grid.Column="4" Grid.Row="6" Content="Button" />
+                                <Button Style="{DynamicResource Button.Borderless.Large}" Grid.Column="6" Grid.Row="6" Content="Button" IsEnabled="False" />
 
-                        </Grid>
-                    </GroupBox>
-                    <GroupBox Header="Button: medium size" BorderBrush="{x:Null}">
-                        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="auto"/>
-                                <RowDefinition Height="10"/>
-                                <RowDefinition Height="auto"/>
-                                <RowDefinition Height="10"/>
-                                <RowDefinition Height="auto"/>
-                                <RowDefinition Height="10"/>
-                                <RowDefinition Height="auto"/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox Header="Button: medium size" BorderBrush="{x:Null}">
+                            <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
 
-                            <TextBlock Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center">Solid</TextBlock>
-                            <TextBlock Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Center">Ghost</TextBlock>
-                            <TextBlock Grid.Row="6" HorizontalAlignment="Right" VerticalAlignment="Center">Borderless</TextBlock>
+                                <TextBlock Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center">Solid</TextBlock>
+                                <TextBlock Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Center">Ghost</TextBlock>
+                                <TextBlock Grid.Row="6" HorizontalAlignment="Right" VerticalAlignment="Center">Borderless</TextBlock>
 
-                            <TextBlock Grid.Column="2" HorizontalAlignment="Center">IsDefault</TextBlock>
-                            <TextBlock Grid.Column="4" HorizontalAlignment="Center">Common</TextBlock>
-                            <TextBlock Grid.Column="6" HorizontalAlignment="Center">Disabled</TextBlock>
+                                <TextBlock Grid.Column="2" HorizontalAlignment="Center">IsDefault</TextBlock>
+                                <TextBlock Grid.Column="4" HorizontalAlignment="Center">Common</TextBlock>
+                                <TextBlock Grid.Column="6" HorizontalAlignment="Center">Disabled</TextBlock>
 
-                            <!-- solid button-->
-                            <Button Style="{DynamicResource Button.Solid.Medium}" Grid.Column="2" Grid.Row="2" Content="Button" IsDefault="True" />
-                            <Button Style="{DynamicResource Button.Solid.Medium}" Grid.Column="4" Grid.Row="2" Content="Button" />
-                            <Button Style="{DynamicResource Button.Solid.Medium}" Grid.Column="6" Grid.Row="2" Content="Button" IsEnabled="False" />
+                                <!-- solid button-->
+                                <Button Style="{DynamicResource Button.Solid.Medium}" Grid.Column="2" Grid.Row="2" Content="Button" IsDefault="True" />
+                                <Button Style="{DynamicResource Button.Solid.Medium}" Grid.Column="4" Grid.Row="2" Content="Button" />
+                                <Button Style="{DynamicResource Button.Solid.Medium}" Grid.Column="6" Grid.Row="2" Content="Button" IsEnabled="False" />
 
-                            <!-- ghost button-->
-                            <Button Style="{DynamicResource Button.Ghost.Medium}" Grid.Column="2" Grid.Row="4" Content="Button" IsDefault="True" />
-                            <Button Style="{DynamicResource Button.Ghost.Medium}" Grid.Column="4" Grid.Row="4" Content="Button" />
-                            <Button Style="{DynamicResource Button.Ghost.Medium}" Grid.Column="6" Grid.Row="4" Content="Button" IsEnabled="False" />
+                                <!-- ghost button-->
+                                <Button Style="{DynamicResource Button.Ghost.Medium}" Grid.Column="2" Grid.Row="4" Content="Button" IsDefault="True" />
+                                <Button Style="{DynamicResource Button.Ghost.Medium}" Grid.Column="4" Grid.Row="4" Content="Button" />
+                                <Button Style="{DynamicResource Button.Ghost.Medium}" Grid.Column="6" Grid.Row="4" Content="Button" IsEnabled="False" />
 
-                            <!-- borderless button-->
-                            <Button Style="{DynamicResource Button.Borderless.Medium}" Grid.Column="2" Grid.Row="6" Content="Button" IsDefault="True" />
-                            <Button Style="{DynamicResource Button.Borderless.Medium}" Grid.Column="4" Grid.Row="6" Content="Button" />
-                            <Button Style="{DynamicResource Button.Borderless.Medium}" Grid.Column="6" Grid.Row="6" Content="Button" IsEnabled="False" />
+                                <!-- borderless button-->
+                                <Button Style="{DynamicResource Button.Borderless.Medium}" Grid.Column="2" Grid.Row="6" Content="Button" IsDefault="True" />
+                                <Button Style="{DynamicResource Button.Borderless.Medium}" Grid.Column="4" Grid.Row="6" Content="Button" />
+                                <Button Style="{DynamicResource Button.Borderless.Medium}" Grid.Column="6" Grid.Row="6" Content="Button" IsEnabled="False" />
 
-                        </Grid>
-                    </GroupBox>
-                    <GroupBox Header="Button: small size" BorderBrush="{x:Null}">
-                        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="auto"/>
-                                <RowDefinition Height="10"/>
-                                <RowDefinition Height="auto"/>
-                                <RowDefinition Height="10"/>
-                                <RowDefinition Height="auto"/>
-                                <RowDefinition Height="10"/>
-                                <RowDefinition Height="auto"/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox Header="Button: small size" BorderBrush="{x:Null}">
+                            <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
 
-                            <TextBlock Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center">Solid</TextBlock>
-                            <TextBlock Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Center">Ghost</TextBlock>
-                            <TextBlock Grid.Row="6" HorizontalAlignment="Right" VerticalAlignment="Center">Borderless</TextBlock>
+                                <TextBlock Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center">Solid</TextBlock>
+                                <TextBlock Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Center">Ghost</TextBlock>
+                                <TextBlock Grid.Row="6" HorizontalAlignment="Right" VerticalAlignment="Center">Borderless</TextBlock>
 
-                            <TextBlock Grid.Column="2" HorizontalAlignment="Center">IsDefault</TextBlock>
-                            <TextBlock Grid.Column="4" HorizontalAlignment="Center">Common</TextBlock>
-                            <TextBlock Grid.Column="6" HorizontalAlignment="Center">Disabled</TextBlock>
+                                <TextBlock Grid.Column="2" HorizontalAlignment="Center">IsDefault</TextBlock>
+                                <TextBlock Grid.Column="4" HorizontalAlignment="Center">Common</TextBlock>
+                                <TextBlock Grid.Column="6" HorizontalAlignment="Center">Disabled</TextBlock>
 
-                            <!-- solid button-->
-                            <Button Style="{DynamicResource Button.Solid.Small}" Grid.Column="2" Grid.Row="2" Content="Button" IsDefault="True" />
-                            <Button Style="{DynamicResource Button.Solid.Small}" Grid.Column="4" Grid.Row="2" Content="Button" />
-                            <Button Style="{DynamicResource Button.Solid.Small}" Grid.Column="6" Grid.Row="2" Content="Button" IsEnabled="False" />
+                                <!-- solid button-->
+                                <Button Style="{DynamicResource Button.Solid.Small}" Grid.Column="2" Grid.Row="2" Content="Button" IsDefault="True" />
+                                <Button Style="{DynamicResource Button.Solid.Small}" Grid.Column="4" Grid.Row="2" Content="Button" />
+                                <Button Style="{DynamicResource Button.Solid.Small}" Grid.Column="6" Grid.Row="2" Content="Button" IsEnabled="False" />
 
-                            <!-- ghost button-->
-                            <Button Style="{DynamicResource Button.Ghost.Small}" Grid.Column="2" Grid.Row="4" Content="Button" IsDefault="True" />
-                            <Button Style="{DynamicResource Button.Ghost.Small}" Grid.Column="4" Grid.Row="4" Content="Button" />
-                            <Button Style="{DynamicResource Button.Ghost.Small}" Grid.Column="6" Grid.Row="4" Content="Button" IsEnabled="False" />
+                                <!-- ghost button-->
+                                <Button Style="{DynamicResource Button.Ghost.Small}" Grid.Column="2" Grid.Row="4" Content="Button" IsDefault="True" />
+                                <Button Style="{DynamicResource Button.Ghost.Small}" Grid.Column="4" Grid.Row="4" Content="Button" />
+                                <Button Style="{DynamicResource Button.Ghost.Small}" Grid.Column="6" Grid.Row="4" Content="Button" IsEnabled="False" />
 
-                            <!-- borderless button-->
-                            <Button Style="{DynamicResource Button.Borderless.Small}" Grid.Column="2" Grid.Row="6" Content="Button" IsDefault="True" />
-                            <Button Style="{DynamicResource Button.Borderless.Small}" Grid.Column="4" Grid.Row="6" Content="Button" />
-                            <Button Style="{DynamicResource Button.Borderless.Small}" Grid.Column="6" Grid.Row="6" Content="Button" IsEnabled="False" />
+                                <!-- borderless button-->
+                                <Button Style="{DynamicResource Button.Borderless.Small}" Grid.Column="2" Grid.Row="6" Content="Button" IsDefault="True" />
+                                <Button Style="{DynamicResource Button.Borderless.Small}" Grid.Column="4" Grid.Row="6" Content="Button" />
+                                <Button Style="{DynamicResource Button.Borderless.Small}" Grid.Column="6" Grid.Row="6" Content="Button" IsEnabled="False" />
 
-                        </Grid>
-                    </GroupBox>
-                    <GroupBox Header="Toggle: default size" BorderBrush="{x:Null}">
-                        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="auto"/>
-                                <RowDefinition Height="10"/>
-                                <RowDefinition Height="auto"/>
-                                <RowDefinition Height="10"/>
-                                <RowDefinition Height="auto"/>
-                                <RowDefinition Height="10"/>
-                                <RowDefinition Height="auto"/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="10"/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox Header="Toggle: default size" BorderBrush="{x:Null}">
+                            <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
 
-                            <TextBlock Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center">Solid</TextBlock>
-                            <TextBlock Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Center">Ghost</TextBlock>
-                            <TextBlock Grid.Row="6" HorizontalAlignment="Right" VerticalAlignment="Center">Borderless</TextBlock>
+                                <TextBlock Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center">Solid</TextBlock>
+                                <TextBlock Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Center">Ghost</TextBlock>
+                                <TextBlock Grid.Row="6" HorizontalAlignment="Right" VerticalAlignment="Center">Borderless</TextBlock>
 
-                            <TextBlock Grid.Column="2" HorizontalAlignment="Center">Common</TextBlock>
-                            <TextBlock Grid.Column="8" HorizontalAlignment="Center">Disabled</TextBlock>
+                                <TextBlock Grid.Column="2" HorizontalAlignment="Center">Common</TextBlock>
+                                <TextBlock Grid.Column="8" HorizontalAlignment="Center">Disabled</TextBlock>
 
-                            <!-- solid button-->
-                            <ToggleButton Style="{DynamicResource ToggleButton.Solid}" Grid.Column="2" Grid.Row="2" Content="ToggleButton" />
-                            <ToggleButton Style="{DynamicResource ToggleButton.Solid}" Grid.Column="4" Grid.Row="2" Content="ToggleButton" IsEnabled="False" />
+                                <!-- solid button-->
+                                <ToggleButton Style="{DynamicResource ToggleButton.Solid}" Grid.Column="2" Grid.Row="2" Content="ToggleButton" />
+                                <ToggleButton Style="{DynamicResource ToggleButton.Solid}" Grid.Column="4" Grid.Row="2" Content="ToggleButton" IsEnabled="False" />
 
-                            <!-- ghost ToggleButton-->
-                            <ToggleButton Style="{DynamicResource ToggleButton.Ghost}" Grid.Column="2" Grid.Row="4" Content="ToggleButton" />
-                            <ToggleButton Style="{DynamicResource ToggleButton.Ghost}" Grid.Column="4" Grid.Row="2" Content="ToggleButton" IsEnabled="False" />
+                                <!-- ghost ToggleButton-->
+                                <ToggleButton Style="{DynamicResource ToggleButton.Ghost}" Grid.Column="2" Grid.Row="4" Content="ToggleButton" />
+                                <ToggleButton Style="{DynamicResource ToggleButton.Ghost}" Grid.Column="4" Grid.Row="4" Content="ToggleButton" IsEnabled="False" />
 
-                            <!-- borderless ToggleButton-->
-                            <ToggleButton Style="{DynamicResource ToggleButton.Borderless}" Grid.Column="2" Grid.Row="6" Content="ToggleButton"  />
-                            <ToggleButton Style="{DynamicResource ToggleButton.Borderless}" Grid.Column="4" Grid.Row="2" Content="ToggleButton" IsEnabled="False" />
+                                <!-- borderless ToggleButton-->
+                                <ToggleButton Style="{DynamicResource ToggleButton.Borderless}" Grid.Column="2" Grid.Row="6" Content="ToggleButton"  />
+                                <ToggleButton Style="{DynamicResource ToggleButton.Borderless}" Grid.Column="4" Grid.Row="6" Content="ToggleButton" IsEnabled="False" />
 
-                        </Grid>
-                    </GroupBox>
-                </WrapPanel>
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox Header="Expander" BorderBrush="{x:Null}">
+                            <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
+                                <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="10"/>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="10"/>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="10"/>
+                                        <RowDefinition Height="auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="10"/>
+                                        <ColumnDefinition Width="240"/>
+                                        <ColumnDefinition Width="10"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <TextBlock Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center">Solid</TextBlock>
+                                    <TextBlock Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Center">Ghost</TextBlock>
+                                    <TextBlock Grid.Row="6" HorizontalAlignment="Right" VerticalAlignment="Center">Borderless</TextBlock>
+
+                                    <TextBlock Grid.Column="2" HorizontalAlignment="Center">Common</TextBlock>
+                                    <TextBlock Grid.Column="8" HorizontalAlignment="Center">Disabled</TextBlock>
+
+                                    <!-- solid button-->
+                                    <Expander Style="{DynamicResource Expander.Solid}" Grid.Column="2" Grid.Row="2" Header="Expander">
+                                        <Expander.Content>
+                                            <ScrollViewer MaxHeight="160" VerticalScrollBarVisibility="Auto" Padding="12,5">
+                                                <TextBlock Style="{StaticResource BodyTextBlockStyle}" TextWrapping="Wrap">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                                                    sed do eiusmod tempor incididunt ut labore et dolore magna 
+                                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                                                    ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                                                    Duis aute irure dolor in reprehenderit in voluptate velit 
+                                                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+                                                    occaecat cupidatat non proident, sunt in culpa qui officia 
+                                                    deserunt mollit anim id est laborum.
+                                                </TextBlock>
+                                            </ScrollViewer>
+                                        </Expander.Content>
+                                    </Expander>
+
+                                    <Expander Style="{DynamicResource Expander.Solid}" Header="Expander" Grid.Column="4" Grid.Row="2" IsEnabled="False" />
+
+                                    <!-- ghost ToggleButton-->
+                                    <Expander Style="{DynamicResource Expander.Ghost}" Header="Expander" Grid.Column="2" Grid.Row="4">
+                                        <Expander.Content>
+                                            <ScrollViewer MaxHeight="160" VerticalScrollBarVisibility="Auto" Padding="12,5">
+                                                <TextBlock Style="{StaticResource BodyTextBlockStyle}" TextWrapping="Wrap">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                                                    sed do eiusmod tempor incididunt ut labore et dolore magna 
+                                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                                                    ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                                                    Duis aute irure dolor in reprehenderit in voluptate velit 
+                                                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+                                                    occaecat cupidatat non proident, sunt in culpa qui officia 
+                                                    deserunt mollit anim id est laborum.
+                                                </TextBlock>
+                                            </ScrollViewer>
+                                        </Expander.Content>
+                                    </Expander>
+                                    <Expander Style="{DynamicResource Expander.Ghost}" Header="Expander" Grid.Column="4" Grid.Row="4"  IsEnabled="False" />
+
+                                    <!-- borderless ToggleButton-->
+                                    <Expander Style="{DynamicResource Expander.Borderless}" Header="Expander" Grid.Column="2" Grid.Row="6">
+                                        <Expander.Content>
+                                            <ScrollViewer MaxHeight="160" VerticalScrollBarVisibility="Auto" Padding="12,5">
+                                                <TextBlock Style="{StaticResource BodyTextBlockStyle}" TextWrapping="Wrap">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                                                    sed do eiusmod tempor incididunt ut labore et dolore magna 
+                                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                                                    ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                                                    Duis aute irure dolor in reprehenderit in voluptate velit 
+                                                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+                                                    occaecat cupidatat non proident, sunt in culpa qui officia 
+                                                    deserunt mollit anim id est laborum.
+                                                </TextBlock>
+                                            </ScrollViewer>
+                                        </Expander.Content>
+                                    </Expander>
+                                    <Expander Style="{DynamicResource Expander.Borderless}" Header="Expander" Grid.Column="4" Grid.Row="6" IsEnabled="False" />
+
+                                </Grid>
+                            </Grid>
+                        </GroupBox>
+                    </WrapPanel>
                 </ScrollViewer>
             </TabItem>
-            <TabItem Header="Forms">
-                <Grid />
+            <TabItem Header="Tables">
+                <WrapPanel>
+                    <GroupBox Header="Table" BorderBrush="{x:Null}" >
+
+                    </GroupBox>
+                </WrapPanel>
             </TabItem>
-            <TabItem Header="Options">
-                <Grid />
+            <TabItem Header="Form elements">
+                <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                    <WrapPanel>
+                        <GroupBox Header="Controls" BorderBrush="{x:Null}">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+
+                                <CheckBox Grid.Row="2" Grid.Column="2" />
+                                <ComboBox Grid.Row="4" Grid.Column="2" />
+                                <DatePicker Grid.Row="6" Grid.Column="2" />
+                                <GroupBox Grid.Row="8" Grid.Column="2" />
+                                <ListBox Grid.Row="10" Grid.Column="2" />
+                                <ListView Grid.Row="12" Grid.Column="2" />
+                                <PasswordBox Grid.Row="14" Grid.Column="2" />
+                                <RadioButton Grid.Row="16" Grid.Column="2" />
+                                <RichTextBox Grid.Row="18" Grid.Column="2" />
+                                <Separator Grid.Row="20" Grid.Column="2"/>
+                                <Slider Grid.Row="22" Grid.Column="2" />
+                                <TabControl Grid.Row="24" Grid.Column="2" />
+                                <TextBox Grid.Row="26" Grid.Column="2" />
+                            </Grid>
+                        </GroupBox>
+                    </WrapPanel>
+                </ScrollViewer>
             </TabItem>
-            <TabItem Header="Scroll, Progress &amp; Sliders">
-                <Grid />
+
+            <TabItem Header="Treeview">
+                <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                    <WrapPanel>
+                        <GroupBox Header="TreeView: normal" BorderBrush="{x:Null}">
+                            <Grid>
+                                <TreeView Grid.Row="28" Grid.Column="2" >
+                                    <TreeViewItem Header="First">
+                                        <TreeViewItem Header="First"/>
+                                        <TreeViewItem Header="Second"/>
+                                        <TreeViewItem Header="Third"/>
+                                    </TreeViewItem>
+                                    <TreeViewItem Header="Second">
+                                        <TreeViewItem Header="First"/>
+                                        <TreeViewItem Header="Second"/>
+                                        <TreeViewItem Header="Third"/>
+                                    </TreeViewItem>
+                                    <TreeViewItem Header="Third">
+                                        <TreeViewItem Header="First"/>
+                                        <TreeViewItem Header="Second"/>
+                                        <TreeViewItem Header="Third"/>
+                                    </TreeViewItem>
+                                </TreeView>
+                            </Grid>
+                        </GroupBox>
+                    </WrapPanel>
+                </ScrollViewer>
+            </TabItem>
+            
+            <TabItem Header="Progress &amp; Scroll">
+                <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                    <WrapPanel>
+                        <GroupBox Header="ProgressBar" BorderBrush="{x:Null}">
+                            <ProgressBar Orientation="Horizontal" />
+                        </GroupBox>
+                        <GroupBox Header="ScrollBar" BorderBrush="{x:Null}">
+                            <ScrollBar Orientation="Vertical"/>
+                        </GroupBox>
+                        <GroupBox Header="ScrollViewer" BorderBrush="{x:Null}">
+                            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" />
+                        </GroupBox>
+                    </WrapPanel>
+                </ScrollViewer>
             </TabItem>
             <TabItem Header="Notifications">
-                <Grid />
+                <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                    <WrapPanel>
+                        <GroupBox Header="Notification" BorderBrush="{x:Null}" >
+                            <TextBlock Style="{StaticResource NotificationItem}" Text="And I think to myself - What a wonderful world."/>
+                        </GroupBox>
+                        <GroupBox Header="Success" BorderBrush="{x:Null}" >
+                            <TextBlock Style="{StaticResource SuccessItem}" Text="It's a Great Success!"/>
+                        </GroupBox>
+                        <GroupBox Header="Warning" BorderBrush="{x:Null}" >
+                            <TextBlock Style="{StaticResource WarningItem}" Text="Rollover Bethoween!"/>
+                        </GroupBox>
+                        <GroupBox Header="Error" BorderBrush="{x:Null}" >
+                            <TextBlock Style="{StaticResource ErrorItem}" Text="Baby did bad bad thing."/>
+                        </GroupBox>
+                    </WrapPanel>
+                </ScrollViewer>
             </TabItem>
         </TabControl>
 

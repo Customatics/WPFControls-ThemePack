@@ -1,6 +1,7 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vc="clr-namespace:ThemePack.Common.Converters;assembly=ThemePack.Common">
 <ResourceDictionary.MergedDictionaries>
     <ResourceDictionary Source="Form.xaml"></ResourceDictionary>
 </ResourceDictionary.MergedDictionaries>
@@ -63,7 +64,7 @@
             <Trigger Property="IsDefault" Value="true">
                 <Setter Property="BorderBrush" Value="{DynamicResource DefaultedColor}"/>
                 <Setter Property="Foreground" Value="{DynamicResource DefaultedColor}"/>
-                <Setter Property="Background" Value="{x:Null}"/>
+                <Setter Property="Background" Value="Transparent"/>
             </Trigger>
             <Trigger Property="IsMouseOver" Value="true">
                 <Setter Property="BorderBrush" Value="{DynamicResource HoverColor}"/>
@@ -77,11 +78,11 @@
             <Trigger Property="IsPressed" Value="true">
                 <Setter Property="BorderBrush" Value="{DynamicResource PressColor}"/>
                 <Setter Property="Foreground" Value="{DynamicResource PressColor}"/>
-                <Setter Property="Background" Value="{x:Null}"/>
+                <Setter Property="Background" Value="Transparent"/>
             </Trigger>
             <Trigger Property="IsEnabled" Value="False">
                 <Setter Property="Opacity" Value="{DynamicResource DisabledOpacity}"/>
-                <Setter Property="Background" Value="{x:Null}"/>
+                <Setter Property="Background" Value="Transparent"/>
                 <Setter Property="BorderThickness" Value="1"/>
             </Trigger>
         </Style.Triggers>
@@ -97,16 +98,16 @@
             </Trigger>
             <Trigger Property="IsEnabled" Value="False">
                 <Setter Property="Opacity" Value="{DynamicResource DisabledOpacity}"/>
-                <Setter Property="Background" Value="{x:Null}"/>
+                <Setter Property="Background" Value="Transparent"/>
                 <Setter Property="BorderThickness" Value="0"/>
             </Trigger>
             <Trigger Property="IsMouseOver" Value="true">
                 <Setter Property="Foreground" Value="{DynamicResource HoverColor}"/>
-                <Setter Property="Background" Value="{x:Null}"/>
+                <Setter Property="Background" Value="Transparent"/>
             </Trigger>
             <Trigger Property="IsPressed" Value="true">
                 <Setter Property="Foreground" Value="{DynamicResource PressColor}"/>
-                <Setter Property="Background" Value="{x:Null}"/>
+                <Setter Property="Background" Value="Transparent"/>
             </Trigger>
 
         </Style.Triggers>
@@ -223,7 +224,7 @@
     </Style>
 
     <Style x:Key="ToggleButton.Ghost" TargetType="{x:Type ToggleButton}" BasedOn="{StaticResource ToggleButton.Solid}">
-        <Setter Property="Background" Value="{x:Null}"/>
+        <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Foreground" Value="{DynamicResource ActiveColor}"/>
         <Setter Property="MinWidth" Value="{DynamicResource ButtonMinWidth}"/>
         <Setter Property="BorderBrush" Value="{DynamicResource ActiveColor}"/>
@@ -249,11 +250,11 @@
             <Trigger Property="IsPressed" Value="true">
                 <Setter Property="BorderBrush" Value="{DynamicResource PressColor}"/>
                 <Setter Property="Foreground" Value="{DynamicResource PressColor}"/>
-                <Setter Property="Background" Value="{x:Null}"/>
+                <Setter Property="Background" Value="Transparent"/>
             </Trigger>
             <Trigger Property="IsEnabled" Value="False">
                 <Setter Property="Opacity" Value="{DynamicResource DisabledOpacity}"/>
-                <Setter Property="Background" Value="{x:Null}"/>
+                <Setter Property="Background" Value="Transparent"/>
                 <Setter Property="BorderThickness" Value="1"/>
             </Trigger>
         </Style.Triggers>
@@ -273,19 +274,126 @@
             </Trigger>
             <Trigger Property="IsEnabled" Value="False">
                 <Setter Property="Opacity" Value="{DynamicResource DisabledOpacity}"/>
-                <Setter Property="Background" Value="{x:Null}"/>
+                <Setter Property="Background" Value="Transparent"/>
                 <Setter Property="BorderThickness" Value="0"/>
             </Trigger>
             <Trigger Property="IsMouseOver" Value="true">
                 <Setter Property="Foreground" Value="{DynamicResource HoverColor}"/>
-                <Setter Property="Background" Value="{x:Null}"/>
+                <Setter Property="Background" Value="Transparent"/>
             </Trigger>
             <Trigger Property="IsPressed" Value="true">
                 <Setter Property="Foreground" Value="{DynamicResource PressColor}"/>
-                <Setter Property="Background" Value="{x:Null}"/>
+                <Setter Property="Background" Value="Transparent"/>
             </Trigger>
 
         </Style.Triggers>
+    </Style>
+
+    <Style x:Key="ToggleButton.Solid.Large" TargetType="{x:Type ToggleButton}" BasedOn="{StaticResource ToggleButton.Solid}">
+        <Setter Property="FontSize" Value="{StaticResource TitleTextSize}"/>
+        <Setter Property="Margin" Value="{DynamicResource SpaceOuter.Large}"/>
+        <Setter Property="Padding" Value="{DynamicResource SpaceInner.Large}"/>
+    </Style>
+
+    <Style x:Key="ToggleButton.Ghost.Large" TargetType="{x:Type ToggleButton}" BasedOn="{StaticResource ToggleButton.Ghost}">
+        <Setter Property="FontSize" Value="{StaticResource TitleTextSize}"/>
+        <Setter Property="Margin" Value="{DynamicResource SpaceOuter.Large}"/>
+        <Setter Property="Padding" Value="{DynamicResource SpaceInner.Large}"/>
+    </Style>
+
+    <Style x:Key="ToggleButton.Borderless.Large" TargetType="{x:Type ToggleButton}" BasedOn="{StaticResource ToggleButton.Borderless}">
+        <Setter Property="FontSize" Value="{StaticResource TitleTextSize}"/>
+        <Setter Property="Margin" Value="{DynamicResource SpaceOuter.Large}"/>
+        <Setter Property="Padding" Value="{DynamicResource SpaceInner.Large}"/>
+    </Style>
+
+
+    <Style x:Key="ToggleButton.Solid.Medium" TargetType="{x:Type ToggleButton}" BasedOn="{StaticResource ToggleButton.Solid}">
+        <Setter Property="FontSize" Value="{StaticResource SubTitleTextSize}"/>
+        <Setter Property="Margin" Value="{DynamicResource SpaceOuter.Medium}"/>
+        <Setter Property="Padding" Value="{DynamicResource SpaceInner.Medium}"/>
+    </Style>
+
+    <Style x:Key="ToggleButton.Ghost.Medium" TargetType="{x:Type ToggleButton}" BasedOn="{StaticResource ToggleButton.Ghost}">
+        <Setter Property="FontSize" Value="{StaticResource SubTitleTextSize}"/>
+        <Setter Property="Margin" Value="{DynamicResource SpaceOuter.Medium}"/>
+        <Setter Property="Padding" Value="{DynamicResource SpaceInner.Medium}"/>
+    </Style>
+
+    <Style x:Key="ToggleButton.Borderless.Medium" TargetType="{x:Type ToggleButton}" BasedOn="{StaticResource ToggleButton.Borderless}">
+        <Setter Property="FontSize" Value="{StaticResource SubTitleTextSize}"/>
+        <Setter Property="Margin" Value="{DynamicResource SpaceOuter.Medium}"/>
+        <Setter Property="Padding" Value="{DynamicResource SpaceInner.Medium}"/>
+    </Style>
+
+
+    <Style x:Key="ToggleButton.Solid.Small" TargetType="{x:Type ToggleButton}" BasedOn="{StaticResource ToggleButton.Solid}">
+        <Setter Property="FontSize"  Value="{StaticResource NoteTextSize}"/>
+        <Setter Property="Margin" Value="{DynamicResource SpaceOuter.Small}"/>
+        <Setter Property="Padding" Value="{DynamicResource SpaceInner.Small}"/>
+    </Style>
+
+    <Style x:Key="ToggleButton.Ghost.Small" TargetType="{x:Type ToggleButton}" BasedOn="{StaticResource ToggleButton.Ghost}">
+        <Setter Property="FontSize"  Value="{StaticResource NoteTextSize}"/>
+        <Setter Property="Margin" Value="{DynamicResource SpaceOuter.Small}"/>
+        <Setter Property="Padding" Value="{DynamicResource SpaceInner.Small}"/>
+    </Style>
+
+    <Style x:Key="ToggleButton.Borderless.Small" TargetType="{x:Type ToggleButton}" BasedOn="{StaticResource ToggleButton.Borderless}">
+        <Setter Property="FontSize"  Value="{StaticResource NoteTextSize}"/>
+        <Setter Property="Margin" Value="{DynamicResource SpaceOuter.Small}"/>
+        <Setter Property="Padding" Value="{DynamicResource SpaceInner.Small}"/>
+    </Style>
+
+    
+    
+    <!-- Expander -->
+    <Style x:Key="Expander.Solid" TargetType="{x:Type Expander}">
+        <Setter Property="TextBlock.FontSize" Value="{StaticResource BodyTextSize}" />
+        <Setter Property="TextBlock.Foreground" Value="{DynamicResource SecondaryColor}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Expander">
+                    <DockPanel>
+                        <ToggleButton x:Name="HeaderSite" Content="{Binding Header, RelativeSource={RelativeSource AncestorType=Expander}}" 
+                                      DockPanel.Dock="Top" IsChecked="False" Style="{StaticResource ToggleButton.Solid}" HorizontalContentAlignment="Left" Margin="0"/>
+                        <ContentPresenter x:Name="ExpandSite" Visibility="{Binding IsChecked, ElementName=HeaderSite, Converter={vc:BooleanToVisibilityConverter}}"/>
+                    </DockPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="Expander.Ghost" TargetType="{x:Type Expander}">
+        <Setter Property="TextBlock.FontSize" Value="{StaticResource BodyTextSize}" />
+        <Setter Property="TextBlock.Foreground" Value="{DynamicResource SecondaryColor}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Expander">
+                    <DockPanel>
+                        <ToggleButton x:Name="HeaderSite" Content="{Binding Header, RelativeSource={RelativeSource AncestorType=Expander}}" 
+                                      DockPanel.Dock="Top" IsChecked="False" Style="{StaticResource ToggleButton.Ghost}" HorizontalContentAlignment="Left" Margin="0"/>
+                        <ContentPresenter x:Name="ExpandSite" Visibility="{Binding IsChecked, ElementName=HeaderSite, Converter={vc:BooleanToVisibilityConverter}}"/>
+                    </DockPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="Expander.Borderless" TargetType="{x:Type Expander}">
+        <Setter Property="TextBlock.FontSize" Value="{StaticResource BodyTextSize}" />
+        <Setter Property="TextBlock.Foreground" Value="{DynamicResource SecondaryColor}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Expander">
+                    <DockPanel>
+                        <ToggleButton x:Name="HeaderSite" Content="{Binding Header, RelativeSource={RelativeSource AncestorType=Expander}}" 
+                                      DockPanel.Dock="Top" IsChecked="False" Style="{StaticResource ToggleButton.Borderless}" HorizontalContentAlignment="Left" Margin="0"/>
+                        <ContentPresenter x:Name="ExpandSite" Visibility="{Binding IsChecked, ElementName=HeaderSite, Converter={vc:BooleanToVisibilityConverter}}"/>
+                    </DockPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
     </Style>
 
 </ResourceDictionary>
