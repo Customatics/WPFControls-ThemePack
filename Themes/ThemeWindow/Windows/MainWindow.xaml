@@ -181,7 +181,7 @@
             <TabItem Header="Buttons">
                 <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
                     <WrapPanel>
-                        <GroupBox Header="Button: default size" BorderBrush="{x:Null}" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                        <GroupBox Header="Button: normal size" BorderBrush="{x:Null}" ScrollViewer.VerticalScrollBarVisibility="Disabled">
                             <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="auto"/>
@@ -453,11 +453,41 @@
                                     <Expander Style="{DynamicResource Expander.Solid}" Header="Expander" Grid.Column="4" Grid.Row="2" IsEnabled="False" />
 
                                     <!-- ghost ToggleButton-->
-                                    <Expander Style="{DynamicResource Expander.Ghost}" Header="Expander" Grid.Column="2" Grid.Row="4"  />
+                                    <Expander Style="{DynamicResource Expander.Ghost}" Header="Expander" Grid.Column="2" Grid.Row="4">
+                                        <Expander.Content>
+                                            <ScrollViewer MaxHeight="160" VerticalScrollBarVisibility="Auto" Padding="12,5">
+                                                <TextBlock Style="{StaticResource BodyTextBlockStyle}" TextWrapping="Wrap">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                                                    sed do eiusmod tempor incididunt ut labore et dolore magna 
+                                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                                                    ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                                                    Duis aute irure dolor in reprehenderit in voluptate velit 
+                                                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+                                                    occaecat cupidatat non proident, sunt in culpa qui officia 
+                                                    deserunt mollit anim id est laborum.
+                                                </TextBlock>
+                                            </ScrollViewer>
+                                        </Expander.Content>
+                                    </Expander>
                                     <Expander Style="{DynamicResource Expander.Ghost}" Header="Expander" Grid.Column="4" Grid.Row="4"  IsEnabled="False" />
 
                                     <!-- borderless ToggleButton-->
-                                    <Expander Style="{DynamicResource Expander.Borderless}" Header="Expander" Grid.Column="2" Grid.Row="6" />
+                                    <Expander Style="{DynamicResource Expander.Borderless}" Header="Expander" Grid.Column="2" Grid.Row="6">
+                                        <Expander.Content>
+                                            <ScrollViewer MaxHeight="160" VerticalScrollBarVisibility="Auto" Padding="12,5">
+                                                <TextBlock Style="{StaticResource BodyTextBlockStyle}" TextWrapping="Wrap">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                                                    sed do eiusmod tempor incididunt ut labore et dolore magna 
+                                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                                                    ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                                                    Duis aute irure dolor in reprehenderit in voluptate velit 
+                                                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+                                                    occaecat cupidatat non proident, sunt in culpa qui officia 
+                                                    deserunt mollit anim id est laborum.
+                                                </TextBlock>
+                                            </ScrollViewer>
+                                        </Expander.Content>
+                                    </Expander>
                                     <Expander Style="{DynamicResource Expander.Borderless}" Header="Expander" Grid.Column="4" Grid.Row="6" IsEnabled="False" />
 
                                 </Grid>
@@ -548,9 +578,25 @@
             <TabItem Header="Treeview">
                 <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
                     <WrapPanel>
-                        <GroupBox Header="TreeView" BorderBrush="{x:Null}">
+                        <GroupBox Header="TreeView: normal" BorderBrush="{x:Null}">
                             <Grid>
-                                <TreeView Grid.Row="28" Grid.Column="2" />
+                                <TreeView Grid.Row="28" Grid.Column="2" >
+                                    <TreeViewItem Header="First">
+                                        <TreeViewItem Header="First"/>
+                                        <TreeViewItem Header="Second"/>
+                                        <TreeViewItem Header="Third"/>
+                                    </TreeViewItem>
+                                    <TreeViewItem Header="Second">
+                                        <TreeViewItem Header="First"/>
+                                        <TreeViewItem Header="Second"/>
+                                        <TreeViewItem Header="Third"/>
+                                    </TreeViewItem>
+                                    <TreeViewItem Header="Third">
+                                        <TreeViewItem Header="First"/>
+                                        <TreeViewItem Header="Second"/>
+                                        <TreeViewItem Header="Third"/>
+                                    </TreeViewItem>
+                                </TreeView>
                             </Grid>
                         </GroupBox>
                     </WrapPanel>
