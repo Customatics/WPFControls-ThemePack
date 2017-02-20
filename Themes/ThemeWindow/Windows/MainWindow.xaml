@@ -29,7 +29,7 @@
                   DisplayMemberPath="Name"
                   SelectedItem="{Binding SelecteColorScheme}"/>
 
-        <TabControl Background="{DynamicResource TintColor}" Grid.Row="2" Grid.ColumnSpan="3" Width="Auto" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <TabControl Name="tabControl" Background="{DynamicResource TintColor}" Grid.Row="2" Grid.ColumnSpan="3" Width="Auto" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
             <TabItem Header="Colors">
                 <TabItem.Resources>
                     <Style TargetType="{x:Type Ellipse}">
