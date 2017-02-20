@@ -10,6 +10,7 @@
         <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled"/>
         <Setter Property="Padding" Value="10"/>
         <Setter Property="Margin" Value="4"/>
+        <Setter Property="MinWidth" Value="200"/>
         <Setter Property="Effect">
             <Setter.Value>
                 <DropShadowEffect BlurRadius="6" Color="{DynamicResource Tint}" Opacity="0.1" Direction="-90" ShadowDepth="2" />

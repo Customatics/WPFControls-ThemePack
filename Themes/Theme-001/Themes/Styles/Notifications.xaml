@@ -1,7 +1,11 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Style x:Key="NotificationItem" TargetType="TextBlock">
-        <Setter Property="Foreground" Value="{DynamicResource SecondaryColor}"/>
+        <Setter Property="Foreground">
+            <Setter.Value>
+                <SolidColorBrush Color="{DynamicResource Secondary}" Opacity="0.85"/>
+            </Setter.Value>
+        </Setter>
         <Setter Property="FontSize" Value="{StaticResource BodyTextSize}"/>
         <Setter Property="Padding" Value="{StaticResource SpaceInner}"/>
         <Setter Property="Background" Value="{DynamicResource NoteColor}"/>
@@ -9,7 +13,11 @@
         <Setter Property="HorizontalAlignment" Value="Stretch"/>
     </Style>
     <Style x:Key="SuccessItem" TargetType="TextBlock">
-        <Setter Property="Foreground" Value="{DynamicResource SecondaryColor}"/>
+        <Setter Property="Foreground">
+            <Setter.Value>
+                <SolidColorBrush Color="{DynamicResource Secondary}" Opacity="0.85"/>
+            </Setter.Value>
+        </Setter>
         <Setter Property="FontSize" Value="{StaticResource BodyTextSize}"/>
         <Setter Property="Padding" Value="{StaticResource SpaceInner}"/>
         <Setter Property="Background" Value="{DynamicResource SuccessColor}"/>
@@ -17,7 +25,11 @@
         <Setter Property="HorizontalAlignment" Value="Stretch"/>
     </Style>
     <Style x:Key="WarningItem" TargetType="TextBlock">
-        <Setter Property="Foreground" Value="{DynamicResource SecondaryColor}"/>
+        <Setter Property="Foreground">
+            <Setter.Value>
+                <SolidColorBrush Color="{DynamicResource Secondary}" Opacity="0.85"/>
+            </Setter.Value>
+        </Setter>
         <Setter Property="FontSize" Value="{StaticResource BodyTextSize}"/>
         <Setter Property="Padding" Value="{StaticResource SpaceInner}"/>
         <Setter Property="Background" Value="{DynamicResource WarningColor}"/>
@@ -25,7 +37,11 @@
         <Setter Property="HorizontalAlignment" Value="Stretch"/>
     </Style>
     <Style x:Key="ErrorItem" TargetType="TextBlock">
-        <Setter Property="Foreground" Value="{DynamicResource SecondaryColor}"/>
+        <Setter Property="Foreground">
+            <Setter.Value>
+                <SolidColorBrush Color="{DynamicResource Secondary}" Opacity="0.85"/>
+            </Setter.Value>
+        </Setter>
         <Setter Property="FontSize" Value="{StaticResource BodyTextSize}"/>
         <Setter Property="Padding" Value="{StaticResource SpaceInner}"/>
         <Setter Property="Background" Value="{DynamicResource ErrorColor}"/>

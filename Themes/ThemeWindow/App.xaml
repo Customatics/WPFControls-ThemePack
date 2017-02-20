@@ -16,6 +16,7 @@
                 <ResourceDictionary Source="/Theme-001;component/Themes/Styles/Scroll.xaml"/>
                 <ResourceDictionary Source="/Theme-001;component/Themes/Styles/Slider.xaml"/>
                 <ResourceDictionary Source="/Theme-001;component/Themes/Styles/Texts.xaml"/>
+                <ResourceDictionary Source="/Theme-001;component/Themes/Styles/TreeView.xaml"/>
                 <ResourceDictionary Source="/Theme-001;component/Themes/Styles/Window.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
