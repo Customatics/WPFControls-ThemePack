@@ -13,8 +13,8 @@ using System.Windows.Input;
 using System.Windows.Interop;
 using System.Windows.Threading;
 using ThemePack.Common.Base.Abstractions;
-using ThemePack.Common.BusinessModels;
 using ThemePack.Common.Interop;
+using ThemePack.Common.Models;
 
 namespace ThemePack.Common.Base
 {

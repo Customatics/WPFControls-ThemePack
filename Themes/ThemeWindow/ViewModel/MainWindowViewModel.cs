@@ -121,14 +121,21 @@ namespace ThemeWindow.ViewModel
 
         private void Initialize()
         {
-            var themeSeeker = themeSeekerFactory.GetThemeSeeker();
-            Themes = new ObservableCollection<ThemeM>(themeSeeker.GetThemes(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, ThemeFolder)));
-            if (Themes.Any())
+            try
             {
-                SelectedTheme = Themes.First();
-                ColorSchemes = new ObservableCollection<ColorSchemeM>(Themes.First().ColorSchemeModels);
-                SelecteColorScheme = ColorSchemes.FirstOrDefault();
-                ThemeManager.ChangeApplicationTheme(Application.Current, SelectedTheme.ControlStyleModels, SelecteColorScheme);
+                var themeSeeker = themeSeekerFactory.GetThemeSeeker();
+                Themes = new ObservableCollection<ThemeM>(themeSeeker.GetThemes(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, ThemeFolder)));
+                if (Themes.Any())
+                {
+                    SelectedTheme = Themes.First();
+                    ColorSchemes = new ObservableCollection<ColorSchemeM>(Themes.First().ColorSchemeModels);
+                    SelecteColorScheme = ColorSchemes.FirstOrDefault();
+                    ThemeManager.ChangeApplicationTheme(Application.Current, SelectedTheme.ControlStyleModels, SelecteColorScheme);
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 

@@ -5,7 +5,6 @@ using System.IO;
 using System.Reflection;
 using System.Resources;
 using System.Windows;
-using ThemePack.Common.BusinessModels;
 using ThemePack.Common.Extentions;
 using ThemePack.Models.Models;
 

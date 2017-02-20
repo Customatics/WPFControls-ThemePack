@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Threading;
 using ThemePack.Common.Base.Abstractions;
-using ThemePack.Common.BusinessModels;
+using ThemePack.Common.Models;
 
 namespace ThemePack.Common.Base
 {

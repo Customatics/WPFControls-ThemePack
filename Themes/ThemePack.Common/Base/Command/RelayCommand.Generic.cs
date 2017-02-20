@@ -5,8 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using ThemePack.Common.BusinessModels;
 using ThemePack.Common.Helpers;
+using ThemePack.Common.Models;
 
 namespace ThemePack.Common.Base.Command
 {

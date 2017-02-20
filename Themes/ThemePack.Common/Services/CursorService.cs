@@ -27,11 +27,6 @@ namespace ThemePack.Common.Services
             UpdateCursor(activeCursor, Interlocked.Increment(ref waitCounter));
         }
 
-        public static void RemoveWaitCursor()
-        {
-            UpdateCursor(activeCursor, Interlocked.Decrement(ref waitCounter));
-        }
-
         public static void SetNormalCursor()
         {
             Interlocked.Exchange(ref activeCursor, null);

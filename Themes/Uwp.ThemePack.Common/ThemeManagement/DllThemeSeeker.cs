@@ -11,7 +11,7 @@ namespace Uwp.ThemePack.Common.ThemeManagement
 {
     public class DllThemeSeeker : IThemesSeeker
     {
-        public IList<ThemeM> GetThemes(string folder)
+        public IList<ThemeM> GetThemes()
         {
             var themes = new List<ThemeM>();
 

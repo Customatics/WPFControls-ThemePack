@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ThemePack.Common.BusinessModels
+namespace ThemePack.Common.Models
 {
     /// <summary>
     /// Event arguments with data inside.

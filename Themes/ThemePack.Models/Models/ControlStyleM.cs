@@ -22,6 +22,5 @@ namespace ThemePack.Models.Models
         /// The name of the application theme.
         /// </summary>
         public string Name { get; private set; }
-
     }
 }
