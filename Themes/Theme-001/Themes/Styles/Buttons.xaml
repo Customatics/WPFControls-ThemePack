@@ -288,4 +288,89 @@
         </Style.Triggers>
     </Style>
 
+    <Style x:Key="ToggleButton.Solid.Large" TargetType="{x:Type ToggleButton}" BasedOn="{StaticResource ToggleButton.Solid}">
+        <Setter Property="FontSize" Value="{StaticResource TitleTextSize}"/>
+        <Setter Property="Margin" Value="{DynamicResource SpaceOuter.Large}"/>
+        <Setter Property="Padding" Value="{DynamicResource SpaceInner.Large}"/>
+    </Style>
+
+    <Style x:Key="ToggleButton.Ghost.Large" TargetType="{x:Type ToggleButton}" BasedOn="{StaticResource ToggleButton.Ghost}">
+        <Setter Property="FontSize" Value="{StaticResource TitleTextSize}"/>
+        <Setter Property="Margin" Value="{DynamicResource SpaceOuter.Large}"/>
+        <Setter Property="Padding" Value="{DynamicResource SpaceInner.Large}"/>
+    </Style>
+
+    <Style x:Key="ToggleButton.Borderless.Large" TargetType="{x:Type ToggleButton}" BasedOn="{StaticResource ToggleButton.Borderless}">
+        <Setter Property="FontSize" Value="{StaticResource TitleTextSize}"/>
+        <Setter Property="Margin" Value="{DynamicResource SpaceOuter.Large}"/>
+        <Setter Property="Padding" Value="{DynamicResource SpaceInner.Large}"/>
+    </Style>
+
+
+    <Style x:Key="ToggleButton.Solid.Medium" TargetType="{x:Type ToggleButton}" BasedOn="{StaticResource ToggleButton.Solid}">
+        <Setter Property="FontSize" Value="{StaticResource SubTitleTextSize}"/>
+        <Setter Property="Margin" Value="{DynamicResource SpaceOuter.Medium}"/>
+        <Setter Property="Padding" Value="{DynamicResource SpaceInner.Medium}"/>
+    </Style>
+
+    <Style x:Key="ToggleButton.Ghost.Medium" TargetType="{x:Type ToggleButton}" BasedOn="{StaticResource ToggleButton.Ghost}">
+        <Setter Property="FontSize" Value="{StaticResource SubTitleTextSize}"/>
+        <Setter Property="Margin" Value="{DynamicResource SpaceOuter.Medium}"/>
+        <Setter Property="Padding" Value="{DynamicResource SpaceInner.Medium}"/>
+    </Style>
+
+    <Style x:Key="ToggleButton.Borderless.Medium" TargetType="{x:Type ToggleButton}" BasedOn="{StaticResource ToggleButton.Borderless}">
+        <Setter Property="FontSize" Value="{StaticResource SubTitleTextSize}"/>
+        <Setter Property="Margin" Value="{DynamicResource SpaceOuter.Medium}"/>
+        <Setter Property="Padding" Value="{DynamicResource SpaceInner.Medium}"/>
+    </Style>
+
+
+    <Style x:Key="ToggleButton.Solid.Small" TargetType="{x:Type ToggleButton}" BasedOn="{StaticResource ToggleButton.Solid}">
+        <Setter Property="FontSize"  Value="{StaticResource NoteTextSize}"/>
+        <Setter Property="Margin" Value="{DynamicResource SpaceOuter.Small}"/>
+        <Setter Property="Padding" Value="{DynamicResource SpaceInner.Small}"/>
+    </Style>
+
+    <Style x:Key="ToggleButton.Ghost.Small" TargetType="{x:Type ToggleButton}" BasedOn="{StaticResource ToggleButton.Ghost}">
+        <Setter Property="FontSize"  Value="{StaticResource NoteTextSize}"/>
+        <Setter Property="Margin" Value="{DynamicResource SpaceOuter.Small}"/>
+        <Setter Property="Padding" Value="{DynamicResource SpaceInner.Small}"/>
+    </Style>
+
+    <Style x:Key="ToggleButton.Borderless.Small" TargetType="{x:Type ToggleButton}" BasedOn="{StaticResource ToggleButton.Borderless}">
+        <Setter Property="FontSize"  Value="{StaticResource NoteTextSize}"/>
+        <Setter Property="Margin" Value="{DynamicResource SpaceOuter.Small}"/>
+        <Setter Property="Padding" Value="{DynamicResource SpaceInner.Small}"/>
+    </Style>
+
+    
+    
+    <!-- Expander -->
+    <Style x:Key="Expander.Solid" TargetType="{x:Type Expander}">
+        <Setter Property="TextBlock.FontSize" Value="{StaticResource BodyTextSize}" />
+        <Setter Property="TextBlock.Foreground" Value="{DynamicResource SecondaryColor}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Expander">
+                    <DockPanel>
+                        <ToggleButton x:Name="HeaderSite" Content="{Binding Header, RelativeSource={RelativeSource AncestorType=Expander}}" 
+                                      DockPanel.Dock="Top" IsChecked="False" Style="{StaticResource ToggleButton.Solid}" HorizontalContentAlignment="Left" Margin="0"/>
+                        <ContentPresenter x:Name="ExpandSite"/>
+                    </DockPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="Expander.Ghost" TargetType="{x:Type Expander}">
+        <Setter Property="TextBlock.FontSize" Value="{StaticResource BodyTextSize}" />
+        <Setter Property="TextBlock.Foreground" Value="{DynamicResource SecondaryColor}" />
+    </Style>
+
+    <Style x:Key="Expander.Borderless" TargetType="{x:Type Expander}">
+        <Setter Property="TextBlock.FontSize" Value="{StaticResource BodyTextSize}" />
+        <Setter Property="TextBlock.Foreground" Value="{DynamicResource SecondaryColor}" />
+    </Style>
+
 </ResourceDictionary>
