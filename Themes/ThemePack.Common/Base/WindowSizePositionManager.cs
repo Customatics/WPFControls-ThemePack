@@ -4,6 +4,8 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Interop;
+using System.Windows.Media;
 using System.Windows.Shapes;
 using ThemePack.Common.Helpers;
 
@@ -216,24 +218,55 @@ namespace ThemePack.Common.Base
 
 			if (resizeLeft)
 			{
-         
                 var dw = Math.Max(_window.MinWidth, resizeSize.Width + deltaX);
                 var shiftX = dw - resizeSize.Width;
-               _window.Left = Math.Max(0, resizeWindowPoint.X  - shiftX);
+                //_window.Left = Math.Max(0, resizeWindowPoint.X  - shiftX);
                 _window.Width = dw;
+                _window.Left = resizeWindowPoint.X - shiftX;
+                //var hwndSource = PresentationSource.FromVisual(_window) as HwndSource;
+                //var source = PresentationSource.FromVisual(_window);
+                //Matrix transformToDevice = source.CompositionTarget.TransformToDevice;
+                //Point[] point = new Point[] { new Point(resizeWindowPoint.X - shiftX, _window.Top), new Point(dw, _window.Height) };
+                //transformToDevice.Transform(point);
+                //SetWindowPos(hwndSource.Handle, IntPtr.Zero, Convert.ToInt32(point[0].X), Convert.ToInt32(point[0].Y), Convert.ToInt32(point[1].X), Convert.ToInt32(point[1].Y), (uint)SWP.NOREPOSITION);
             }
 
 			if (resizeUp)
 			{
                 var dh = Math.Max(_window.MinHeight, resizeSize.Height + deltaY);
                 var shiftY = dh - resizeSize.Height;
-                _window.Top = Math.Max(0, resizeWindowPoint.Y - shiftY);
+                //_window.Top = Math.Max(0, resizeWindowPoint.Y - shiftY);
                 _window.Height = dh;
-
+                _window.Top = resizeWindowPoint.Y - shiftY;
             }
-		}
+        }
 
-		private void updateMouseDown()
+        //[DllImport("user32.dll", CharSet = CharSet.Auto)]
+        //[return: MarshalAs(UnmanagedType.Bool)]
+        //private static extern bool SetWindowPos(IntPtr hWnd, IntPtr hWndInsertAfter, int X, int Y, int cx, int cy, uint uFlags);
+        ///// <summary>
+        ///// SetWindowPos Flags
+        ///// </summary>
+        //public static class SWP
+        //{
+        //    public static readonly int
+        //    NOSIZE = 0x0001,
+        //    NOMOVE = 0x0002,
+        //    NOZORDER = 0x0004,
+        //    NOREDRAW = 0x0008,
+        //    NOACTIVATE = 0x0010,
+        //    DRAWFRAME = 0x0020,
+        //    FRAMECHANGED = 0x0020,
+        //    SHOWWINDOW = 0x0040,
+        //    HIDEWINDOW = 0x0080,
+        //    NOCOPYBITS = 0x0100,
+        //    NOOWNERZORDER = 0x0200,
+        //    NOREPOSITION = 0x0200,
+        //    NOSENDCHANGING = 0x0400,
+        //    DEFERERASE = 0x2000,
+        //    ASYNCWINDOWPOS = 0x4000;
+        //}
+        private void updateMouseDown()
 		{
 			if (Mouse.LeftButton == MouseButtonState.Released)
 			{

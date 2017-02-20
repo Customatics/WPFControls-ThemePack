@@ -81,6 +81,11 @@
     <Compile Include="Base\DPI.cs" />
     <Compile Include="Base\DpiAwareWindow.cs" />
     <Compile Include="Base\WindowSizePositionManager.cs" />
+    <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Converters\ConverterMarkupExtension.cs" />
+    <Compile Include="Converters\EmptyStringToZeroConverter.cs" />
+    <Compile Include="Converters\NullToVisibilityConverter.cs" />
+    <Compile Include="Converters\TreeLevelConverter.cs" />
     <Compile Include="Models\DataEventsArgs.cs" />
     <Compile Include="Constants\ThemeNameConstants.cs" />
     <Compile Include="Extentions\ResourceTypeExtenstions.cs" />
