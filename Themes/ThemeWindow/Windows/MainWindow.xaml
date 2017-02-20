@@ -575,12 +575,24 @@
                 </ScrollViewer>
             </TabItem>
 
-            <TabItem Header="Treeview">
+            <!--<TabItem Header="Treeview">
                 <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
                     <WrapPanel>
                         <GroupBox Header="TreeView: normal" BorderBrush="{x:Null}">
                             <Grid>
-                                <TreeView Grid.Row="28" Grid.Column="2" >
+                                <TreeView Grid.Row="28" Grid.Column="2" Style="{StaticResource TreeView.Normal}"
+                                          >
+                                    <TreeView.Resources>-->
+                                        <!--<HierarchicalDataTemplate DataType="{x:Type ContentPresenter}">
+                                            <TextBlock Text="{Binding}" Style="{StaticResource BodyTextBlockStyle}"/>
+                                        </HierarchicalDataTemplate>
+                                        -->
+                                        <!--
+                                        <DataTemplate DataType="{x:Type ItemsPresenter}">
+                                            <TextBlock Text="{Binding}" Style="{StaticResource BodyTextBlockStyle}"/>
+                                        </DataTemplate>
+                                        -->
+                                    <!--</TreeView.Resources>
                                     <TreeViewItem Header="First">
                                         <TreeViewItem Header="First"/>
                                         <TreeViewItem Header="Second"/>
@@ -592,16 +604,91 @@
                                         <TreeViewItem Header="Third"/>
                                     </TreeViewItem>
                                     <TreeViewItem Header="Third">
-                                        <TreeViewItem Header="First"/>
-                                        <TreeViewItem Header="Second"/>
-                                        <TreeViewItem Header="Third"/>
+                                        <TreeViewItem Header="First">
+                                            <TreeViewItem Header="First"/>
+                                            <TreeViewItem Header="Second"/>
+                                            <TreeViewItem Header="Third"/>
+                                        </TreeViewItem>
+                                        <TreeViewItem Header="Second">
+                                            <TreeViewItem Header="First"/>
+                                            <TreeViewItem Header="Second"/>
+                                            <TreeViewItem Header="Third"/>
+                                        </TreeViewItem>
+                                        <TreeViewItem Header="Third">
+                                        </TreeViewItem>
+                                        <TreeViewItem Header="Fourth">
+                                        </TreeViewItem>
+                                        <TreeViewItem Header="Fifth">
+                                        </TreeViewItem>
+                                        <TreeViewItem Header="Sixth">
+                                        </TreeViewItem>
+                                    </TreeViewItem>
+                                    <TreeViewItem Header="Fourth">
+                                        <TreeViewItem Header="First">
+                                            <TreeViewItem Header="First"/>
+                                            <TreeViewItem Header="Second"/>
+                                            <TreeViewItem Header="Third"/>
+                                        </TreeViewItem>
+                                        <TreeViewItem Header="Second">
+                                            <TreeViewItem Header="First"/>
+                                            <TreeViewItem Header="Second"/>
+                                            <TreeViewItem Header="Third"/>
+                                        </TreeViewItem>
+                                        <TreeViewItem Header="Third">
+                                        </TreeViewItem>
+                                        <TreeViewItem Header="Fourth">
+                                        </TreeViewItem>
+                                        <TreeViewItem Header="Fifth">
+                                        </TreeViewItem>
+                                        <TreeViewItem Header="Sixth">
+                                        </TreeViewItem>
+                                    </TreeViewItem>
+                                    <TreeViewItem Header="Fifth">
+                                        <TreeViewItem Header="First">
+                                            <TreeViewItem Header="First"/>
+                                            <TreeViewItem Header="Second"/>
+                                            <TreeViewItem Header="Third"/>
+                                        </TreeViewItem>
+                                        <TreeViewItem Header="Second">
+                                            <TreeViewItem Header="First"/>
+                                            <TreeViewItem Header="Second"/>
+                                            <TreeViewItem Header="Third"/>
+                                        </TreeViewItem>
+                                        <TreeViewItem Header="Third">
+                                        </TreeViewItem>
+                                        <TreeViewItem Header="Fourth">
+                                        </TreeViewItem>
+                                        <TreeViewItem Header="Fifth">
+                                        </TreeViewItem>
+                                        <TreeViewItem Header="Sixth">
+                                        </TreeViewItem>
+                                    </TreeViewItem>
+                                    <TreeViewItem Header="Sixth">
+                                        <TreeViewItem Header="First">
+                                            <TreeViewItem Header="First"/>
+                                            <TreeViewItem Header="Second"/>
+                                            <TreeViewItem Header="Third"/>
+                                        </TreeViewItem>
+                                        <TreeViewItem Header="Second">
+                                            <TreeViewItem Header="First"/>
+                                            <TreeViewItem Header="Second"/>
+                                            <TreeViewItem Header="Third"/>
+                                        </TreeViewItem>
+                                        <TreeViewItem Header="Third">
+                                        </TreeViewItem>
+                                        <TreeViewItem Header="Fourth">
+                                        </TreeViewItem>
+                                        <TreeViewItem Header="Fifth">
+                                        </TreeViewItem>
+                                        <TreeViewItem Header="Sixth">
+                                        </TreeViewItem>
                                     </TreeViewItem>
                                 </TreeView>
                             </Grid>
                         </GroupBox>
                     </WrapPanel>
                 </ScrollViewer>
-            </TabItem>
+            </TabItem>-->
             
             <TabItem Header="Progress &amp; Scroll">
                 <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">

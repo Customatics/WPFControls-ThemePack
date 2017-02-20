@@ -20,8 +20,8 @@
     
     <Color x:Key="Note">#c2def2</Color>
     <Color x:Key="Success">#aced95</Color>
-    <Color x:Key="Warning">#eae96c</Color>
-    <Color x:Key="Error">#ea6c6c</Color>
+    <Color x:Key="Warning">#fffe8f</Color>
+    <Color x:Key="Error">#ffa6a6</Color>
     <!-- end: color definitions-->
 
 

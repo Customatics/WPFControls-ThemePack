@@ -13,10 +13,10 @@
     <Color x:Key="Primary">#01161E</Color>
     <Color x:Key="Secondary">#EFF6E0</Color>
 
-    <Color x:Key="Note">#c2def2</Color>
-    <Color x:Key="Success">#aced95</Color>
-    <Color x:Key="Warning">#eae96c</Color>
-    <Color x:Key="Error">#ea6c6c</Color>
+    <Color x:Key="Note">#2582c4</Color>
+    <Color x:Key="Success">#1aa510</Color>
+    <Color x:Key="Warning">#d5ab04</Color>
+    <Color x:Key="Error">#ce1e1e</Color>
 
     <SolidColorBrush x:Key="PrimaryColor" Color="{StaticResource Primary}" po:Freeze="True" />
     <SolidColorBrush x:Key="SecondaryColor" Color="{StaticResource Secondary}" po:Freeze="True" />
