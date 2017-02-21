@@ -5,59 +5,11 @@
                     xmlns:base="clr-namespace:ThemePack.Common.Base;assembly=ThemePack.Common"
                     xmlns:assets="clr-namespace:ThemePack.Common.Assets;assembly=ThemePack.Common">
 
-    <Style x:Key="Window.Form" TargetType="Window">
-        <!--<Setter Property="Height" Value="591" />-->
-        <Setter Property="WindowStyle" Value="None" />
-        <Setter Property="SizeToContent" Value="Width" />
-        <Setter Property="ResizeMode" Value="NoResize" />
-        <Setter Property="MaxWidth" Value="818" />
-        <!--<Setter Property="MinWidth" Value="409" />-->
-        <Setter Property="MaxHeight" Value="600" />
-        <!--<Setter Property="MinHeight" Value="500" />-->
-        <Setter Property="ShowInTaskbar" Value="False" />
-        <Setter Property="BorderThickness" Value="1"/>
-        <Setter Property="BorderBrush" Value="{DynamicResource SecondaryColor}"/>
-    </Style>
 
     <Style TargetType="{x:Type Grid}" x:Key="Form.Title">
         <Setter Property="Background" Value="{DynamicResource PrimaryColor}" />
         <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Disabled"/>
         <Setter Property="Height" Value="106"/>
-    </Style>
-
-    <Style x:Key="Window.Form.Scalable" TargetType="Window">
-        <Setter Property="WindowStyle" Value="None" />
-        <Setter Property="ResizeMode" Value="CanResize" />
-        <Setter Property="MinWidth" Value="800" />
-        <Setter Property="MinHeight" Value="600" />
-        <Setter Property="ShowInTaskbar" Value="True" />
-        <Setter Property="Padding" Value="0"/>
-        <Setter Property="BorderThickness" Value="1"/>
-        <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
-
-        <Setter Property="shell:WindowChrome.WindowChrome">
-            <Setter.Value>
-                <shell:WindowChrome CaptionHeight="0"
-                                CornerRadius="0"
-                                GlassFrameThickness="0"
-                                NonClientFrameEdges="None"
-                                ResizeBorderThickness="3"
-                                        />
-            </Setter.Value>
-        </Setter>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Window}">
-                    <Grid Margin="7">
-                        <Border Background="{TemplateBinding Background}" BorderBrush="{DynamicResource SecondaryColor}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="0" ClipToBounds="True"/>
-                        <Grid Margin="0">
-                            <ContentPresenter Margin="0"/>
-                        </Grid>
-                    </Grid>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-
     </Style>
 
     <Style x:Key="Window.Shade" TargetType="Rectangle">
