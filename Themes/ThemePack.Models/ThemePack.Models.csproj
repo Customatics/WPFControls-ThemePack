@@ -46,6 +46,7 @@
     <Compile Include="Models\DllResourceInfo.cs" />
     <Compile Include="Models\Enums\XamlResourceType.cs" />
     <Compile Include="Models\ThemeM.cs" />
+    <Compile Include="Models\NumericValuesM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

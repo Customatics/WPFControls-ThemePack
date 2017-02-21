@@ -15,6 +15,8 @@ namespace ThemePack.Common.Constants
 
         public const string ColorScheme = "themes\\colorschemes";
 
+        public const string Icons = "icons";
+
         /// <summary>
         /// Numerics values
         /// </summary>

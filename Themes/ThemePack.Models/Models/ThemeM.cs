@@ -11,11 +11,12 @@ namespace ThemePack.Models.Models
     /// </summary>
     public class ThemeM
     {
-        public ThemeM(string name, IList<ColorSchemeM> schemes, IList<ControlStyleM> styles)
+        public ThemeM(string name, IList<ColorSchemeM> schemes, IList<ControlStyleM> styles, IList<NumericValuesM> numerics)
         {
             Name = name;
             ColorSchemeModels = schemes;
             ControlStyleModels = styles;
+            NumericValuesModels = numerics;
         }
 
         /// <summary>
@@ -32,6 +33,11 @@ namespace ThemePack.Models.Models
         /// List of <see cref="ControlStyleM"/>
         /// </summary>
         public IList<ControlStyleM> ControlStyleModels { get; set; }
+
+        /// <summary>
+        /// List of <see cref="NumericValuesM"/>
+        /// </summary>
+        public IList<NumericValuesM> NumericValuesModels { get; set; }
 
     }
 }

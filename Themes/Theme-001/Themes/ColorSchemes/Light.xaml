@@ -27,7 +27,7 @@
 
     <SolidColorBrush x:Key="PrimaryColor" Color="{StaticResource Primary}" po:Freeze="True" />
     <SolidColorBrush x:Key="SecondaryColor" Color="{StaticResource Secondary}" po:Freeze="True" />
-    <SolidColorBrush x:Key="TintColor" Color="{StaticResource Tint}" Opacity="{StaticResource TintOpacity}" po:Freeze="True" />
+    <SolidColorBrush x:Key="TintColor" Color="{StaticResource Tint}" Opacity="{DynamicResource TintOpacity}" po:Freeze="True" />
     <SolidColorBrush x:Key="AccentedColor" Color="{StaticResource Accent}" po:Freeze="True" />
 
     <SolidColorBrush x:Key="ActiveColor" Color="{StaticResource Active}" po:Freeze="True" />

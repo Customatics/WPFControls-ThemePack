@@ -67,10 +67,10 @@
                                 <Ellipse Grid.Column="4" Fill="{DynamicResource TintColor}"/>
                                 <Ellipse Grid.Column="6" Fill="{DynamicResource AccentedColor}"/>
 
-                                <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Primary</TextBlock>
-                                <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Secondary</TextBlock>
-                                <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Tint</TextBlock>
-                                <TextBlock Grid.Row="2" Grid.Column="6" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Accent</TextBlock>
+                                <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" Style="{DynamicResource CaptionTextBlockStyle}">Primary</TextBlock>
+                                <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" Style="{DynamicResource CaptionTextBlockStyle}">Secondary</TextBlock>
+                                <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center" Style="{DynamicResource CaptionTextBlockStyle}">Tint</TextBlock>
+                                <TextBlock Grid.Row="2" Grid.Column="6" HorizontalAlignment="Center" Style="{DynamicResource CaptionTextBlockStyle}">Accent</TextBlock>
                             </Grid>
                         </GroupBox>
                         <GroupBox Header="Interaction colors" BorderBrush="{x:Null}">
@@ -95,10 +95,10 @@
                                 <Ellipse Grid.Column="4" Fill="{DynamicResource PressColor}" />
                                 <Ellipse Grid.Column="6" Fill="{DynamicResource DefaultedColor}" />
 
-                                <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Active</TextBlock>
-                                <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Hover</TextBlock>
-                                <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Pressed</TextBlock>
-                                <TextBlock Grid.Row="2" Grid.Column="6" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Defaulted</TextBlock>
+                                <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" Style="{DynamicResource CaptionTextBlockStyle}">Active</TextBlock>
+                                <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" Style="{DynamicResource CaptionTextBlockStyle}">Hover</TextBlock>
+                                <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center" Style="{DynamicResource CaptionTextBlockStyle}">Pressed</TextBlock>
+                                <TextBlock Grid.Row="2" Grid.Column="6" HorizontalAlignment="Center" Style="{DynamicResource CaptionTextBlockStyle}">Defaulted</TextBlock>
                             </Grid>
                         </GroupBox>
                         <GroupBox Header="Marker colors" BorderBrush="{x:Null}">
@@ -123,10 +123,10 @@
                                 <Ellipse Grid.Column="6" Fill="{DynamicResource ErrorColor}" />
 
 
-                                <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Note</TextBlock>
-                                <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Success</TextBlock>
-                                <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Warning</TextBlock>
-                                <TextBlock Grid.Row="2" Grid.Column="6" HorizontalAlignment="Center" Style="{StaticResource CaptionTextBlockStyle}">Error</TextBlock>
+                                <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" Style="{DynamicResource CaptionTextBlockStyle}">Note</TextBlock>
+                                <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" Style="{DynamicResource CaptionTextBlockStyle}">Success</TextBlock>
+                                <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center" Style="{DynamicResource CaptionTextBlockStyle}">Warning</TextBlock>
+                                <TextBlock Grid.Row="2" Grid.Column="6" HorizontalAlignment="Center" Style="{DynamicResource CaptionTextBlockStyle}">Error</TextBlock>
                             </Grid>
                         </GroupBox>
                     </WrapPanel>
@@ -437,7 +437,7 @@
                                     <Expander Style="{DynamicResource Expander.Solid}" Grid.Column="2" Grid.Row="2" Header="Expander">
                                         <Expander.Content>
                                             <ScrollViewer MaxHeight="160" VerticalScrollBarVisibility="Auto" Padding="12,5">
-                                                <TextBlock Style="{StaticResource BodyTextBlockStyle}" TextWrapping="Wrap">
+                                                <TextBlock Style="{DynamicResource BodyTextBlockStyle}" TextWrapping="Wrap">
                                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
                                                     sed do eiusmod tempor incididunt ut labore et dolore magna 
                                                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
@@ -457,7 +457,7 @@
                                     <Expander Style="{DynamicResource Expander.Ghost}" Header="Expander" Grid.Column="2" Grid.Row="4">
                                         <Expander.Content>
                                             <ScrollViewer MaxHeight="160" VerticalScrollBarVisibility="Auto" Padding="12,5">
-                                                <TextBlock Style="{StaticResource BodyTextBlockStyle}" TextWrapping="Wrap">
+                                                <TextBlock Style="{DynamicResource BodyTextBlockStyle}" TextWrapping="Wrap">
                                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
                                                     sed do eiusmod tempor incididunt ut labore et dolore magna 
                                                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
@@ -476,7 +476,7 @@
                                     <Expander Style="{DynamicResource Expander.Borderless}" Header="Expander" Grid.Column="2" Grid.Row="6">
                                         <Expander.Content>
                                             <ScrollViewer MaxHeight="160" VerticalScrollBarVisibility="Auto" Padding="12,5">
-                                                <TextBlock Style="{StaticResource BodyTextBlockStyle}" TextWrapping="Wrap">
+                                                <TextBlock Style="{DynamicResource BodyTextBlockStyle}" TextWrapping="Wrap">
                                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
                                                     sed do eiusmod tempor incididunt ut labore et dolore magna 
                                                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
@@ -741,16 +741,16 @@
                 <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
                     <WrapPanel>
                         <GroupBox Header="Notification" BorderBrush="{x:Null}" >
-                            <TextBlock Style="{StaticResource NotificationItem}" Text="And I think to myself - What a wonderful world."/>
+                            <TextBlock Style="{DynamicResource NotificationItem}" Text="And I think to myself - What a wonderful world."/>
                         </GroupBox>
                         <GroupBox Header="Success" BorderBrush="{x:Null}" >
-                            <TextBlock Style="{StaticResource SuccessItem}" Text="It's a Great Success!"/>
+                            <TextBlock Style="{DynamicResource SuccessItem}" Text="It's a Great Success!"/>
                         </GroupBox>
                         <GroupBox Header="Warning" BorderBrush="{x:Null}" >
-                            <TextBlock Style="{StaticResource WarningItem}" Text="Rollover Bethoween!"/>
+                            <TextBlock Style="{DynamicResource WarningItem}" Text="Rollover Bethoween!"/>
                         </GroupBox>
                         <GroupBox Header="Error" BorderBrush="{x:Null}" >
-                            <TextBlock Style="{StaticResource ErrorItem}" Text="Baby did bad bad thing."/>
+                            <TextBlock Style="{DynamicResource ErrorItem}" Text="Baby did bad bad thing."/>
                         </GroupBox>
                     </WrapPanel>
                 </ScrollViewer>

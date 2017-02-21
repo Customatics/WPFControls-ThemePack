@@ -130,7 +130,7 @@ namespace ThemeWindow.ViewModel
                     SelectedTheme = Themes.First();
                     ColorSchemes = new ObservableCollection<ColorSchemeM>(Themes.First().ColorSchemeModels);
                     SelecteColorScheme = ColorSchemes.FirstOrDefault();
-                    ThemeManager.ChangeApplicationTheme(Application.Current, SelectedTheme.ControlStyleModels, SelecteColorScheme);
+                    ThemeManager.ChangeApplicationTheme(Application.Current, SelectedTheme.ControlStyleModels, SelectedTheme.NumericValuesModels, SelecteColorScheme);
                 }
             }
             catch (Exception e)
@@ -141,7 +141,7 @@ namespace ThemeWindow.ViewModel
 
         private void ChangeSelectedTheme()
         {
-            ThemeManager.ChangeApplicationTheme(Application.Current, selectedTheme.ControlStyleModels, selecteColorScheme);
+            ThemeManager.ChangeApplicationTheme(Application.Current, selectedTheme.ControlStyleModels, SelectedTheme.NumericValuesModels, selecteColorScheme);
         }
 
         #endregion

@@ -7,6 +7,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/Theme-001;component/Themes/Values/Numerics.xaml"/>
                 <ResourceDictionary Source="/Theme-001;component/Themes/ColorSchemes/Light.xaml"/>
+                <ResourceDictionary Source="/Theme-001;component/Icons/Icons.xaml"/>
 
                 <ResourceDictionary Source="/Theme-001;component/Themes/Styles/Buttons.xaml"/>
                 <ResourceDictionary Source="/Theme-001;component/Themes/Styles/Form.xaml"/>

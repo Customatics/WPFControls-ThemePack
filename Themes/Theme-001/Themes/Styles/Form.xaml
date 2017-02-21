@@ -32,7 +32,7 @@
                                 <RowDefinition Height="*" />
                             </Grid.RowDefinitions>
 
-                            <TextBlock Padding="{TemplateBinding Padding}" Foreground="{TemplateBinding Foreground}" FontSize="{TemplateBinding FontSize}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Style="{StaticResource CaptionTextBlockStyle}">
+                            <TextBlock Padding="{TemplateBinding Padding}" Foreground="{TemplateBinding Foreground}" FontSize="{TemplateBinding FontSize}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Style="{DynamicResource CaptionTextBlockStyle}">
                             <ContentPresenter ContentSource="Header" RecognizesAccessKey="True" />
                             </TextBlock>
 

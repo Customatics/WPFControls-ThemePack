@@ -66,11 +66,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\InvokeInteractiveCommandAction.cs" />
+    <Compile Include="AttachedProperties\PathButton.cs" />
     <Compile Include="Base\Abstractions\IBlockableWindow.cs" />
     <Compile Include="Base\Abstractions\IEnvironmentRectangle.cs" />
     <Compile Include="Base\Abstractions\IEnvironmentRegion.cs" />
     <Compile Include="Abstractions\IThemesSeeker.cs" />
-    <Compile Include="Assets\InvokeInteractiveCommandAction.cs" />
     <Compile Include="Base\Abstractions\IRequestActivateViewModel.cs" />
     <Compile Include="Base\Abstractions\IRequestCloseViewModel.cs" />
     <Compile Include="Base\Abstractions\IRequestWaitViewModel.cs" />

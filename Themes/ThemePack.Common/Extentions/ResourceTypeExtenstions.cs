@@ -15,10 +15,12 @@ namespace ThemePack.Common.Extentions
             switch (folderName.ToLower())
             {
                 case ThemeNameConstants.ThemeStyle:
-                case ThemeNameConstants.Values:
+                case ThemeNameConstants.Icons:
                     return XamlResourceType.ControlStyle;
                 case ThemeNameConstants.ColorScheme:
                     return XamlResourceType.ColorScheme;
+                case ThemeNameConstants.Values:
+                    return XamlResourceType.NumericValue;
             }
             throw new ArgumentException("Unexpected argument. Some .xaml resource placed in wrong folder.");
         }

@@ -8,6 +8,7 @@ namespace ThemePack.Models.Models.Enums
     public enum XamlResourceType
     {
         ControlStyle,
-        ColorScheme
+        ColorScheme,
+        NumericValue
     }
 }

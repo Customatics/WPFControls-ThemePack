@@ -18,48 +18,48 @@
 
     <Style x:Key="HeaderTextBlockStyle" TargetType="TextBlock">
         <Setter Property="Foreground" Value="{DynamicResource SecondaryColor}"/>
-        <Setter Property="FontSize" Value="{StaticResource HeaderTextSize}"/>
+        <Setter Property="FontSize" Value="{DynamicResource HeaderTextSize}"/>
         <Setter Property="FontWeight" Value="SemiBold"/>
         <Setter Property="TextWrapping" Value="Wrap"/>
     </Style>
 
     <Style x:Key="SubHeaderTextBlockStyle" TargetType="TextBlock" BasedOn="{StaticResource HeaderTextBlockStyle}">
-        <Setter Property="FontSize" Value="{StaticResource SubHeaderTextSize}"/>
+        <Setter Property="FontSize" Value="{DynamicResource SubHeaderTextSize}"/>
         <Setter Property="FontWeight" Value="SemiBold"/>
         <Setter Property="TextWrapping" Value="Wrap"/>
     </Style>
 
     <Style x:Key="TitleTextBlockStyle" TargetType="TextBlock">
-        <Setter Property="FontSize" Value="{StaticResource TitleTextSize}"/>
+        <Setter Property="FontSize" Value="{DynamicResource TitleTextSize}"/>
         <Setter Property="Foreground" Value="{DynamicResource SecondaryColor}"/>
         <Setter Property="TextWrapping" Value="Wrap"/>
     </Style>
 
     <Style x:Key="SubTitleTextBlockStyle" TargetType="TextBlock" BasedOn="{StaticResource TitleTextBlockStyle}">
-        <Setter Property="FontSize" Value="{StaticResource SubTitleTextSize}"/>
+        <Setter Property="FontSize" Value="{DynamicResource SubTitleTextSize}"/>
         <Setter Property="TextWrapping" Value="Wrap"/>
     </Style>
 
     <Style x:Key="BaseTextBlockStyle" TargetType="TextBlock">
-        <Setter Property="FontSize" Value="{StaticResource BaseTextSize}"/>
+        <Setter Property="FontSize" Value="{DynamicResource BaseTextSize}"/>
         <Setter Property="Foreground" Value="{DynamicResource SecondaryColor}"/>
         <Setter Property="TextWrapping" Value="Wrap"/>
     </Style>
 
     <Style x:Key="BodyTextBlockStyle" TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}">
-        <Setter Property="FontSize" Value="{StaticResource BodyTextSize}"/>
+        <Setter Property="FontSize" Value="{DynamicResource BodyTextSize}"/>
         <Setter Property="TextWrapping" Value="Wrap"/>
     </Style>
 
     <Style x:Key="CaptionTextBlockStyle" TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}">
-        <Setter Property="FontSize" Value="{StaticResource CaptionTextSize}"/>
+        <Setter Property="FontSize" Value="{DynamicResource CaptionTextSize}"/>
         <Setter Property="TextWrapping" Value="Wrap"/>
     </Style>
 
     <Style x:Key="NoteTextBlockStyle" TargetType="TextBlock" BasedOn="{StaticResource BodyTextBlockStyle}">
-        <Setter Property="FontSize" Value="{StaticResource NoteTextSize}"/>
+        <Setter Property="FontSize" Value="{DynamicResource NoteTextSize}"/>
         <Setter Property="TextWrapping" Value="Wrap"/>
-        <Setter Property="Padding" Value="{StaticResource SpaceOuter}"/>
+        <Setter Property="Padding" Value="{DynamicResource SpaceOuter}"/>
     </Style>
 
 
