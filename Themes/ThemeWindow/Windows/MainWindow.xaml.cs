@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using ThemePack.Common.Base;
 using ThemeWindow.Properties;
 
@@ -12,16 +13,16 @@ namespace ThemeWindow.Windows
         public MainWindow()
         {
             InitializeComponent();
-            LoadSettings();
+            Loaded += LoadSettings;
         }
 
-        private void LoadSettings()
+        private void LoadSettings(object sender, RoutedEventArgs routedEventArgs)
         {
+            this.WindowState = Settings.Default.WindowState;
             this.Height = Settings.Default.WindowHeight;
             this.Width = Settings.Default.WindowWidth;
             this.Top = Settings.Default.WindowTop;
             this.Left = Settings.Default.WindowLeft;
-            this.WindowState = Settings.Default.WindowState;
             this.tabControl.SelectedIndex = Settings.Default.SelectedTabIndex;
         }
 
