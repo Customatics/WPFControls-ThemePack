@@ -7,7 +7,7 @@ using System.Windows;
 
 namespace ThemePack.Common.AttachedProperties
 {
-    public class PathButton
+    public class IconAttached
     {
         #region Image dependency property
 
@@ -15,27 +15,27 @@ namespace ThemePack.Common.AttachedProperties
         /// An attached dependency property which provides an
         /// <see cref="Style" /> for arbitrary WPF elements.
         /// </summary>
-        public static readonly DependencyProperty PathStyleProperty = DependencyProperty.RegisterAttached("PathStyle",
-            typeof(Style), typeof(PathButton), new FrameworkPropertyMetadata(null));
+        public static readonly DependencyProperty FontIconProperty = DependencyProperty.RegisterAttached("FontIcon",
+            typeof(Style), typeof(IconAttached), new FrameworkPropertyMetadata(null));
 
         /// <summary>
-        /// Gets the <see cref="PathStyleProperty"/> for a given
+        /// Gets the <see cref="FontIconProperty"/> for a given
         /// <see cref="DependencyObject"/>, which provides an
         /// <see cref="Style" /> for arbitrary WPF elements.
         /// </summary>
-        public static Style GetPathStyle(DependencyObject obj)
+        public static Style GetFontIcon(DependencyObject obj)
         {
-            return (Style)obj.GetValue(PathStyleProperty);
+            return (Style)obj.GetValue(FontIconProperty);
         }
 
         /// <summary>
-        /// Sets the attached <see cref="PathStyleProperty"/> for a given
+        /// Sets the attached <see cref="FontIconProperty"/> for a given
         /// <see cref="DependencyObject"/>, which provides an
         /// <see cref="Style" /> for arbitrary WPF elements.
         /// </summary>
-        public static void SetPathStyle(DependencyObject obj, Style value)
+        public static void SetFontIcon(DependencyObject obj, Style value)
         {
-            obj.SetValue(PathStyleProperty, value);
+            obj.SetValue(FontIconProperty, value);
         }
 
         #endregion

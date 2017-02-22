@@ -6,7 +6,7 @@ using ThemePack.Models.Models;
 namespace ThemePack.Common.ThemeManagement
 {
     /// <summary>
-    /// A class that allows to change theme and color scheme of current application
+    /// A class that allows to change theme and color scheme
     /// </summary>
     public static class ThemeManager
     {
@@ -15,7 +15,7 @@ namespace ThemePack.Common.ThemeManagement
         /// </summary>
         /// <param name="app"><see cref="Application"/></param>
         /// <param name="styles">new <see cref="ControlStyleM"/></param>
-        /// <param name="numericValues"></param>
+        /// <param name="numericValues"><see cref="NumericValuesM"/></param>
         /// <param name="colorScheme">new <see cref="ColorSchemeM"/></param>
         public static void ChangeApplicationTheme(Application app, IList<ControlStyleM> styles, IList<NumericValuesM> numericValues, ColorSchemeM colorScheme)
         {

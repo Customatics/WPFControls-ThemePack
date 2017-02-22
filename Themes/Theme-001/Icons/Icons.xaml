@@ -14,7 +14,9 @@
         <Setter Property="FontFamily" Value="/Theme-001;component/Fonts/Nucleo demo/#icomoon" />
         <Setter Property="FontSize" Value="{StaticResource BodyTextSize}"/>
     </Style>
-    
-    <sys:String x:Key="Icon.Font.like">&#xE62B;</sys:String>
+
+    <Style x:Key="Icon.Font.like" TargetType="TextBlock" BasedOn="{StaticResource IconFont}">
+        <Setter Property="Text" Value="&#xE62B;"></Setter>
+    </Style>
 
 </ResourceDictionary>
