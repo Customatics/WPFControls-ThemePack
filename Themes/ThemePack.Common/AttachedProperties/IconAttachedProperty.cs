@@ -7,7 +7,7 @@ using System.Windows;
 
 namespace ThemePack.Common.AttachedProperties
 {
-    public class IconAttached
+    public static class IconAttachedProperty
     {
         #region Image dependency property
 
@@ -16,7 +16,7 @@ namespace ThemePack.Common.AttachedProperties
         /// <see cref="Style" /> for arbitrary WPF elements.
         /// </summary>
         public static readonly DependencyProperty FontIconProperty = DependencyProperty.RegisterAttached("FontIcon",
-            typeof(Style), typeof(IconAttached), new FrameworkPropertyMetadata(null));
+            typeof(Style), typeof(IconAttachedProperty), new FrameworkPropertyMetadata(null));
 
         /// <summary>
         /// Gets the <see cref="FontIconProperty"/> for a given

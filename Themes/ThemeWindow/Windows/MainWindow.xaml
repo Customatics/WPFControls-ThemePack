@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="clr-namespace:ThemeWindow.ViewModel"
         xmlns:base="clr-namespace:ThemePack.Common.Base;assembly=ThemePack.Common"
-        xmlns:attachedProperties="clr-namespace:ThemePack.Common.AttachedProperties;assembly=ThemePack.Common"
+        xmlns:common="clr-namespace:ThemePack.Common.AttachedProperties;assembly=ThemePack.Common"
         mc:Ignorable="d" 
         Closing="Window_Closing"
         Title="Theme preview" Width="900" Height="600" Style="{StaticResource Window.ModalStyle.NormalStyle}" SizeToContent="Manual">
@@ -213,7 +213,7 @@
                                 <TextBlock Grid.Column="6" HorizontalAlignment="Center">Disabled</TextBlock>
 
                                 <!-- solid button-->
-                                <Button Style="{DynamicResource Button.Solid.Iconic}" attachedProperties:IconAttached.FontIcon="{DynamicResource Icon.Font.like}" Grid.Column="2" Grid.Row="2" Content="Button" IsDefault="True" />
+                                <Button Style="{DynamicResource Button.Solid.Iconic}" common:IconAttachedProperty.FontIcon="{DynamicResource Icon.Font.like}" Grid.Column="2" Grid.Row="2" Content="Button" IsDefault="True" />
                                 <Button Style="{DynamicResource Button.Solid.Iconic}" Grid.Column="4" Grid.Row="2" Content="Button" />
                                 <Button Style="{DynamicResource Button.Solid.Iconic}" Grid.Column="6" Grid.Row="2" Content="Button" IsEnabled="False" />
 
