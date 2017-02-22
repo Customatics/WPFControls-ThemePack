@@ -1,7 +1,8 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:vc="clr-namespace:ThemePack.Common.Converters;assembly=ThemePack.Common">
+    xmlns:vc="clr-namespace:ThemePack.Common.Converters;assembly=ThemePack.Common"
+    xmlns:common="clr-namespace:ThemePack.Common.AttachedProperties;assembly=ThemePack.Common">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="Form.xaml"></ResourceDictionary>
     </ResourceDictionary.MergedDictionaries>
@@ -397,11 +398,11 @@
     </Style>
 
     <!-- Experimental button with icon based on font -->
-
+    <common:IconAttachedProperty x:Key="IconAttachedProperty"/>
     <Style x:Key="Button.Solid.Iconic" TargetType="{x:Type Button}" >
         <Setter Property="Background" Value="{DynamicResource ActiveColor}"/>
         <Setter Property="Foreground" Value="{DynamicResource PrimaryColor}"/>
-        <Setter Property="FontSize" Value="{StaticResource BodyTextSize}"/>
+        <Setter Property="FontSize" Value="{DynamicResource BodyTextSize}"/>
         <Setter Property="FontWeight" Value="Regular"/>
         <Setter Property="MinWidth" Value="{DynamicResource ControlMinWidth}"/>
         <Setter Property="BorderThickness" Value="2"/>
@@ -419,8 +420,7 @@
                         <StackPanel Orientation="Horizontal" Margin="{TemplateBinding Padding}" >
                             
                             <TextBlock
-                                   Text="{Binding icon:glyph, StringFormat='{}{0} '}"
-                                   Style="{DynamicResource ButtonIcon}"
+                                   Style="{Binding Path=(common:IconAttachedProperty.FontIcon), RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}"
                                    Foreground="{TemplateBinding Foreground}"
                                    FontSize="{TemplateBinding FontSize}"
                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
@@ -439,13 +439,13 @@
                             </TextBlock>
 
                             <!--<TextBlock>&#x00A0;</TextBlock>-->
-                            <TextBlock
+                            <!--<TextBlock
                                    Text="{Binding icon:glyph, StringFormat=' {}{0}'}"
                                    Style="{DynamicResource ButtonIcon}"
                                    Foreground="{TemplateBinding Foreground}"
                                    FontSize="{TemplateBinding FontSize}"
                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
-                            </TextBlock>
+                            </TextBlock>-->
                         </StackPanel>
                     </Border>
                     <ControlTemplate.Triggers>
