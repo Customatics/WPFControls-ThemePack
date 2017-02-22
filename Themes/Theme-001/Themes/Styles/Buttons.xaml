@@ -10,7 +10,7 @@
         <Setter Property="Foreground" Value="{DynamicResource PrimaryColor}"/>
         <Setter Property="FontSize" Value="{StaticResource BodyTextSize}"/>
         <Setter Property="FontWeight" Value="Regular"/>
-        <Setter Property="MinWidth" Value="{DynamicResource ButtonMinWidth}"/>
+        <Setter Property="MinWidth" Value="{DynamicResource ControlMinWidth}"/>
         <Setter Property="BorderThickness" Value="2"/>
         <Setter Property="BorderBrush" Value="{DynamicResource ActiveColor}"/>
         <Setter Property="Margin" Value="{DynamicResource SpaceOuter}"/>
@@ -58,7 +58,7 @@
     <Style x:Key="Button.Ghost" TargetType="{x:Type Button}" BasedOn="{StaticResource Button.Solid}">
         <Setter Property="Background" Value="{x:Null}"/>
         <Setter Property="Foreground" Value="{DynamicResource ActiveColor}"/>
-        <Setter Property="MinWidth" Value="{DynamicResource ButtonMinWidth}"/>
+        <Setter Property="MinWidth" Value="{DynamicResource ControlMinWidth}"/>
         <Setter Property="BorderBrush" Value="{DynamicResource ActiveColor}"/>
         <Style.Triggers>
             <Trigger Property="IsDefault" Value="true">
@@ -176,7 +176,7 @@
         <Setter Property="Foreground" Value="{DynamicResource PrimaryColor}"/>
         <Setter Property="FontSize" Value="{StaticResource BodyTextSize}"/>
         <Setter Property="FontWeight" Value="Regular"/>
-        <Setter Property="MinWidth" Value="{DynamicResource ButtonMinWidth}"/>
+        <Setter Property="MinWidth" Value="{DynamicResource ControlMinWidth}"/>
         <Setter Property="BorderThickness" Value="2"/>
         <Setter Property="BorderBrush" Value="{DynamicResource ActiveColor}"/>
         <Setter Property="Margin" Value="{DynamicResource SpaceOuter}"/>
@@ -226,7 +226,7 @@
     <Style x:Key="ToggleButton.Ghost" TargetType="{x:Type ToggleButton}" BasedOn="{StaticResource ToggleButton.Solid}">
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Foreground" Value="{DynamicResource ActiveColor}"/>
-        <Setter Property="MinWidth" Value="{DynamicResource ButtonMinWidth}"/>
+        <Setter Property="MinWidth" Value="{DynamicResource ControlMinWidth}"/>
         <Setter Property="BorderBrush" Value="{DynamicResource ActiveColor}"/>
         <Style.Triggers>
             <Trigger Property="IsChecked" Value="true">
@@ -403,7 +403,7 @@
         <Setter Property="Foreground" Value="{DynamicResource PrimaryColor}"/>
         <Setter Property="FontSize" Value="{StaticResource BodyTextSize}"/>
         <Setter Property="FontWeight" Value="Regular"/>
-        <Setter Property="MinWidth" Value="{DynamicResource ButtonMinWidth}"/>
+        <Setter Property="MinWidth" Value="{DynamicResource ControlMinWidth}"/>
         <Setter Property="BorderThickness" Value="2"/>
         <Setter Property="BorderBrush" Value="{DynamicResource ActiveColor}"/>
         <Setter Property="Margin" Value="{DynamicResource SpaceOuter}"/>

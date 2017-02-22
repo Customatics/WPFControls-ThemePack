@@ -188,10 +188,6 @@
                                     <RowDefinition Height="auto"/>
                                     <RowDefinition Height="10"/>
                                     <RowDefinition Height="auto"/>
-                                    <RowDefinition Height="10"/>
-                                    <RowDefinition Height="auto"/>
-                                    <RowDefinition Height="10"/>
-                                    <RowDefinition Height="auto"/>
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
@@ -204,8 +200,6 @@
                                 </Grid.ColumnDefinitions>
 
                                 <TextBlock Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center">Solid</TextBlock>
-                                <TextBlock Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Center">Ghost</TextBlock>
-                                <TextBlock Grid.Row="6" HorizontalAlignment="Right" VerticalAlignment="Center">Borderless</TextBlock>
 
                                 <TextBlock Grid.Column="2" HorizontalAlignment="Center">IsDefault</TextBlock>
                                 <TextBlock Grid.Column="4" HorizontalAlignment="Center">Common</TextBlock>
@@ -543,7 +537,7 @@
             <TabItem Header="Form elements">
                 <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
                     <WrapPanel>
-                        <GroupBox Header="Texts" BorderBrush="{x:Null}">
+                        <GroupBox Header="Text fields" BorderBrush="{x:Null}">
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="auto"/>
@@ -557,16 +551,16 @@
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="10"/>
-                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="250"/>
                                 </Grid.ColumnDefinitions>
 
-                                <TextBox Grid.Row="2" Grid.Column="2" />
-                                <PasswordBox Grid.Row="4" Grid.Column="2" />
-                                <RichTextBox Grid.Row="6" Grid.Column="2" />
+                                <TextBox Grid.Row="2" Grid.Column="2" HorizontalAlignment="Stretch" />
+                                <PasswordBox Grid.Row="4" Grid.Column="2" HorizontalAlignment="Stretch" />
+                                <RichTextBox Grid.Row="6" Grid.Column="2" HorizontalAlignment="Stretch" />
 
-                                <TextBlock Grid.Row="2" Grid.Column="0">TextBlock Box</TextBlock>
-                                <TextBlock Grid.Row="4" Grid.Column="0">Password Box</TextBlock>
-                                <TextBlock Grid.Row="6" Grid.Column="0">RichText Box</TextBlock>
+                                <TextBlock Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right">TextBlock Box</TextBlock>
+                                <TextBlock Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right">Password Box</TextBlock>
+                                <TextBlock Grid.Row="6" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right">RichText Box</TextBlock>
                                 
                             </Grid>
                         </GroupBox>
@@ -582,22 +576,38 @@
                                     <RowDefinition Height="auto"/>
                                     <RowDefinition Height="10"/>
                                     <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="10"/>
-                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition Width="100"/>
                                 </Grid.ColumnDefinitions>
 
-                                <CheckBox Grid.Row="2" Grid.Column="2" />
-                                <RadioButton Grid.Row="4" Grid.Column="2" />
-                                <Separator Grid.Row="6" Grid.Column="2"/>
-                                <Slider Grid.Row="8" Grid.Column="2" />
+                                <CheckBox Grid.Row="2" Grid.Column="2" Content="Check Me" IsThreeState="True" />
+                                <CheckBox Grid.Row="2" Grid.Column="4" Content="Check Me" IsThreeState="True" IsChecked="True" IsEnabled="False" />
+                                
+                                <RadioButton Grid.Row="4" Grid.Column="2" Content="Click me" />
+                                <RadioButton Grid.Row="4" Grid.Column="4" Content="Click me" IsEnabled="False" />
+
+                                <Separator Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="3"/>
+                                
+                                <Slider Grid.Row="8" Grid.Column="2" Grid.ColumnSpan="3"/>
+                                
+                                <Slider Grid.Row="10" Grid.Column="2" Grid.ColumnSpan="3" TickPlacement="Both" TickFrequency="1" IsSnapToTickEnabled="True" IsSelectionRangeEnabled="True" SelectionStart="-3" SelectionEnd="3" AutoToolTipPlacement="TopLeft" Minimum="-5" Value="1" Maximum="5" />
+
+                                
+                                <TextBlock Grid.Row="0" Grid.Column="2">Enabled</TextBlock>
+                                <TextBlock Grid.Row="0" Grid.Column="4">Disabled</TextBlock>
 
                                 <TextBlock Grid.Row="2" Grid.Column="0">CheckBox</TextBlock>
                                 <TextBlock Grid.Row="4" Grid.Column="0">Radio</TextBlock>
                                 <TextBlock Grid.Row="6" Grid.Column="0">Separator</TextBlock>
                                 <TextBlock Grid.Row="8" Grid.Column="0">Slider</TextBlock>
+                                <TextBlock Grid.Row="10" Grid.Column="0">Slider with Ticks</TextBlock>
                             </Grid>
                         </GroupBox>
                         <GroupBox Header="Pickers" BorderBrush="{x:Null}">
