@@ -566,19 +566,19 @@
                             </Grid>
                         </GroupBox>
                         <GroupBox Header="Options" BorderBrush="{x:Null}">
-                            <Grid>
+                            <Grid Grid.IsSharedSizeScope="True">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="auto"/>
                                     <RowDefinition Height="10"/>
-                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="auto" SharedSizeGroup="row"/>
                                     <RowDefinition Height="10"/>
-                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="auto" SharedSizeGroup="row"/>
                                     <RowDefinition Height="10"/>
-                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="auto" SharedSizeGroup="row"/>
                                     <RowDefinition Height="10"/>
-                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="auto" SharedSizeGroup="row"/>
                                     <RowDefinition Height="10"/>
-                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="auto" SharedSizeGroup="row"/>
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
@@ -588,11 +588,11 @@
                                     <ColumnDefinition Width="100"/>
                                 </Grid.ColumnDefinitions>
 
-                                <CheckBox Grid.Row="2" Grid.Column="2" Content="Check Me" IsThreeState="True" />
-                                <CheckBox Grid.Row="2" Grid.Column="4" Content="Check Me" IsThreeState="True" IsChecked="True" IsEnabled="False" />
-                                
-                                <RadioButton Grid.Row="4" Grid.Column="2" Content="Click me" />
-                                <RadioButton Grid.Row="4" Grid.Column="4" Content="Click me" IsEnabled="False" />
+                                <CheckBox Grid.Row="2" Grid.Column="2" Content="Enabled" IsThreeState="True" />
+                                <CheckBox Grid.Row="2" Grid.Column="4" Content="Disabled" IsThreeState="True" IsChecked="True" IsEnabled="False" />
+
+                                <RadioButton Grid.Row="4" Grid.Column="2" Content="Enabled" />
+                                <RadioButton Grid.Row="4" Grid.Column="4" Content="Disabled" IsEnabled="False" />
 
                                 <Separator Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="3"/>
                                 
@@ -601,8 +601,8 @@
                                 <Slider Grid.Row="10" Grid.Column="2" Grid.ColumnSpan="3" TickPlacement="Both" TickFrequency="1" IsSnapToTickEnabled="True" IsSelectionRangeEnabled="True" SelectionStart="-3" SelectionEnd="3" AutoToolTipPlacement="TopLeft" Minimum="-5" Value="1" Maximum="5" />
 
                                 
-                                <TextBlock Grid.Row="0" Grid.Column="2">Enabled</TextBlock>
-                                <TextBlock Grid.Row="0" Grid.Column="4">Disabled</TextBlock>
+                                <!--<TextBlock Grid.Row="0" Grid.Column="2">Enabled</TextBlock>
+                                <TextBlock Grid.Row="0" Grid.Column="4">Disabled</TextBlock>-->
 
                                 <TextBlock Grid.Row="2" Grid.Column="0">CheckBox</TextBlock>
                                 <TextBlock Grid.Row="4" Grid.Column="0">Radio</TextBlock>

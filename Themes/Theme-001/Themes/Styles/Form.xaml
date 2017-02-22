@@ -59,6 +59,7 @@
         <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
         <Setter Property="Foreground" Value="{DynamicResource SecondaryColor}"/>
         <Setter Property="MinWidth" Value="{DynamicResource ControlMinWidth}"/>
+        <Setter Property="TextBox.CaretBrush" Value="{DynamicResource SecondaryColor}"/>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="true">
                 <Setter Property="BorderBrush" Value="{DynamicResource HoverColor}"/>
@@ -92,6 +93,7 @@
         <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
         <Setter Property="Foreground" Value="{DynamicResource SecondaryColor}"/>
         <Setter Property="MinWidth" Value="{DynamicResource ControlMinWidth}"/>
+        <Setter Property="PasswordBox.CaretBrush" Value="{DynamicResource SecondaryColor}"/>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="true">
                 <Setter Property="BorderBrush" Value="{DynamicResource HoverColor}"/>
@@ -125,6 +127,7 @@
         <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
         <Setter Property="Foreground" Value="{DynamicResource SecondaryColor}"/>
         <Setter Property="MinWidth" Value="{DynamicResource ControlMinWidth}"/>
+        <Setter Property="RichTextBox.CaretBrush" Value="{DynamicResource SecondaryColor}"/>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="true">
                 <Setter Property="BorderBrush" Value="{DynamicResource HoverColor}"/>
@@ -298,13 +301,18 @@
                             <Setter TargetName="Ellipse" Property="Stroke" Value="{DynamicResource HoverColor}"/>
                             <Setter TargetName="Ellipse" Property="Fill">
                                 <Setter.Value>
-                                    <SolidColorBrush Color="{DynamicResource Active}" Opacity="0.2"/>
+                                    <SolidColorBrush Color="{DynamicResource Hover}" Opacity="0.2"/>
                                 </Setter.Value>
                             </Setter>
                         </Trigger>
-                        <!--<Trigger Property="IsPressed" Value="True">
-                            <Setter TargetName="Ellipse" Property="Fill" Value="{DynamicResource PressedColor}"/>
-                        </Trigger>-->
+                        <Trigger Property="IsDragging" Value="True">
+                            <Setter TargetName="Ellipse" Property="Stroke" Value="{DynamicResource PrimaryColor}"/>
+                            <Setter TargetName="Ellipse" Property="Fill">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="{DynamicResource Press}"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
@@ -320,7 +328,7 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
             <TickBar x:Name="TopTick" SnapsToDevicePixels="True" Placement="Top" Height="4" Visibility="Collapsed" Fill="{DynamicResource TintColor}"/>
-            <Border x:Name="TrackBackground" Margin="0,1,0,0" CornerRadius="2" Height="2" Grid.Row="1" BorderThickness="0" Background="{DynamicResource TintColor}" VerticalAlignment="Center">
+            <Border x:Name="TrackBackground" Margin="0,1,0,0" CornerRadius="2" Height="2" Grid.Row="1" BorderThickness="0" Background="{DynamicResource ActiveColor}" VerticalAlignment="Center">
                 <Canvas>
                     <Canvas.Style>
                         <Style TargetType="Canvas">
@@ -375,7 +383,7 @@
             </Grid.ColumnDefinitions>
             <TickBar x:Name="TopTick" SnapsToDevicePixels="True" Placement="Left" Width="4" Visibility="Collapsed" Fill="{DynamicResource TintColor}"/>
 
-            <Border x:Name="TrackBackground" Margin="1,0,0,0" CornerRadius="2" Width="2" Grid.Column="1" BorderThickness="0" Background="{DynamicResource TintColor}" HorizontalAlignment="Center">
+            <Border x:Name="TrackBackground" Margin="1,0,0,0" CornerRadius="2" Width="2" Grid.Column="1" BorderThickness="0" Background="{DynamicResource ActiveColor}" HorizontalAlignment="Center">
                 <Canvas>
                     <Canvas.Style>
                         <Style TargetType="Canvas">
