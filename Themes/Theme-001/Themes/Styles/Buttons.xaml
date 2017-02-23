@@ -7,144 +7,6 @@
         <ResourceDictionary Source="Form.xaml"></ResourceDictionary>
     </ResourceDictionary.MergedDictionaries>
 
-    <!--<ControlTemplate x:Key="Icon.Left" TargetType="Button">
-        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" 
-                            Margin="{TemplateBinding Margin}" MinWidth="{TemplateBinding MinWidth}">
-            <Grid Margin="{TemplateBinding Padding}" >
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="8"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
-
-                <TextBlock x:Name="Icon" Grid.Row="1" Grid.Column="0"
-                                   Style="{Binding Path=(c:IconAttachedProperty.FontIcon), RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}"
-                                   Foreground="{TemplateBinding Foreground}"
-                                   FontSize="{TemplateBinding FontSize}"
-                                   VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-
-                <ContentPresenter x:Name="Content" Grid.Row="1" Grid.Column="2" ContentSource="Content">
-                    <ContentPresenter.Resources>
-                        <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseTextBlockStyle}">
-                            <Setter Property="Foreground" Value="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}"/>
-                            <Setter Property="FontSize" Value="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path= FontSize}"/>
-                            <Setter Property="TextDecorations" Value="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path= TextBlock.TextDecorations}"/>
-                        </Style>
-                    </ContentPresenter.Resources>
-                </ContentPresenter>
-            </Grid>
-        </Border>
-    </ControlTemplate>
-
-    <ControlTemplate x:Key="Icon.Right" TargetType="Button">
-        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" 
-                            Margin="{TemplateBinding Margin}" MinWidth="{TemplateBinding MinWidth}">
-            <Grid Margin="{TemplateBinding Padding}" >
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
-
-                <TextBlock x:Name="Icon" Grid.Row="1" Grid.Column="2"
-                                   Style="{Binding Path=(c:IconAttachedProperty.FontIcon), RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}"
-                                   Foreground="{TemplateBinding Foreground}"
-                                   FontSize="{TemplateBinding FontSize}"
-                                   VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-
-                <ContentPresenter x:Name="Content" Grid.Row="1" Grid.Column="0" ContentSource="Content">
-                    <ContentPresenter.Resources>
-                        <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseTextBlockStyle}">
-                            <Setter Property="Foreground" Value="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}"/>
-                            <Setter Property="FontSize" Value="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path= FontSize}"/>
-                            <Setter Property="TextDecorations" Value="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path= TextBlock.TextDecorations}"/>
-                        </Style>
-                    </ContentPresenter.Resources>
-                </ContentPresenter>
-            </Grid>
-        </Border>
-    </ControlTemplate>
-
-    <ControlTemplate x:Key="Icon.Top" TargetType="Button">
-        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" 
-                            Margin="{TemplateBinding Margin}" MinWidth="{TemplateBinding MinWidth}">
-            <Grid Margin="{TemplateBinding Padding}" >
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
-
-                <TextBlock x:Name="Icon" Grid.Row="0" Grid.Column="1"
-                                   Style="{Binding Path=(c:IconAttachedProperty.FontIcon), RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}"
-                                   Foreground="{TemplateBinding Foreground}"
-                                   FontSize="{TemplateBinding FontSize}"
-                                   VerticalAlignment="Bottom"
-                                   />
-
-                <ContentPresenter x:Name="Content" Grid.Row="2" Grid.Column="1" ContentSource="Content" VerticalAlignment="Top">
-                    <ContentPresenter.Resources>
-                        <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseTextBlockStyle}">
-                            <Setter Property="Foreground" Value="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}"/>
-                            <Setter Property="FontSize" Value="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path= FontSize}"/>
-                            <Setter Property="TextDecorations" Value="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path= TextBlock.TextDecorations}"/>
-                        </Style>
-                    </ContentPresenter.Resources>
-                </ContentPresenter>
-            </Grid>
-        </Border>
-    </ControlTemplate>
-
-    <ControlTemplate x:Key="Icon.Bottom" TargetType="Button">
-        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" 
-                            Margin="{TemplateBinding Margin}" MinWidth="{TemplateBinding MinWidth}">
-            <Grid Margin="{TemplateBinding Padding}" >
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
-
-                <TextBlock x:Name="Icon" Grid.Row="2" Grid.Column="1"
-                                   Style="{Binding Path=(c:IconAttachedProperty.FontIcon), RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}"
-                                   Foreground="{TemplateBinding Foreground}"
-                                   FontSize="{TemplateBinding FontSize}"
-                                   VerticalAlignment="Top"
-                                   />
-
-                <ContentPresenter x:Name="Content" Grid.Row="0" Grid.Column="1" ContentSource="Content" VerticalAlignment="Bottom">
-                    <ContentPresenter.Resources>
-                        <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseTextBlockStyle}">
-                            <Setter Property="Foreground" Value="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}"/>
-                            <Setter Property="FontSize" Value="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path= FontSize}"/>
-                            <Setter Property="TextDecorations" Value="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path= TextBlock.TextDecorations}"/>
-                        </Style>
-                    </ContentPresenter.Resources>
-                </ContentPresenter>
-            </Grid>
-        </Border>
-    </ControlTemplate>-->
-
     <Style x:Key="Button.Solid" TargetType="{x:Type Button}" >
         <Setter Property="Background" Value="{DynamicResource ActiveColor}"/>
         <Setter Property="Foreground" Value="{DynamicResource PrimaryColor}"/>
@@ -169,13 +31,15 @@
                                    Style="{Binding Path=(c:IconAttachedProperty.FontIcon), RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}"
                                    Foreground="{TemplateBinding Foreground}"
                                    FontSize="{TemplateBinding FontSize}"
-                                   VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                   VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                   HorizontalAlignment="Center"/>
 
                             <ContentPresenter x:Name="Content" ContentSource="Content">
                                 <ContentPresenter.Resources>
                                     <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseTextBlockStyle}">
                                         <Setter Property="Foreground" Value="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}"/>
                                         <Setter Property="FontSize" Value="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path= FontSize}"/>
+                                        <Setter Property="HorizontalAlignment" Value="Center"/>
                                         <Setter Property="TextDecorations" Value="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path= TextBlock.TextDecorations}"/>
                                     </Style>
                                 </ContentPresenter.Resources>
@@ -184,21 +48,27 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=(c:IconAttachedProperty.IconAlignment)}" Value="Right">
-                            <Setter Property="Background" Value="Red"/>
+                            <!--<Setter Property="Background" Value="Red"/>-->
                             <Setter TargetName="Panel" Property="FlowDirection" Value="RightToLeft"/>
+                            <Setter TargetName="Content" Property="Margin" Value="8,0"/>
                         </DataTrigger>
                         <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=(c:IconAttachedProperty.IconAlignment)}" Value="Top">
-                            <Setter Property="Background" Value="Green"/>
+                            <!--<Setter Property="Background" Value="Green"/>-->
                             <Setter TargetName="Panel" Property="Orientation" Value="Vertical"/>
+                            <Setter TargetName="Content" Property="Margin" Value="0,8"/>
+                            <Setter TargetName="Icon" Property="TextBlock.FontSize" Value="{StaticResource TitleTextSize}"/>
                         </DataTrigger>
                         <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=(c:IconAttachedProperty.IconAlignment)}" Value="Bottom">
-                            <Setter Property="Background" Value="Orange"/>
+                            <!--<Setter Property="Background" Value="Orange"/>-->
                             <Setter TargetName="Panel" Property="Orientation" Value="Vertical"/>
                             <Setter TargetName="Panel" Property="FlowDirection" Value="RightToLeft"/>
+                            <Setter TargetName="Content" Property="Margin" Value="0,8"/>
+                            <Setter TargetName="Icon" Property="TextBlock.FontSize" Value="{StaticResource TitleTextSize}"/>
                         </DataTrigger>
                         <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=(c:IconAttachedProperty.IconAlignment)}" Value="Left">
-                            <Setter Property="Background" Value="Blue"/>
+                            <!--<Setter Property="Background" Value="Blue"/>-->
                             <Setter TargetName="Panel" Property="FlowDirection" Value="LeftToRight"/>
+                            <Setter TargetName="Content" Property="Margin" Value="8,0"/>
                         </DataTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -355,83 +225,73 @@
                 <ControlTemplate TargetType="ToggleButton">
                     <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" 
                             Margin="{TemplateBinding Margin}" MinWidth="{TemplateBinding MinWidth}">
-                        <Grid Margin="{TemplateBinding Padding}" >
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="auto"/>
-                                <RowDefinition>
-                                    <RowDefinition.Style>
-                                        <Style TargetType="RowDefinition">
-                                            <Style.Triggers>
-                                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=(c:IconAttachedProperty.IconAlignment)}" Value="top">
-                                                    <Setter Property="Height" Value="8"/>
-                                                </DataTrigger>
-                                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=(c:IconAttachedProperty.IconAlignment)}" Value="bottom">
-                                                    <Setter Property="Height" Value="8"/>
-                                                </DataTrigger>
-                                            </Style.Triggers>
-                                        </Style>
-                                    </RowDefinition.Style>
-                                </RowDefinition>
-                                <RowDefinition Height="auto"/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition>
-                                    <ColumnDefinition.Style>
-                                        <Style TargetType="ColumnDefinition">
-                                            <Style.Triggers>
-                                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=(c:IconAttachedProperty.IconAlignment)}" Value="left">
-                                                    <Setter Property="Width" Value="8"/>
-                                                </DataTrigger>
-                                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=(c:IconAttachedProperty.IconAlignment)}" Value="right">
-                                                    <Setter Property="Width" Value="8"/>
-                                                </DataTrigger>
-                                            </Style.Triggers>
-                                        </Style>
-                                    </ColumnDefinition.Style>
-                                </ColumnDefinition>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
+                        <StackPanel x:Name="Panel" Orientation="Horizontal" Margin="{TemplateBinding Padding}" >
 
-                            <TextBlock Grid.Row="1" Grid.Column="0"
-                                   Style="{Binding Path=(c:IconAttachedProperty.FontIcon), RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}"
+                            <TextBlock x:Name="Icon"
+                                   Style="{Binding Path=(c:IconAttachedProperty.FontIcon), RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ToggleButton}}, Mode=OneWay}"
                                    Foreground="{TemplateBinding Foreground}"
                                    FontSize="{TemplateBinding FontSize}"
                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                   Visibility="{Binding Converter={vc:EmptyStringToVisibilityConverter}, Path=(c:IconAttachedProperty.FontIcon), RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}"
-                                   >
-                            </TextBlock>
+                                   HorizontalAlignment="Center"
+                                   Visibility="{Binding Style, Converter={vc:EmptyStringToVisibilityConverter}}"
+                                   />
 
-                            <ContentPresenter ContentSource="Content" Grid.Row="1" Grid.Column="2">
+                            <ContentPresenter x:Name="Content" ContentSource="Content">
                                 <ContentPresenter.Resources>
                                     <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseTextBlockStyle}">
-                                        <Setter Property="Foreground" Value="{Binding RelativeSource={RelativeSource AncestorType=ToggleButton}, Path=Foreground}"/>
-                                        <Setter Property="FontSize" Value="{Binding RelativeSource={RelativeSource AncestorType=ToggleButton}, Path= FontSize}"/>
-                                        <Setter Property="TextDecorations" Value="{Binding RelativeSource={RelativeSource AncestorType=ToggleButton}, Path= TextBlock.TextDecorations}"/>
+                                        <Setter Property="Foreground" Value="{Binding RelativeSource={RelativeSource Self}, Path=Foreground}"/>
+                                        <Setter Property="FontSize" Value="{Binding RelativeSource={RelativeSource Self}, Path= FontSize}"/>
+                                        <Setter Property="HorizontalAlignment" Value="Center"/>
+                                        <Setter Property="TextDecorations" Value="{Binding RelativeSource={RelativeSource Self}, Path= TextBlock.TextDecorations}"/>
                                     </Style>
                                 </ContentPresenter.Resources>
                             </ContentPresenter>
-                        </Grid>
+                        </StackPanel>
                     </Border>
                     <ControlTemplate.Triggers>
-                        <Trigger Property="IsChecked" Value="true">
-                            <Setter Property="Background" Value="{DynamicResource DefaultedColor}"/>
-                        </Trigger>
-                        <Trigger Property="IsMouseOver" Value="true">
-                            <Setter Property="Background" Value="{DynamicResource HoverColor}"/>
-                            <!--<Setter Property="Panel.ZIndex" Value="10"/>-->
-                        </Trigger>
-                        <Trigger Property="IsPressed" Value="true">
-                            <Setter Property="Background" Value="{DynamicResource PressColor}"/>
-                            <Setter Property="BorderBrush" Value="{DynamicResource PressColor}"/>
-                        </Trigger>
-                        <Trigger Property="IsEnabled" Value="False">
-                            <Setter Property="Opacity" Value="{DynamicResource DisabledOpacity}"/>
-                        </Trigger>
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=(c:IconAttachedProperty.IconAlignment)}" Value="Right">
+                            <!--<Setter Property="Background" Value="Red"/>-->
+                            <Setter TargetName="Panel" Property="FlowDirection" Value="RightToLeft"/>
+                            <Setter TargetName="Content" Property="Margin" Value="8,0"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=(c:IconAttachedProperty.IconAlignment)}" Value="Top">
+                            <!--<Setter Property="Background" Value="Green"/>-->
+                            <Setter TargetName="Panel" Property="Orientation" Value="Vertical"/>
+                            <Setter TargetName="Content" Property="Margin" Value="0,8"/>
+                            <Setter TargetName="Icon" Property="TextBlock.FontSize" Value="{StaticResource TitleTextSize}"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=(c:IconAttachedProperty.IconAlignment)}" Value="Bottom">
+                            <!--<Setter Property="Background" Value="Orange"/>-->
+                            <Setter TargetName="Panel" Property="Orientation" Value="Vertical"/>
+                            <Setter TargetName="Panel" Property="FlowDirection" Value="RightToLeft"/>
+                            <Setter TargetName="Content" Property="Margin" Value="0,8"/>
+                            <Setter TargetName="Icon" Property="TextBlock.FontSize" Value="{StaticResource TitleTextSize}"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=(c:IconAttachedProperty.IconAlignment)}" Value="Left">
+                            <!--<Setter Property="Background" Value="Blue"/>-->
+                            <Setter TargetName="Panel" Property="FlowDirection" Value="LeftToRight"/>
+                            <Setter TargetName="Content" Property="Margin" Value="8,0"/>
+                        </DataTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="true">
+                <Setter Property="Background" Value="{DynamicResource DefaultedColor}"/>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="Background" Value="{DynamicResource HoverColor}"/>
+                <!--<Setter Property="Panel.ZIndex" Value="10"/>-->
+            </Trigger>
+            <Trigger Property="IsPressed" Value="true">
+                <Setter Property="Background" Value="{DynamicResource PressColor}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource PressColor}"/>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Opacity" Value="{DynamicResource DisabledOpacity}"/>
+            </Trigger>
+        </Style.Triggers>
     </Style>
 
     <Style x:Key="ToggleButton.Ghost" TargetType="{x:Type ToggleButton}" BasedOn="{StaticResource ToggleButton.Solid}">
@@ -565,7 +425,9 @@
                 <ControlTemplate TargetType="Expander">
                     <DockPanel>
                         <ToggleButton x:Name="HeaderSite" Content="{Binding Header, RelativeSource={RelativeSource AncestorType=Expander}}" 
-                                      DockPanel.Dock="Top" IsChecked="False" Style="{StaticResource ToggleButton.Solid}" HorizontalContentAlignment="Left" Margin="0"/>
+                                        c:IconAttachedProperty.FontIcon="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Expander}}, Path=c:IconAttachedProperty.FontIcon, Mode=OneWay}" 
+                                        c:IconAttachedProperty.IconAlignment="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Expander}}, Path=c:IconAttachedProperty.IconAlignment, Mode=OneWay}" 
+                                      DockPanel.Dock="Top" IsChecked="False" Style="{StaticResource ToggleButton.Solid}" HorizontalContentAlignment="Stretch" Margin="0"/>
                         <ContentPresenter x:Name="ExpandSite" Visibility="{Binding IsChecked, ElementName=HeaderSite, Converter={vc:BooleanToVisibilityConverter}}"/>
                     </DockPanel>
                 </ControlTemplate>

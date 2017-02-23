@@ -505,7 +505,7 @@
                         <Border Grid.ColumnSpan="2" BorderThickness="2" BorderBrush="{DynamicResource ActiveColor}" Background="{DynamicResource PrimaryColor}"/>
 
                         <ToggleButton x:Name="ToggleButton" Grid.Column="1" Style="{StaticResource ToggleButton.Solid}" 
-                                      c:IconAttachedProperty.FontIcon="{DynamicResource Icon.Font.like}" 
+                                      c:IconAttachedProperty.FontIcon="{DynamicResource Icon.Font.like}" c:IconAttachedProperty.IconAlignment="Right"
                                       Margin="0" Padding="0" ClickMode="Press" Focusable="false"
                                       IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" 
                                       BorderBrush="Transparent"/>

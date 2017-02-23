@@ -466,8 +466,12 @@
                                 <ToggleButton Style="{DynamicResource ToggleButton.Solid}" Grid.Column="4" Grid.Row="2" Content="ToggleButton" IsEnabled="False" />
 
                                 <!-- ghost ToggleButton-->
-                                <ToggleButton Style="{DynamicResource ToggleButton.Ghost}" Grid.Column="2" Grid.Row="4" Content="ToggleButton" />
-                                <ToggleButton Style="{DynamicResource ToggleButton.Ghost}" Grid.Column="4" Grid.Row="4" Content="ToggleButton" IsEnabled="False" />
+                                <ToggleButton Style="{DynamicResource ToggleButton.Ghost}" Grid.Column="2" Grid.Row="4" Content="ToggleButton" 
+                                        c:IconAttachedProperty.FontIcon="{DynamicResource Icon.Font.like}" 
+                                        c:IconAttachedProperty.IconAlignment="Left"   />
+                                <ToggleButton Style="{DynamicResource ToggleButton.Ghost}" Grid.Column="4" Grid.Row="4" Content="ToggleButton" 
+                                        c:IconAttachedProperty.FontIcon="{DynamicResource Icon.Font.like}" 
+                                        c:IconAttachedProperty.IconAlignment="Left" IsEnabled="False" />
 
                                 <!-- borderless ToggleButton-->
                                 <ToggleButton Style="{DynamicResource ToggleButton.Borderless}" Grid.Column="2" Grid.Row="6" Content="ToggleButton"  />
@@ -503,7 +507,9 @@
                                     <TextBlock Grid.Column="8" HorizontalAlignment="Center">Disabled</TextBlock>
 
                                     <!-- solid button-->
-                                    <Expander Style="{DynamicResource Expander.Solid}" Grid.Column="2" Grid.Row="2" Header="Expander">
+                                    <Expander Style="{DynamicResource Expander.Solid}" Grid.Column="2" Grid.Row="2" Header="Expander" 
+                                        c:IconAttachedProperty.FontIcon="{DynamicResource Icon.Font.like}" 
+                                        c:IconAttachedProperty.IconAlignment="Right"  >
                                         <Expander.Content>
                                             <ScrollViewer MaxHeight="160" VerticalScrollBarVisibility="Auto" Padding="12,5">
                                                 <TextBlock Style="{DynamicResource BodyTextBlockStyle}" TextWrapping="Wrap">
