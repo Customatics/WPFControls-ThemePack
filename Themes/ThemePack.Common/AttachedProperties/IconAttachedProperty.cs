@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using ThemePack.Common.AttachedProperties.Enums;
 
 namespace ThemePack.Common.AttachedProperties
 {
@@ -37,6 +38,24 @@ namespace ThemePack.Common.AttachedProperties
         {
             obj.SetValue(FontIconProperty, value);
         }
+
+        #endregion
+
+        #region IconAlignment
+
+        public static readonly DependencyProperty IconAlignmentProperty = DependencyProperty.RegisterAttached(
+            "IconAlignment", typeof(IconAlignmentEnum), typeof(IconAttachedProperty), new PropertyMetadata(default(IconAlignmentEnum)));
+
+        public static void SetIconAlignment(DependencyObject element, IconAlignmentEnum value)
+        {
+            element.SetValue(IconAlignmentProperty, value);
+        }
+
+        public static IconAlignmentEnum GetIconAlignment(DependencyObject element)
+        {
+            return (IconAlignmentEnum) element.GetValue(IconAlignmentProperty);
+        }
+
 
         #endregion
     }

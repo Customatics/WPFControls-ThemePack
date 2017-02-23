@@ -183,20 +183,20 @@
                         </StackPanel>
                     </Border>
                     <ControlTemplate.Triggers>
-                        <DataTrigger Binding="{Binding Path=(c:IconLocation.IconAlignment)}" Value="Right">
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=(c:IconAttachedProperty.IconAlignment)}" Value="Right">
                             <Setter Property="Background" Value="Red"/>
                             <Setter TargetName="Panel" Property="FlowDirection" Value="RightToLeft"/>
                         </DataTrigger>
-                        <DataTrigger Binding="{Binding Path=(c:IconLocation.IconAlignment)}" Value="Top">
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=(c:IconAttachedProperty.IconAlignment)}" Value="Top">
                             <Setter Property="Background" Value="Green"/>
                             <Setter TargetName="Panel" Property="Orientation" Value="Vertical"/>
                         </DataTrigger>
-                        <DataTrigger Binding="{Binding Path=(c:IconLocation.IconAlignment)}" Value="Bottom">
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=(c:IconAttachedProperty.IconAlignment)}" Value="Bottom">
                             <Setter Property="Background" Value="Orange"/>
                             <Setter TargetName="Panel" Property="Orientation" Value="Vertical"/>
                             <Setter TargetName="Panel" Property="FlowDirection" Value="RightToLeft"/>
                         </DataTrigger>
-                        <DataTrigger Binding="{Binding Path=(c:IconLocation.IconAlignment)}" Value="Left">
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=(c:IconAttachedProperty.IconAlignment)}" Value="Left">
                             <Setter Property="Background" Value="Blue"/>
                             <Setter TargetName="Panel" Property="FlowDirection" Value="LeftToRight"/>
                         </DataTrigger>
@@ -362,10 +362,10 @@
                                     <RowDefinition.Style>
                                         <Style TargetType="RowDefinition">
                                             <Style.Triggers>
-                                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=(c:IconLocation.IconAlignment)}" Value="top">
+                                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=(c:IconAttachedProperty.IconAlignment)}" Value="top">
                                                     <Setter Property="Height" Value="8"/>
                                                 </DataTrigger>
-                                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=(c:IconLocation.IconAlignment)}" Value="bottom">
+                                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=(c:IconAttachedProperty.IconAlignment)}" Value="bottom">
                                                     <Setter Property="Height" Value="8"/>
                                                 </DataTrigger>
                                             </Style.Triggers>
@@ -380,10 +380,10 @@
                                     <ColumnDefinition.Style>
                                         <Style TargetType="ColumnDefinition">
                                             <Style.Triggers>
-                                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=(c:IconLocation.IconAlignment)}" Value="left">
+                                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=(c:IconAttachedProperty.IconAlignment)}" Value="left">
                                                     <Setter Property="Width" Value="8"/>
                                                 </DataTrigger>
-                                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=(c:IconLocation.IconAlignment)}" Value="right">
+                                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=(c:IconAttachedProperty.IconAlignment)}" Value="right">
                                                     <Setter Property="Width" Value="8"/>
                                                 </DataTrigger>
                                             </Style.Triggers>

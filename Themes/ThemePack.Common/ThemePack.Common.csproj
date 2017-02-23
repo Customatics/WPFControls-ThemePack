@@ -68,8 +68,7 @@
   <ItemGroup>
     <Compile Include="Assets\InvokeInteractiveCommandAction.cs" />
     <Compile Include="AttachedProperties\Enums\IconAlignmentEnum.cs" />
-    <Compile Include="AttachedProperties\IconLocation.cs" />
-    <Compile Include="AttachedProperties\IconLocationProperty.cs" />
+    <Compile Include="AttachedProperties\IconAttachedProperty.cs" />
     <Compile Include="Base\Abstractions\IBlockableWindow.cs" />
     <Compile Include="Base\Abstractions\IEnvironmentRectangle.cs" />
     <Compile Include="Base\Abstractions\IEnvironmentRegion.cs" />
