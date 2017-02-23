@@ -398,7 +398,6 @@
     </Style>
 
     <!-- Experimental button with icon based on font -->
-    <common:IconAttachedProperty x:Key="IconAttachedProperty"/>
     <Style x:Key="Button.Solid.Iconic" TargetType="{x:Type Button}" >
         <Setter Property="Background" Value="{DynamicResource ActiveColor}"/>
         <Setter Property="Foreground" Value="{DynamicResource PrimaryColor}"/>
