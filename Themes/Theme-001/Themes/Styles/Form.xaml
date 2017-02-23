@@ -6,7 +6,7 @@
         <Setter Property="Background" Value="{DynamicResource TintColor}"/>
         <Setter Property="Height" Value="1"/>
     </Style>
-    
+
     <Style TargetType="{x:Type GroupBox}">
         <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
         <Setter Property="Foreground" Value="{DynamicResource SecondaryColor}"/>
@@ -40,7 +40,7 @@
 
                             <!--<ScrollViewer Grid.Row="2" HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}" VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}" Padding="{TemplateBinding Padding}">-->
                             <Grid Grid.Row="2">
-                            <ContentPresenter Margin="{TemplateBinding Padding}" />
+                                <ContentPresenter Margin="{TemplateBinding Padding}" />
                             </Grid>
                             <!--</ScrollViewer>-->
                         </Grid>
@@ -48,6 +48,401 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type TextBox}">
+        <Setter Property="Padding" Value="{StaticResource SpaceInner}"/>
+        <Setter Property="Margin" Value="{StaticResource SpaceOuter}"/>
+        <Setter Property="FontSize" Value="{StaticResource BodyTextSize}"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource ActiveColor}"/>
+        <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
+        <Setter Property="Foreground" Value="{DynamicResource SecondaryColor}"/>
+        <Setter Property="MinWidth" Value="{DynamicResource ControlMinWidth}"/>
+        <Setter Property="TextBox.CaretBrush" Value="{DynamicResource SecondaryColor}"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="BorderBrush" Value="{DynamicResource HoverColor}"/>
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <SolidColorBrush Color="{DynamicResource Active}" Opacity="0.2"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsFocused" Value="true">
+                <!--<Setter Property="Background" Value="{DynamicResource PressColor}"/>-->
+                <Setter Property="BorderBrush" Value="{DynamicResource ActiveColor}"/>
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <SolidColorBrush Color="{DynamicResource Active}" Opacity="0.2"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Opacity" Value="{DynamicResource DisabledOpacity}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style TargetType="{x:Type PasswordBox}">
+        <Setter Property="Padding" Value="{StaticResource SpaceInner}"/>
+        <Setter Property="Margin" Value="{StaticResource SpaceOuter}"/>
+        <Setter Property="FontSize" Value="{StaticResource BodyTextSize}"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource ActiveColor}"/>
+        <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
+        <Setter Property="Foreground" Value="{DynamicResource SecondaryColor}"/>
+        <Setter Property="MinWidth" Value="{DynamicResource ControlMinWidth}"/>
+        <Setter Property="PasswordBox.CaretBrush" Value="{DynamicResource SecondaryColor}"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="BorderBrush" Value="{DynamicResource HoverColor}"/>
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <SolidColorBrush Color="{DynamicResource Active}" Opacity="0.2"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsFocused" Value="true">
+                <!--<Setter Property="Background" Value="{DynamicResource PressColor}"/>-->
+                <Setter Property="BorderBrush" Value="{DynamicResource ActiveColor}"/>
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <SolidColorBrush Color="{DynamicResource Active}" Opacity="0.2"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Opacity" Value="{DynamicResource DisabledOpacity}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style TargetType="{x:Type RichTextBox}">
+        <Setter Property="Padding" Value="{StaticResource SpaceInner}"/>
+        <Setter Property="Margin" Value="{StaticResource SpaceOuter}"/>
+        <Setter Property="FontSize" Value="{StaticResource BodyTextSize}"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource ActiveColor}"/>
+        <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
+        <Setter Property="Foreground" Value="{DynamicResource SecondaryColor}"/>
+        <Setter Property="MinWidth" Value="{DynamicResource ControlMinWidth}"/>
+        <Setter Property="RichTextBox.CaretBrush" Value="{DynamicResource SecondaryColor}"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="BorderBrush" Value="{DynamicResource HoverColor}"/>
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <SolidColorBrush Color="{DynamicResource Active}" Opacity="0.2"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsFocused" Value="true">
+                <!--<Setter Property="Background" Value="{DynamicResource PressColor}"/>-->
+                <Setter Property="BorderBrush" Value="{DynamicResource ActiveColor}"/>
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <SolidColorBrush Color="{DynamicResource Active}" Opacity="0.2"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Opacity" Value="{DynamicResource DisabledOpacity}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style TargetType="{x:Type CheckBox}">
+        <Setter Property="Foreground" Value="{DynamicResource SecondaryColor}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="CheckBox">
+                    <StackPanel Orientation="Horizontal">
+                        <Border x:Name="border" BorderThickness="2" Background="{DynamicResource PrimaryColor}" BorderBrush="{DynamicResource ActiveColor}" HorizontalAlignment="Left" Margin="0,0,6,0" VerticalAlignment="Center">
+                            <Path x:Name="checkmark" StrokeThickness="2" Width="17" Height="17" StrokeLineJoin="Round" Stroke="{DynamicResource ActiveColor}"/>
+                        </Border>
+                        <ContentPresenter x:Name="content" VerticalAlignment="Center">
+                            <ContentPresenter.Resources>
+                                <Style TargetType="TextBlock" BasedOn="{StaticResource BodyTextBlockStyle}">
+                                    <Setter Property="Margin" Value="0,-2,0,0"/>
+                                    <Setter Property="Padding" Value="0"/>
+                                </Style>
+                            </ContentPresenter.Resources>
+                        </ContentPresenter>
+                    </StackPanel>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="true">
+                            <Setter TargetName="checkmark" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="checkmark" Property="Data" Value="M3,9.5L6.5,13L13.5,5"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="False">
+                            <Setter TargetName="checkmark" Property="Visibility" Value="Hidden"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="{x:Null}">
+                            <Setter TargetName="checkmark" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="checkmark" Property="Data" Value="M3,9 L14,9"/>
+                            <Setter TargetName="border" Property="Background">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="{DynamicResource Active}" Opacity="0.2"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value="{StaticResource DisabledOpacity}"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="checkmark" Property="Stroke" Value="{DynamicResource HoverColor}"/>
+                            <Setter TargetName="border" Property="BorderBrush" Value="{DynamicResource HoverColor}"/>
+                            <Setter TargetName="border" Property="Background">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="{DynamicResource Hover}" Opacity="0.2"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="checkmark" Property="Stroke" Value="{DynamicResource PressColor}"/>
+                            <Setter TargetName="border" Property="BorderBrush" Value="{DynamicResource PressColor}"/>
+                            <Setter TargetName="border" Property="Background">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="{DynamicResource Press}" Opacity="0.2"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type RadioButton}">
+        <Setter Property="Foreground" Value="{DynamicResource SecondaryColor}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="RadioButton">
+                    <StackPanel Orientation="Horizontal">
+                        <Border x:Name="border" BorderThickness="2" CornerRadius="17" Background="{DynamicResource PrimaryColor}" BorderBrush="{DynamicResource ActiveColor}" HorizontalAlignment="Left" Margin="0,0,6,0" VerticalAlignment="Center">
+                            <Path x:Name="checkmark" Width="17" Height="17" Fill="{DynamicResource ActiveColor}"/>
+                        </Border>
+                        <ContentPresenter x:Name="content" VerticalAlignment="Center">
+                            <ContentPresenter.Resources>
+                                <Style TargetType="TextBlock" BasedOn="{StaticResource BodyTextBlockStyle}">
+                                    <Setter Property="Margin" Value="0,-2,0,0"/>
+                                    <Setter Property="Padding" Value="0"/>
+                                </Style>
+                            </ContentPresenter.Resources>
+                        </ContentPresenter>
+                    </StackPanel>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="true">
+                            <Setter TargetName="checkmark" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="checkmark" Property="Data" Value="M13,8.5C13,10.9852813742386,10.9852813742386,13,8.5,13C6.01471862576143,13,4,10.9852813742386,4,8.5C4,6.01471862576143,6.01471862576143,4,8.5,4C10.9852813742386,4,13,6.01471862576143,13,8.5z"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="False">
+                            <Setter TargetName="checkmark" Property="Visibility" Value="Hidden"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value="{StaticResource DisabledOpacity}"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="checkmark" Property="Fill" Value="{DynamicResource HoverColor}"/>
+                            <Setter TargetName="border" Property="BorderBrush" Value="{DynamicResource HoverColor}"/>
+                            <Setter TargetName="border" Property="Background">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="{DynamicResource Hover}" Opacity="0.2"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="checkmark" Property="Fill" Value="{DynamicResource PressColor}"/>
+                            <Setter TargetName="border" Property="BorderBrush" Value="{DynamicResource PressColor}"/>
+                            <Setter TargetName="border" Property="Background">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="{DynamicResource Press}" Opacity="0.2"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- slider parts -->
+
+    <Style x:Key="SliderButtonStyle" TargetType="{x:Type RepeatButton}">
+        <Setter Property="SnapsToDevicePixels" Value="true" />
+        <Setter Property="OverridesDefaultStyle" Value="true" />
+        <Setter Property="IsTabStop" Value="false" />
+        <Setter Property="Focusable" Value="false" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RepeatButton}">
+                    <Border Background="Transparent" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="SliderThumbStyle" TargetType="{x:Type Thumb}">
+        <Setter Property="SnapsToDevicePixels" Value="true" />
+        <Setter Property="OverridesDefaultStyle" Value="true" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Height" Value="21" />
+        <Setter Property="Width" Value="21" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Thumb}">
+                    <Grid>
+                        <Ellipse Fill="{DynamicResource PrimaryColor}"/>
+                        <Ellipse x:Name="Ellipse" StrokeThickness="2" Fill="{DynamicResource PrimaryColor}" Stroke="{DynamicResource ActiveColor}"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Ellipse" Property="Stroke" Value="{DynamicResource HoverColor}"/>
+                            <Setter TargetName="Ellipse" Property="Fill">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="{DynamicResource Hover}" Opacity="0.2"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsDragging" Value="True">
+                            <Setter TargetName="Ellipse" Property="Stroke" Value="{DynamicResource PrimaryColor}"/>
+                            <Setter TargetName="Ellipse" Property="Fill">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="{DynamicResource Press}"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--Template when the orientation of the Slider is Horizontal.-->
+    <ControlTemplate x:Key="HorizontalSlider" TargetType="{x:Type Slider}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" MinHeight="{TemplateBinding MinHeight}" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <TickBar x:Name="TopTick" SnapsToDevicePixels="True" Placement="Top" Height="4" Visibility="Collapsed" Fill="{DynamicResource TintColor}"/>
+            <Border x:Name="TrackBackground" Margin="0,1,0,0" CornerRadius="2" Height="2" Grid.Row="1" BorderThickness="0" Background="{DynamicResource ActiveColor}" VerticalAlignment="Center">
+                <Canvas>
+                    <Canvas.Style>
+                        <Style TargetType="Canvas">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding IsSelectionRangeEnabled, RelativeSource={RelativeSource AncestorType=Slider}, Mode=OneWay}" Value="true">
+                                    <Setter Property="Background">
+                                        <Setter.Value>
+                                            <SolidColorBrush Color="{DynamicResource Primary}" Opacity="0.7"/>
+                                        </Setter.Value>
+                                    </Setter>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Canvas.Style>
+                    <Rectangle x:Name="PART_SelectionRange" Height="{Binding ElementName=TrackBackground, Path=ActualHeight}" Fill="{DynamicResource ActiveColor}"/>
+                </Canvas>
+            </Border>
+            <Track Grid.Row="1" x:Name="PART_Track" VerticalAlignment="Center">
+                <Track.DecreaseRepeatButton>
+                    <RepeatButton Style="{StaticResource SliderButtonStyle}" Command="Slider.DecreaseLarge" />
+                </Track.DecreaseRepeatButton>
+                <Track.Thumb>
+                    <Thumb Style="{StaticResource SliderThumbStyle}" />
+                </Track.Thumb>
+                <Track.IncreaseRepeatButton>
+                    <RepeatButton Style="{StaticResource SliderButtonStyle}" Command="Slider.IncreaseLarge" />
+                </Track.IncreaseRepeatButton>
+            </Track>
+            <TickBar x:Name="BottomTick" SnapsToDevicePixels="True" Grid.Row="2" Placement="Bottom" Height="4" Visibility="Collapsed" Fill="{DynamicResource TintColor}"/>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="TickPlacement" Value="TopLeft">
+                <Setter TargetName="TopTick" Property="Visibility" Value="Visible" />
+            </Trigger>
+            <Trigger Property="TickPlacement" Value="BottomRight">
+                <Setter TargetName="BottomTick" Property="Visibility" Value="Visible" />
+            </Trigger>
+            <Trigger Property="TickPlacement" Value="Both">
+                <Setter TargetName="TopTick" Property="Visibility" Value="Visible" />
+                <Setter TargetName="BottomTick" Property="Visibility" Value="Visible" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <!--Template when the orientation of the Slider is Vertical.-->
+    <ControlTemplate x:Key="VerticalSlider" TargetType="{x:Type Slider}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" MinWidth="{TemplateBinding MinWidth}" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <TickBar x:Name="TopTick" SnapsToDevicePixels="True" Placement="Left" Width="4" Visibility="Collapsed" Fill="{DynamicResource TintColor}"/>
+
+            <Border x:Name="TrackBackground" Margin="1,0,0,0" CornerRadius="2" Width="2" Grid.Column="1" BorderThickness="0" Background="{DynamicResource ActiveColor}" HorizontalAlignment="Center">
+                <Canvas>
+                    <Canvas.Style>
+                        <Style TargetType="Canvas">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding IsSelectionRangeEnabled, RelativeSource={RelativeSource AncestorType=Slider}, Mode=OneWay}" Value="true">
+                                    <Setter Property="Background">
+                                        <Setter.Value>
+                                            <SolidColorBrush Color="{DynamicResource Primary}" Opacity="0.7"/>
+                                        </Setter.Value>
+                                    </Setter>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Canvas.Style>
+                    <Rectangle x:Name="PART_SelectionRange" Width="{Binding ElementName=TrackBackground, Path=ActualWidth}" Fill="{DynamicResource ActiveColor}"/>
+                </Canvas>
+            </Border>
+            <Track Grid.Column="1" x:Name="PART_Track" HorizontalAlignment="Center">
+                <Track.DecreaseRepeatButton>
+                    <RepeatButton Style="{StaticResource SliderButtonStyle}" Command="Slider.DecreaseLarge" />
+                </Track.DecreaseRepeatButton>
+                <Track.Thumb>
+                    <Thumb Style="{StaticResource SliderThumbStyle}" />
+                </Track.Thumb>
+                <Track.IncreaseRepeatButton>
+                    <RepeatButton Style="{StaticResource SliderButtonStyle}" Command="Slider.IncreaseLarge" />
+                </Track.IncreaseRepeatButton>
+            </Track>
+            <TickBar x:Name="BottomTick" SnapsToDevicePixels="True" Grid.Column="2" Placement="Right" Width="4" Visibility="Collapsed" Fill="{DynamicResource TintColor}"/>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="TickPlacement" Value="TopLeft">
+                <Setter TargetName="TopTick" Property="Visibility" Value="Visible" />
+            </Trigger>
+            <Trigger Property="TickPlacement" Value="BottomRight">
+                <Setter TargetName="BottomTick" Property="Visibility" Value="Visible" />
+            </Trigger>
+            <Trigger Property="TickPlacement" Value="Both">
+                <Setter TargetName="TopTick" Property="Visibility" Value="Visible" />
+                <Setter TargetName="BottomTick" Property="Visibility" Value="Visible" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <Style TargetType="{x:Type Slider}">
+        <Setter Property="SnapsToDevicePixels" Value="true" />
+        <!--<Setter Property="OverridesDefaultStyle" Value="true" />-->
+        <Style.Triggers>
+            <Trigger Property="Orientation" Value="Horizontal">
+                <Setter Property="MinWidth" Value="104" />
+                <Setter Property="MinHeight" Value="21" />
+                <Setter Property="Template" Value="{StaticResource HorizontalSlider}" />
+            </Trigger>
+            <Trigger Property="Orientation" Value="Vertical">
+                <Setter Property="MinWidth" Value="21" />
+                <Setter Property="MinHeight" Value="104" />
+                <Setter Property="Template" Value="{StaticResource VerticalSlider}" />
+            </Trigger>
+        </Style.Triggers>
     </Style>
 
 </ResourceDictionary>
