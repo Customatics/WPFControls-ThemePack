@@ -225,12 +225,12 @@
                 <ControlTemplate TargetType="ToggleButton">
                     <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" 
                             Margin="{TemplateBinding Margin}" MinWidth="{TemplateBinding MinWidth}">
-                        <StackPanel x:Name="Panel" Orientation="Horizontal" Margin="{TemplateBinding Padding}" >
+                        <StackPanel x:Name="Panel" Orientation="Horizontal" Margin="{TemplateBinding Padding}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" >
 
                             <TextBlock x:Name="Icon"
                                    Style="{Binding Path=(c:IconAttachedProperty.FontIcon), RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ToggleButton}}, Mode=OneWay}"
-                                   Foreground="{TemplateBinding Foreground}"
-                                   FontSize="{TemplateBinding FontSize}"
+                                   Foreground="{Binding RelativeSource={RelativeSource AncestorType=ToggleButton}, Path=Foreground}"
+                                   FontSize="{Binding RelativeSource={RelativeSource AncestorType=ToggleButton}, Path=FontSize}"
                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                                    HorizontalAlignment="Center"
                                    Visibility="{Binding Style, Converter={vc:EmptyStringToVisibilityConverter}}"
@@ -239,8 +239,8 @@
                             <ContentPresenter x:Name="Content" ContentSource="Content">
                                 <ContentPresenter.Resources>
                                     <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseTextBlockStyle}">
-                                        <Setter Property="Foreground" Value="{Binding RelativeSource={RelativeSource Self}, Path=Foreground}"/>
-                                        <Setter Property="FontSize" Value="{Binding RelativeSource={RelativeSource Self}, Path= FontSize}"/>
+                                        <Setter Property="Foreground" Value="{Binding RelativeSource={RelativeSource AncestorType=ToggleButton}, Path=Foreground}"/>
+                                        <Setter Property="FontSize" Value="{Binding RelativeSource={RelativeSource AncestorType=ToggleButton}, Path=FontSize}"/>
                                         <Setter Property="HorizontalAlignment" Value="Center"/>
                                         <Setter Property="TextDecorations" Value="{Binding RelativeSource={RelativeSource Self}, Path= TextBlock.TextDecorations}"/>
                                     </Style>
@@ -425,9 +425,9 @@
                 <ControlTemplate TargetType="Expander">
                     <DockPanel>
                         <ToggleButton x:Name="HeaderSite" Content="{Binding Header, RelativeSource={RelativeSource AncestorType=Expander}}" 
-                                        c:IconAttachedProperty.FontIcon="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Expander}}, Path=c:IconAttachedProperty.FontIcon, Mode=OneWay}" 
-                                        c:IconAttachedProperty.IconAlignment="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Expander}}, Path=c:IconAttachedProperty.IconAlignment, Mode=OneWay}" 
-                                      DockPanel.Dock="Top" IsChecked="False" Style="{StaticResource ToggleButton.Solid}" HorizontalContentAlignment="Stretch" Margin="0"/>
+                                        c:IconAttachedProperty.FontIcon="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Expander}}, Path=(c:IconAttachedProperty.FontIcon), Mode=OneWay}" 
+                                        c:IconAttachedProperty.IconAlignment="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Expander}}, Path=(c:IconAttachedProperty.IconAlignment), Mode=OneWay}" 
+                                      DockPanel.Dock="Top" IsChecked="False" Style="{StaticResource ToggleButton.Solid}" HorizontalContentAlignment="Center" Margin="0"/>
                         <ContentPresenter x:Name="ExpandSite" Visibility="{Binding IsChecked, ElementName=HeaderSite, Converter={vc:BooleanToVisibilityConverter}}"/>
                     </DockPanel>
                 </ControlTemplate>
