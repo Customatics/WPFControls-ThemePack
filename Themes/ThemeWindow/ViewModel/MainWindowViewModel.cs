@@ -6,8 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using Microsoft.Practices.Unity;
+using ThemePack.Common.Abstractions;
 using ThemePack.Common.Base;
-using ThemePack.Common.Factories;
 using ThemePack.Common.ThemeManagement;
 using ThemePack.Models.Models;
 
@@ -19,8 +20,7 @@ namespace ThemeWindow.ViewModel
 
         private const string ThemeFolder = "Themes";
 
-
-        private ThemeSeekerFactory themeSeekerFactory;
+        private IThemesSeeker themesSeeker;
 
 
         /// <summary>
@@ -51,9 +51,9 @@ namespace ThemeWindow.ViewModel
         /// <summary>
         /// Create instance of <see cref="MainWindowViewModel"/>
         /// </summary>
-        public MainWindowViewModel()
+        public MainWindowViewModel(IUnityContainer container)
         {
-            themeSeekerFactory = new ThemeSeekerFactory();
+            themesSeeker = container.Resolve<IThemesSeeker>();
             Initialize();
         }
 
@@ -123,8 +123,7 @@ namespace ThemeWindow.ViewModel
         {
             try
             {
-                var themeSeeker = themeSeekerFactory.GetThemeSeeker();
-                Themes = new ObservableCollection<ThemeM>(themeSeeker.GetThemes(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, ThemeFolder)));
+                Themes = new ObservableCollection<ThemeM>(themesSeeker.GetThemes(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, ThemeFolder)));
                 if (Themes.Any())
                 {
                     SelectedTheme = Themes.First();

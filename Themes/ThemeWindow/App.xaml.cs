@@ -5,6 +5,9 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using Microsoft.Practices.Unity;
+using ThemePack.Common.Abstractions;
+using ThemePack.Common.ThemeManagement;
 using ThemeWindow.ViewModel;
 using ThemeWindow.Windows;
 
@@ -15,6 +18,8 @@ namespace ThemeWindow
     /// </summary>
     public partial class App : Application
     {
+        private IUnityContainer container;
+
         #region Application Overriding
 
         /// <summary>
@@ -41,10 +46,14 @@ namespace ThemeWindow
 
         private void RunApplication()
         {
-            var mainWindowVm = new MainWindowViewModel();
-            var mainWindow = new MainWindow { DataContext = mainWindowVm };
+            container = new UnityContainer();
+            container.RegisterType<IThemesSeeker, DllThemeSeeker>();
 
+            var mainWindowVM = container.Resolve<MainWindowViewModel>();
+            var mainWindow = container.Resolve<MainWindow>();
+            mainWindow.DataContext = mainWindowVM;
             Current.MainWindow = mainWindow;
+
             mainWindow.Show();
         }
     }
