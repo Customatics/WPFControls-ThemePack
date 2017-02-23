@@ -210,6 +210,7 @@
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="true">
                             <Setter Property="Background" Value="{DynamicResource HoverColor}"/>
+                            <!--<Setter Property="Panel.ZIndex" Value="10"/>-->
                         </Trigger>
                         <Trigger Property="IsPressed" Value="true">
                             <Setter Property="Background" Value="{DynamicResource PressColor}"/>
@@ -453,6 +454,76 @@
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="true">
                             <Setter Property="Background" Value="{DynamicResource HoverColor}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Background" Value="{DynamicResource PressColor}"/>
+                            <Setter Property="BorderBrush" Value="{DynamicResource PressColor}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value="{DynamicResource DisabledOpacity}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ToggleButton.Solid.Iconic" TargetType="{x:Type ToggleButton}" >
+        <Setter Property="Background" Value="{DynamicResource ActiveColor}"/>
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryColor}"/>
+        <Setter Property="FontSize" Value="{StaticResource BodyTextSize}"/>
+        <Setter Property="FontWeight" Value="Regular"/>
+        <Setter Property="MinWidth" Value="{DynamicResource ControlMinWidth}"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource ActiveColor}"/>
+        <Setter Property="Margin" Value="{DynamicResource SpaceOuter}"/>
+        <Setter Property="Padding" Value="{DynamicResource SpaceInner}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="TextBlock.TextDecorations" Value="{x:Null}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ToggleButton">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" 
+                            Margin="{TemplateBinding Margin}" MinWidth="{TemplateBinding MinWidth}">
+                        <StackPanel Orientation="Horizontal" Margin="{TemplateBinding Padding}" >
+
+                            <TextBlock
+                                   Style="{Binding Path=(common:IconAttachedProperty.FontIcon), RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}"
+                                   Foreground="{TemplateBinding Foreground}"
+                                   FontSize="{TemplateBinding FontSize}"
+                                   VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                            </TextBlock>
+                            <!--<TextBlock>&#x00A0;</TextBlock>-->
+
+                            <TextBlock Foreground="{TemplateBinding Foreground}"
+                                   FontSize="{TemplateBinding FontSize}"
+                                   VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                   HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                   TextDecorations="{TemplateBinding TextBlock.TextDecorations}">
+                                <TextBlock.Style>
+                                    <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseTextBlockStyle}"/>
+                                </TextBlock.Style>
+                                <ContentPresenter ContentSource="Content"/>
+                            </TextBlock>
+
+                            <!--<TextBlock>&#x00A0;</TextBlock>-->
+                            <!--<TextBlock
+                                   Text="{Binding icon:glyph, StringFormat=' {}{0}'}"
+                                   Style="{DynamicResource ButtonIcon}"
+                                   Foreground="{TemplateBinding Foreground}"
+                                   FontSize="{TemplateBinding FontSize}"
+                                   VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                            </TextBlock>-->
+                        </StackPanel>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="true">
+                            <Setter Property="Background" Value="{DynamicResource DefaultedColor}"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Background" Value="{DynamicResource HoverColor}"/>
+                            <!--<Setter Property="Panel.ZIndex" Value="10"/>-->
                         </Trigger>
                         <Trigger Property="IsPressed" Value="true">
                             <Setter Property="Background" Value="{DynamicResource PressColor}"/>

@@ -623,22 +623,48 @@
                                     <RowDefinition Height="auto"/>
                                     <RowDefinition Height="10"/>
                                     <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="10"/>
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
+
+                                <ComboBox Grid.Row="2" Grid.Column="2" IsEditable="False" Width="200">
+                                    <ComboBoxItem>First</ComboBoxItem>
+                                    <ComboBoxItem>Second</ComboBoxItem>
+                                    <ComboBoxItem>Third</ComboBoxItem>
+                                    <ComboBoxItem>Fourth</ComboBoxItem>
+                                </ComboBox>
+
+                                <ComboBox Grid.Row="4" Grid.Column="2" IsEditable="True" Width="200">
+                                    <ComboBoxItem>First</ComboBoxItem>
+                                    <ComboBoxItem>Second</ComboBoxItem>
+                                    <ComboBoxItem>Third</ComboBoxItem>
+                                    <ComboBoxItem>Fourth</ComboBoxItem>
+                                </ComboBox>
                                 
-                                <ComboBox Grid.Row="2" Grid.Column="2" />
-                                <DatePicker Grid.Row="4" Grid.Column="2" />
-                                <ListBox Grid.Row="6" Grid.Column="2" />
-                                <ListView Grid.Row="8" Grid.Column="2" />
+                                <DatePicker Grid.Row="6" Grid.Column="2" />
+                                <ListBox Grid.Row="8" Grid.Column="2">
+                                    <ListBoxItem>First</ListBoxItem>
+                                    <ListBoxItem>Second</ListBoxItem>
+                                    <ListBoxItem>Third</ListBoxItem>
+                                    <ListBoxItem>Fourth</ListBoxItem>
+                                </ListBox>
+                                <ListView Grid.Row="10" Grid.Column="2" >
+                                    <ListViewItem>First</ListViewItem>
+                                    <ListViewItem>Second</ListViewItem>
+                                    <ListViewItem>Third</ListViewItem>
+                                    <ListViewItem>Fourth</ListViewItem>
+                                </ListView>
 
                                 <TextBlock Grid.Row="2" Grid.Column="0">ComboBox</TextBlock>
-                                <TextBlock Grid.Row="4" Grid.Column="0">DatePicker</TextBlock>
-                                <TextBlock Grid.Row="6" Grid.Column="0">ListBox</TextBlock>
-                                <TextBlock Grid.Row="8" Grid.Column="0">ListView</TextBlock>
+                                <TextBlock Grid.Row="4" Grid.Column="0">ComboBox-Editable</TextBlock>
+                                <TextBlock Grid.Row="6" Grid.Column="0">DatePicker</TextBlock>
+                                <TextBlock Grid.Row="8" Grid.Column="0">ListBox</TextBlock>
+                                <TextBlock Grid.Row="10" Grid.Column="0">ListView</TextBlock>
                             </Grid>
                         </GroupBox>
                     </WrapPanel>
