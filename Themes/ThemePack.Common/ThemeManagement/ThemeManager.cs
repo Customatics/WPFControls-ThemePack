@@ -23,9 +23,10 @@ namespace ThemePack.Common.ThemeManagement
             if (styles == null) { return; }
             if (colorScheme == null) { return; }
 
+            app.Resources.BeginInit();
+
             app.Resources.MergedDictionaries.Clear();
 
-            app.Resources.BeginInit();
 
             foreach (var numericValue in numericValues)
             {
