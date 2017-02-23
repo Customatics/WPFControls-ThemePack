@@ -16,7 +16,11 @@
     </Style>
 
     <Style x:Key="Icon.Font.like" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IconFont}">
-        <Setter Property="Text" Value="&#xE62B;"></Setter>
+        <Setter Property="Text" Value="&#xE61C;"></Setter>
+    </Style>
+
+    <Style x:Key="Icon.Font.favorite" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IconFont}">
+        <Setter Property="Text" Value="&#xE617;"></Setter>
     </Style>
 
 </ResourceDictionary>

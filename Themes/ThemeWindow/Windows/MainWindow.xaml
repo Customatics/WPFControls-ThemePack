@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="clr-namespace:ThemeWindow.ViewModel"
         xmlns:base="clr-namespace:ThemePack.Common.Base;assembly=ThemePack.Common"
-        xmlns:common="clr-namespace:ThemePack.Common.AttachedProperties;assembly=ThemePack.Common"
+        xmlns:c="clr-namespace:ThemePack.Common.AttachedProperties;assembly=ThemePack.Common"
         mc:Ignorable="d" 
         Closing="Window_Closing"
         Title="Theme preview" Width="900" Height="600" Style="{StaticResource Window.ModalStyle.NormalStyle}" SizeToContent="Manual">
@@ -189,6 +189,10 @@
                                     <RowDefinition Height="auto"/>
                                     <RowDefinition Height="10"/>
                                     <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
@@ -207,10 +211,44 @@
                                 <TextBlock Grid.Column="6" HorizontalAlignment="Center">Disabled</TextBlock>
 
                                 <!-- solid button-->
-                                <Button Style="{DynamicResource Button.Solid.Iconic}" common:IconAttachedProperty.FontIcon="{DynamicResource Icon.Font.like}" common:IconLocation.IconAlignment="Left" Grid.Column="2" Grid.Row="2" Content="Button" IsDefault="True" />
-                                <Button Style="{DynamicResource Button.Solid.Iconic}" Grid.Column="4" Grid.Row="2" Content="Button" />
-                                <Button Style="{DynamicResource Button.Solid.Iconic}" Grid.Column="6" Grid.Row="2" Content="Button" IsEnabled="False" />
+                                <Button Style="{StaticResource Button.Solid}" 
+                                        c:IconAttachedProperty.FontIcon="{DynamicResource Icon.Font.like}" 
+                                        c:IconLocation.IconAlignment="Left" 
+                                        Grid.Column="2" Grid.Row="2" Content="Button" IsDefault="True" />
+                                <Button Style="{StaticResource Button.Solid}" 
+                                        c:IconAttachedProperty.FontIcon="{DynamicResource Icon.Font.like}" 
+                                        c:IconLocation.IconAlignment="Left" 
+                                        Grid.Column="4" Grid.Row="2" Content="Button" />
+                                <Button Style="{StaticResource Button.Solid}" 
+                                        c:IconAttachedProperty.FontIcon="{DynamicResource Icon.Font.like}" 
+                                        c:IconLocation.IconAlignment="Left" 
+                                        Grid.Column="6" Grid.Row="2" Content="Button" IsEnabled="False" />
 
+                                <Button Style="{StaticResource Button.Ghost}" 
+                                        c:IconAttachedProperty.FontIcon="{DynamicResource Icon.Font.like}" 
+                                        c:IconLocation.IconAlignment="Right" 
+                                        Grid.Column="2" Grid.Row="4" Content="Button" IsDefault="True" />
+                                <Button Style="{StaticResource Button.Ghost}" 
+                                        c:IconAttachedProperty.FontIcon="{DynamicResource Icon.Font.like}" 
+                                        c:IconLocation.IconAlignment="Right" 
+                                        Grid.Column="4" Grid.Row="4" Content="Button" />
+                                <Button Style="{StaticResource Button.Ghost}" 
+                                        c:IconAttachedProperty.FontIcon="{DynamicResource Icon.Font.like}" 
+                                        c:IconLocation.IconAlignment="Right" 
+                                        Grid.Column="6" Grid.Row="4" Content="Button" IsEnabled="False" />
+
+                                <Button Style="{StaticResource Button.Borderless}" 
+                                        c:IconAttachedProperty.FontIcon="{DynamicResource Icon.Font.favorite}" 
+                                        c:IconLocation.IconAlignment="Top" 
+                                        Grid.Column="2" Grid.Row="6" Content="Button" IsDefault="True" />
+                                <Button Style="{StaticResource Button.Borderless}" 
+                                        c:IconAttachedProperty.FontIcon="{DynamicResource Icon.Font.favorite}" 
+                                        c:IconLocation.IconAlignment="Top" 
+                                        Grid.Column="4" Grid.Row="6" Content="Button" />
+                                <Button Style="{StaticResource Button.Borderless}" 
+                                        c:IconAttachedProperty.FontIcon="{DynamicResource Icon.Font.favorite}" 
+                                        c:IconLocation.IconAlignment="Top" 
+                                        Grid.Column="6" Grid.Row="6" Content="Button" IsEnabled="False" />
                             </Grid>
                         </GroupBox>
                         <GroupBox Header="Button: normal size" BorderBrush="{x:Null}" ScrollViewer.VerticalScrollBarVisibility="Disabled">
