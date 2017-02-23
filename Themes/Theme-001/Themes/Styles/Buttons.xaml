@@ -233,7 +233,7 @@
                                    FontSize="{TemplateBinding FontSize}"
                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                                    HorizontalAlignment="Center"
-                                   Visibility="{Binding Style, Converter={vc:EmptyStringToVisibilityConverter}}"
+                                   Visibility="{Binding Path=Style, RelativeSource={RelativeSource Self}, Converter={vc:NullToVisibilityConverter}}"
                                    />
 
                             <ContentPresenter x:Name="Content" ContentSource="Content">
@@ -425,8 +425,8 @@
                 <ControlTemplate TargetType="Expander">
                     <DockPanel>
                         <ToggleButton x:Name="HeaderSite" Content="{Binding Header, RelativeSource={RelativeSource AncestorType=Expander}}" 
-                                        c:IconAttachedProperty.FontIcon="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Expander}}, Path=c:IconAttachedProperty.FontIcon, Mode=OneWay}" 
-                                        c:IconAttachedProperty.IconAlignment="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Expander}}, Path=c:IconAttachedProperty.IconAlignment, Mode=OneWay}" 
+                                        c:IconAttachedProperty.FontIcon="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Expander}}, Path=(c:IconAttachedProperty.FontIcon), Mode=OneWay}" 
+                                        c:IconAttachedProperty.IconAlignment="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Expander}}, Path=(c:IconAttachedProperty.IconAlignment), Mode=OneWay}" 
                                       DockPanel.Dock="Top" IsChecked="False" Style="{StaticResource ToggleButton.Solid}" HorizontalContentAlignment="Stretch" Margin="0"/>
                         <ContentPresenter x:Name="ExpandSite" Visibility="{Binding IsChecked, ElementName=HeaderSite, Converter={vc:BooleanToVisibilityConverter}}"/>
                     </DockPanel>

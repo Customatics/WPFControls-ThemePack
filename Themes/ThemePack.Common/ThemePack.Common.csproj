@@ -85,7 +85,6 @@
     <Compile Include="Base\WindowSizePositionManager.cs" />
     <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
     <Compile Include="Converters\ConverterMarkupExtension.cs" />
-    <Compile Include="Converters\EmptyStringToVisibilityConverter.cs" />
     <Compile Include="Converters\EmptyStringToZeroConverter.cs" />
     <Compile Include="Converters\NullToVisibilityConverter.cs" />
     <Compile Include="Converters\TreeLevelConverter.cs" />
