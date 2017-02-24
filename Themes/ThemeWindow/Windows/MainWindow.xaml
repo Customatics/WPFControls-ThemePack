@@ -24,8 +24,12 @@
         <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" 
                   ItemsSource="{Binding Themes}"
                   DisplayMemberPath="Name"
+                    c:IconAttachedProperty.FontIcon="{DynamicResource Icon.Font.like}" 
+                    c:IconAttachedProperty.IconAlignment="Right" 
                   SelectedItem="{Binding SelectedTheme}"/>
         <ComboBox Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120"
+                    c:IconAttachedProperty.FontIcon="{DynamicResource Icon.Font.like}" 
+                    c:IconAttachedProperty.IconAlignment="Right" 
                   ItemsSource="{Binding ColorSchemes}"
                   DisplayMemberPath="Name"
                   SelectedItem="{Binding SelecteColorScheme}"/>
@@ -474,8 +478,12 @@
                                         c:IconAttachedProperty.IconAlignment="Left" IsEnabled="False" />
 
                                 <!-- borderless ToggleButton-->
-                                <ToggleButton Style="{DynamicResource ToggleButton.Borderless}" Grid.Column="2" Grid.Row="6" Content="ToggleButton"  />
-                                <ToggleButton Style="{DynamicResource ToggleButton.Borderless}" Grid.Column="4" Grid.Row="6" Content="ToggleButton" IsEnabled="False" />
+                                <ToggleButton Style="{DynamicResource ToggleButton.Borderless}" Grid.Column="2" Grid.Row="6" Content="ToggleButton" 
+                                        c:IconAttachedProperty.FontIcon="{DynamicResource Icon.Font.favorite}" 
+                                        c:IconAttachedProperty.IconAlignment="Right" />
+                                <ToggleButton Style="{DynamicResource ToggleButton.Borderless}" Grid.Column="4" Grid.Row="6" Content="ToggleButton" IsEnabled="False"
+                                        c:IconAttachedProperty.FontIcon="{DynamicResource Icon.Font.favorite}" 
+                                        c:IconAttachedProperty.IconAlignment="Right" />
 
                             </Grid>
                         </GroupBox>
@@ -507,9 +515,7 @@
                                     <TextBlock Grid.Column="8" HorizontalAlignment="Center">Disabled</TextBlock>
 
                                     <!-- solid button-->
-                                    <Expander Style="{DynamicResource Expander.Solid}" Grid.Column="2" Grid.Row="2" Header="Expander" 
-                                        c:IconAttachedProperty.FontIcon="{DynamicResource Icon.Font.like}" 
-                                        c:IconAttachedProperty.IconAlignment="Right"  >
+                                    <Expander Style="{DynamicResource Expander.Solid}" Grid.Column="2" Grid.Row="2" Header="Expander">
                                         <Expander.Content>
                                             <ScrollViewer MaxHeight="160" VerticalScrollBarVisibility="Auto" Padding="12,5">
                                                 <TextBlock Style="{DynamicResource BodyTextBlockStyle}" TextWrapping="Wrap">

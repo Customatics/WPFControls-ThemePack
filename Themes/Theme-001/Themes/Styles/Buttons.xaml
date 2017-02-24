@@ -236,19 +236,23 @@
                                    Visibility="{Binding Path=Style, RelativeSource={RelativeSource Self}, Converter={vc:NullToVisibilityConverter}}"
                                    />
 
-                            <ContentPresenter x:Name="Content" ContentSource="Content">
+                            <ContentPresenter x:Name="Content" ContentSource="Content" Visibility="{Binding RelativeSource={RelativeSource Self}, Path=Content, Converter={vc:NullToVisibilityConverter}}">
                                 <ContentPresenter.Resources>
                                     <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseTextBlockStyle}">
                                         <Setter Property="Foreground" Value="{Binding RelativeSource={RelativeSource AncestorType=ToggleButton}, Path=Foreground}"/>
                                         <Setter Property="FontSize" Value="{Binding RelativeSource={RelativeSource AncestorType=ToggleButton}, Path=FontSize}"/>
                                         <Setter Property="HorizontalAlignment" Value="Center"/>
                                         <Setter Property="TextDecorations" Value="{Binding RelativeSource={RelativeSource Self}, Path= TextBlock.TextDecorations}"/>
+                                        <Setter Property="Margin" Value="0"/>
                                     </Style>
                                 </ContentPresenter.Resources>
                             </ContentPresenter>
                         </StackPanel>
                     </Border>
                     <ControlTemplate.Triggers>
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=(c:IconAttachedProperty.IconAlignment)}" Value="{x:Null}">
+                            <Setter TargetName="Content" Property="Margin" Value="0"/>
+                        </DataTrigger>
                         <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=(c:IconAttachedProperty.IconAlignment)}" Value="Right">
                             <!--<Setter Property="Background" Value="Red"/>-->
                             <Setter TargetName="Panel" Property="FlowDirection" Value="RightToLeft"/>
