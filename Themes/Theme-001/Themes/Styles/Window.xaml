@@ -243,6 +243,11 @@
         <Setter Property="BorderBrush" Value="{DynamicResource SecondaryColor}"/>
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding WindowState, RelativeSource={RelativeSource AncestorType=base:BaseWindow}, Mode=OneWay}" Value="Maximized">
+                <Setter Property="BorderThickness" Value="0"/>
+            </DataTrigger>
+        </Style.Triggers>
 
     </Style>
     

@@ -703,7 +703,7 @@
                                     <ListBoxItem>Third</ListBoxItem>
                                     <ListBoxItem>Fourth</ListBoxItem>
                                 </ListBox>
-                                <ListView Grid.Row="10" Grid.Column="2" >
+                                <ListView Grid.Row="10" Grid.Column="2" SelectionMode="Multiple" >
                                     <ListViewItem>First</ListViewItem>
                                     <ListViewItem>Second</ListViewItem>
                                     <ListViewItem>Third</ListViewItem>
