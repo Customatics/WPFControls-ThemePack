@@ -482,6 +482,7 @@
         </Style.Triggers>
     </Style>
 
+    <!-- TODO: if sliderThumb not in range - change color for tooltip... -->
     <Style TargetType="{x:Type ToolTip}">
         <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
         <Setter Property="BorderThickness" Value="{StaticResource BorderSize}"/>
@@ -814,22 +815,27 @@
                                 <Grid.Resources>
                                     <Style TargetType="{x:Type Button}" BasedOn="{StaticResource Button.Borderless.Medium}">
                                         <Setter Property="Margin" Value="0"/>
+                                        <Setter Property="MinWidth" Value="10"/>
+                                        <Setter Property="Width" Value="Auto"/>
+                                        <Setter Property="VerticalAlignment" Value="Center"/>
+                                        <Setter Property="HorizontalAlignment" Value="Center"/>
+                                        <Setter Property="Foreground" Value="{DynamicResource SecondaryColor}"/>
                                     </Style>
 
-                                    <DataTemplate x:Key="DayTitleTemplate" >
+                                    <!--<DataTemplate x:Key="DayTitleTemplate" >
                                         <TextBlock Foreground="#FFA9C822" FontWeight="Normal" FontSize="12" HorizontalAlignment="Center" Margin="0,5,0,5" Text="{Binding}" VerticalAlignment="Center"/>
-                                    </DataTemplate>
+                                    </DataTemplate>-->
 
 
                                 </Grid.Resources>
 
-                                <Button x:Name="PART_PreviousButton" Grid.Column="0" Content="&#x2190;" MinWidth="24" Visibility="Visible" HorizontalAlignment="Left" />
+                                <Button x:Name="PART_PreviousButton" Grid.Column="0" Content="&#x2190;" MinWidth="24" Visibility="Visible" HorizontalAlignment="Stretch" />
 
-                                <Button x:Name="PART_HeaderButton" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                <Button x:Name="PART_HeaderButton" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" />
 
-                                <Button x:Name="PART_NextButton" Grid.Column="2"  Content="&#x2192;" MinWidth="24" Visibility="Visible" HorizontalAlignment="Right" />
+                                <Button x:Name="PART_NextButton" Grid.Column="2"  Content="&#x2192;" MinWidth="24" Visibility="Visible" HorizontalAlignment="Stretch" />
 
-                                <Grid x:Name="PART_MonthView" Grid.Row="1" Grid.ColumnSpan="3" Visibility="Visible" Margin="0">
+                                <Grid x:Name="PART_MonthView" Grid.Row="1" Grid.ColumnSpan="3" Visibility="Visible" Margin="0,10,0,0">
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="Auto" />
                                         <RowDefinition Height="Auto" />
@@ -850,7 +856,7 @@
                                     </Grid.ColumnDefinitions>
                                 </Grid>
 
-                                <Grid x:Name="PART_YearView" Grid.Row="1" Grid.ColumnSpan="3" Visibility="Collapsed" Margin="0">
+                                <Grid x:Name="PART_YearView" Grid.Row="1" Grid.ColumnSpan="3" Visibility="Collapsed" Margin="0,10,0,0">
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="Auto" />
                                         <RowDefinition Height="Auto" />
