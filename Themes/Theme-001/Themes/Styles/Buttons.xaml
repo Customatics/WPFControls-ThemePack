@@ -25,7 +25,7 @@
                 <ControlTemplate TargetType="Button">
                     <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" 
                             Margin="{TemplateBinding Margin}" MinWidth="{TemplateBinding MinWidth}">
-                        <StackPanel x:Name="Panel" Orientation="Horizontal" Margin="{TemplateBinding Padding}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" >
+                        <StackPanel x:Name="Panel" Orientation="Horizontal" Margin="{TemplateBinding Padding}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" >
 
                             <TextBlock x:Name="Icon"
                                    Style="{Binding Path=(c:IconAttachedProperty.FontIcon), RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}, Mode=OneWay}"
@@ -148,7 +148,11 @@
             </Trigger>
             <Trigger Property="IsMouseOver" Value="true">
                 <Setter Property="Foreground" Value="{DynamicResource HoverColor}"/>
-                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <SolidColorBrush Color="{DynamicResource Default}" Opacity="{StaticResource DisabledOpacity}"/>
+                    </Setter.Value>
+                </Setter>
             </Trigger>
             <Trigger Property="IsPressed" Value="true">
                 <Setter Property="Foreground" Value="{DynamicResource PressColor}"/>
@@ -321,7 +325,7 @@
                 <Setter Property="Foreground" Value="{DynamicResource DefaultedColor}"/>
                 <Setter Property="Background">
                     <Setter.Value>
-                        <SolidColorBrush Color="{DynamicResource Default}" Opacity="0.10"/>
+                        <SolidColorBrush Color="{DynamicResource Default}" Opacity="{StaticResource DisabledOpacity}"/>
                     </Setter.Value>
                 </Setter>
             </Trigger>
@@ -330,7 +334,7 @@
                 <Setter Property="Foreground" Value="{DynamicResource HoverColor}"/>
                 <Setter Property="Background">
                     <Setter.Value>
-                        <SolidColorBrush Color="{DynamicResource Active}" Opacity="0.10"/>
+                        <SolidColorBrush Color="{DynamicResource Active}" Opacity="{StaticResource DisabledOpacity}"/>
                     </Setter.Value>
                 </Setter>
             </Trigger>
@@ -355,7 +359,7 @@
                 <Setter Property="Foreground" Value="{DynamicResource DefaultedColor}"/>
                 <Setter Property="Background">
                     <Setter.Value>
-                        <SolidColorBrush Color="{DynamicResource Default}" Opacity="0.10"/>
+                        <SolidColorBrush Color="{DynamicResource Default}" Opacity="{StaticResource DisabledOpacity}"/>
                     </Setter.Value>
                 </Setter>
             </Trigger>

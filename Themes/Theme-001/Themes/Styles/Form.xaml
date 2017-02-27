@@ -771,18 +771,24 @@
         <Setter Property="CalendarItemStyle" Value="{StaticResource CalendarItemOverride}"/>
         <Setter Property="CalendarButtonStyle">
             <Setter.Value>
-                <Style TargetType="{x:Type CalendarButton}" BasedOn="{StaticResource Button.Borderless.Small}">
+                <Style TargetType="{x:Type CalendarButton}" BasedOn="{StaticResource Button.Borderless}">
                     <Setter Property="Margin" Value="0"/>
                     <Setter Property="MinWidth" Value="10"/>
+                    <Setter Property="Width" Value="Auto"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
                     <Setter Property="Foreground" Value="{DynamicResource SecondaryColor}"/>
                 </Style>
             </Setter.Value>
         </Setter>
         <Setter Property="CalendarDayButtonStyle">
             <Setter.Value>
-                <Style TargetType="{x:Type CalendarDayButton}" BasedOn="{StaticResource Button.Borderless.Small}">
+                <Style TargetType="{x:Type CalendarDayButton}" BasedOn="{StaticResource Button.Borderless}">
                     <Setter Property="Margin" Value="0"/>
                     <Setter Property="MinWidth" Value="10"/>
+                    <Setter Property="Width" Value="Auto"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
                     <Setter Property="Foreground" Value="{DynamicResource SecondaryColor}"/>
                 </Style>
             </Setter.Value>
