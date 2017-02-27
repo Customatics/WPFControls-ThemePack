@@ -715,7 +715,7 @@
                                     <ComboBoxItem>Fourth</ComboBoxItem>
                                 </ComboBox>
 
-                                <DatePicker Grid.Row="6" Grid.Column="2" />
+                                <DatePicker Grid.Row="6" Grid.Column="2"/>
                                 
                                 <ListBox Grid.Row="8" Grid.Column="2">
                                     <ListBoxItem Selector.IsSelected="True">First</ListBoxItem>
