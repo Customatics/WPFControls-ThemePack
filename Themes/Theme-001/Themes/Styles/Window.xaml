@@ -74,7 +74,7 @@
                 <Setter Property="Foreground" Value="{DynamicResource PrimaryColor}"/>
             </Trigger>
             <Trigger Property="IsEnabled" Value="False">
-                <Setter Property="Opacity" Value="0.25"/>
+                <Setter Property="Opacity" Value="{StaticResource DisabledOpacity}"/>
             </Trigger>
         </Style.Triggers>
     </Style>

@@ -13,5 +13,6 @@ namespace ThemePack.Common.AttachedProperties.Enums
         Top=1,
         Right=2,
         Bottom=3,
+        Center=4
     }
 }

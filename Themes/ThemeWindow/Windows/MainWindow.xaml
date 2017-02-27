@@ -6,6 +6,7 @@
         xmlns:vm="clr-namespace:ThemeWindow.ViewModel"
         xmlns:base="clr-namespace:ThemePack.Common.Base;assembly=ThemePack.Common"
         xmlns:c="clr-namespace:ThemePack.Common.AttachedProperties;assembly=ThemePack.Common"
+        xmlns:vc="clr-namespace:ThemePack.Common.Converters;assembly=ThemePack.Common"
         mc:Ignorable="d" 
         Closing="Window_Closing"
         Title="Theme preview" Width="900" Height="600" Style="{StaticResource Window.ModalStyle.NormalStyle}" SizeToContent="Manual">
@@ -602,17 +603,26 @@
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="10"/>
-                                    <ColumnDefinition Width="250"/>
+                                    <ColumnDefinition Width="200"/>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition Width="200"/>
                                 </Grid.ColumnDefinitions>
+
+                                <TextBlock Grid.Column="2" HorizontalAlignment="Center">Common</TextBlock>
+                                <TextBlock Grid.Column="8" HorizontalAlignment="Center">Disabled</TextBlock>
 
                                 <TextBox Grid.Row="2" Grid.Column="2" HorizontalAlignment="Stretch" />
                                 <PasswordBox Grid.Row="4" Grid.Column="2" HorizontalAlignment="Stretch" />
                                 <RichTextBox Grid.Row="6" Grid.Column="2" HorizontalAlignment="Stretch" />
 
+                                <TextBox Grid.Row="2" Grid.Column="4" HorizontalAlignment="Stretch" IsEnabled="False" />
+                                <PasswordBox Grid.Row="4" Grid.Column="4" HorizontalAlignment="Stretch" IsEnabled="False" />
+                                <RichTextBox Grid.Row="6" Grid.Column="4" HorizontalAlignment="Stretch" IsEnabled="False" />
+
                                 <TextBlock Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right">TextBlock Box</TextBlock>
                                 <TextBlock Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right">Password Box</TextBlock>
                                 <TextBlock Grid.Row="6" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right">RichText Box</TextBlock>
-                                
+
                             </Grid>
                         </GroupBox>
                         <GroupBox Header="Options" BorderBrush="{x:Null}">
@@ -645,12 +655,16 @@
                                 <RadioButton Grid.Row="4" Grid.Column="4" Content="Disabled" IsEnabled="False" />
 
                                 <Separator Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="3"/>
-                                
-                                <Slider Grid.Row="8" Grid.Column="2" Grid.ColumnSpan="3"/>
-                                
-                                <Slider Grid.Row="10" Grid.Column="2" Grid.ColumnSpan="3" TickPlacement="Both" TickFrequency="1" IsSnapToTickEnabled="True" IsSelectionRangeEnabled="True" SelectionStart="-3" SelectionEnd="3" AutoToolTipPlacement="TopLeft" Minimum="-5" Value="1" Maximum="5" />
 
-                                
+                                <Slider Grid.Row="8" Grid.Column="2"/>
+
+                                <Slider Grid.Row="10" Grid.Column="2"  TickPlacement="Both" TickFrequency="1" IsSnapToTickEnabled="True" IsSelectionRangeEnabled="True" SelectionStart="-3" SelectionEnd="3" AutoToolTipPlacement="TopLeft" Minimum="-5" Value="1" Maximum="5" />
+
+                                <Slider Grid.Row="8" Grid.Column="4" IsEnabled="False" />
+
+                                <Slider Grid.Row="10" Grid.Column="4" IsEnabled="False" TickPlacement="Both" TickFrequency="1" IsSnapToTickEnabled="True" IsSelectionRangeEnabled="True" SelectionStart="-3" SelectionEnd="3" AutoToolTipPlacement="TopLeft" Minimum="-5" Value="1" Maximum="5" />
+
+
                                 <!--<TextBlock Grid.Row="0" Grid.Column="2">Enabled</TextBlock>
                                 <TextBlock Grid.Row="0" Grid.Column="4">Disabled</TextBlock>-->
 
@@ -679,8 +693,13 @@
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="10"/>
-                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="200"/>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition Width="200"/>
                                 </Grid.ColumnDefinitions>
+
+                                <TextBlock Grid.Column="2" HorizontalAlignment="Center">Common</TextBlock>
+                                <TextBlock Grid.Column="8" HorizontalAlignment="Center">Disabled</TextBlock>
 
                                 <ComboBox Grid.Row="2" Grid.Column="2" IsEditable="False" Width="200">
                                     <ComboBoxItem>First</ComboBoxItem>
@@ -695,15 +714,47 @@
                                     <ComboBoxItem>Third</ComboBoxItem>
                                     <ComboBoxItem>Fourth</ComboBoxItem>
                                 </ComboBox>
-                                
+
                                 <DatePicker Grid.Row="6" Grid.Column="2" />
+                                
                                 <ListBox Grid.Row="8" Grid.Column="2">
+                                    <ListBoxItem Selector.IsSelected="True">First</ListBoxItem>
+                                    <ListBoxItem>Second</ListBoxItem>
+                                    <ListBoxItem>Third</ListBoxItem>
+                                    <ListBoxItem>Fourth</ListBoxItem>
+                                </ListBox>
+                                
+                                <ListView Grid.Row="10" Grid.Column="2" SelectionMode="Multiple" >
+                                    <ListViewItem>First</ListViewItem>
+                                    <ListViewItem>Second</ListViewItem>
+                                    <ListViewItem>Third</ListViewItem>
+                                    <ListViewItem>Fourth</ListViewItem>
+                                </ListView>
+
+                                <ComboBox Grid.Row="2" Grid.Column="4" IsEditable="False" Width="200" IsEnabled="False">
+                                    <ComboBoxItem>First</ComboBoxItem>
+                                    <ComboBoxItem>Second</ComboBoxItem>
+                                    <ComboBoxItem>Third</ComboBoxItem>
+                                    <ComboBoxItem>Fourth</ComboBoxItem>
+                                </ComboBox>
+
+                                <ComboBox Grid.Row="4" Grid.Column="4" IsEditable="True" Width="200" IsEnabled="False">
+                                    <ComboBoxItem>First</ComboBoxItem>
+                                    <ComboBoxItem>Second</ComboBoxItem>
+                                    <ComboBoxItem>Third</ComboBoxItem>
+                                    <ComboBoxItem>Fourth</ComboBoxItem>
+                                </ComboBox>
+
+                                <DatePicker Grid.Row="6" Grid.Column="4" IsEnabled="False" />
+
+                                <ListBox Grid.Row="8" Grid.Column="4" IsEnabled="False">
                                     <ListBoxItem>First</ListBoxItem>
                                     <ListBoxItem>Second</ListBoxItem>
                                     <ListBoxItem>Third</ListBoxItem>
                                     <ListBoxItem>Fourth</ListBoxItem>
                                 </ListBox>
-                                <ListView Grid.Row="10" Grid.Column="2" SelectionMode="Multiple" >
+
+                                <ListView Grid.Row="10" Grid.Column="4" SelectionMode="Multiple" IsEnabled="False">
                                     <ListViewItem>First</ListViewItem>
                                     <ListViewItem>Second</ListViewItem>
                                     <ListViewItem>Third</ListViewItem>
@@ -729,16 +780,16 @@
                                 <TreeView Grid.Row="28" Grid.Column="2" Style="{StaticResource TreeView.Normal}"
                                           >
                                     <TreeView.Resources>-->
-                                        <!--<HierarchicalDataTemplate DataType="{x:Type ContentPresenter}">
+            <!--<HierarchicalDataTemplate DataType="{x:Type ContentPresenter}">
                                             <TextBlock Text="{Binding}" Style="{StaticResource BodyTextBlockStyle}"/>
                                         </HierarchicalDataTemplate>
                                         -->
-                                        <!--
+            <!--
                                         <DataTemplate DataType="{x:Type ItemsPresenter}">
                                             <TextBlock Text="{Binding}" Style="{StaticResource BodyTextBlockStyle}"/>
                                         </DataTemplate>
                                         -->
-                                    <!--</TreeView.Resources>
+            <!--</TreeView.Resources>
                                     <TreeViewItem Header="First">
                                         <TreeViewItem Header="First"/>
                                         <TreeViewItem Header="Second"/>
@@ -835,7 +886,7 @@
                     </WrapPanel>
                 </ScrollViewer>
             </TabItem>-->
-            
+
             <TabItem Header="Scrolls">
                 <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
                     <WrapPanel>
@@ -903,7 +954,7 @@
                 <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
                     <WrapPanel>
                         <GroupBox Header="Outline" BorderBrush="{x:Null}">
-                           
+
                         </GroupBox>
                         <GroupBox Header="Solid" BorderBrush="{x:Null}">
 

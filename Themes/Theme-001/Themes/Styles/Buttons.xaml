@@ -22,31 +22,37 @@
         <Setter Property="TextBlock.TextDecorations" Value="{x:Null}"/>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="Button" >
+                <ControlTemplate TargetType="Button">
                     <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" 
                             Margin="{TemplateBinding Margin}" MinWidth="{TemplateBinding MinWidth}">
-                        <StackPanel x:Name="Panel" Orientation="Horizontal" Margin="{TemplateBinding Padding}" >
+                        <StackPanel x:Name="Panel" Orientation="Horizontal" Margin="{TemplateBinding Padding}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" >
 
                             <TextBlock x:Name="Icon"
-                                   Style="{Binding Path=(c:IconAttachedProperty.FontIcon), RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}"
-                                   Foreground="{TemplateBinding Foreground}"
-                                   FontSize="{TemplateBinding FontSize}"
+                                   Style="{Binding Path=(c:IconAttachedProperty.FontIcon), RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}, Mode=OneWay}"
+                                   Foreground="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}"
+                                   FontSize="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=FontSize}"
                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                   HorizontalAlignment="Center"/>
+                                   HorizontalAlignment="Center"
+                                   Visibility="{Binding Path=Style, RelativeSource={RelativeSource Self}, Converter={vc:NullToVisibilityConverter}}"
+                                   />
 
-                            <ContentPresenter x:Name="Content" ContentSource="Content">
+                            <ContentPresenter x:Name="Content" ContentSource="Content" Visibility="{Binding RelativeSource={RelativeSource Self}, Path=Content, Converter={vc:NullToVisibilityConverter}}">
                                 <ContentPresenter.Resources>
                                     <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseTextBlockStyle}">
                                         <Setter Property="Foreground" Value="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}"/>
-                                        <Setter Property="FontSize" Value="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path= FontSize}"/>
+                                        <Setter Property="FontSize" Value="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=FontSize}"/>
                                         <Setter Property="HorizontalAlignment" Value="Center"/>
-                                        <Setter Property="TextDecorations" Value="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path= TextBlock.TextDecorations}"/>
+                                        <Setter Property="TextDecorations" Value="{Binding RelativeSource={RelativeSource Self}, Path= TextBlock.TextDecorations}"/>
+                                        <Setter Property="Margin" Value="0"/>
                                     </Style>
                                 </ContentPresenter.Resources>
                             </ContentPresenter>
                         </StackPanel>
                     </Border>
                     <ControlTemplate.Triggers>
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=(c:IconAttachedProperty.IconAlignment)}" Value="{x:Null}">
+                            <Setter TargetName="Content" Property="Margin" Value="0"/>
+                        </DataTrigger>
                         <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=(c:IconAttachedProperty.IconAlignment)}" Value="Right">
                             <!--<Setter Property="Background" Value="Red"/>-->
                             <Setter TargetName="Panel" Property="FlowDirection" Value="RightToLeft"/>
@@ -69,6 +75,9 @@
                             <!--<Setter Property="Background" Value="Blue"/>-->
                             <Setter TargetName="Panel" Property="FlowDirection" Value="LeftToRight"/>
                             <Setter TargetName="Content" Property="Margin" Value="8,0"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=(c:IconAttachedProperty.IconAlignment)}" Value="Center">
+                            <Setter TargetName="Content" Property="Visibility" Value="Collapsed"/>
                         </DataTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -275,6 +284,9 @@
                             <!--<Setter Property="Background" Value="Blue"/>-->
                             <Setter TargetName="Panel" Property="FlowDirection" Value="LeftToRight"/>
                             <Setter TargetName="Content" Property="Margin" Value="8,0"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=(c:IconAttachedProperty.IconAlignment)}" Value="Center">
+                            <Setter TargetName="Content" Property="Visibility" Value="Collapsed"/>
                         </DataTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
