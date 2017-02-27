@@ -13,7 +13,7 @@
         <Setter Property="FontSize" Value="{StaticResource BodyTextSize}"/>
         <Setter Property="FontWeight" Value="Regular"/>
         <Setter Property="MinWidth" Value="{DynamicResource ControlMinWidth}"/>
-        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="BorderThickness" Value="{StaticResource BorderSize}"/>
         <Setter Property="BorderBrush" Value="{DynamicResource ActiveColor}"/>
         <Setter Property="Margin" Value="{DynamicResource SpaceOuter}"/>
         <Setter Property="Padding" Value="{DynamicResource SpaceInner}"/>
@@ -116,7 +116,7 @@
                 <Setter Property="Foreground" Value="{DynamicResource HoverColor}"/>
                 <Setter Property="Background">
                     <Setter.Value>
-                        <SolidColorBrush Color="{DynamicResource Active}" Opacity="0.10"/>
+                        <SolidColorBrush Color="{DynamicResource Active}" Opacity="{StaticResource DisabledOpacity}"/>
                     </Setter.Value>
                 </Setter>
             </Trigger>
@@ -222,7 +222,7 @@
         <Setter Property="FontSize" Value="{StaticResource BodyTextSize}"/>
         <Setter Property="FontWeight" Value="Regular"/>
         <Setter Property="MinWidth" Value="{DynamicResource ControlMinWidth}"/>
-        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="BorderThickness" Value="{StaticResource BorderSize}"/>
         <Setter Property="BorderBrush" Value="{DynamicResource ActiveColor}"/>
         <Setter Property="Margin" Value="{DynamicResource SpaceOuter}"/>
         <Setter Property="Padding" Value="{DynamicResource SpaceInner}"/>

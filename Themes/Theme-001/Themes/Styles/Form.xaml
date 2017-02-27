@@ -58,12 +58,21 @@
         <Setter Property="Padding" Value="{StaticResource SpaceInner}"/>
         <Setter Property="Margin" Value="{StaticResource SpaceOuter}"/>
         <Setter Property="FontSize" Value="{StaticResource BodyTextSize}"/>
-        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="BorderThickness" Value="{StaticResource BorderSize}"/>
         <Setter Property="BorderBrush" Value="{DynamicResource ActiveColor}"/>
         <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
         <Setter Property="Foreground" Value="{DynamicResource SecondaryColor}"/>
         <Setter Property="MinWidth" Value="{DynamicResource ControlMinWidth}"/>
         <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBoxBase}">
+                    <Border Name="Border" CornerRadius="0" Padding="0" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" >
+                        <ScrollViewer Margin="0" Padding="{TemplateBinding Padding}" x:Name="PART_ContentHost"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="true">
                 <Setter Property="BorderBrush" Value="{DynamicResource HoverColor}"/>
@@ -93,11 +102,20 @@
         <Setter Property="Padding" Value="{StaticResource SpaceInner}"/>
         <Setter Property="Margin" Value="{StaticResource SpaceOuter}"/>
         <Setter Property="FontSize" Value="{StaticResource BodyTextSize}"/>
-        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="BorderThickness" Value="{StaticResource BorderSize}"/>
         <Setter Property="BorderBrush" Value="{DynamicResource ActiveColor}"/>
         <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
         <Setter Property="Foreground" Value="{DynamicResource SecondaryColor}"/>
         <Setter Property="MinWidth" Value="{DynamicResource ControlMinWidth}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type PasswordBox}">
+                    <Border Name="Border" CornerRadius="0" Padding="0" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" >
+                        <ScrollViewer Margin="0" Padding="{TemplateBinding Padding}" x:Name="PART_ContentHost"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="true">
                 <Setter Property="BorderBrush" Value="{DynamicResource HoverColor}"/>
@@ -108,10 +126,10 @@
                 </Setter>
             </Trigger>
             <Trigger Property="IsFocused" Value="true">
-                <Setter Property="BorderBrush" Value="{DynamicResource ActiveColor}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource PressColor}"/>
                 <Setter Property="Background">
                     <Setter.Value>
-                        <SolidColorBrush Color="{DynamicResource Active}" Opacity="{DynamicResource DisabledOpacity}"/>
+                        <SolidColorBrush Color="{DynamicResource Press}" Opacity="{DynamicResource DisabledOpacity}"/>
                     </Setter.Value>
                 </Setter>
             </Trigger>
@@ -126,11 +144,25 @@
         <Setter Property="Padding" Value="{StaticResource SpaceInner}"/>
         <Setter Property="Margin" Value="{StaticResource SpaceOuter}"/>
         <Setter Property="FontSize" Value="{StaticResource BodyTextSize}"/>
-        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="BorderThickness" Value="{StaticResource BorderSize}"/>
         <Setter Property="BorderBrush" Value="{DynamicResource ActiveColor}"/>
         <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
         <Setter Property="Foreground" Value="{DynamicResource SecondaryColor}"/>
         <Setter Property="MinWidth" Value="{DynamicResource ControlMinWidth}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RichTextBox}">
+                    <Border Name="Border" CornerRadius="0" Padding="0" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" >
+                        <ScrollViewer Margin="0" Padding="{TemplateBinding Padding}" x:Name="PART_ContentHost"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Resources>
+            <Style x:Key="{x:Type FlowDocument}" TargetType="{x:Type FlowDocument}">
+                <Setter Property="OverridesDefaultStyle" Value="true"/>
+            </Style>
+        </Style.Resources>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="true">
                 <Setter Property="BorderBrush" Value="{DynamicResource HoverColor}"/>
@@ -141,10 +173,10 @@
                 </Setter>
             </Trigger>
             <Trigger Property="IsFocused" Value="true">
-                <Setter Property="BorderBrush" Value="{DynamicResource ActiveColor}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource PressColor}"/>
                 <Setter Property="Background">
                     <Setter.Value>
-                        <SolidColorBrush Color="{DynamicResource Active}" Opacity="{DynamicResource DisabledOpacity}"/>
+                        <SolidColorBrush Color="{DynamicResource Press}" Opacity="{DynamicResource DisabledOpacity}"/>
                     </Setter.Value>
                 </Setter>
             </Trigger>
@@ -160,7 +192,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="CheckBox">
                     <StackPanel Orientation="Horizontal">
-                        <Border x:Name="border" BorderThickness="2" Background="{DynamicResource PrimaryColor}" BorderBrush="{DynamicResource ActiveColor}" HorizontalAlignment="Left" Margin="0,0,6,0" VerticalAlignment="Center">
+                        <Border x:Name="border" BorderThickness="{StaticResource BorderSize}" Background="{DynamicResource PrimaryColor}" BorderBrush="{DynamicResource ActiveColor}" HorizontalAlignment="Left" Margin="0,0,6,0" VerticalAlignment="Center">
                             <Path x:Name="checkmark" StrokeThickness="2" Width="17" Height="17" StrokeLineJoin="Round" Stroke="{DynamicResource ActiveColor}"/>
                         </Border>
                         <ContentPresenter x:Name="content" VerticalAlignment="Center">
@@ -222,7 +254,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="RadioButton">
                     <StackPanel Orientation="Horizontal">
-                        <Border x:Name="border" BorderThickness="2" CornerRadius="17" Background="{DynamicResource PrimaryColor}" BorderBrush="{DynamicResource ActiveColor}" HorizontalAlignment="Left" Margin="0,0,6,0" VerticalAlignment="Center">
+                        <Border x:Name="border" BorderThickness="{StaticResource BorderSize}" CornerRadius="17" Background="{DynamicResource PrimaryColor}" BorderBrush="{DynamicResource ActiveColor}" HorizontalAlignment="Left" Margin="0,0,6,0" VerticalAlignment="Center">
                             <Path x:Name="checkmark" Width="17" Height="17" Fill="{DynamicResource ActiveColor}"/>
                         </Border>
                         <ContentPresenter x:Name="content" VerticalAlignment="Center">
@@ -452,7 +484,7 @@
 
     <Style TargetType="{x:Type ToolTip}">
         <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
-        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="BorderThickness" Value="{StaticResource BorderSize}"/>
         <Setter Property="BorderBrush" Value="{DynamicResource TintColor}"/>
         <Setter Property="Foreground" Value="{DynamicResource SecondaryColor}"/>
         <Setter Property="FontSize" Value="{StaticResource NoteTextSize}"/>
@@ -506,7 +538,7 @@
                             </Grid>
                         </Popup>
 
-                        <Border Grid.ColumnSpan="2" BorderThickness="2" BorderBrush="{DynamicResource ActiveColor}" Background="{DynamicResource PrimaryColor}"/>
+                        <Border Grid.ColumnSpan="2" BorderThickness="{StaticResource BorderSize}" BorderBrush="{DynamicResource ActiveColor}" Background="{DynamicResource PrimaryColor}"/>
 
                         <ToggleButton x:Name="ToggleButton" Grid.Column="1" BorderThickness="0"
                                       c:IconAttachedProperty.FontIcon="{DynamicResource Icon.Font.like}" c:IconAttachedProperty.IconAlignment="Right"
@@ -569,7 +601,7 @@
     <Style TargetType="{x:Type ComboBoxItem}" BasedOn="{StaticResource {x:Type ListBoxItem}}"/>
 
     <Style TargetType="{x:Type ListBox}">
-        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="BorderThickness" Value="{StaticResource BorderSize}"/>
         <Setter Property="BorderBrush" Value="{DynamicResource ActiveColor}"/>
         <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
         <Setter Property="Template">
@@ -671,7 +703,7 @@
     </Style>
 
     <Style TargetType="{x:Type DatePickerTextBox}">
-        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="BorderThickness" Value="{StaticResource BorderSize}"/>
         <Setter Property="BorderBrush" Value="{DynamicResource ActiveColor}"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -733,7 +765,7 @@
     <Style TargetType="{x:Type Calendar}">
         <Setter Property="IsTabStop" Value="False" />
         <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
-        <Setter Property="BorderThickness" Value="2" />
+        <Setter Property="BorderThickness" Value="{StaticResource BorderSize}" />
         <Setter Property="BorderBrush" Value="{DynamicResource ActiveColor}"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -765,7 +797,7 @@
                             </VisualStateGroup>
                         </VisualStateManager.VisualStateGroups>
 
-                        <Border x:Name="border" BorderThickness="2" BorderBrush="{DynamicResource ActiveColor}" Background="{DynamicResource PrimaryColor}" Margin="0" Padding="2">
+                        <Border x:Name="border" BorderThickness="{StaticResource BorderSize}" BorderBrush="{DynamicResource ActiveColor}" Background="{DynamicResource PrimaryColor}" Margin="0" Padding="2">
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto" />

@@ -14,6 +14,8 @@
     <Thickness x:Key="SpaceInner.Small" Left="9" Top="4" Right="9" Bottom="5" />
     <Thickness x:Key="SpaceOuter.Small" Left="5" Top="4" Right="5" Bottom="4" />
 
+    <Thickness x:Key="BorderSize" Left="2" Top="2" Right="2" Bottom="2"/>
+
     <sys:Double x:Key="ControlMinWidth">60</sys:Double>
 
     <sys:Double x:Key="DisabledOpacity">0.25</sys:Double>
