@@ -7,6 +7,7 @@
         xmlns:base="clr-namespace:ThemePack.Common.Base;assembly=ThemePack.Common"
         xmlns:c="clr-namespace:ThemePack.Common.AttachedProperties;assembly=ThemePack.Common"
         xmlns:vc="clr-namespace:ThemePack.Common.Converters;assembly=ThemePack.Common"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d" 
         Closing="Window_Closing"
         Title="Theme preview" Width="900" Height="600" Style="{StaticResource Window.ModalStyle.NormalStyle}" SizeToContent="Manual">
@@ -715,8 +716,13 @@
                                     <ComboBoxItem>Fourth</ComboBoxItem>
                                 </ComboBox>
 
-                                <DatePicker Grid.Row="6" Grid.Column="2"/>
-                                
+                                <DatePicker Grid.Row="6" Grid.Column="2" IsTodayHighlighted="True" SelectedDate="{Binding Path=CurrentModel.startDate, UpdateSourceTrigger=PropertyChanged}" FirstDayOfWeek="Monday">
+                                    <DatePicker.BlackoutDates>
+                                        <CalendarDateRange Start="1/1/2000" End="{x:Static sys:DateTime.Today}" />
+                                    </DatePicker.BlackoutDates>
+                                </DatePicker>
+
+
                                 <ListBox Grid.Row="8" Grid.Column="2">
                                     <ListBoxItem Selector.IsSelected="True">First</ListBoxItem>
                                     <ListBoxItem>Second</ListBoxItem>

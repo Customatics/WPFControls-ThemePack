@@ -11,6 +11,7 @@
 
                 <ResourceDictionary Source="/Theme_001;component/Themes/Styles/Buttons.xaml"/>
                 <ResourceDictionary Source="/Theme_001;component/Themes/Styles/Form.xaml"/>
+                <ResourceDictionary Source="/Theme_001;component/Themes/Styles/DatePicker.xaml"/>
                 <ResourceDictionary Source="/Theme_001;component/Themes/Styles/Notifications.xaml"/>
                 <ResourceDictionary Source="/Theme_001;component/Themes/Styles/Options.xaml"/>
                 <ResourceDictionary Source="/Theme_001;component/Themes/Styles/ProgressBar.xaml"/>
