@@ -900,7 +900,24 @@
                             <ScrollBar Orientation="Horizontal"/>
                         </GroupBox>
                         <GroupBox Header="ScrollViewer" BorderBrush="{x:Null}">
-                            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Visible" />
+                            <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible" Width="400" Height="200">
+                                <Border Background="{DynamicResource TintColor}" Width="900" Height="900">
+                                    <Canvas>
+                                        <Rectangle Width="900" Height="900">
+                                            <Rectangle.Fill>
+                                                <DrawingBrush Stretch="None" TileMode="Tile" Viewport="0,0,16,16" ViewportUnits="Absolute" Opacity="0.1">
+                                                    <DrawingBrush.Drawing>
+                                                        <DrawingGroup>
+                                                            <GeometryDrawing Geometry="M0,0 L16,0 16,16, 0,16Z" Brush="White"/>
+                                                            <GeometryDrawing Geometry="M0,8 L16,8 16,16, 8,16 8,0 0,0Z" Brush="Black"/>
+                                                        </DrawingGroup>
+                                                    </DrawingBrush.Drawing>
+                                                </DrawingBrush>
+                                            </Rectangle.Fill>
+                                        </Rectangle>
+                                    </Canvas>
+                                </Border>
+                            </ScrollViewer>
                         </GroupBox>
                     </WrapPanel>
                 </ScrollViewer>
@@ -909,9 +926,7 @@
                 <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
                     <WrapPanel>
                         <GroupBox Header="ProgressBar" BorderBrush="{x:Null}">
-                            <ProgressBar Orientation="Horizontal">
-                                <ProgressBar.Value>65</ProgressBar.Value>
-                            </ProgressBar>
+                            <ProgressBar Orientation="Horizontal" Value="65" Height="4" Width="200"/>
                         </GroupBox>
                         <GroupBox Header="Preloader" BorderBrush="{x:Null}"></GroupBox>
                     </WrapPanel>
