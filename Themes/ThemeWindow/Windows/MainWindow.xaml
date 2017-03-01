@@ -723,11 +723,17 @@
                                 </DatePicker>
 
 
-                                <ListBox Grid.Row="8" Grid.Column="2">
+                                <ListBox Grid.Row="8" Grid.Column="2" Height="120">
                                     <ListBoxItem Selector.IsSelected="True">First</ListBoxItem>
                                     <ListBoxItem>Second</ListBoxItem>
                                     <ListBoxItem>Third</ListBoxItem>
                                     <ListBoxItem>Fourth</ListBoxItem>
+                                    <ListBoxItem>Fifth</ListBoxItem>
+                                    <ListBoxItem>Sixth</ListBoxItem>
+                                    <ListBoxItem>Seventh</ListBoxItem>
+                                    <ListBoxItem>Eightth</ListBoxItem>
+                                    <ListBoxItem>Nineth</ListBoxItem>
+                                    <ListBoxItem>Tenth</ListBoxItem>
                                 </ListBox>
                                 
                                 <ListView Grid.Row="10" Grid.Column="2" SelectionMode="Multiple" >
@@ -735,6 +741,12 @@
                                     <ListViewItem>Second</ListViewItem>
                                     <ListViewItem>Third</ListViewItem>
                                     <ListViewItem>Fourth</ListViewItem>
+                                    <ListViewItem>Fifth</ListViewItem>
+                                    <ListViewItem>Sixth</ListViewItem>
+                                    <ListViewItem>Seventh</ListViewItem>
+                                    <ListViewItem>Eightth</ListViewItem>
+                                    <ListViewItem>Nineth</ListViewItem>
+                                    <ListViewItem>Tenth</ListViewItem>
                                 </ListView>
 
                                 <ComboBox Grid.Row="2" Grid.Column="4" IsEditable="False" Width="200" IsEnabled="False">
@@ -753,11 +765,17 @@
 
                                 <DatePicker Grid.Row="6" Grid.Column="4" IsEnabled="False" />
 
-                                <ListBox Grid.Row="8" Grid.Column="4" IsEnabled="False">
+                                <ListBox Grid.Row="8" Grid.Column="4" Height="120" IsEnabled="False">
                                     <ListBoxItem>First</ListBoxItem>
                                     <ListBoxItem>Second</ListBoxItem>
                                     <ListBoxItem>Third</ListBoxItem>
                                     <ListBoxItem>Fourth</ListBoxItem>
+                                    <ListBoxItem>Fifth</ListBoxItem>
+                                    <ListBoxItem>Sixth</ListBoxItem>
+                                    <ListBoxItem>Seventh</ListBoxItem>
+                                    <ListBoxItem>Eightth</ListBoxItem>
+                                    <ListBoxItem>Nineth</ListBoxItem>
+                                    <ListBoxItem>Tenth</ListBoxItem>
                                 </ListBox>
 
                                 <ListView Grid.Row="10" Grid.Column="4" SelectionMode="Multiple" IsEnabled="False">
@@ -765,6 +783,12 @@
                                     <ListViewItem>Second</ListViewItem>
                                     <ListViewItem>Third</ListViewItem>
                                     <ListViewItem>Fourth</ListViewItem>
+                                    <ListViewItem>Fifth</ListViewItem>
+                                    <ListViewItem>Sixth</ListViewItem>
+                                    <ListViewItem>Seventh</ListViewItem>
+                                    <ListViewItem>Eightth</ListViewItem>
+                                    <ListViewItem>Nineth</ListViewItem>
+                                    <ListViewItem>Tenth</ListViewItem>
                                 </ListView>
 
                                 <TextBlock Grid.Row="2" Grid.Column="0">ComboBox</TextBlock>
@@ -897,7 +921,24 @@
                 <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
                     <WrapPanel>
                         <GroupBox Header="ScrollBar" BorderBrush="{x:Null}">
-                            <ScrollBar Orientation="Horizontal"/>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition Width="200"/>
+                                </Grid.ColumnDefinitions>
+                                
+                                <TextBlock Grid.Row="0" Grid.Column="0">Enabled</TextBlock>
+                                <TextBlock Grid.Row="2" Grid.Column="0">Disabled</TextBlock>
+
+                                <ScrollBar Grid.Row="0" Grid.Column="2" Orientation="Horizontal"/>
+                                <ScrollBar Grid.Row="2" Grid.Column="2" Orientation="Horizontal" IsEnabled="False"/>
+                            </Grid>
                         </GroupBox>
                         <GroupBox Header="ScrollViewer" BorderBrush="{x:Null}">
                             <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible" Width="400" Height="200">

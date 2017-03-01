@@ -97,7 +97,7 @@
         <Setter Property="Foreground" Value="{DynamicResource PrimaryColor}"/>
         <Setter Property="BorderThickness" Value="0"/>
 
-        <Setter Property="Width" Value="6"/>
+        <Setter Property="Width" Value="8"/>
         <Setter Property="MinWidth" Value="8"/>
         <Setter Property="Height" Value="Auto"/>
         <Setter Property="MinHeight" Value="0"/>
@@ -260,7 +260,7 @@
                                     <Setter Property="Width" TargetName="PART_LineRightButton" Value="0"/>
                                     <Setter Property="Height" TargetName="PART_Track" Value="4"/>
                                     <Setter Property="Height" TargetName="Border" Value="4"/>
-                                    <Setter Property="Height" TargetName="Bg" Value="6"/>
+                                    <Setter Property="Height" TargetName="Bg" Value="8"/>
                                     <Setter Property="MinHeight" TargetName="Bg" Value="8"/>
                                 </Trigger>
                                 <Trigger Property="IsMouseOver" Value="True">
