@@ -996,16 +996,23 @@
                     <WrapPanel>
                         <GroupBox Header="Right mouse click on this block for context menu" BorderBrush="{x:Null}">
                             <GroupBox.ContextMenu>
-                                <ContextMenu>
+                                <ContextMenu MaxHeight="300">
                                     <MenuItem Header="Enabled" >
                                         <MenuItem Header="Enabled subitem"/>
-                                        <MenuItem Header="Checkable subitem" IsCheckable="True"/>
+                                        <MenuItem Header="Checkable subitem" IsCheckable="True" InputGestureText="CTRL+C"/>
                                         <Separator/>
                                         <MenuItem Header="Disabled subitem" IsEnabled="False"/>
                                     </MenuItem>
-                                    <MenuItem Header="Checkable" IsCheckable="True"/>
+                                    <MenuItem Header="Checkable" IsCheckable="True" InputGestureText="CTRL+ALT+C"/>
                                     <Separator/>
                                     <MenuItem Header="Disabled" IsEnabled="False"/>
+                                    <MenuItem Header="Disabled 2" IsEnabled="False"/>
+                                    <MenuItem Header="Disabled 3" IsEnabled="False"/>
+                                    <MenuItem Header="Disabled 4" IsEnabled="False"/>
+                                    <MenuItem Header="Disabled 5" IsEnabled="False"/>
+                                    <MenuItem Header="Disabled 6" IsEnabled="False"/>
+                                    <MenuItem Header="Disabled 7" IsEnabled="False"/>
+                                    <MenuItem Header="Disabled 8" IsEnabled="False"/>
                                 </ContextMenu>
                             </GroupBox.ContextMenu>
                         </GroupBox>
