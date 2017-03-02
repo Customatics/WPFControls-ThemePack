@@ -996,7 +996,7 @@
                     <WrapPanel>
                         <GroupBox Header="Right mouse click on this block for context menu" BorderBrush="{x:Null}">
                             <GroupBox.ContextMenu>
-                                <ContextMenu MaxHeight="300">
+                                <ContextMenu ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="20">
                                     <MenuItem Header="Enabled" >
                                         <MenuItem Header="Enabled subitem"/>
                                         <MenuItem Header="Checkable subitem" IsCheckable="True" InputGestureText="CTRL+C"/>
@@ -1013,6 +1013,30 @@
                                     <MenuItem Header="Disabled 6" IsEnabled="False"/>
                                     <MenuItem Header="Disabled 7" IsEnabled="False"/>
                                     <MenuItem Header="Disabled 8" IsEnabled="False"/>
+                                    <MenuItem Header="Disabled 9" IsEnabled="False"/>
+                                    <MenuItem Header="Disabled 10" IsEnabled="False"/>
+                                    <MenuItem Header="Disabled 11" IsEnabled="False"/>
+                                    <MenuItem Header="Disabled 12" IsEnabled="False"/>
+                                    <MenuItem Header="Disabled 13" IsEnabled="False"/>
+                                    <MenuItem Header="Disabled 14" IsEnabled="False"/>
+                                    <MenuItem Header="Disabled 15" IsEnabled="False"/>
+                                    <MenuItem Header="Disabled 16" IsEnabled="False"/>
+                                    <MenuItem Header="Disabled 17" IsEnabled="False"/>
+                                    <MenuItem Header="Disabled 18" IsEnabled="False"/>
+                                    <MenuItem Header="Disabled 19" IsEnabled="False"/>
+                                    <MenuItem Header="Disabled 20" IsEnabled="False"/>
+                                    <MenuItem Header="Disabled 21" IsEnabled="False"/>
+                                    <MenuItem Header="Disabled 22" IsEnabled="False"/>
+                                    <MenuItem Header="Disabled 23" IsEnabled="False"/>
+                                    <MenuItem Header="Disabled 24" IsEnabled="False"/>
+                                    <MenuItem Header="Disabled 25" IsEnabled="False"/>
+                                    <MenuItem Header="Disabled 26" IsEnabled="False"/>
+                                    <MenuItem Header="Disabled 27" IsEnabled="False"/>
+                                    <MenuItem Header="Disabled 28" IsEnabled="False"/>
+                                    <MenuItem Header="Disabled 29" IsEnabled="False"/>
+                                    <MenuItem Header="Disabled 30" IsEnabled="False"/>
+                                    <MenuItem Header="Disabled 31" IsEnabled="False"/>
+                                    <MenuItem Header="Disabled 32" IsEnabled="False"/>
                                 </ContextMenu>
                             </GroupBox.ContextMenu>
                         </GroupBox>

@@ -9,8 +9,10 @@
         <Setter Property="OverridesDefaultStyle" Value="True" />
         <Setter Property="HasDropShadow" Value="True" />
         <Setter Property="Grid.IsSharedSizeScope" Value="True"/>
+        <Setter Property="ScrollViewer.CanContentScroll" Value="False"/>
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Hidden"/>
         <Setter Property="MinWidth" Value="120"/>
-        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontSize" Value="{StaticResource CaptionTextSize}"/>
         <!--<Setter Property="FocusVisualStyle" Value="{StaticResource NewFocusVisualStyle.Button}"/>-->
         <Setter Property="Template">
             <Setter.Value>
@@ -45,10 +47,10 @@
                                     </Border>
                                     <Border Name="Check" Width="12" Height="12" Visibility="Hidden" Margin="10,0,0,0" Background="Transparent" BorderThickness="0" BorderBrush="{DynamicResource TintColor}" >
                                         <!--  BorderThickness="1" Width="24" Height="24"  -->
-                                        <Path Name="CheckMark" Width="8" Height="8" Visibility="Collapsed" Fill="#5082a4" Stroke="#5082a4" StrokeThickness="1" Data="M0,4L3,7 8,2 7.5,1.5 3,6 0.5,3.5z" />
+                                        <Path Name="CheckMark" Width="8" Height="8" Visibility="Collapsed" Fill="{DynamicResource SecondaryColor}" Stroke="{DynamicResource SecondaryColor}" StrokeThickness="1" Data="M0,4L3,7 8,2 7.5,1.5 3,6 0.5,3.5z" />
                                     </Border>
-                                    <ContentPresenter Name="HeaderHost" Grid.Column="1" ContentSource="Header" VerticalAlignment="Center" RecognizesAccessKey="True" Margin="12,0,0,0" />
-                                    <TextBlock x:Name="InputGestureText" Grid.Column="2" Text="{TemplateBinding InputGestureText}" VerticalAlignment="Center" Margin="5,2,0,2" HorizontalAlignment="Right" Foreground="{DynamicResource TintColor}" />
+                                    <ContentPresenter Name="HeaderHost" Grid.Column="1" ContentSource="Header" VerticalAlignment="Center" RecognizesAccessKey="True" Margin="12,0,0,0"/>
+                                    <TextBlock x:Name="InputGestureText" Grid.Column="2" Text="{TemplateBinding InputGestureText}" VerticalAlignment="Center" Margin="5,2,0,2" HorizontalAlignment="Right" Foreground="{DynamicResource TintColor}"/>
                                 </Grid>
                             </Border>
                             <ControlTemplate.Triggers>
@@ -89,7 +91,14 @@
                                 <Trigger Property="IsHighlighted" Value="true">
                                     <Setter TargetName="Border" Property="Background" Value="{DynamicResource HoverColor}" />
                                     <Setter Property="Foreground" Value="{DynamicResource PrimaryColor}" />
+                                    <Setter TargetName="CheckMark" Property="Fill" Value="{DynamicResource PrimaryColor}" />
+                                    <Setter TargetName="CheckMark" Property="Stroke" Value="{DynamicResource PrimaryColor}" />
                                     <Setter TargetName="HeaderHost" Property="TextElement.Foreground" Value="{DynamicResource PrimaryColor}"/>
+                                    <Setter TargetName="InputGestureText" Property="Foreground">
+                                        <Setter.Value>
+                                            <SolidColorBrush Color="{DynamicResource Primary}" Opacity="{StaticResource TintOpacity}"/>
+                                        </Setter.Value>
+                                    </Setter>
                                 </Trigger>
                             </ControlTemplate.Triggers>
                         </ControlTemplate>
@@ -112,12 +121,12 @@
                                     </Border>
                                     <Border Name="Check" Width="12" Height="12" Visibility="Hidden" Margin="10,0,0,0" Background="Transparent" BorderThickness="0" BorderBrush="{DynamicResource TintColor}" >
                                         <!--  BorderThickness="1" Width="24" Height="24"  -->
-                                        <Path Name="CheckMark" Width="8" Height="8" Visibility="Collapsed" Fill="#5082a4" Stroke="#5082a4" StrokeThickness="1" Data="M0,4L3,7 8,2 7.5,1.5 3,6 0.5,3.5z" />
+                                        <Path Name="CheckMark" Width="8" Height="8" Visibility="Collapsed" Fill="{DynamicResource SecondaryColor}" Stroke="{DynamicResource SecondaryColor}" StrokeThickness="1" Data="M0,4L3,7 8,2 7.5,1.5 3,6 0.5,3.5z" />
                                     </Border>
                                     <ContentPresenter Name="HeaderHost" Grid.Column="1" ContentSource="Header" VerticalAlignment="Center" RecognizesAccessKey="True" Margin="12,0,0,0"/>
                                     <TextBlock x:Name="InputGestureText" Grid.Column="2" Text="{TemplateBinding InputGestureText}" VerticalAlignment="Center" Margin="5,2,0,2" HorizontalAlignment="Right" Foreground="{DynamicResource TintColor}" />
-                                    <Path Name="Expandable"  Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" Data="M 0 0 L 0 7 L 4 3.5 Z" Fill="#0f3c5a" />
-                                    <Popup Name="Popup" Placement="Right" HorizontalOffset="0" VerticalOffset="-1" IsOpen="{TemplateBinding IsSubmenuOpen}" AllowsTransparency="True"  PopupAnimation="Fade">
+                                    <Path Name="Expandable"  Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" Data="M 0 0 L 0 7 L 4 3.5 Z" Fill="{DynamicResource SecondaryColor}" />
+                                    <Popup Name="Popup" Placement="Right" HorizontalOffset="0" VerticalOffset="-2" IsOpen="{TemplateBinding IsSubmenuOpen}" AllowsTransparency="True"  PopupAnimation="Fade">
                                         <Border Name="SubmenuBorder" Background="{DynamicResource PrimaryColor}" BorderBrush="{DynamicResource ActiveColor}" BorderThickness="2">
                                             <ScrollViewer CanContentScroll="True" VerticalScrollBarVisibility="Auto">
                                                 <ItemsPresenter KeyboardNavigation.DirectionalNavigation="Cycle"/>
@@ -156,6 +165,13 @@
                                     <Setter TargetName="Border" Property="Background" Value="{DynamicResource HoverColor}" />
                                     <Setter Property="Foreground" Value="{DynamicResource PrimaryColor}" />
                                     <Setter TargetName="Expandable" Property="Fill" Value="{DynamicResource PrimaryColor}" />
+                                    <Setter TargetName="CheckMark" Property="Fill" Value="{DynamicResource PrimaryColor}" />
+                                    <Setter TargetName="CheckMark" Property="Stroke" Value="{DynamicResource PrimaryColor}" />
+                                    <Setter TargetName="InputGestureText" Property="Foreground">
+                                        <Setter.Value>
+                                            <SolidColorBrush Color="{DynamicResource Primary}" Opacity="{StaticResource TintOpacity}"/>
+                                        </Setter.Value>
+                                    </Setter>
                                 </Trigger>
                                 <!--<Trigger SourceName="Popup" Property="Popup.AllowsTransparency" Value="True">
                                     <Setter TargetName="SubmenuBorder" Property="CornerRadius" Value="0" />
@@ -167,7 +183,9 @@
                     </ControlTemplate.Resources>
 
                     <Border x:Name="Border" Background="{DynamicResource PrimaryColor}" BorderThickness="2" BorderBrush="{DynamicResource ActiveColor}">
-                        <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Cycle" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                        <ScrollViewer CanContentScroll="{TemplateBinding ScrollViewer.CanContentScroll}" ScrollViewer.VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}">
+                            <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Cycle" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                        </ScrollViewer>
                     </Border>
                     <!--<ControlTemplate.Triggers>
                         <Trigger Property="HasDropShadow" Value="true">

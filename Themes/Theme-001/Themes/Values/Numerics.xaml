@@ -27,7 +27,7 @@
     <sys:Double x:Key="SubTitleTextSize">16</sys:Double>
     <sys:Double x:Key="BaseTextSize">16</sys:Double>
     <sys:Double x:Key="BodyTextSize">14</sys:Double>
-    <sys:Double x:Key="CaptionTextSize">14</sys:Double>
+    <sys:Double x:Key="CaptionTextSize">12</sys:Double>
     <sys:Double x:Key="NoteTextSize">11</sys:Double>
 
 
