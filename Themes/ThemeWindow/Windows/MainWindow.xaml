@@ -11,8 +11,10 @@
         mc:Ignorable="d" 
         Closing="Window_Closing"
         Title="Theme preview" Width="900" Height="600" Style="{StaticResource Window.ModalStyle.NormalStyle}" SizeToContent="Manual">
-    <Grid Margin="10" SnapsToDevicePixels="True" UseLayoutRounding="True" Grid.IsSharedSizeScope="True">
+    <Grid Margin="10,0,10,10" SnapsToDevicePixels="True" UseLayoutRounding="True" Grid.IsSharedSizeScope="True">
         <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="10"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="10"/>
             <RowDefinition Height="1*"/>
@@ -23,20 +25,36 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" 
+        <Menu Background="Transparent" Grid.ColumnSpan="3">
+            <MenuItem Header="File">
+                <MenuItem Header="Exit" IsEnabled="False" />
+            </MenuItem>
+            <MenuItem Header="Edit">
+                <MenuItem Header="Copy" IsEnabled="False"/>
+                <MenuItem Header="Cut" IsEnabled="False"/>
+                <MenuItem Header="Paste" IsEnabled="False"/>
+            </MenuItem>
+            <MenuItem Header="Color Scheme">
+                <MenuItem Header="Light" IsCheckable="True" StaysOpenOnClick="True"/>
+                <MenuItem Header="Dark"/>
+            </MenuItem>
+            <MenuItem Header="Help" IsEnabled="False"/>
+        </Menu>
+
+        <ComboBox Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" 
                   ItemsSource="{Binding Themes}"
                   DisplayMemberPath="Name"
                     c:IconAttachedProperty.FontIcon="{DynamicResource Icon.Font.like}" 
                     c:IconAttachedProperty.IconAlignment="Right" 
                   SelectedItem="{Binding SelectedTheme}"/>
-        <ComboBox Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120"
+        <ComboBox Grid.Row="2" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120"
                     c:IconAttachedProperty.FontIcon="{DynamicResource Icon.Font.like}" 
                     c:IconAttachedProperty.IconAlignment="Right" 
                   ItemsSource="{Binding ColorSchemes}"
                   DisplayMemberPath="Name"
                   SelectedItem="{Binding SelecteColorScheme}"/>
 
-        <TabControl Name="tabControl" Background="{DynamicResource TintColor}" Grid.Row="2" Grid.ColumnSpan="3" Width="Auto" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <TabControl Grid.Row="4" Grid.ColumnSpan="3" Name="tabControl" Background="{DynamicResource TintColor}" Width="Auto" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
             <TabItem Header="Colors">
                 <TabItem.Resources>
                     <Style TargetType="{x:Type Ellipse}">
@@ -999,11 +1017,11 @@
                                 <ContextMenu ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="20">
                                     <MenuItem Header="Enabled" >
                                         <MenuItem Header="Enabled subitem"/>
-                                        <MenuItem Header="Checkable subitem" IsCheckable="True" InputGestureText="CTRL+C"/>
+                                        <MenuItem Header="Checkable subitem" IsCheckable="True" InputGestureText="CTRL+C" StaysOpenOnClick="True"/>
                                         <Separator/>
                                         <MenuItem Header="Disabled subitem" IsEnabled="False"/>
                                     </MenuItem>
-                                    <MenuItem Header="Checkable" IsCheckable="True" InputGestureText="CTRL+ALT+C"/>
+                                    <MenuItem Header="Checkable" IsCheckable="True" InputGestureText="CTRL+ALT+C" StaysOpenOnClick="True"/>
                                     <Separator/>
                                     <MenuItem Header="Disabled" IsEnabled="False"/>
                                     <MenuItem Header="Disabled 2" IsEnabled="False"/>
