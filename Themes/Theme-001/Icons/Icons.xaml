@@ -19,30 +19,1967 @@
         <Setter Property="Text" Value="&#xE61C;"/>
     </Style>
 
+    <!-- Iconic font based on free IcoMoon set -->
+
     <Style x:Key="IcoMoon" TargetType="{x:Type TextBlock}">
         <Setter Property="FontFamily" Value="/Theme_001;component/Fonts/IcoMoon-Free/#icomoon" />
         <Setter Property="FontSize" Value="{StaticResource BodyTextSize}"/>
     </Style>
 
-    <Style x:Key="Icon.Font.favorite" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
-        <Setter Property="Text" Value="&#xE9DA;"/>
+    <Style x:Key="Icon.Font.home" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe900;"/>
     </Style>
 
-    <Style x:Key="Icon.Font.Expand" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
-        <Setter Property="Text" Value="&#xEA43;"/>
+    <Style x:Key="Icon.Font.home2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe901;"/>
     </Style>
 
-    <Style x:Key="Icon.Font.Collapse" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
-        <Setter Property="Text" Value="&#xEA41;"/>
+    <Style x:Key="Icon.Font.home3" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe902;"/>
     </Style>
 
-    <Style x:Key="Icon.Font.ExpandArrow" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
-        <Setter Property="Text" Value="&#xEA3E;"/>
+    <Style x:Key="Icon.Font.office" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe903;"/>
     </Style>
 
-    <Style x:Key="Icon.Font.Calendar" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
-        <Setter Property="Text" Value="&#xE953;"/>
+    <Style x:Key="Icon.Font.newspaper" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe904;"/>
     </Style>
 
+    <Style x:Key="Icon.Font.pencil" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe905;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.pencil2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe906;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.quill" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe907;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.pen" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe908;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.blog" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe909;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.eyedropper" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe90a;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.droplet" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe90b;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.paint-format" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe90c;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.image" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe90d;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.images" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe90e;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.camera" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe90f;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.headphones" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe910;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.music" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe911;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.play" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe912;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.film" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe913;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.video-camera" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe914;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.dice" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe915;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.pacman" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe916;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.spades" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe917;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.clubs" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe918;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.diamonds" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe919;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.bullhorn" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe91a;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.connection" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe91b;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.podcast" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe91c;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.feed" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe91d;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.mic" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe91e;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.book" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe91f;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.books" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe920;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.library" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe921;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.file-text" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe922;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.profile" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe923;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.file-empty" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe924;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.files-empty" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe925;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.file-text2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe926;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.file-picture" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe927;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.file-music" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe928;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.file-play" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe929;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.file-video" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe92a;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.file-zip" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe92b;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.copy" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe92c;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.paste" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe92d;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.stack" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe92e;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.folder" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe92f;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.folder-open" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe930;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.folder-plus" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe931;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.folder-minus" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe932;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.folder-download" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe933;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.folder-upload" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe934;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.price-tag" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe935;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.price-tags" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe936;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.barcode" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe937;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.qrcode" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe938;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.ticket" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe939;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.cart" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe93a;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.coin-dollar" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe93b;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.coin-euro" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe93c;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.coin-pound" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe93d;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.coin-yen" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe93e;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.credit-card" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe93f;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.calculator" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe940;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.lifebuoy" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe941;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.phone" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe942;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.phone-hang-up" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe943;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.address-book" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe944;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.envelop" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe945;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.pushpin" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe946;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.location" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe947;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.location2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe948;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.compass" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe949;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.compass2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe94a;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.map" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe94b;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.map2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe94c;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.history" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe94d;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.clock" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe94e;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.clock2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe94f;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.alarm" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe950;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.bell" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe951;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.stopwatch" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe952;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.calendar" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe953;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.printer" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe954;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.keyboard" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe955;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.display" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe956;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.laptop" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe957;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.mobile" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe958;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.mobile2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe959;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.tablet" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe95a;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.tv" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe95b;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.drawer" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe95c;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.drawer2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe95d;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.box-add" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe95e;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.box-remove" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe95f;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.download" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe960;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.upload" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe961;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.floppy-disk" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe962;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.drive" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe963;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.database" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe964;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.undo" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe965;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.redo" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe966;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.undo2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe967;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.redo2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe968;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.forward" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe969;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.reply" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe96a;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.bubble" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe96b;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.bubbles" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe96c;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.bubbles2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe96d;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.bubble2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe96e;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.bubbles3" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe96f;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.bubbles4" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe970;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.user" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe971;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.users" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe972;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.user-plus" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe973;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.user-minus" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe974;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.user-check" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe975;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.user-tie" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe976;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.quotes-left" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe977;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.quotes-right" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe978;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.hour-glass" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe979;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.spinner" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe97a;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.spinner2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe97b;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.spinner3" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe97c;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.spinner4" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe97d;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.spinner5" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe97e;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.spinner6" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe97f;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.spinner7" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe980;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.spinner8" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe981;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.spinner9" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe982;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.spinner10" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe983;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.spinner11" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe984;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.binoculars" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe985;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.search" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe986;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.zoom-in" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe987;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.zoom-out" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe988;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.enlarge" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe989;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.shrink" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe98a;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.enlarge2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe98b;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.shrink2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe98c;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.key" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe98d;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.key2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe98e;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.lock" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe98f;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.unlocked" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe990;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.wrench" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe991;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.equalizer" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe992;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.equalizer2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe993;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.cog" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe994;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.cogs" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe995;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.hammer" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe996;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.magic-wand" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe997;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.aid-kit" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe998;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.bug" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe999;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.pie-chart" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe99a;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.stats-dots" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe99b;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.stats-bars" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe99c;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.stats-bars2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe99d;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.trophy" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe99e;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.gift" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe99f;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.glass" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9a0;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.glass2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9a1;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.mug" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9a2;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.spoon-knife" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9a3;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.leaf" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9a4;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.rocket" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9a5;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.meter" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9a6;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.meter2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9a7;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.hammer2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9a8;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.fire" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9a9;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.lab" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9aa;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.magnet" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9ab;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.bin" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9ac;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.bin2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9ad;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.briefcase" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9ae;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.airplane" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9af;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.truck" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9b0;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.road" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9b1;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.accessibility" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9b2;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.target" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9b3;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.shield" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9b4;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.power" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9b5;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.switch" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9b6;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.power-cord" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9b7;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.clipboard" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9b8;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.list-numbered" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9b9;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.list" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9ba;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.list2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9bb;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.tree" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9bc;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.menu" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9bd;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.menu2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9be;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.menu3" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9bf;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.menu4" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9c0;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.cloud" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9c1;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.cloud-download" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9c2;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.cloud-upload" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9c3;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.cloud-check" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9c4;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.download2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9c5;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.upload2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9c6;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.download3" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9c7;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.upload3" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9c8;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.sphere" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9c9;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.earth" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9ca;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.link" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9cb;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.flag" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9cc;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.attachment" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9cd;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.eye" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9ce;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.eye-plus" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9cf;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.eye-minus" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9d0;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.eye-blocked" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9d1;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.bookmark" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9d2;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.bookmarks" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9d3;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.sun" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9d4;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.contrast" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9d5;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.brightness-contrast" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9d6;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.star-empty" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9d7;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.star-half" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9d8;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.star-full" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9d9;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.heart" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9da;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.heart-broken" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9db;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.man" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9dc;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.woman" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9dd;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.man-woman" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9de;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.happy" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9df;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.happy2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9e0;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.smile" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9e1;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.smile2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9e2;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.tongue" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9e3;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.tongue2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9e4;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.sad" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9e5;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.sad2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9e6;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.wink" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9e7;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.wink2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9e8;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.grin" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9e9;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.grin2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9ea;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.cool" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9eb;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.cool2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9ec;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.angry" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9ed;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.angry2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9ee;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.evil" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9ef;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.evil2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9f0;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.shocked" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9f1;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.shocked2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9f2;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.baffled" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9f3;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.baffled2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9f4;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.confused" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9f5;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.confused2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9f6;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.neutral" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9f7;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.neutral2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9f8;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.hipster" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9f9;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.hipster2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9fa;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.wondering" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9fb;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.wondering2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9fc;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.sleepy" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9fd;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.sleepy2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9fe;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.frustrated" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xe9ff;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.frustrated2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea00;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.crying" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea01;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.crying2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea02;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.point-up" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea03;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.point-right" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea04;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.point-down" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea05;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.point-left" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea06;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.warning" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea07;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.notification" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea08;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.question" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea09;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.plus" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea0a;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.minus" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea0b;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.info" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea0c;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.cancel-circle" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea0d;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.blocked" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea0e;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.cross" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea0f;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.checkmark" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea10;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.checkmark2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea11;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.spell-check" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea12;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.enter" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea13;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.exit" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea14;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.play2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea15;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.pause" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea16;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.stop" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea17;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.previous" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea18;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.next" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea19;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.backward" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea1a;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.forward2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea1b;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.play3" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea1c;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.pause2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea1d;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.stop2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea1e;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.backward2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea1f;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.forward3" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea20;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.first" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea21;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.last" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea22;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.previous2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea23;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.next2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea24;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.eject" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea25;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.volume-high" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea26;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.volume-medium" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea27;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.volume-low" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea28;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.volume-mute" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea29;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.volume-mute2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea2a;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.volume-increase" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea2b;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.volume-decrease" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea2c;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.loop" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea2d;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.loop2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea2e;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.infinite" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea2f;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.shuffle" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea30;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.arrow-up-left" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea31;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.arrow-up" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea32;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.arrow-up-right" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea33;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.arrow-right" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea34;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.arrow-down-right" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea35;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.arrow-down" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea36;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.arrow-down-left" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea37;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.arrow-left" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea38;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.arrow-up-left2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea39;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.arrow-up2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea3a;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.arrow-up-right2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea3b;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.arrow-right2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea3c;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.arrow-down-right2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea3d;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.arrow-down2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea3e;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.arrow-down-left2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea3f;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.arrow-left2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea40;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.circle-up" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea41;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.circle-right" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea42;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.circle-down" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea43;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.circle-left" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea44;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.tab" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea45;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.move-up" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea46;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.move-down" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea47;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.sort-alpha-asc" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea48;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.sort-alpha-desc" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea49;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.sort-numeric-asc" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea4a;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.sort-numberic-desc" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea4b;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.sort-amount-asc" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea4c;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.sort-amount-desc" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea4d;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.command" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea4e;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.shift" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea4f;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.ctrl" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea50;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.opt" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea51;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.checkbox-checked" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea52;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.checkbox-unchecked" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea53;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.radio-checked" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea54;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.radio-checked2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea55;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.radio-unchecked" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea56;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.crop" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea57;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.make-group" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea58;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.ungroup" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea59;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.scissors" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea5a;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.filter" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea5b;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.font" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea5c;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.ligature" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea5d;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.ligature2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea5e;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.text-height" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea5f;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.text-width" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea60;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.font-size" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea61;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.bold" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea62;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.underline" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea63;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.italic" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea64;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.strikethrough" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea65;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.omega" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea66;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.sigma" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea67;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.page-break" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea68;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.superscript" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea69;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.subscript" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea6a;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.superscript2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea6b;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.subscript2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea6c;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.text-color" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea6d;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.pagebreak" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea6e;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.clear-formatting" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea6f;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.table" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea70;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.table2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea71;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.insert-template" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea72;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.pilcrow" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea73;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.ltr" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea74;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.rtl" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea75;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.section" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea76;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.paragraph-left" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea77;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.paragraph-center" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea78;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.paragraph-right" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea79;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.paragraph-justify" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea7a;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.indent-increase" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea7b;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.indent-decrease" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea7c;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.share" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea7d;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.new-tab" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea7e;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.embed" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea7f;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.embed2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea80;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.terminal" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea81;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.share2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea82;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.mail" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea83;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.mail2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea84;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.mail3" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea85;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.mail4" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea86;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.amazon" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea87;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.google" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea88;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.google2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea89;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.google3" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea8a;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.google-plus" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea8b;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.google-plus2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea8c;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.google-plus3" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea8d;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.hangouts" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea8e;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.google-drive" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea8f;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.facebook" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea90;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.facebook2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea91;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.instagram" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea92;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.whatsapp" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea93;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.spotify" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea94;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.telegram" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea95;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.twitter" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea96;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.vine" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea97;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.vk" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea98;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.renren" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea99;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.sina-weibo" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea9a;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.rss" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea9b;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.rss2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea9c;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.youtube" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea9d;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.youtube2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea9e;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.twitch" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xea9f;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.vimeo" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeaa0;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.vimeo2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeaa1;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.lanyrd" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeaa2;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.flickr" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeaa3;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.flickr2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeaa4;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.flickr3" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeaa5;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.flickr4" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeaa6;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.dribbble" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeaa7;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.behance" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeaa8;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.behance2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeaa9;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.deviantart" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeaaa;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.500px" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeaab;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.steam" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeaac;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.steam2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeaad;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.dropbox" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeaae;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.onedrive" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeaaf;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.github" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeab0;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.npm" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeab1;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.basecamp" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeab2;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.trello" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeab3;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.wordpress" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeab4;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.joomla" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeab5;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.ello" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeab6;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.blogger" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeab7;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.blogger2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeab8;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.tumblr" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeab9;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.tumblr2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeaba;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.yahoo" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeabb;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.yahoo2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeabc;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.tux" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeabd;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.appleinc" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeabe;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.finder" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeabf;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.android" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeac0;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.windows" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeac1;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.windows8" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeac2;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.soundcloud" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeac3;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.soundcloud2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeac4;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.skype" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeac5;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.reddit" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeac6;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.hackernews" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeac7;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.wikipedia" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeac8;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.linkedin" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeac9;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.linkedin2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeaca;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.lastfm" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeacb;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.lastfm2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeacc;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.delicious" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeacd;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.stumbleupon" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeace;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.stumbleupon2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeacf;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.stackoverflow" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xead0;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.pinterest" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xead1;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.pinterest2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xead2;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.xing" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xead3;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.xing2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xead4;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.flattr" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xead5;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.foursquare" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xead6;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.yelp" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xead7;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.paypal" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xead8;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.chrome" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xead9;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.firefox" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeada;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.edge" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeadc;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.safari" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeadd;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.opera" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeade;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.file-pdf" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeadf;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.file-openoffice" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeae0;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.file-word" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeae1;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.file-excel" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeae2;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.libreoffice" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeae3;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.html-five" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeae4;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.html-five2" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeae5;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.css3" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeae6;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.git" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeae7;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.codepen" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeae8;"/>
+    </Style>
+
+    <Style x:Key="Icon.Font.svg" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource IcoMoon}">
+        <Setter Property="Text" Value="&#xeae9;"/>
+    </Style>
 
 </ResourceDictionary>
