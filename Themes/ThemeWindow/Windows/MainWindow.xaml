@@ -982,13 +982,13 @@
                     </WrapPanel>
                 </ScrollViewer>
             </TabItem>
-            <TabItem Header="Preloader &amp; progress">
+            <TabItem Header="Progress bar">
                 <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
                     <WrapPanel>
                         <GroupBox Header="ProgressBar" >
                             <ProgressBar Orientation="Horizontal" Value="65" Height="4" Width="200"/>
                         </GroupBox>
-                        <GroupBox Header="Preloader" ></GroupBox>
+                        <!--<GroupBox Header="Preloader" ></GroupBox>-->
                     </WrapPanel>
                 </ScrollViewer>
             </TabItem>
@@ -1062,7 +1062,7 @@
                     </WrapPanel>
                 </ScrollViewer>
             </TabItem>
-            <TabItem Header="Icons">
+            <!--<TabItem Header="Icons">
                 <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
                     <WrapPanel>
                         <GroupBox Header="Outline" >
@@ -1073,7 +1073,7 @@
                         </GroupBox>
                     </WrapPanel>
                 </ScrollViewer>
-            </TabItem>
+            </TabItem>-->
         </TabControl>
 
     </Grid>
