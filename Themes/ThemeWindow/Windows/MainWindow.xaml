@@ -54,7 +54,7 @@
                   DisplayMemberPath="Name"
                   SelectedItem="{Binding SelecteColorScheme}"/>
 
-        <TabControl Grid.Row="4" Grid.ColumnSpan="3" Name="tabControl" Background="{DynamicResource TintColor}" Width="Auto" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <TabControl Grid.Row="4" Grid.ColumnSpan="3" Name="tabControl" Background="{DynamicResource TintColor}" Width="Auto" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
             <!-- ScrollViewer.CanContentScroll="False" applies template with wrap panel -->
             <TabItem Header="Colors">
                 <TabItem.Resources>

@@ -133,17 +133,20 @@
         </Setter>
     </Style>
 
+    
+    <!-- TabStripPlacement -->
     <Style TargetType="{x:Type TabControl}">
         <Setter Property="OverridesDefaultStyle" Value="True" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
-        <Setter Property="Padding" Value="{StaticResource SpaceInner}"/>
+        <!--<Setter Property="Padding" Value="{StaticResource SpaceInner}"/>-->
         <Setter Property="ScrollViewer.CanContentScroll" Value="True"/>
+        <Setter Property="TabStripPlacement" Value="Top"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TabControl}">
                     <Grid>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="0"/>
+                            <RowDefinition Height="5"/>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
