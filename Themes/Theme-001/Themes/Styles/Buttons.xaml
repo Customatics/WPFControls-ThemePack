@@ -442,12 +442,12 @@
         <Setter Property="TextBlock.Foreground" Value="{DynamicResource SecondaryColor}" />
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="Expander">
+                <ControlTemplate TargetType="{x:Type Expander}">
                     <DockPanel>
                         <ToggleButton x:Name="HeaderSite" Content="{Binding Header, RelativeSource={RelativeSource AncestorType=Expander}}" 
-                                        c:IconAttachedProperty.FontIcon="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Expander}}, Path=(c:IconAttachedProperty.FontIcon), Mode=OneWay}" 
-                                        c:IconAttachedProperty.IconAlignment="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Expander}}, Path=(c:IconAttachedProperty.IconAlignment), Mode=OneWay}" 
-                                      DockPanel.Dock="Top" IsChecked="False" Style="{StaticResource ToggleButton.Solid}" HorizontalContentAlignment="Stretch" Margin="0"/>
+                                      c:IconAttachedProperty.FontIcon="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Expander}}, Path=(c:IconAttachedProperty.FontIcon), Mode=OneWay}" 
+                                      c:IconAttachedProperty.IconAlignment="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Expander}}, Path=(c:IconAttachedProperty.IconAlignment), Mode=OneWay}" 
+                                      DockPanel.Dock="Top" IsChecked="{Binding IsExpanded, RelativeSource={RelativeSource AncestorType=Expander}}" Style="{StaticResource ToggleButton.Solid}" HorizontalContentAlignment="Stretch" Margin="0"/>
                         <ContentPresenter x:Name="ExpandSite" Visibility="{Binding IsChecked, ElementName=HeaderSite, Converter={vc:BooleanToVisibilityConverter}}"/>
                     </DockPanel>
                 </ControlTemplate>
@@ -463,7 +463,9 @@
                 <ControlTemplate TargetType="Expander">
                     <DockPanel>
                         <ToggleButton x:Name="HeaderSite" Content="{Binding Header, RelativeSource={RelativeSource AncestorType=Expander}}" 
-                                      DockPanel.Dock="Top" IsChecked="False" Style="{StaticResource ToggleButton.Ghost}" HorizontalContentAlignment="Left" Margin="0"/>
+                                      c:IconAttachedProperty.FontIcon="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Expander}}, Path=(c:IconAttachedProperty.FontIcon), Mode=OneWay}" 
+                                      c:IconAttachedProperty.IconAlignment="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Expander}}, Path=(c:IconAttachedProperty.IconAlignment), Mode=OneWay}" 
+                                      DockPanel.Dock="Top" IsChecked="{Binding IsExpanded, RelativeSource={RelativeSource AncestorType=Expander}}" Style="{StaticResource ToggleButton.Ghost}" HorizontalContentAlignment="Left" Margin="0"/>
                         <ContentPresenter x:Name="ExpandSite" Visibility="{Binding IsChecked, ElementName=HeaderSite, Converter={vc:BooleanToVisibilityConverter}}"/>
                     </DockPanel>
                 </ControlTemplate>
@@ -479,7 +481,9 @@
                 <ControlTemplate TargetType="Expander">
                     <DockPanel>
                         <ToggleButton x:Name="HeaderSite" Content="{Binding Header, RelativeSource={RelativeSource AncestorType=Expander}}" 
-                                      DockPanel.Dock="Top" IsChecked="False" Style="{StaticResource ToggleButton.Borderless}" HorizontalContentAlignment="Left" Margin="0"/>
+                                      c:IconAttachedProperty.FontIcon="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Expander}}, Path=(c:IconAttachedProperty.FontIcon), Mode=OneWay}" 
+                                      c:IconAttachedProperty.IconAlignment="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Expander}}, Path=(c:IconAttachedProperty.IconAlignment), Mode=OneWay}" 
+                                      DockPanel.Dock="Top" IsChecked="{Binding IsExpanded, RelativeSource={RelativeSource AncestorType=Expander}}" Style="{StaticResource ToggleButton.Borderless}" HorizontalContentAlignment="Left" Margin="0"/>
                         <ContentPresenter x:Name="ExpandSite" Visibility="{Binding IsChecked, ElementName=HeaderSite, Converter={vc:BooleanToVisibilityConverter}}"/>
                     </DockPanel>
                 </ControlTemplate>

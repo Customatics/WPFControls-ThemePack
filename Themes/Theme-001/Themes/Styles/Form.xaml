@@ -543,7 +543,8 @@
                         <Border Grid.ColumnSpan="2" BorderThickness="{StaticResource BorderSize}" BorderBrush="{DynamicResource ActiveColor}" Background="{DynamicResource PrimaryColor}"/>
 
                         <ToggleButton x:Name="ToggleButton" Grid.Column="1" BorderThickness="0"
-                                      c:IconAttachedProperty.FontIcon="{DynamicResource Icon.Font.like}" c:IconAttachedProperty.IconAlignment="Right"
+                                      c:IconAttachedProperty.FontIcon="{Binding RelativeSource={RelativeSource AncestorType=ComboBox}, Path=(c:IconAttachedProperty.FontIcon), Mode=OneWay}" 
+                                      c:IconAttachedProperty.IconAlignment="Right"
                                       Margin="0" ClickMode="Press" Focusable="false"
                                       IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" 
                                       BorderBrush="Transparent">

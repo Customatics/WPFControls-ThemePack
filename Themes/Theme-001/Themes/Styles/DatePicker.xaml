@@ -19,7 +19,7 @@
                             <ColumnDefinition Width="auto"/>
                         </Grid.ColumnDefinitions>
                         <Button Grid.Column="1" x:Name="PART_Button" Width="32" MinWidth="32" MinHeight="32" Margin="0" Padding="0" OverridesDefaultStyle="True"
-                                BorderThickness="0" c:IconAttachedProperty.FontIcon="{DynamicResource Icon.Font.like}" c:IconAttachedProperty.IconAlignment="Center" Content="">
+                                BorderThickness="0" c:IconAttachedProperty.FontIcon="{Binding RelativeSource={RelativeSource AncestorType=DatePicker}, Path=(c:IconAttachedProperty.FontIcon), Mode=OneWay}" c:IconAttachedProperty.IconAlignment="Center" Content="">
                             <Button.Style>
                                 <Style BasedOn="{StaticResource Button.Solid}" TargetType="Button">
                                     <Style.Triggers>

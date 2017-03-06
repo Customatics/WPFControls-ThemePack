@@ -44,11 +44,11 @@
         <ComboBox Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" 
                   ItemsSource="{Binding Themes}"
                   DisplayMemberPath="Name"
-                    c:IconAttachedProperty.FontIcon="{DynamicResource Icon.Font.like}" 
+                    c:IconAttachedProperty.FontIcon="{DynamicResource Icon.Font.ExpandArrow}" 
                     c:IconAttachedProperty.IconAlignment="Right" 
                   SelectedItem="{Binding SelectedTheme}"/>
         <ComboBox Grid.Row="2" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120"
-                    c:IconAttachedProperty.FontIcon="{DynamicResource Icon.Font.like}" 
+                    c:IconAttachedProperty.FontIcon="{DynamicResource Icon.Font.ExpandArrow}" 
                     c:IconAttachedProperty.IconAlignment="Right" 
                   ItemsSource="{Binding ColorSchemes}"
                   DisplayMemberPath="Name"
@@ -536,7 +536,7 @@
                                     <TextBlock Grid.Column="8" HorizontalAlignment="Center">Disabled</TextBlock>
 
                                     <!-- solid button-->
-                                    <Expander Style="{DynamicResource Expander.Solid}" Grid.Column="2" Grid.Row="2" Header="Expander">
+                                    <Expander Grid.Column="2" Grid.Row="2" Header="Expander">
                                         <Expander.Content>
                                             <ScrollViewer MaxHeight="160" VerticalScrollBarVisibility="Auto" Padding="12,5">
                                                 <TextBlock Style="{DynamicResource BodyTextBlockStyle}" TextWrapping="Wrap">
@@ -551,12 +551,33 @@
                                                 </TextBlock>
                                             </ScrollViewer>
                                         </Expander.Content>
+                                        <Expander.Style>
+                                            <Style TargetType="{x:Type Expander}" BasedOn="{StaticResource Expander.Solid}">
+                                                <Setter Property="c:IconAttachedProperty.FontIcon" Value="{StaticResource Icon.Font.Expand}"/>
+                                                <Style.Triggers>
+                                                    <Trigger Property="IsExpanded" Value="True">
+                                                        <Setter Property="c:IconAttachedProperty.FontIcon" Value="{StaticResource Icon.Font.Collapse}"/>
+                                                    </Trigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </Expander.Style>
                                     </Expander>
 
-                                    <Expander Style="{DynamicResource Expander.Solid}" Header="Expander" Grid.Column="4" Grid.Row="2" IsEnabled="False" />
+                                    <Expander Header="Expander" Grid.Column="4" Grid.Row="2" IsEnabled="False">
+                                        <Expander.Style>
+                                            <Style TargetType="{x:Type Expander}" BasedOn="{StaticResource Expander.Solid}">
+                                                <Setter Property="c:IconAttachedProperty.FontIcon" Value="{StaticResource Icon.Font.Expand}"/>
+                                                <Style.Triggers>
+                                                    <Trigger Property="IsExpanded" Value="True">
+                                                        <Setter Property="c:IconAttachedProperty.FontIcon" Value="{StaticResource Icon.Font.Collapse}"/>
+                                                    </Trigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </Expander.Style>
+                                    </Expander>
 
                                     <!-- ghost ToggleButton-->
-                                    <Expander Style="{DynamicResource Expander.Ghost}" Header="Expander" Grid.Column="2" Grid.Row="4">
+                                    <Expander Header="Expander" Grid.Column="2" Grid.Row="4">
                                         <Expander.Content>
                                             <ScrollViewer MaxHeight="160" VerticalScrollBarVisibility="Auto" Padding="12,5">
                                                 <TextBlock Style="{DynamicResource BodyTextBlockStyle}" TextWrapping="Wrap">
@@ -571,11 +592,32 @@
                                                 </TextBlock>
                                             </ScrollViewer>
                                         </Expander.Content>
+                                        <Expander.Style>
+                                            <Style TargetType="{x:Type Expander}" BasedOn="{StaticResource Expander.Ghost}">
+                                                <Setter Property="c:IconAttachedProperty.FontIcon" Value="{StaticResource Icon.Font.Expand}"/>
+                                                <Style.Triggers>
+                                                    <Trigger Property="IsExpanded" Value="True">
+                                                        <Setter Property="c:IconAttachedProperty.FontIcon" Value="{StaticResource Icon.Font.Collapse}"/>
+                                                    </Trigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </Expander.Style>
                                     </Expander>
-                                    <Expander Style="{DynamicResource Expander.Ghost}" Header="Expander" Grid.Column="4" Grid.Row="4"  IsEnabled="False" />
+                                    <Expander Header="Expander" Grid.Column="4" Grid.Row="4" IsEnabled="False">
+                                        <Expander.Style>
+                                            <Style TargetType="{x:Type Expander}" BasedOn="{StaticResource Expander.Ghost}">
+                                                <Setter Property="c:IconAttachedProperty.FontIcon" Value="{StaticResource Icon.Font.Expand}"/>
+                                                <Style.Triggers>
+                                                    <Trigger Property="IsExpanded" Value="True">
+                                                        <Setter Property="c:IconAttachedProperty.FontIcon" Value="{StaticResource Icon.Font.Collapse}"/>
+                                                    </Trigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </Expander.Style>
+                                    </Expander>
 
                                     <!-- borderless ToggleButton-->
-                                    <Expander Style="{DynamicResource Expander.Borderless}" Header="Expander" Grid.Column="2" Grid.Row="6">
+                                    <Expander Header="Expander" Grid.Column="2" Grid.Row="6">
                                         <Expander.Content>
                                             <ScrollViewer MaxHeight="160" VerticalScrollBarVisibility="Auto" Padding="12,5">
                                                 <TextBlock Style="{DynamicResource BodyTextBlockStyle}" TextWrapping="Wrap">
@@ -590,8 +632,29 @@
                                                 </TextBlock>
                                             </ScrollViewer>
                                         </Expander.Content>
+                                        <Expander.Style>
+                                            <Style TargetType="{x:Type Expander}" BasedOn="{StaticResource Expander.Borderless}">
+                                                <Setter Property="c:IconAttachedProperty.FontIcon" Value="{StaticResource Icon.Font.Expand}"/>
+                                                <Style.Triggers>
+                                                    <Trigger Property="IsExpanded" Value="True">
+                                                        <Setter Property="c:IconAttachedProperty.FontIcon" Value="{StaticResource Icon.Font.Collapse}"/>
+                                                    </Trigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </Expander.Style>
                                     </Expander>
-                                    <Expander Style="{DynamicResource Expander.Borderless}" Header="Expander" Grid.Column="4" Grid.Row="6" IsEnabled="False" />
+                                    <Expander Header="Expander" Grid.Column="4" Grid.Row="6" IsEnabled="False">
+                                        <Expander.Style>
+                                            <Style TargetType="{x:Type Expander}" BasedOn="{StaticResource Expander.Borderless}">
+                                                <Setter Property="c:IconAttachedProperty.FontIcon" Value="{StaticResource Icon.Font.Expand}"/>
+                                                <Style.Triggers>
+                                                    <Trigger Property="IsExpanded" Value="True">
+                                                        <Setter Property="c:IconAttachedProperty.FontIcon" Value="{StaticResource Icon.Font.Collapse}"/>
+                                                    </Trigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </Expander.Style>
+                                    </Expander>
 
                                 </Grid>
                             </Grid>
@@ -721,21 +784,21 @@
                                 <TextBlock Grid.Column="2" HorizontalAlignment="Center">Common</TextBlock>
                                 <TextBlock Grid.Column="8" HorizontalAlignment="Center">Disabled</TextBlock>
 
-                                <ComboBox Grid.Row="2" Grid.Column="2" IsEditable="False" Width="200">
+                                <ComboBox Grid.Row="2" Grid.Column="2" IsEditable="False" Width="200" c:IconAttachedProperty.FontIcon="{StaticResource Icon.Font.ExpandArrow}">
                                     <ComboBoxItem>First</ComboBoxItem>
                                     <ComboBoxItem>Second</ComboBoxItem>
                                     <ComboBoxItem>Third</ComboBoxItem>
                                     <ComboBoxItem>Fourth</ComboBoxItem>
                                 </ComboBox>
 
-                                <ComboBox Grid.Row="4" Grid.Column="2" IsEditable="True" Width="200">
+                                <ComboBox Grid.Row="4" Grid.Column="2" IsEditable="True" Width="200" c:IconAttachedProperty.FontIcon="{StaticResource Icon.Font.ExpandArrow}">
                                     <ComboBoxItem>First</ComboBoxItem>
                                     <ComboBoxItem>Second</ComboBoxItem>
                                     <ComboBoxItem>Third</ComboBoxItem>
                                     <ComboBoxItem>Fourth</ComboBoxItem>
                                 </ComboBox>
 
-                                <DatePicker Grid.Row="6" Grid.Column="2" IsTodayHighlighted="True" SelectedDate="{Binding Path=CurrentModel.startDate, UpdateSourceTrigger=PropertyChanged}" FirstDayOfWeek="Monday">
+                                <DatePicker Grid.Row="6" Grid.Column="2" IsTodayHighlighted="True" SelectedDate="{Binding Path=CurrentModel.startDate, UpdateSourceTrigger=PropertyChanged}" FirstDayOfWeek="Monday" c:IconAttachedProperty.FontIcon="{StaticResource Icon.Font.Calendar}">
                                     <DatePicker.BlackoutDates>
                                         <CalendarDateRange Start="1/1/2000" End="{x:Static sys:DateTime.Today}" />
                                     </DatePicker.BlackoutDates>
@@ -754,7 +817,7 @@
                                     <ListBoxItem>Nineth</ListBoxItem>
                                     <ListBoxItem>Tenth</ListBoxItem>
                                 </ListBox>
-                                
+
                                 <ListView Grid.Row="10" Grid.Column="2" SelectionMode="Multiple" >
                                     <ListViewItem>First</ListViewItem>
                                     <ListViewItem>Second</ListViewItem>
@@ -768,21 +831,21 @@
                                     <ListViewItem>Tenth</ListViewItem>
                                 </ListView>
 
-                                <ComboBox Grid.Row="2" Grid.Column="4" IsEditable="False" Width="200" IsEnabled="False">
+                                <ComboBox Grid.Row="2" Grid.Column="4" IsEditable="False" Width="200" IsEnabled="False" c:IconAttachedProperty.FontIcon="{StaticResource Icon.Font.ExpandArrow}">
                                     <ComboBoxItem>First</ComboBoxItem>
                                     <ComboBoxItem>Second</ComboBoxItem>
                                     <ComboBoxItem>Third</ComboBoxItem>
                                     <ComboBoxItem>Fourth</ComboBoxItem>
                                 </ComboBox>
 
-                                <ComboBox Grid.Row="4" Grid.Column="4" IsEditable="True" Width="200" IsEnabled="False">
+                                <ComboBox Grid.Row="4" Grid.Column="4" IsEditable="True" Width="200" IsEnabled="False" c:IconAttachedProperty.FontIcon="{StaticResource Icon.Font.ExpandArrow}">
                                     <ComboBoxItem>First</ComboBoxItem>
                                     <ComboBoxItem>Second</ComboBoxItem>
                                     <ComboBoxItem>Third</ComboBoxItem>
                                     <ComboBoxItem>Fourth</ComboBoxItem>
                                 </ComboBox>
 
-                                <DatePicker Grid.Row="6" Grid.Column="4" IsEnabled="False" />
+                                <DatePicker Grid.Row="6" Grid.Column="4" IsEnabled="False" c:IconAttachedProperty.FontIcon="{StaticResource Icon.Font.Calendar}" />
 
                                 <ListBox Grid.Row="8" Grid.Column="4" Height="120" IsEnabled="False">
                                     <ListBoxItem>First</ListBoxItem>
@@ -951,7 +1014,7 @@
                                     <ColumnDefinition Width="10"/>
                                     <ColumnDefinition Width="200"/>
                                 </Grid.ColumnDefinitions>
-                                
+
                                 <TextBlock Grid.Row="0" Grid.Column="0">Enabled</TextBlock>
                                 <TextBlock Grid.Row="2" Grid.Column="0">Disabled</TextBlock>
 
