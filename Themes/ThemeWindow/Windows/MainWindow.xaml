@@ -55,6 +55,7 @@
                   SelectedItem="{Binding SelecteColorScheme}"/>
 
         <TabControl Grid.Row="4" Grid.ColumnSpan="3" Name="tabControl" Background="{DynamicResource TintColor}" Width="Auto" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <!-- ScrollViewer.CanContentScroll="False" applies template with wrap panel -->
             <TabItem Header="Colors">
                 <TabItem.Resources>
                     <Style TargetType="{x:Type Ellipse}">
@@ -71,7 +72,7 @@
                 </TabItem.Resources>
                 <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
                     <WrapPanel>
-                        <GroupBox Header="Main colors" BorderBrush="{x:Null}">
+                        <GroupBox Header="Main colors" >
                             <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="auto"/>
@@ -98,7 +99,7 @@
                                 <TextBlock Grid.Row="2" Grid.Column="6" HorizontalAlignment="Center" Style="{DynamicResource CaptionTextBlockStyle}">Accent</TextBlock>
                             </Grid>
                         </GroupBox>
-                        <GroupBox Header="Interaction colors" BorderBrush="{x:Null}">
+                        <GroupBox Header="Interaction colors" >
                             <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="auto"/>
@@ -126,7 +127,7 @@
                                 <TextBlock Grid.Row="2" Grid.Column="6" HorizontalAlignment="Center" Style="{DynamicResource CaptionTextBlockStyle}">Defaulted</TextBlock>
                             </Grid>
                         </GroupBox>
-                        <GroupBox Header="Marker colors" BorderBrush="{x:Null}">
+                        <GroupBox Header="Marker colors" >
                             <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="auto"/>
@@ -159,7 +160,7 @@
             </TabItem>
             <TabItem Header="Labels and texts">
                 <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
-                    <GroupBox Header="Headers" BorderBrush="{x:Null}" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Auto" >
+                    <GroupBox Header="Headers" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Auto" >
                         <Grid Margin="10">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="auto"/>
@@ -207,7 +208,7 @@
             <TabItem Header="Buttons">
                 <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
                     <WrapPanel>
-                        <GroupBox Header="Experimental button with Icon" BorderBrush="{x:Null}" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                        <GroupBox Header="Experimental button with Icon" ScrollViewer.VerticalScrollBarVisibility="Disabled">
                             <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="auto"/>
@@ -275,7 +276,7 @@
                                         Grid.Column="6" Grid.Row="6" Content="Button" IsEnabled="False" />
                             </Grid>
                         </GroupBox>
-                        <GroupBox Header="Button: normal size" BorderBrush="{x:Null}" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                        <GroupBox Header="Button: normal size" ScrollViewer.VerticalScrollBarVisibility="Disabled">
                             <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="auto"/>
@@ -321,7 +322,7 @@
 
                             </Grid>
                         </GroupBox>
-                        <GroupBox Header="Button: large size" BorderBrush="{x:Null}">
+                        <GroupBox Header="Button: large size" >
                             <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="auto"/>
@@ -367,7 +368,7 @@
 
                             </Grid>
                         </GroupBox>
-                        <GroupBox Header="Button: medium size" BorderBrush="{x:Null}">
+                        <GroupBox Header="Button: medium size" >
                             <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="auto"/>
@@ -413,7 +414,7 @@
 
                             </Grid>
                         </GroupBox>
-                        <GroupBox Header="Button: small size" BorderBrush="{x:Null}">
+                        <GroupBox Header="Button: small size" >
                             <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="auto"/>
@@ -459,7 +460,7 @@
 
                             </Grid>
                         </GroupBox>
-                        <GroupBox Header="Toggle: default size" BorderBrush="{x:Null}">
+                        <GroupBox Header="Toggle: default size" >
                             <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="auto"/>
@@ -507,7 +508,7 @@
 
                             </Grid>
                         </GroupBox>
-                        <GroupBox Header="Expander" BorderBrush="{x:Null}">
+                        <GroupBox Header="Expander" >
                             <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
                                 <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
                                     <Grid.RowDefinitions>
@@ -600,7 +601,7 @@
             </TabItem>
             <!--<TabItem Header="Tables">
                 <WrapPanel>
-                    <GroupBox Header="Table" BorderBrush="{x:Null}" >
+                    <GroupBox Header="Table" >
 
                     </GroupBox>
                 </WrapPanel>
@@ -608,7 +609,7 @@
             <TabItem Header="Form elements">
                 <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
                     <WrapPanel>
-                        <GroupBox Header="Text fields" BorderBrush="{x:Null}">
+                        <GroupBox Header="Text fields" >
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="auto"/>
@@ -644,7 +645,7 @@
 
                             </Grid>
                         </GroupBox>
-                        <GroupBox Header="Options" BorderBrush="{x:Null}">
+                        <GroupBox Header="Options" >
                             <Grid Grid.IsSharedSizeScope="True">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="auto"/>
@@ -694,7 +695,7 @@
                                 <TextBlock Grid.Row="10" Grid.Column="0">Slider with Ticks</TextBlock>
                             </Grid>
                         </GroupBox>
-                        <GroupBox Header="Pickers" BorderBrush="{x:Null}">
+                        <GroupBox Header="Pickers" >
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="auto"/>
@@ -823,7 +824,7 @@
             <!--<TabItem Header="Treeview">
                 <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
                     <WrapPanel>
-                        <GroupBox Header="TreeView: normal" BorderBrush="{x:Null}">
+                        <GroupBox Header="TreeView: normal" >
                             <Grid>
                                 <TreeView Grid.Row="28" Grid.Column="2" Style="{StaticResource TreeView.Normal}"
                                           >
@@ -938,7 +939,7 @@
             <TabItem Header="Scrolls">
                 <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
                     <WrapPanel>
-                        <GroupBox Header="ScrollBar" BorderBrush="{x:Null}">
+                        <GroupBox Header="ScrollBar" >
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="auto"/>
@@ -958,7 +959,7 @@
                                 <ScrollBar Grid.Row="2" Grid.Column="2" Orientation="Horizontal" IsEnabled="False"/>
                             </Grid>
                         </GroupBox>
-                        <GroupBox Header="ScrollViewer" BorderBrush="{x:Null}">
+                        <GroupBox Header="ScrollViewer" >
                             <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible" Width="400" Height="200">
                                 <Border Background="{DynamicResource TintColor}" Width="900" Height="900">
                                     <Canvas>
@@ -984,26 +985,26 @@
             <TabItem Header="Preloader &amp; progress">
                 <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
                     <WrapPanel>
-                        <GroupBox Header="ProgressBar" BorderBrush="{x:Null}">
+                        <GroupBox Header="ProgressBar" >
                             <ProgressBar Orientation="Horizontal" Value="65" Height="4" Width="200"/>
                         </GroupBox>
-                        <GroupBox Header="Preloader" BorderBrush="{x:Null}"></GroupBox>
+                        <GroupBox Header="Preloader" ></GroupBox>
                     </WrapPanel>
                 </ScrollViewer>
             </TabItem>
             <TabItem Header="Notifications">
                 <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
                     <WrapPanel>
-                        <GroupBox Header="Notification" BorderBrush="{x:Null}" >
+                        <GroupBox Header="Notification" >
                             <TextBlock Style="{DynamicResource NotificationItem}" Text="And I think to myself - What a wonderful world."/>
                         </GroupBox>
-                        <GroupBox Header="Success" BorderBrush="{x:Null}" >
+                        <GroupBox Header="Success" >
                             <TextBlock Style="{DynamicResource SuccessItem}" Text="It's a Great Success!"/>
                         </GroupBox>
-                        <GroupBox Header="Warning" BorderBrush="{x:Null}" >
+                        <GroupBox Header="Warning" >
                             <TextBlock Style="{DynamicResource WarningItem}" Text="Rollover Bethoween!"/>
                         </GroupBox>
-                        <GroupBox Header="Error" BorderBrush="{x:Null}" >
+                        <GroupBox Header="Error" >
                             <TextBlock Style="{DynamicResource ErrorItem}" Text="Baby did bad bad thing."/>
                         </GroupBox>
                     </WrapPanel>
@@ -1012,7 +1013,7 @@
             <TabItem Header="Context Menu">
                 <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
                     <WrapPanel>
-                        <GroupBox Header="Right mouse click on this block for context menu" BorderBrush="{x:Null}">
+                        <GroupBox Header="Right mouse click on this block for context menu" >
                             <GroupBox.ContextMenu>
                                 <ContextMenu ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="20">
                                     <MenuItem Header="Enabled" >
@@ -1064,10 +1065,10 @@
             <TabItem Header="Icons">
                 <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
                     <WrapPanel>
-                        <GroupBox Header="Outline" BorderBrush="{x:Null}">
+                        <GroupBox Header="Outline" >
 
                         </GroupBox>
-                        <GroupBox Header="Solid" BorderBrush="{x:Null}">
+                        <GroupBox Header="Solid" >
 
                         </GroupBox>
                     </WrapPanel>
