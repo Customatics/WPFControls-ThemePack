@@ -3,13 +3,15 @@ Custom designed themes for WPF controls to make your app look better. Simple to 
 
 ## Intro
 This theme is made to have an individually styled controls set for WPF apps, which depends on few configurable properties (like colors and sizes), so it can be easily modified according to design requirements.
-Current state: this version contains most commonly used controls. More controls are coming.
-Further plans on theme development and releases: update incomplete templates, add a few more configurable values such as corner radius for controls, animations, etc.
+
+**Current state:** this version contains most commonly used controls. More controls are coming.
+
+**Further plans on theme development and releases:** update incomplete templates, add a few more configurable values such as corner radius for controls, animations, etc.
 
 ## Special features
 * There is a Numerics.xaml, which contains most of the pre-defined values that are used across the theme such as paddings, margins, font-sizes, opacities and border widths.
 * 2 color schemes consisting of 12 colors each, which means a small change has an influence on the whole theme style.
-* Re-worked window template that scales correctly on different resolutions (including retina), multimonitor systems and even DPI’s.
+* Re-worked Window template that scales correctly on different resolutions (including retina), multimonitor systems and even DPI’s.
 * Re-constructed datepicker including popup content.
 * Attached property that allows to use glyph fonts instead of usual path data, so now you can apply icons to the controls in a much simpler way, keeping the UI consistent at the same time.
 
